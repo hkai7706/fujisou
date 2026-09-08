@@ -1,0 +1,33 @@
+# フジ創アイノス｜富山の注文住宅・自然素材の家
+
+> 富山県高岡市・富山市を拠点に、無垢材と漆喰を使った自然素材の注文住宅を手がける地域工務店です。
+
+## Main pages
+
+- [ホーム](https://www.fujisou-ainos.com/): フジ創アイノスの家づくり、住宅プラン、性能、保証、施工事例
+- [家づくりの考え方](https://www.fujisou-ainos.com/concept/): 天然素材と健康住宅への考え方
+- [施工事例](https://www.fujisou-ainos.com/gallery/): 富山県内の注文住宅・平屋・二階建て住宅
+- [イベント情報](https://www.fujisou-ainos.com/eventinfo/): 完成見学会や相談会
+- [ブログ](https://www.fujisou-ainos.com/staffblog/): 富山での家づくりに役立つ情報
+- [お問い合わせ](https://www.fujisou-ainos.com/contact/): 資料請求、無料相談、来店予約
+
+## Homepage sections
+
+- [家づくりへの想い](https://www.fujisou-ainos.com/#philosophy): 天然素材を使う理由とフジ創アイノスの考え方
+- [施工事例](https://www.fujisou-ainos.com/#works): 富山県内で手がけた住宅の外観と事例
+- [住宅性能と保証](https://www.fujisou-ainos.com/#performance): 耐震、断熱、調湿、長期保証
+- [家づくりの流れ](https://www.fujisou-ainos.com/#flow): ご相談からお引渡しまでの7ステップ
+
+## Housing plans
+
+- [SIMPLY](https://www.fujisou-ainos.com/simply/): シンプルな意匠と住宅性能を大切にした自由設計住宅
+- [Pretty](https://www.fujisou-ainos.com/pretty/): 自然素材、タイル、DIYを楽しむ自由設計住宅
+- [Healthy](https://www.fujisou-ainos.com/healthy/): 無垢材と漆喰を使い、家族の健康を考えた自由設計住宅
+
+## Business information
+
+- 運営会社: 有限会社フジ創
+- 本社・ショールーム: 〒933-0062 富山県高岡市江尻846-1
+- 富山事務所: 〒939-8006 富山県富山市山室256-4 SKビル2-A
+- 電話: 0800-200-2661
+- 営業時間: 9:00–18:00（水曜・木曜定休）

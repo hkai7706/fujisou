@@ -1,0 +1,22 @@
+# Dependencies and generated caches
+node_modules/
+.cache/
+
+# Temporary working files
+.tmp-*
+*.tmp
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*

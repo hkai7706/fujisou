@@ -1019,3 +1019,27 @@ body{background:#fff}.site-header,main,.section,.statement,.lineup,.home,.home__
     font-size: 13px;
   }
 }
+
+/* ==================================================
+   NEUTRAL SURFACE PALETTE
+   Replaces beige surfaces while retaining the timber
+   and golden-brown accent colors.
+   ================================================== */
+:root{
+  --paper:#f7f8f6;
+  --color-paper:#f7f8f6;
+}
+body{background:#ecefed}
+.site-header,main{background:#f7f8f6}
+.statement{background:#f1f3f0}
+.exterior-works{background:#f5f6f4}
+.lineup{background:#fff}
+.home-selector{background:linear-gradient(180deg,#fff 0%,#f6f7f5 100%)}
+.seven,.seven__content{background:#eef1ee}
+.performance-ledger{background:#fff}
+.process.alt-flow{background:#f3f5f4}
+.step-detail{background:#e9eeeb}
+.news-preview{background:#fff}
+.local,.local__copy{background:#f0f3f1}
+.contact{background:#fff}
+.site-footer{background:#eef1ef}

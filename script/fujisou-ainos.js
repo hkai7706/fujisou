@@ -57,6 +57,23 @@ newsTabs.forEach((tab) => {
   });
 });
 
+const blogFilters = document.querySelectorAll('[data-blog-filter]');
+const blogCards = document.querySelectorAll('[data-blog-category]');
+
+blogFilters.forEach((filter) => {
+  filter.addEventListener('click', () => {
+    const selected = filter.dataset.blogFilter;
+    blogFilters.forEach((button) => {
+      const active = button === filter;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    blogCards.forEach((card) => {
+      card.hidden = selected !== 'all' && card.dataset.blogCategory !== selected;
+    });
+  });
+});
+
 /* ===== HOMEPAGE INTERACTIONS ===== */
 
 const hybridSlider=document.querySelector('[data-hybrid-slider]');

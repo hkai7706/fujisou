@@ -1,0 +1,142 @@
+<!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
+<style>
+.shared-footer {
+  --chrome-ink: #493b31;
+  --chrome-muted: #71665f;
+  --chrome-gold: #967042;
+  --chrome-line: #e7e1da;
+  --chrome-font: var(--serif, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  color: var(--chrome-ink);
+  border-top: 1px solid var(--chrome-line);
+  background-color: #f5f5f4;
+  background-image: url('/images/footer-bg-white.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+  font: 400 15px/1.8 var(--chrome-font);
+  text-align: left;
+}
+.shared-footer *, .shared-footer *::before, .shared-footer *::after { box-sizing: border-box; }
+.shared-footer a { color: inherit; font-family: inherit; text-decoration: none; }
+.shared-footer img { display: block; max-width: 100%; height: auto; }
+.shared-footer a:focus-visible { outline: 2px solid var(--chrome-gold); outline-offset: 5px; }
+.shared-footer a:hover { color: var(--chrome-gold); }
+.shared-footer__inner { width: min(1380px, 100%); margin-inline: auto; padding: 56px clamp(20px, 4vw, 56px) 24px; }
+.shared-footer__top { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid var(--chrome-line); }
+.shared-footer__brand img { width: 230px; }
+.shared-footer__brand p { margin: 15px 0 0; color: var(--chrome-muted); font: 400 13px/1.8 var(--chrome-font); }
+.shared-footer__contact { display: flex; align-items: center; gap: 36px; }
+.shared-footer__phone { display: inline-block; min-height: 44px; font-size: 29px; line-height: 1.5; white-space: nowrap; }
+.shared-footer__contact p { margin: 0; color: var(--chrome-muted); font: 400 12px/1.8 var(--chrome-font); }
+.shared-footer__inquiry { display: flex; align-items: center; justify-content: space-between; gap: 32px; min-height: 52px; padding: 10px 22px; border: 1px solid #bca181; font-size: 15px; }
+.shared-footer__inquiry span { color: var(--chrome-gold); }
+.shared-footer__grid { display: grid; grid-template-columns: minmax(250px, 1fr) minmax(0, 2fr); gap: 64px; padding: 36px 0; }
+.shared-footer__offices { display: grid; align-content: start; gap: 20px; }
+.shared-footer__offices p { margin: 0 0 4px; font: 500 13px/1.8 var(--chrome-font); }
+.shared-footer address { margin: 0; color: var(--chrome-muted); font: 400 13px/1.9 var(--chrome-font); }
+.shared-footer__offices > a { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+.shared-footer__nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.shared-footer__nav h2 { margin: 0 0 14px; color: var(--chrome-gold); font: 500 14px/1.7 var(--chrome-font); letter-spacing: .06em; }
+.shared-footer__nav ul { margin: 0; padding: 0; list-style: none; }
+.shared-footer__nav li { margin: 0; padding: 0; list-style: none; }
+.shared-footer__nav a { display: block; padding: 10px 0; font-size: 13px; line-height: 1.8; }
+.shared-footer__bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 28px; padding-top: 18px; border-top: 1px solid var(--chrome-line); }
+.shared-footer__legal, .shared-footer__social { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 22px; }
+.shared-footer__legal a, .shared-footer__social a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 12px; }
+.shared-footer__copyright { flex-basis: 100%; margin-top: 10px; color: var(--chrome-muted); font: 400 11px/1.8 var(--chrome-font); letter-spacing: .09em; }
+@media (max-width: 1120px) {
+  .shared-footer__contact { gap: 22px; }
+  .shared-footer__grid { gap: 32px; }
+  .shared-footer__nav { gap: 18px; }
+}
+@media (max-width: 820px) {
+  .shared-footer__top { align-items: flex-start; flex-direction: column; }
+  .shared-footer__contact { justify-content: space-between; width: 100%; }
+  .shared-footer__grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .shared-footer__offices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
+  .shared-footer__offices > a { grid-column: 1 / -1; }
+}
+@media (max-width: 540px) {
+  .shared-footer__inner { padding-top: 40px; }
+  .shared-footer__contact { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .shared-footer__inquiry { width: 100%; }
+  .shared-footer__offices { grid-template-columns: minmax(0, 1fr); }
+  .shared-footer__nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; }
+  .shared-footer__nav a { min-height: 44px; font-size: 13px; }
+  .shared-footer__nav > div:last-child { grid-column: 1 / -1; }
+  .shared-footer__nav > div:last-child ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
+  .shared-footer__bottom { align-items: flex-start; flex-direction: column; }
+}
+@media print {
+  .shared-footer__nav, .shared-footer__legal, .shared-footer__social, .shared-footer__inquiry { display: none !important; }
+  .shared-footer__grid { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+<footer class="shared-footer" aria-label="サイトフッター">
+  <div class="shared-footer__inner">
+    <div class="shared-footer__top">
+      <div class="shared-footer__brand">
+        <a href="/" aria-label="フジ創アイノス ホーム"><img src="/images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" loading="lazy" decoding="async"></a>
+        <p>有限会社フジ創 / 一級建築士事務所</p>
+      </div>
+      <div class="shared-footer__contact">
+        <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
+        <a class="shared-footer__inquiry" href="/contact/">お問い合わせ<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="shared-footer__grid">
+      <div class="shared-footer__offices">
+        <div><p>本社・ショールーム</p><address>〒933-0062<br>富山県高岡市江尻846-1</address></div>
+        <div><p>富山事務所</p><address>〒939-8006<br>富山県富山市山室256-4 SKビル 2-A</address></div>
+        <a href="mailto:info@ainos.biz">info@ainos.biz</a>
+      </div>
+      <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
+        <div><h2>会社紹介</h2><ul>
+          <li><a href="/concept/">私たちの家造り</a></li>
+          <li><a href="/staff/">スタッフ紹介</a></li>
+          <li><a href="/staffblog/">社長のブログ</a></li>
+          <li><a href="/shikkui/">漆喰とは</a></li>
+        </ul></div>
+        <div><h2>家造り情報</h2><ul>
+          <li><a href="/gallery/">施工事例</a></li>
+          <li><a href="/eventinfo/">イベント情報</a></li>
+          <li><a href="/land-info/">土地情報</a></li>
+        </ul></div>
+        <div><h2>施工プラン</h2><ul>
+          <li><a href="/plans/hiraya/">平屋住宅</a></li>
+          <li><a href="/plans/two-story/">２階建て住宅</a></li>
+          <li><a href="/plans/custom/">オーダーメイド住宅</a></li>
+          <li><a href="/consultation/">不動産相談</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <div class="shared-footer__bottom">
+      <div class="shared-footer__legal"><a href="/policy/">プライバシーポリシー</a><a href="https://fujisou-ainos.ambassador-cloud.biz/login/" target="_blank" rel="noopener noreferrer">オーナーズクラブ<span aria-hidden="true">↗</span></a></div>
+      <nav class="shared-footer__social" aria-label="公式SNS">
+        <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer">LINE</a>
+      </nav>
+      <small class="shared-footer__copyright">&copy; FUJISOU AINOS</small>
+    </div>
+  </div>
+</footer>
+<script>
+(() => {
+  'use strict';
+  const footer = document.querySelector('.shared-footer');
+  if (!footer || footer.hasAttribute('data-enhanced')) return;
+  const normalizePath = value => value.replace(/index\.(?:html?|shtml?|php)$/i, '').replace(/\/+$/, '') || '/';
+  const current = normalizePath(window.location.pathname);
+  footer.querySelectorAll('a[href]').forEach(link => {
+    const url = new URL(link.href);
+    if (url.origin === window.location.origin && normalizePath(url.pathname) === current) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+  footer.setAttribute('data-enhanced', '');
+})();
+</script>

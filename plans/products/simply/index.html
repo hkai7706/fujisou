@@ -1,2 +1,380 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIMPLY｜フジ創アイノス</title><link rel="stylesheet" href="../../../stylesheet/fujisou-ainos.css"></head><body class="plans-page"><main><article><p><a href="../../../">← ホーム</a></p><h1>SIMPLY</h1><p>洗練されたデザインと機能性を備えた高性能住宅です。</p></article></main><script src="../../../script/fujisou-ainos.js" defer></script></body></html>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SIMPLY｜フジ創アイノス</title><link rel="canonical" href="https://www.fujisou-ainos.com/simply/"><meta name="description" content="洗練されたデザインと暮らしやすい設計を備えた、フジ創アイノスの高性能住宅「SIMPLY」をご紹介します。"><link rel="stylesheet" href="../../../stylesheet/fujisou-ainos.css">  <link rel="stylesheet" href="../../../stylesheet/nav-slot.css">
+  <link rel="stylesheet" href="../../../stylesheet/breadcrumbs.css">
+</head><body class="plans-page">
+  <!-- Future SSI navigation: replace this entire placeholder with the shared include. -->
+  <!-- Local copy of header.shtml for direct local testing. -->
+<!-- Shared SSI header with its CSS and JavaScript included in this file. -->
+<style>
+/* Shared SSI components. These selectors do not restyle page content. */
+.shared-header {
+  --chrome-ink: #493b31;
+  --chrome-muted: #71665f;
+  --chrome-gold: #967042;
+  --chrome-line: #e7e1da;
+  --chrome-font: var(--serif, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  color: var(--chrome-ink);
+  background: #fff;
+  font: 400 15px/1.8 var(--chrome-font);
+  text-align: left;
+}
+.shared-header *, .shared-header *::before, .shared-header *::after { box-sizing: border-box; }
+.shared-header a { color: inherit; font-family: inherit; text-decoration: none; }
+.shared-header img { display: block; max-width: 100%; height: auto; }
+.shared-header a:focus-visible, .shared-header button:focus-visible, .shared-header summary:focus-visible { outline: 2px solid var(--chrome-gold); outline-offset: 5px; }
+.shared-header a:hover { color: var(--chrome-gold); }
+.has-shared-header { scroll-padding-top: calc(var(--shared-header-height, 104px) + 16px); }
+
+.shared-header { position: sticky; z-index: 100; top: 0; border-top: 3px solid #806039; border-bottom: 1px solid var(--chrome-line); box-shadow: 0 3px 16px #493b3108; }
+.shared-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: min(1560px, 100%); min-height: 100px; margin-inline: auto; padding: 20px clamp(20px, 3vw, 48px); }
+.shared-header__brand { flex-shrink: 0; width: clamp(205px, 17vw, 250px); }
+.shared-header__nav { display: flex; align-items: center; gap: clamp(16px, 1.8vw, 28px); min-width: 0; }
+.shared-header__nav > a, .shared-header summary { white-space: nowrap; font-size: 15px; font-weight: 500; }
+.shared-header details { position: relative; margin: 0; padding: 0; border: 0; }
+.shared-header summary { position: relative; display: flex; align-items: center; gap: 9px; min-height: 44px; margin: 0; padding: 10px 0; list-style: none; cursor: pointer; }
+.shared-header summary::-webkit-details-marker { display: none; }
+.shared-header summary::after { position: static; content: ''; display: block; width: 6px; height: 6px; margin-top: -3px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg); }
+.shared-header details[open] > summary::after { content: ''; margin-top: 3px; transform: rotate(225deg); }
+.shared-header summary:hover, .shared-header__group[data-active] > summary,
+.shared-header__nav a[aria-current="page"], .shared-header__link[data-active] { color: var(--chrome-gold); }
+.shared-header__link { display: flex; align-items: center; min-height: 44px; }
+.shared-header__dropdown { position: absolute; z-index: 1; top: calc(100% + 12px); left: 50%; width: max-content; min-width: 225px; margin: 0; padding: 10px; list-style: none; border: 1px solid var(--chrome-line); background: #fff; box-shadow: 0 10px 28px #493b3112; transform: translateX(-50%); }
+.shared-header__dropdown::before { position: absolute; right: 0; bottom: 100%; left: 0; height: 14px; content: ''; }
+.shared-header__dropdown li { margin: 0; padding: 0; list-style: none; }
+.shared-header__dropdown a { display: block; min-height: 44px; padding: 10px 14px; font-size: 14px; line-height: 1.7; }
+.shared-header__dropdown a:hover, .shared-header__dropdown a[aria-current="page"] { background: #f8f8f7; }
+.shared-header .shared-header__owner { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 46px; padding: 10px 16px; color: #fff; background: #73512e; }
+.shared-header .shared-header__owner:hover { color: #fff; background: #8a643a; }
+.shared-header__owner span { font-size: 14px; }
+.shared-header__toggle, .shared-header__toggle[hidden] { display: none; }
+.shared-header__skip { position: absolute; z-index: 2; top: 6px; left: 12px; padding: 8px 14px; background: #fff; transform: translateY(-160%); }
+.shared-header__skip:focus { transform: none; }
+
+
+@media (max-width: 1120px) {
+  .shared-header:not([data-enhanced]) { position: relative; }
+  .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 20px; min-height: 86px; padding: 18px 24px; }
+  .shared-header__brand { width: 210px; }
+  .shared-header__nav { flex: 0 0 100%; display: grid; gap: 0; padding-top: 16px; }
+  .shared-header[data-enhanced] .shared-header__toggle { display: flex; align-items: center; gap: 12px; min-height: 44px; margin-left: auto; padding: 8px 0 8px 12px; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
+  .shared-header__toggle-lines { position: relative; display: block; width: 22px; height: 14px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
+  .shared-header__toggle-lines::before { position: absolute; top: 5px; left: 0; width: 22px; height: 1px; content: ''; background: currentColor; }
+  .shared-header__toggle[aria-expanded="true"] .shared-header__toggle-lines { border-color: transparent; }
+  .shared-header__toggle[aria-expanded="true"] .shared-header__toggle-lines::before { transform: rotate(45deg); }
+  .shared-header__toggle[aria-expanded="true"] .shared-header__toggle-lines::after { position: absolute; top: 5px; left: 0; width: 22px; height: 1px; content: ''; background: currentColor; transform: rotate(-45deg); }
+  .shared-header[data-enhanced] .shared-header__nav { position: absolute; top: 100%; right: 0; left: 0; display: none; max-height: calc(100vh - var(--shared-header-height, 90px) - 8px); max-height: calc(100dvh - var(--shared-header-height, 90px) - 8px); padding: 8px 24px 24px; overflow-y: auto; overscroll-behavior: contain; background: #fff; border-bottom: 1px solid var(--chrome-line); box-shadow: 0 12px 20px #493b310d; }
+  .shared-header[data-menu-open] .shared-header__nav { display: grid; }
+  .shared-header summary, .shared-header__link { justify-content: space-between; min-height: 54px; padding: 14px 0; border-bottom: 1px solid var(--chrome-line); font-size: 16px; }
+  .shared-header__dropdown { position: static; width: auto; min-width: 0; margin: 0; padding: 6px 0 10px 16px; border: 0; border-left: 1px solid var(--chrome-line); box-shadow: none; transform: none; }
+  .shared-header__dropdown::before { display: none; }
+  .shared-header__dropdown a { padding: 11px 12px; font-size: 15px; }
+  .shared-header .shared-header__owner { margin-top: 18px; font-size: 15px; }
+}
+@media (max-width: 820px) {
+}
+@media (max-width: 540px) {
+  .shared-header__inner { padding-inline: 18px; gap: 12px; }
+  .shared-header__brand { width: clamp(165px, 48vw, 210px); }
+  .shared-header[data-enhanced] .shared-header__toggle { gap: 9px; padding-left: 0; font-size: 12px; }
+  .shared-header[data-enhanced] .shared-header__nav { padding-inline: 20px; }
+}
+@media print {
+  .shared-header { position: static; box-shadow: none; }
+  .shared-header .shared-header__nav, .shared-header .shared-header__toggle, .shared-header__skip { display: none !important; }
+}
+</style>
+<header class="shared-header" data-shared-header>
+  <a class="shared-header__skip" href="#main">本文へ移動</a>
+  <div class="shared-header__inner">
+    <a class="shared-header__brand" href="../../../index.html" aria-label="フジ創アイノス ホーム">
+      <img src="../../../images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" decoding="async">
+    </a>
+    <button class="shared-header__toggle" type="button" aria-expanded="false" aria-controls="shared-site-navigation" aria-label="メニューを開く" hidden>
+      <span>メニュー</span><span class="shared-header__toggle-lines" aria-hidden="true"></span>
+    </button>
+    <nav class="shared-header__nav" id="shared-site-navigation" aria-label="メインナビゲーション">
+      <details class="shared-header__group">
+        <summary>会社紹介</summary>
+        <ul class="shared-header__dropdown">
+          <li><a href="../../../concept/index.html">私たちの家造り</a></li>
+          <li><a href="../../../staff/index.html">スタッフ紹介</a></li>
+          <li><a href="../../../policy/index.html">プライバシーポリシー</a></li>
+        </ul>
+      </details>
+      <details class="shared-header__group">
+        <summary>家造り情報</summary>
+        <ul class="shared-header__dropdown">
+          <li><a href="../../../gallery/index.html">施工事例</a></li>
+          <li><a href="../../../eventinfo/index.html">イベント情報</a></li>
+          <li><a href="../../../land-info/index.html">土地情報</a></li>
+        </ul>
+      </details>
+      <details class="shared-header__group">
+        <summary>施工プラン</summary>
+        <ul class="shared-header__dropdown">
+          <li><a href="../../../plans/hiraya/index.html">平屋住宅</a></li>
+          <li><a href="../../../plans/two-story/index.html">２階建て住宅</a></li>
+          <li><a href="../../../plans/custom/index.html">オーダーメイド住宅</a></li>
+        </ul>
+      </details>
+      <a class="shared-header__link" href="../../../staffblog/index.html">社長のブログ</a>
+      <a class="shared-header__link" href="../../../shikkui/index.html">漆喰とは</a>
+      <a class="shared-header__owner" href="https://fujisou-ainos.ambassador-cloud.biz/login/" target="_blank" rel="noopener noreferrer">オーナーズクラブ<span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<script>
+/* SSI provides the markup. JavaScript only enhances navigation behavior. */
+(() => {
+  'use strict';
+  const header = document.querySelector('[data-shared-header]');
+  if (!header || header.hasAttribute('data-enhanced')) return;
+  const toggle = header.querySelector('.shared-header__toggle');
+  const navigation = header.querySelector('.shared-header__nav');
+  if (!toggle || !navigation) return;
+  const groups = [...navigation.querySelectorAll('details')];
+  const mobile = window.matchMedia('(max-width: 1120px)');
+  const hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  let closeTimer;
+
+  const closeGroups = () => {
+    clearTimeout(closeTimer);
+    groups.forEach(group => { group.open = false; });
+  };
+  const closeMenu = (restoreFocus = false) => {
+    header.removeAttribute('data-menu-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'メニューを開く');
+    closeGroups();
+    if (restoreFocus) toggle.focus();
+  };
+  toggle.addEventListener('click', () => {
+    if (header.hasAttribute('data-menu-open')) {
+      closeMenu();
+    } else {
+      header.setAttribute('data-menu-open', '');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'メニューを閉じる');
+    }
+  });
+  groups.forEach(group => {
+    group.addEventListener('pointerenter', event => {
+      if (mobile.matches || !hover.matches || event.pointerType !== 'mouse') return;
+      clearTimeout(closeTimer);
+      groups.forEach(other => { other.open = other === group; });
+    });
+    group.addEventListener('pointerleave', () => {
+      if (mobile.matches || !hover.matches) return;
+      closeTimer = setTimeout(() => {
+        if (!group.contains(document.activeElement)) group.open = false;
+      }, 180);
+    });
+    group.addEventListener('toggle', () => {
+      if (group.open) groups.forEach(other => { if (other !== group) other.open = false; });
+    });
+    group.addEventListener('focusout', event => {
+      if (!mobile.matches && !group.contains(event.relatedTarget) && !group.matches(':hover')) group.open = false;
+    });
+  });
+  document.addEventListener('click', event => {
+    if (!header.contains(event.target)) closeMenu();
+  });
+  header.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    const openGroup = groups.find(group => group.open);
+    if (openGroup) {
+      event.preventDefault();
+      openGroup.open = false;
+      openGroup.querySelector('summary').focus();
+    } else if (header.hasAttribute('data-menu-open')) {
+      event.preventDefault();
+      closeMenu(true);
+    }
+  });
+  header.addEventListener('focusout', event => {
+    if (mobile.matches && event.relatedTarget && !header.contains(event.relatedTarget)) closeMenu();
+  });
+  navigation.addEventListener('click', event => {
+    if (mobile.matches && event.target.closest('a')) closeMenu(true);
+  });
+  mobile.addEventListener('change', () => closeMenu());
+
+  const normalizePath = value => value.replace(/index\.(?:html?|shtml?|php)$/i, '').replace(/\/+$/, '') || '/';
+  const current = normalizePath(window.location.pathname);
+  navigation.querySelectorAll('a[href]').forEach(link => {
+    const url = new URL(link.href);
+    if (url.origin !== window.location.origin) return;
+    const route = normalizePath(url.pathname);
+    if (current === route) link.setAttribute('aria-current', 'page');
+    if (current === route || (route !== '/' && current.startsWith(route + '/'))) {
+      (link.closest('details') || link).setAttribute('data-active', '');
+    }
+  });
+  const main = document.querySelector('main');
+  if (main) {
+    if (!main.id) main.id = document.getElementById('main') ? 'shared-main-content' : 'main';
+    header.querySelector('.shared-header__skip').setAttribute('href', '#' + main.id);
+  }
+  toggle.hidden = false;
+  header.setAttribute('data-enhanced', '');
+  document.documentElement.classList.add('has-shared-header');
+  const updateHeight = () => document.documentElement.style.setProperty('--shared-header-height', Math.ceil(header.getBoundingClientRect().height) + 'px');
+  updateHeight();
+  if ('ResizeObserver' in window) new ResizeObserver(updateHeight).observe(header);
+  else window.addEventListener('resize', updateHeight);
+})();
+</script>
+
+
+<main>
+    <nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../../../index.html">ホーム</a></li><li><span aria-hidden="true">/</span><a href="../../custom/index.html">オーダーメイド住宅</a></li><li><span aria-hidden="true">/</span><span aria-current="page">SIMPLY</span></li></ol></nav>
+<article><h1>SIMPLY</h1><p>洗練されたデザインと機能性を備えた高性能住宅です。</p></article></main>
+  <!-- Local copy of footer.shtml for direct local testing. -->
+<!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
+<style>
+.shared-footer {
+  --chrome-ink: #493b31;
+  --chrome-muted: #71665f;
+  --chrome-gold: #967042;
+  --chrome-line: #e7e1da;
+  --chrome-font: var(--serif, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  color: var(--chrome-ink);
+  border-top: 1px solid var(--chrome-line);
+  background-color: #f5f5f4;
+  background-image: url('../../../images/footer-bg-white.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+  font: 400 15px/1.8 var(--chrome-font);
+  text-align: left;
+}
+.shared-footer *, .shared-footer *::before, .shared-footer *::after { box-sizing: border-box; }
+.shared-footer a { color: inherit; font-family: inherit; text-decoration: none; }
+.shared-footer img { display: block; max-width: 100%; height: auto; }
+.shared-footer a:focus-visible { outline: 2px solid var(--chrome-gold); outline-offset: 5px; }
+.shared-footer a:hover { color: var(--chrome-gold); }
+.shared-footer__inner { width: min(1380px, 100%); margin-inline: auto; padding: 56px clamp(20px, 4vw, 56px) 24px; }
+.shared-footer__top { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid var(--chrome-line); }
+.shared-footer__brand img { width: 230px; }
+.shared-footer__brand p { margin: 15px 0 0; color: var(--chrome-muted); font: 400 13px/1.8 var(--chrome-font); }
+.shared-footer__contact { display: flex; align-items: center; gap: 36px; }
+.shared-footer__phone { display: inline-block; min-height: 44px; font-size: 29px; line-height: 1.5; white-space: nowrap; }
+.shared-footer__contact p { margin: 0; color: var(--chrome-muted); font: 400 12px/1.8 var(--chrome-font); }
+.shared-footer__inquiry { display: flex; align-items: center; justify-content: space-between; gap: 32px; min-height: 52px; padding: 10px 22px; border: 1px solid #bca181; font-size: 15px; }
+.shared-footer__inquiry span { color: var(--chrome-gold); }
+.shared-footer__grid { display: grid; grid-template-columns: minmax(250px, 1fr) minmax(0, 2fr); gap: 64px; padding: 36px 0; }
+.shared-footer__offices { display: grid; align-content: start; gap: 20px; }
+.shared-footer__offices p { margin: 0 0 4px; font: 500 13px/1.8 var(--chrome-font); }
+.shared-footer address { margin: 0; color: var(--chrome-muted); font: 400 13px/1.9 var(--chrome-font); }
+.shared-footer__offices > a { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+.shared-footer__nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.shared-footer__nav h2 { margin: 0 0 14px; color: var(--chrome-gold); font: 500 14px/1.7 var(--chrome-font); letter-spacing: .06em; }
+.shared-footer__nav ul { margin: 0; padding: 0; list-style: none; }
+.shared-footer__nav li { margin: 0; padding: 0; list-style: none; }
+.shared-footer__nav a { display: block; padding: 10px 0; font-size: 13px; line-height: 1.8; }
+.shared-footer__bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 28px; padding-top: 18px; border-top: 1px solid var(--chrome-line); }
+.shared-footer__legal, .shared-footer__social { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 22px; }
+.shared-footer__legal a, .shared-footer__social a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 12px; }
+.shared-footer__copyright { flex-basis: 100%; margin-top: 10px; color: var(--chrome-muted); font: 400 11px/1.8 var(--chrome-font); letter-spacing: .09em; }
+@media (max-width: 1120px) {
+  .shared-footer__contact { gap: 22px; }
+  .shared-footer__grid { gap: 32px; }
+  .shared-footer__nav { gap: 18px; }
+}
+@media (max-width: 820px) {
+  .shared-footer__top { align-items: flex-start; flex-direction: column; }
+  .shared-footer__contact { justify-content: space-between; width: 100%; }
+  .shared-footer__grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .shared-footer__offices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
+  .shared-footer__offices > a { grid-column: 1 / -1; }
+}
+@media (max-width: 540px) {
+  .shared-footer__inner { padding-top: 40px; }
+  .shared-footer__contact { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .shared-footer__inquiry { width: 100%; }
+  .shared-footer__offices { grid-template-columns: minmax(0, 1fr); }
+  .shared-footer__nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; }
+  .shared-footer__nav a { min-height: 44px; font-size: 13px; }
+  .shared-footer__nav > div:last-child { grid-column: 1 / -1; }
+  .shared-footer__nav > div:last-child ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
+  .shared-footer__bottom { align-items: flex-start; flex-direction: column; }
+}
+@media print {
+  .shared-footer__nav, .shared-footer__legal, .shared-footer__social, .shared-footer__inquiry { display: none !important; }
+  .shared-footer__grid { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+<footer class="shared-footer" aria-label="サイトフッター">
+  <div class="shared-footer__inner">
+    <div class="shared-footer__top">
+      <div class="shared-footer__brand">
+        <a href="../../../index.html" aria-label="フジ創アイノス ホーム"><img src="../../../images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" loading="lazy" decoding="async"></a>
+        <p>有限会社フジ創 / 一級建築士事務所</p>
+      </div>
+      <div class="shared-footer__contact">
+        <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
+        <a class="shared-footer__inquiry" href="../../../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="shared-footer__grid">
+      <div class="shared-footer__offices">
+        <div><p>本社・ショールーム</p><address>〒933-0062<br>富山県高岡市江尻846-1</address></div>
+        <div><p>富山事務所</p><address>〒939-8006<br>富山県富山市山室256-4 SKビル 2-A</address></div>
+        <a href="mailto:info@ainos.biz">info@ainos.biz</a>
+      </div>
+      <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
+        <div><h2>会社紹介</h2><ul>
+          <li><a href="../../../concept/index.html">私たちの家造り</a></li>
+          <li><a href="../../../staff/index.html">スタッフ紹介</a></li>
+          <li><a href="../../../staffblog/index.html">社長のブログ</a></li>
+          <li><a href="../../../shikkui/index.html">漆喰とは</a></li>
+        </ul></div>
+        <div><h2>家造り情報</h2><ul>
+          <li><a href="../../../gallery/index.html">施工事例</a></li>
+          <li><a href="../../../eventinfo/index.html">イベント情報</a></li>
+          <li><a href="../../../land-info/index.html">土地情報</a></li>
+        </ul></div>
+        <div><h2>施工プラン</h2><ul>
+          <li><a href="../../../plans/hiraya/index.html">平屋住宅</a></li>
+          <li><a href="../../../plans/two-story/index.html">２階建て住宅</a></li>
+          <li><a href="../../../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../../../consultation/index.html">不動産相談</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <div class="shared-footer__bottom">
+      <div class="shared-footer__legal"><a href="../../../policy/index.html">プライバシーポリシー</a><a href="https://fujisou-ainos.ambassador-cloud.biz/login/" target="_blank" rel="noopener noreferrer">オーナーズクラブ<span aria-hidden="true">↗</span></a></div>
+      <nav class="shared-footer__social" aria-label="公式SNS">
+        <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer">LINE</a>
+      </nav>
+      <small class="shared-footer__copyright">&copy; FUJISOU AINOS</small>
+    </div>
+  </div>
+</footer>
+<script>
+(() => {
+  'use strict';
+  const footer = document.querySelector('.shared-footer');
+  if (!footer || footer.hasAttribute('data-enhanced')) return;
+  const normalizePath = value => value.replace(/index\.(?:html?|shtml?|php)$/i, '').replace(/\/+$/, '') || '/';
+  const current = normalizePath(window.location.pathname);
+  footer.querySelectorAll('a[href]').forEach(link => {
+    const url = new URL(link.href);
+    if (url.origin === window.location.origin && normalizePath(url.pathname) === current) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+  footer.setAttribute('data-enhanced', '');
+})();
+</script>
+
+<script src="../../../script/fujisou-ainos.js" defer></script></body></html>
 

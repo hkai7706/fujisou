@@ -1,0 +1,10 @@
+{
+  "name": "fujisou-ainos-website",
+  "private": true,
+  "scripts": {
+    "prepare": "node tools/prepare-html.mjs",
+    "sitemap": "node tools/generate-sitemap.mjs",
+    "check": "node tools/site-check.mjs",
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1"
+  }
+}

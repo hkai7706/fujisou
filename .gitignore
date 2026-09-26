@@ -1,6 +1,7 @@
 # Dependencies and generated caches
 node_modules/
 .cache/
+dist/
 
 # Temporary working files
 .tmp-*

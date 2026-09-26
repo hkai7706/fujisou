@@ -1,0 +1,18 @@
+/* Temporary space for the future shared SSI navigation.
+   Replace the .site-nav-slot element with the include; do not keep both. */
+:root { --site-nav-space: 104px; }
+body > .site-nav-slot {
+  display: block;
+  width: 100%;
+  height: var(--site-nav-space);
+  margin: 0;
+  padding: 0;
+  flex: 0 0 var(--site-nav-space);
+  background: #fff;
+}
+@media (max-width: 960px) {
+  :root { --site-nav-space: 90px; }
+}
+@media print {
+  body > .site-nav-slot { display: none; }
+}

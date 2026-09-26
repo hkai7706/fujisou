@@ -13,3 +13,24 @@
 @media(max-width:800px){.event-header{padding:20px}.event-header img{width:180px}.event-header nav{gap:0}.event-header nav>a:first-child{display:none}.header-link{padding-left:0;border-left:0;font-size:13px}.header-link span{display:none}.event-hero{grid-template-columns:1fr;padding-top:0;gap:25px}.hero-copy{padding:20px 0 0}.event-kind{margin-top:20px}.event-hero figure img{aspect-ratio:4/3;object-position:center}.section{grid-template-columns:1fr;gap:30px}.section-heading>p:last-child:not(.eyebrow){max-width:none}.photo-story{min-height:380px;margin-bottom:0}.photo-story>div{padding:45px 25px}.event-footer{flex-direction:column}.event-ledger>div{grid-template-columns:80px 1fr;gap:15px}.desktop-break{display:none}}
 @media(max-width:380px){.event-header img{width:155px}.header-link{font-size:12px}h1{font-size:31px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Exterior image: preserve the full roof, walls and entrance. */
+.event-hero--exterior{grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(24px,4vw,56px)}
+.event-exterior{min-width:0}
+.event-exterior__image{padding:clamp(12px,2vw,28px) 0;background:#f4f6f7;border:1px solid #dde2e5}
+.event-hero .event-exterior img{width:100%;aspect-ratio:1672/941;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+@media(max-width:800px){.event-hero--exterior{grid-template-columns:minmax(0,1fr);gap:28px}.event-exterior__image{padding:16px 0}}
+
+/* Architectural presentation board */
+.event-exterior__image{position:relative;isolation:isolate;overflow:hidden;padding:24px;background:linear-gradient(135deg,#ffffff,#edf1f3);border:1px solid #dce2e6;box-shadow:12px 16px 0 -1px #eef1f3}
+.event-exterior__image::before{content:"";position:absolute;z-index:-2;inset:0;background-image:linear-gradient(#35434d0a 1px,transparent 1px),linear-gradient(90deg,#35434d0a 1px,transparent 1px);background-size:36px 36px}
+.event-exterior__image::after{content:"";position:absolute;z-index:-1;inset:12px;border:1px solid #52616b25;pointer-events:none}
+.event-exterior__heading{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:#586670;font-size:9px;letter-spacing:.16em;line-height:1.6}
+.event-exterior__heading>span:first-child{display:flex;align-items:center;gap:9px}.event-exterior__heading>span:first-child::before{content:"";width:18px;height:1px;background:#52616b}
+.event-exterior__circle{position:absolute;z-index:-1;width:65%;aspect-ratio:1;right:5%;top:10%;border:1px solid #85939e66;border-radius:50%;background:radial-gradient(circle,#d8e1e866,transparent 70%)}
+.event-hero .event-exterior img{position:relative;margin:28px 0 18px}
+.event-exterior__footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:17px;border-top:1px solid #85939e66}
+.event-exterior__title>span{font-size:9px;letter-spacing:.18em;color:#586670}.event-exterior__title>p{margin-top:5px;font:500 clamp(15px,1.5vw,21px)/1.6 var(--serif);color:#303b43}
+.event-exterior__palette{display:flex;flex-shrink:0;gap:7px}.event-exterior__palette i{width:20px;height:20px;background:#34383b;border:3px solid #ffffff;outline:1px solid #85939e66;border-radius:50%}.event-exterior__palette i:nth-child(2){background:#a44e2d}.event-exterior__palette i:nth-child(3){background:#bfc5ca}
+.event-hero .event-exterior figcaption{margin-top:24px}
+@media(max-width:480px){.event-exterior__image{padding:18px;box-shadow:7px 10px 0 -1px #eef1f3}.event-exterior__image::after{inset:8px}.event-exterior__heading{font-size:8px;letter-spacing:.1em}.event-hero .event-exterior img{margin:24px 0 16px}.event-exterior__palette{gap:5px}.event-exterior__palette i{width:16px;height:16px;border-width:2px}.event-exterior__footer{gap:10px}.event-exterior__title>span{font-size:8px}}

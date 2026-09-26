@@ -1,0 +1,39 @@
+.shikkui-page { --shikkui-ink:#493b31; --shikkui-muted:#71665f; --shikkui-gold:#967042; --shikkui-line:#d8cbb9; background:#fff; color:var(--shikkui-ink); }
+.shikkui-page main { overflow:hidden; }
+.shikkui-hero { width:min(1320px,calc(100% - var(--frame)*2)); margin:0 auto; padding:clamp(52px,7vw,96px) var(--sx) clamp(82px,10vw,132px); display:grid; grid-template-columns:minmax(390px,.88fr) minmax(0,1.12fr); gap:clamp(38px,5vw,76px); align-items:center; }
+.shikkui-hero__copy>p:first-child,.shikkui-origin__heading>p,.shikkui-breathe>div>p:first-child,.shikkui-benefits__title>p,.shikkui-belief__copy>p:first-child { margin:0 0 20px; color:var(--shikkui-gold); font:500 11px/1.6 var(--latin); letter-spacing:.18em; }
+.shikkui-hero h1 { margin:0; font:500 clamp(42px,4.4vw,60px)/1.5 var(--serif); letter-spacing:.03em; }
+.shikkui-hero h1 span { display:block; white-space:nowrap; }
+.shikkui-hero__copy>p:last-child { margin:30px 0 0; color:var(--shikkui-muted); font:400 15px/2.1 var(--serif); }
+.shikkui-hero figure,.shikkui-origin figure,.shikkui-belief figure { margin:0; }
+.shikkui-hero figure { padding:clamp(20px,3vw,38px); background:url('../images/footer-bg-white.jpg') center/cover; }
+.shikkui-hero img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; }
+.shikkui-hero figcaption,.shikkui-origin figcaption,.shikkui-belief figcaption { margin-top:14px; color:var(--shikkui-muted); font:400 12px/1.8 var(--serif); }
+.shikkui-origin { width:min(1100px,calc(100% - var(--frame)*2)); margin:0 auto; padding:clamp(76px,10vw,140px) var(--sx); border-top:1px solid var(--shikkui-line); display:grid; grid-template-columns:minmax(260px,.8fr) minmax(300px,1.2fr); gap:clamp(34px,6vw,84px); }
+.shikkui-origin h2,.shikkui-breathe h2,.shikkui-benefits h2,.shikkui-belief h2 { margin:0; font:500 clamp(29px,3.7vw,48px)/1.58 var(--serif); }
+.shikkui-origin__content p { margin:0 0 20px; color:var(--shikkui-muted); font:400 15px/2.1 var(--serif); }
+.shikkui-origin figure { grid-column:1/-1; margin-top:18px; }
+.shikkui-origin figure img { display:block; width:100%; max-height:620px; object-fit:cover; }
+.shikkui-origin figcaption { display:flex; gap:18px; }
+.shikkui-origin figcaption span { color:var(--shikkui-gold); font-family:var(--latin); }
+.shikkui-breathe { width:min(1180px,calc(100% - var(--frame)*2)); margin:0 auto; padding:clamp(84px,11vw,150px) var(--sx); display:grid; grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr); gap:clamp(42px,7vw,104px); align-items:center; border-top:1px solid var(--shikkui-line); }
+.shikkui-breathe figure { margin:0; }
+.shikkui-breathe img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; }
+.shikkui-breathe>div>p:not(:first-child) { margin:24px 0 0; color:var(--shikkui-muted); font:400 15px/2.1 var(--serif); }
+.shikkui-benefits { width:min(1180px,calc(100% - var(--frame)*2)); margin:0 auto; padding:clamp(82px,10vw,140px) var(--sx); border-top:1px solid var(--shikkui-line); }
+.shikkui-benefits__title { display:flex; justify-content:space-between; gap:40px; align-items:end; margin-bottom:50px; }
+.shikkui-benefits__visual { display:grid; grid-template-columns:1.15fr .85fr; gap:14px; margin-bottom:54px; }
+.shikkui-benefits__visual img { display:block; width:100%; height:380px; object-fit:cover; }
+.shikkui-benefits dl { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); margin:0; border-top:1px solid var(--shikkui-line); }
+.shikkui-benefits dl>div { display:grid; grid-template-columns:155px 1fr; gap:20px; padding:28px 24px 28px 0; border-bottom:1px solid var(--shikkui-line); }
+.shikkui-benefits dl>div:nth-child(even) { padding-left:30px; border-left:1px solid var(--shikkui-line); }
+.shikkui-benefits dt { font:500 17px/1.7 var(--serif); }
+.shikkui-benefits dt span { display:block; margin-bottom:4px; color:var(--shikkui-gold); font:500 10px/1.3 var(--latin); }
+.shikkui-benefits dd { margin:0; color:var(--shikkui-muted); font:400 14px/1.9 var(--serif); }
+.shikkui-belief { width:min(1180px,calc(100% - var(--frame)*2)); margin:0 auto clamp(48px,7vw,90px); padding:clamp(82px,10vw,140px) var(--sx); display:grid; grid-template-columns:minmax(310px,.92fr) minmax(0,1.08fr); gap:clamp(44px,8vw,116px); align-items:center; border-top:1px solid var(--shikkui-line); }
+.shikkui-belief__copy>p:not(:first-child) { margin:24px 0 0; color:var(--shikkui-muted); font:400 15px/2.1 var(--serif); }
+.shikkui-belief__copy a { display:flex; justify-content:space-between; max-width:360px; margin-top:34px; padding:14px 0; color:var(--shikkui-ink); border-bottom:1px solid var(--shikkui-gold); font:500 14px/1.6 var(--serif); text-decoration:none; }
+.shikkui-belief__copy a span { color:var(--shikkui-gold); }
+.shikkui-belief img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; }
+@media(max-width:820px){.shikkui-hero,.shikkui-breathe,.shikkui-belief{grid-template-columns:1fr}.shikkui-hero__copy{max-width:620px}.shikkui-origin{grid-template-columns:1fr}.shikkui-benefits dl{grid-template-columns:1fr}.shikkui-benefits dl>div:nth-child(even){padding-left:0;border-left:0}.shikkui-breathe img,.shikkui-belief img{aspect-ratio:4/3}.shikkui-breathe figure{order:2}}
+@media(max-width:600px){.shikkui-hero{padding-top:38px}.shikkui-hero h1{font-size:clamp(32px,10vw,43px)}.shikkui-hero figure{padding:12px}.shikkui-benefits__title{display:block}.shikkui-benefits__visual{grid-template-columns:1fr}.shikkui-benefits__visual img{height:auto;aspect-ratio:4/3}.shikkui-benefits__visual img:last-child{display:none}.shikkui-benefits dl>div{grid-template-columns:120px 1fr;padding-right:0}.shikkui-belief h2 br{display:none}}

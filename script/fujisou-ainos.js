@@ -1,50 +1,5 @@
 /* ===== PAGE INITIALIZATION, NAVIGATION, REVEALS AND NEWS ===== */
 document.documentElement.classList.add('js');
-const heroSlider = document.querySelector('[data-hero-slider]');
-
-if (heroSlider) {
-  const heroSlides = [...heroSlider.querySelectorAll('.hero__slide')];
-  const heroDots = [...heroSlider.querySelectorAll('[data-hero-dot]')];
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let activeSlide = 0;
-  let heroTimer;
-
-  const showHeroSlide = (index) => {
-    activeSlide = (index + heroSlides.length) % heroSlides.length;
-    heroSlides.forEach((slide, slideIndex) => {
-      const isActive = slideIndex === activeSlide;
-      slide.classList.toggle('is-active', isActive);
-      slide.setAttribute('aria-hidden', String(!isActive));
-    });
-    heroDots.forEach((dot, dotIndex) => {
-      const isActive = dotIndex === activeSlide;
-      dot.classList.toggle('is-active', isActive);
-      if (isActive) dot.setAttribute('aria-current', 'true');
-      else dot.removeAttribute('aria-current');
-    });
-  };
-
-  const startHeroSlider = () => {
-    clearInterval(heroTimer);
-    if (!reduceMotion.matches) {
-      heroTimer = setInterval(() => showHeroSlide(activeSlide + 1), 3700);
-    }
-  };
-
-  heroDots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      showHeroSlide(Number(dot.dataset.heroDot));
-      startHeroSlider();
-    });
-  });
-  document.addEventListener('visibilitychange', () => document.hidden ? clearInterval(heroTimer) : startHeroSlider());
-  if ('addEventListener' in reduceMotion) {
-    reduceMotion.addEventListener('change', startHeroSlider);
-  } else {
-    reduceMotion.addListener(startHeroSlider);
-  }
-  startHeroSlider();
-}
 
 const items = document.querySelectorAll('.reveal');
 
@@ -102,21 +57,7 @@ newsTabs.forEach((tab) => {
   });
 });
 
-/* ===== CONTACT AND CONSULTATION FORMS ===== */
-function enhanceForms(scope = document) {
-  scope.querySelectorAll('form[data-enhanced-form]').forEach((form) => {
-    form.addEventListener('submit', () => {
-      form.querySelectorAll('button[type="submit"]').forEach((button) => {
-        button.disabled = true;
-        button.setAttribute('aria-busy', 'true');
-      });
-    });
-  });
-}
-
-
-/* ===== HOMEPAGE INTERACTIONS (MOVED FROM INDEX.HTML) ===== */
-document.documentElement.classList.add('js')
+/* ===== HOMEPAGE INTERACTIONS ===== */
 
 const hybridSlider=document.querySelector('[data-hybrid-slider]');
     if(hybridSlider){
@@ -166,3 +107,61 @@ const hybridSlider=document.querySelector('[data-hybrid-slider]');
       document.querySelector('#step-copy').textContent=item[2];
       document.querySelector('#step-note').textContent=item[3];
     }));
+
+// Responsive landing header; native details also work without JavaScript.
+{
+  const header = document.querySelector('.site-header');
+  const toggle = header?.querySelector('.header-toggle');
+  const navigation = header?.querySelector('.header-nav');
+  if (toggle && navigation) {
+    const groups = [...navigation.querySelectorAll('.header-group')];
+    const mobile = window.matchMedia('(max-width: 960px)');
+    const hoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    let dropdownCloseTimer;
+    const closeGroups = () => groups.forEach(group => { group.open = false; });
+    const closeMenu = (restoreFocus = false) => {
+      clearTimeout(dropdownCloseTimer);
+      navigation.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      closeGroups();
+      if (restoreFocus) toggle.focus();
+    };
+    toggle.addEventListener('click', () => {
+      const opening = toggle.getAttribute('aria-expanded') !== 'true';
+      navigation.classList.toggle('is-open', opening);
+      toggle.setAttribute('aria-expanded', String(opening));
+      if (!opening) closeGroups();
+    });
+    groups.forEach(group => {
+      group.addEventListener('mouseenter', () => {
+        if (mobile.matches || !hoverPointer.matches) return;
+        clearTimeout(dropdownCloseTimer);
+        groups.forEach(other => { other.open = other === group; });
+      });
+      group.addEventListener('mouseleave', () => {
+        if (mobile.matches || !hoverPointer.matches) return;
+        dropdownCloseTimer = setTimeout(() => {
+          if (!group.contains(document.activeElement)) group.open = false;
+        }, 180);
+      });
+      group.addEventListener('toggle', () => {
+        if (group.open) groups.forEach(other => { if (other !== group) other.open = false; });
+      });
+    });
+    document.addEventListener('click', event => {
+      if (!header.contains(event.target)) closeMenu();
+    });
+    header.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      const openGroup = groups.find(group => group.open);
+      if (openGroup) {
+        openGroup.open = false;
+        openGroup.querySelector('summary').focus();
+      } else if (navigation.classList.contains('is-open')) closeMenu(true);
+    });
+    navigation.addEventListener('click', event => {
+      if (event.target.closest('a') && mobile.matches) closeMenu();
+    });
+    mobile.addEventListener('change', () => closeMenu());
+  }
+}

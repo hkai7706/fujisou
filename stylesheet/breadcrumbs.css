@@ -1,0 +1,11 @@
+/* Shared breadcrumbs, displayed below the future SSI navigation slot. */
+.site-breadcrumbs { padding: 22px var(--sx, clamp(20px, 5vw, 72px)); color: #71665f; font: 400 12px/1.9 var(--serif); }
+.site-breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 0; padding: 0; list-style: none; }
+.site-breadcrumbs li { display: inline-flex; align-items: baseline; gap: 12px; min-width: 0; max-width: 100%; }
+.site-breadcrumbs a { display: inline-block; padding-block: 5px; color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.site-breadcrumbs a:hover { color: #73512e; }
+.site-breadcrumbs a:focus-visible { outline: 2px solid #a27b43; outline-offset: 3px; }
+.site-breadcrumbs [aria-current="page"] { padding-block: 5px; overflow-wrap: anywhere; }
+.site-breadcrumbs [aria-hidden="true"] { color: #9b784d; }
+@media (max-width: 600px) { .site-breadcrumbs { padding-block: 16px; font-size: 12px; } }
+@media print { .site-breadcrumbs { display: none; } }

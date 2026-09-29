@@ -42,8 +42,23 @@
 .shared-header { position: sticky; z-index: 100; top: 0; border-top: 3px solid #806039; border-bottom: 1px solid var(--chrome-line); box-shadow: 0 3px 16px #493b3108; }
 .shared-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: min(1560px, 100%); min-height: 100px; margin-inline: auto; padding: 20px clamp(20px, 3vw, 48px); }
 .shared-header__brand { flex-shrink: 0; width: clamp(205px, 17vw, 250px); }
-.shared-header__nav { display: flex; align-items: center; gap: clamp(16px, 1.8vw, 28px); min-width: 0; }
-.shared-header__nav > a, .shared-header summary { white-space: nowrap; font-size: 15px; font-weight: 500; }
+.shared-header__identity { display: flex; flex: 0 1 auto; align-items: center; gap: clamp(12px, 1.25vw, 20px); min-width: 0; }
+.shared-header__identity .shared-header__brand { flex: 0 1 250px; }
+.shared-header__signature { position: relative; flex: 0 0 auto; padding: 3px 0 3px clamp(12px, 1.1vw, 18px); border-left: 1px solid #b89a72; color: var(--chrome-ink); line-height: 1.35; white-space: nowrap; }
+.shared-header__signature::before { position: absolute; top: 3px; left: -3px; width: 5px; height: 5px; border-radius: 50%; content: ''; background: var(--chrome-gold); }
+.shared-header__signature strong { display: block; font-size: clamp(15px, 1.25vw, 19px); font-weight: 500; letter-spacing: .16em; }
+.shared-header__signature small { display: block; margin-top: 4px; color: var(--chrome-muted); font-size: 11px; letter-spacing: .08em; }
+.shared-header__stack { display: grid; align-self: stretch; align-content: center; }
+.shared-header__stack .shared-header__link { min-height: 34px; padding-block: 3px; font-size: 17px; font-weight: 500; line-height: 1.45; letter-spacing: .03em; }
+.shared-header__stack .shared-header__link + .shared-header__link { border-top: 1px solid var(--chrome-line); }
+.shared-header__utility { display: flex; align-items: center; gap: 14px; padding-left: 2px; white-space: nowrap; }
+.shared-header__utility .shared-header__link { position: relative; font-size: 17px; font-weight: 600; letter-spacing: .05em; }
+.shared-header__line { display: inline-flex; align-items: center; gap: 7px; min-height: 38px; padding: 5px 1px; border-bottom: 1px solid #6f9d75; color: #376b3e; font-size: 14px; font-weight: 500; line-height: 1; letter-spacing: .06em; transition: border-color .2s, color .2s; }
+.shared-header__line span[aria-hidden] { font-size: 12px; transition: transform .2s; }
+.shared-header__line:hover { border-color: #285d31; color: #285d31 !important; }
+.shared-header__line:hover span[aria-hidden] { transform: translate(2px, -2px); }
+.shared-header__nav { display: flex; align-items: center; gap: clamp(22px, 2.2vw, 34px); min-width: 0; }
+.shared-header__nav > a, .shared-header summary { white-space: nowrap; font-size: 17px; font-weight: 500; letter-spacing: .03em; }
 .shared-header details { position: relative; margin: 0; padding: 0; border: 0; }
 .shared-header summary { position: relative; display: flex; align-items: center; gap: 9px; min-height: 44px; margin: 0; padding: 10px 0; list-style: none; cursor: pointer; }
 .shared-header summary::-webkit-details-marker { display: none; }
@@ -57,18 +72,18 @@
 .shared-header__dropdown li { margin: 0; padding: 0; list-style: none; }
 .shared-header__dropdown a { display: block; min-height: 44px; padding: 10px 14px; font-size: 14px; line-height: 1.7; }
 .shared-header__dropdown a:hover, .shared-header__dropdown a[aria-current="page"] { background: #f8f8f7; }
-.shared-header .shared-header__owner { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 46px; padding: 10px 16px; color: #fff; background: #73512e; }
-.shared-header .shared-header__owner:hover { color: #fff; background: #8a643a; }
-.shared-header__owner span { font-size: 14px; }
 .shared-header__toggle, .shared-header__toggle[hidden] { display: none; }
 .shared-header__skip { position: absolute; z-index: 2; top: 6px; left: 12px; padding: 8px 14px; background: #fff; transform: translateY(-160%); }
 .shared-header__skip:focus { transform: none; }
-
 
 @media (max-width: 1120px) {
   .shared-header:not([data-enhanced]) { position: relative; }
   .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 20px; min-height: 86px; padding: 18px 24px; }
   .shared-header__brand { width: 210px; }
+  .shared-header__identity { flex: 1 1 auto; gap: 14px; min-width: 0; }
+  .shared-header__identity .shared-header__brand { flex: 0 1 210px; width: auto; }
+  .shared-header__signature strong { font-size: 15px; }
+  .shared-header__signature small { font-size: 10px; }
   .shared-header__nav { flex: 0 0 100%; display: grid; gap: 0; padding-top: 16px; }
   .shared-header[data-enhanced] .shared-header__toggle { display: flex; width: 44px; min-height: 44px; align-items: center; justify-content: center; margin-left: auto; padding: 0; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
   .shared-header__toggle-lines { position: relative; display: block; width: 22px; height: 14px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
@@ -82,13 +97,17 @@
   .shared-header__dropdown { position: static; width: auto; min-width: 0; margin: 0; padding: 6px 0 10px 16px; border: 0; border-left: 1px solid var(--chrome-line); box-shadow: none; transform: none; }
   .shared-header__dropdown::before { display: none; }
   .shared-header__dropdown a { padding: 11px 12px; font-size: 15px; }
-  .shared-header .shared-header__owner { margin-top: 18px; font-size: 15px; }
+
 }
 @media (max-width: 820px) {
 }
 @media (max-width: 540px) {
   .shared-header__inner { padding-inline: 18px; gap: 12px; }
-  .shared-header__brand { width: clamp(165px, 48vw, 210px); }
+  .shared-header__identity { gap: 9px; }
+  .shared-header__identity .shared-header__brand { flex-basis: clamp(125px, 39vw, 180px); width: auto; }
+  .shared-header__signature { padding-left: 9px; }
+  .shared-header__signature strong { font-size: clamp(12px, 3.8vw, 15px); letter-spacing: .1em; }
+  .shared-header__signature small { display: block; margin-top: 2px; font-size: 8px; letter-spacing: .03em; }
   .shared-header[data-enhanced] .shared-header__toggle { padding: 0; }
   .shared-header[data-enhanced] .shared-header__nav { padding-inline: 20px; }
 }
@@ -100,9 +119,12 @@
 <header class="shared-header" data-shared-header>
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
+    <div class="shared-header__identity">
     <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
       <img src="../images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" decoding="async">
     </a>
+    <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
+    </div>
     <button class="shared-header__toggle" type="button" aria-expanded="false" aria-controls="shared-site-navigation" aria-label="メニューを開く" hidden>
       <span class="shared-header__toggle-lines" aria-hidden="true"></span>
     </button>
@@ -119,7 +141,7 @@
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
           <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="./index.html">イベント情報</a></li>
+
           <li><a href="../land-info/index.html">土地情報</a></li>
         </ul>
       </details>
@@ -131,9 +153,15 @@
           <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
         </ul>
       </details>
-      <a class="shared-header__link" href="../staffblog/index.html">社長のブログ</a>
-      <a class="shared-header__link" href="../shikkui/index.html">漆喰とは</a>
-      <a class="shared-header__owner" href="https://fujisou-ainos.ambassador-cloud.biz/login/" target="_blank" rel="noopener noreferrer">オーナーズクラブ<span aria-hidden="true">↗</span></a>
+      <div class="shared-header__stack">
+        <a class="shared-header__link" href="./index.html" aria-current="page">イベント情報</a>
+        <a class="shared-header__link" href="../staffblog/index.html">社長のブログ</a>
+      </div>
+      <div class="shared-header__utility">
+        <a class="shared-header__link" href="../shikkui/index.html">漆喰とは</a>
+        <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
+      </div>
+
     </nav>
   </div>
 </header>
@@ -480,7 +508,7 @@
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a><a href="https://fujisou-ainos.ambassador-cloud.biz/login/" target="_blank" rel="noopener noreferrer">オーナーズクラブ<span aria-hidden="true">↗</span></a></div>
+      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>

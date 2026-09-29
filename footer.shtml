@@ -114,7 +114,7 @@
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="/policy/">プライバシーポリシー</a><a href="https://fujisou-ainos.ambassador-cloud.biz/login/" target="_blank" rel="noopener noreferrer">オーナーズクラブ<span aria-hidden="true">↗</span></a></div>
+      <div class="shared-footer__legal"><a href="/policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>

@@ -353,7 +353,7 @@
 .shared-footer__area { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 7px 14px; max-width: 600px; margin: 12px 0 0; padding: 12px 14px; border-left: 2px solid var(--chrome-gold); background: rgb(255 255 255 / 55%); }
 .shared-footer__area strong { color: var(--chrome-gold); font-size: 14px; font-weight: 600; white-space: nowrap; }
 .shared-footer__area span { color: var(--chrome-ink); font-size: 14px; line-height: 1.9; }
-.shared-footer__nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.shared-footer__nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
 .shared-footer__nav h2 { margin: 0 0 14px; color: var(--chrome-gold); font: 500 16px/1.7 var(--chrome-font); letter-spacing: .06em; }
 .shared-footer__nav ul { margin: 0; padding: 0; list-style: none; }
 .shared-footer__nav li { margin: 0; padding: 0; list-style: none; }
@@ -413,11 +413,10 @@
         <div><h2>会社紹介</h2><ul>
           <li><a href="../concept/index.html">私たちの家造り</a></li>
           <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../staffblog/index.html">社長のブログ</a></li>
+          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
           <li><a href="index.html">施工事例</a></li>
-          <li><a href="../eventinfo/index.html">イベント情報</a></li>
           <li><a href="../land-info/index.html">土地情報</a></li>
           <li><a href="../shikkui/index.html">漆喰とは</a></li>
         </ul></div>
@@ -425,7 +424,10 @@
           <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
           <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
           <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
-          <li><a href="../consultation/index.html">不動産相談</a></li>
+        </ul></div>
+        <div class="shared-footer__updates"><h2>最新情報</h2><ul>
+          <li><a href="../eventinfo/index.html">イベント情報</a></li>
+          <li><a href="../staffblog/index.html">社長のブログ</a></li>
         </ul></div>
       </nav>
     </div>

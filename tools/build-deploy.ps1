@@ -41,7 +41,7 @@ foreach ($file in $publicFiles) {
     } else {
       Join-Path $file.DirectoryName $reference
     }
-    $resolved = [IO.Path]::GetFullPath($candidate)
+    try { $resolved = [IO.Path]::GetFullPath($candidate) } catch { continue }
     if ([IO.File]::Exists($resolved)) { [void]$assetReferences.Add($resolved) }
   }
   foreach ($srcsetMatch in [regex]::Matches($content, 'srcset=["'']([^"'']+)["'']', 'IgnoreCase')) {
@@ -49,7 +49,7 @@ foreach ($file in $publicFiles) {
       $reference = $candidateEntry.Trim().Split(' ')[0]
       if (-not $reference) { continue }
       $candidate = if ($reference.StartsWith('/')) { Join-Path $projectRoot $reference.TrimStart('/') } else { Join-Path $file.DirectoryName $reference }
-      $resolved = [IO.Path]::GetFullPath($candidate)
+      try { $resolved = [IO.Path]::GetFullPath($candidate) } catch { continue }
       if ([IO.File]::Exists($resolved)) { [void]$assetReferences.Add($resolved) }
     }
   }

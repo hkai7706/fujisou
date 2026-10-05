@@ -316,10 +316,6 @@
   toggle.hidden = false;
   header.setAttribute('data-enhanced', '');
   document.documentElement.classList.add('has-shared-header');
-  const updateHeight = () => document.documentElement.style.setProperty('--shared-header-height', Math.ceil(header.getBoundingClientRect().height) + 'px');
-  updateHeight();
-  if ('ResizeObserver' in window) new ResizeObserver(updateHeight).observe(header);
-  else window.addEventListener('resize', updateHeight);
 })();
 </script>
 
@@ -340,7 +336,7 @@
     <section class="statement section" id="philosophy" aria-labelledby="statement-title">
       <div class="section-index reveal"><span>01</span><i></i>OUR PHILOSOPHY</div>
       <div class="statement__layout">
-        <div class="statement__photo reveal"><img src="images/natural-room-900.webp" srcset="images/natural-room-480.webp 480w, images/natural-room-900.webp 900w" sizes="(max-width: 760px) calc(100vw - 56px), 50vw" alt="天然無垢材に包まれた明るい室内" width="900" height="600" loading="lazy" decoding="async"><p><b>自然素材</b><span>素材が呼吸する、心地よい室内環境。</span></p></div>
+        <div class="statement__photo reveal"><img src="images/natural-room-900.webp" srcset="images/natural-room-480.webp 480w, images/natural-room-720.webp 720w, images/natural-room-900.webp 900w" sizes="(max-width: 760px) calc(100vw - 56px), 50vw" alt="天然無垢材に包まれた明るい室内" width="900" height="600" loading="lazy" decoding="async"><p><b>自然素材</b><span>素材が呼吸する、心地よい室内環境。</span></p></div>
         <div class="statement__grid">
           <div class="statement__title reveal"><p class="kicker dark">OUR PROMISE</p><h2 id="statement-title">自分が住みたくない家は、<br>建てたくない。</h2></div>
           <div class="statement__text reveal"><p class="lead">食べ物と同じように、住まいの素材も家族の健康に関わります。だから私たちは、毎日触れる床や壁に、無垢材や漆喰などの天然素材を使います。</p><p>ただ安い家ではなく、安心して長く暮らせる家を納得できる価格で。無駄な経費を抑え、一棟ずつ正直に家づくりをしています。</p><ul class="statement__points" aria-label="フジ創アイノスが大切にする3つのこと"><li><b>漆喰</b><span>SHIKKUI</span></li><li><b>無垢材</b><span>SOLID WOOD</span></li><li><b>自社大工</b><span>CRAFTSMANSHIP</span></li></ul><a class="statement__more" href="concept/index.html"><span>フジ創の家づくりを詳しく見る</span><b aria-hidden="true">→</b></a></div>
@@ -360,7 +356,7 @@
     </section>
 
     <section class="value-story" aria-labelledby="value-title">
-      <div class="value-story__image reveal"><img src="images/natural-room-900.webp" srcset="images/natural-room-480.webp 480w, images/natural-room-900.webp 900w" sizes="(max-width: 760px) calc(100vw - 56px), 50vw" alt="高岡市の無垢材と漆喰を使った注文住宅の室内" width="900" height="600" loading="lazy" decoding="async"></div>
+      <div class="value-story__image reveal"><img src="images/natural-room-900.webp" srcset="images/natural-room-480.webp 480w, images/natural-room-720.webp 720w, images/natural-room-900.webp 900w" sizes="(max-width: 760px) calc(100vw - 56px), 50vw" alt="高岡市の無垢材と漆喰を使った注文住宅の室内" width="900" height="600" loading="lazy" decoding="async"></div>
       <div class="value-story__copy reveal"><p class="kicker dark">HONEST VALUE</p><h2 id="value-title">自然素材の家は、<br>高いと思っていませんか？</h2><p>必要なところには、きちんとお金をかける。余計な経費は、できるだけ抑える。</p><p>私たちが目指すのは、安心して長く暮らせる家を、納得できる価格で届けることです。</p><a class="editorial-link" href="concept/index.html">価格への考え方を見る <span aria-hidden="true">→</span></a></div>
     </section>
 

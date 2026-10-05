@@ -9,6 +9,7 @@ const images = [
   ["images/slide1.jpg", "images/slide1-768.webp", 768, 82],
   ["images/slide1.jpg", "images/slide1-1440.webp", 1440, 84],
   ["images/natural-room.webp", "images/natural-room-480.webp", 480, 80],
+  ["images/natural-room.webp", "images/natural-room-720.webp", 720, 81],
   ["images/natural-room.webp", "images/natural-room-900.webp", 900, 82],
   ["images/footer-bg-white.jpg", "images/footer-bg-white.webp", 1600, 78],
 ];

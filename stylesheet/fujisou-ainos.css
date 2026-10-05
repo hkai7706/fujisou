@@ -1148,6 +1148,20 @@ body{background:#fff}
 .design-feature__visual figcaption{color:#70645c}
 .process.alt-flow .step-tab span{color:#756d66}
 .process.alt-flow .step-tab[aria-selected="true"] span{color:#66513b}
+/* Mobile reveal content remains readable when animations are skipped. */
+main .statement__points span,
+main .home-selector__head small{color:#70645c}
+main .strengths__grid>li>span,
+main .exterior-card__copy b,
+main .planning-support__grid article>span,
+main .first-guide__examples>p{color:#725535}
+main .exterior-card.exterior-card--featured .exterior-card__copy b{color:#725535}
+main .home__roman,
+main .news-preview__head .kicker,
+main .contact__head .kicker,
+main .contact-card small{color:#725535}
+main .contact-card--line{border-top-color:#087a3c}
+main .contact-card--line>div>a{background:#087a3c}
 .editorial-link{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;min-height:48px;padding:8px 1px;border-bottom:1px solid currentColor;color:inherit;font-size:12px;text-decoration:none}
 .editorial-link span,.editorial-link b{color:var(--gold-line);font-weight:400;transition:transform .2s}
 .editorial-link:hover span,.editorial-link:hover b{transform:translateX(5px)}

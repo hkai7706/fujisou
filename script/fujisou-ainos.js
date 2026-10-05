@@ -2,8 +2,11 @@
 document.documentElement.classList.add('js');
 
 const items = document.querySelectorAll('.reveal');
+const skipRevealTracking = window.matchMedia('(max-width: 819px), (prefers-reduced-motion: reduce)').matches;
 
-if ('IntersectionObserver' in window) {
+if (skipRevealTracking) {
+  items.forEach((item) => item.classList.add('is-visible'));
+} else if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
     const visibleItems = entries.filter((entry) => entry.isIntersecting);
     if (!visibleItems.length) return;

@@ -22,7 +22,7 @@ function Copy-PublicFile([string]$SourcePath) {
 
 $publicExtensions = '.html', '.shtml', '.css', '.js', '.xml', '.txt'
 $publicFiles = Get-ChildItem -LiteralPath $projectRoot -Recurse -File | Where-Object {
-  $_.FullName -notmatch '[\\/](?:\.git|node_modules|tools|docs|dist)[\\/]' -and $_.Extension -in $publicExtensions
+  $_.FullName -notmatch '[\\/](?:\.git|node_modules|tools|docs|dist|backup)[\\/]' -and $_.Extension -in $publicExtensions
 }
 
 foreach ($file in $publicFiles) { Copy-PublicFile $file.FullName }

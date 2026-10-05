@@ -21,3 +21,10 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Local full-project backup
+backup/
+
+# Local generated reports and temporary rendering files
+output/
+tmp/

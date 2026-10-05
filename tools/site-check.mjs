@@ -4,7 +4,7 @@ import path from 'node:path';
 const root = process.argv[2]
   ? path.resolve(process.cwd(), process.argv[2])
   : path.resolve(import.meta.dirname, '..');
-const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist']);
+const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist', 'backup', 'tmp', 'output']);
 const failures = [];
 let checkedPages = 0;
 

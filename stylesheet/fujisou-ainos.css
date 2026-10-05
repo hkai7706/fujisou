@@ -1213,3 +1213,23 @@ body{background:#fff}
 .statement__more:hover{padding-left:8px;color:var(--green)}
 .statement__more:hover b{transform:translateX(5px)}
 @media(max-width:560px){.statement__more{width:100%;margin-top:24px}}
+
+/* Consistent homepage typography and more readable section copy */
+body,
+body :where(main, section, article, div, nav, a, button, input, textarea, select, h1, h2, h3, h4, p, span, small, strong, b, em, time, address, dt, dd, li, summary) {
+  font-family: var(--serif) !important;
+}
+
+main section :where(p:not(.kicker):not(.eyebrow), li, dd) {
+  font-size: clamp(14px, 1.05vw, 16px) !important;
+}
+
+main section :where(small, time) {
+  font-size: max(11px, .72em) !important;
+}
+
+@media (max-width: 560px) {
+  main section :where(p:not(.kicker):not(.eyebrow), li, dd) {
+    font-size: 14px !important;
+  }
+}

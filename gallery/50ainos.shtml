@@ -358,6 +358,9 @@
 .shared-footer__nav ul { margin: 0; padding: 0; list-style: none; }
 .shared-footer__nav li { margin: 0; padding: 0; list-style: none; }
 .shared-footer__nav a { display: block; padding: 10px 0; font-size: 15px; line-height: 1.8; }
+.shared-footer__standalone { display: grid; align-content: start; }
+.shared-footer__standalone a { font-size: 16px; font-weight: 500; }
+.shared-footer__standalone a + a { border-top: 1px solid var(--chrome-line); }
 .shared-footer__bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 28px; padding-top: 18px; border-top: 1px solid var(--chrome-line); }
 .shared-footer__legal, .shared-footer__social { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 22px; }
 .shared-footer__legal a, .shared-footer__social a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 14px; }
@@ -380,9 +383,9 @@
   .shared-footer__inquiry { width: 100%; }
   .shared-footer__offices { grid-template-columns: minmax(0, 1fr); }
   .shared-footer__nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; }
-  .shared-footer__nav a { min-height: 44px; font-size: 13px; }
+  .shared-footer__nav a { min-height: 44px; font-size: 15px; }
   .shared-footer__nav > div:last-child { grid-column: 1 / -1; }
-  .shared-footer__nav > div:last-child ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
+  .shared-footer__standalone { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
   .shared-footer__bottom { align-items: flex-start; flex-direction: column; }
 }
 @media print {
@@ -425,10 +428,10 @@
           <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
           <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
         </ul></div>
-        <div class="shared-footer__updates"><h2>最新情報</h2><ul>
-          <li><a href="../eventinfo/index.html">イベント情報</a></li>
-          <li><a href="../staffblog/index.html">社長のブログ</a></li>
-        </ul></div>
+        <div class="shared-footer__standalone">
+          <a href="../eventinfo/index.html">イベント情報</a>
+          <a href="../staffblog/index.html">社長のブログ</a>
+        </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">

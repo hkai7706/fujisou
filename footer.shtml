@@ -27,7 +27,8 @@
 .shared-footer__inner { width: min(1380px, 100%); margin-inline: auto; padding: 56px clamp(20px, 4vw, 56px) 24px; }
 .shared-footer__top { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid var(--chrome-line); }
 .shared-footer__brand img { width: 230px; }
-.shared-footer__brand p { margin: 15px 0 0; color: var(--chrome-muted); font: 400 15px/1.85 var(--chrome-font); }
+.shared-footer__brand { flex: 1 1 560px; min-width: 0; }
+.shared-footer__company { margin: 15px 0 0; color: var(--chrome-muted); font: 400 15px/1.85 var(--chrome-font); }
 .shared-footer__contact { display: flex; align-items: center; gap: 36px; }
 .shared-footer__phone { display: inline-block; min-height: 44px; font-size: 29px; line-height: 1.5; white-space: nowrap; }
 .shared-footer__contact p { margin: 0; color: var(--chrome-muted); font: 400 14px/1.8 var(--chrome-font); }
@@ -38,9 +39,9 @@
 .shared-footer__offices p { margin: 0 0 4px; font: 500 13px/1.8 var(--chrome-font); }
 .shared-footer address { margin: 0; color: var(--chrome-muted); font: 400 14px/1.9 var(--chrome-font); }
 .shared-footer__offices > a { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; }
-.shared-footer__area { max-width: 560px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--chrome-line); }
-.shared-footer__area p { margin: 0 0 5px; color: var(--chrome-gold); font-weight: 500; }
-.shared-footer__area span { display: block; color: var(--chrome-muted); font-size: 14px; line-height: 1.9; }
+.shared-footer__area { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 7px 14px; max-width: 600px; margin: 12px 0 0; padding: 12px 14px; border-left: 2px solid var(--chrome-gold); background: rgb(255 255 255 / 55%); }
+.shared-footer__area strong { color: var(--chrome-gold); font-size: 14px; font-weight: 600; white-space: nowrap; }
+.shared-footer__area span { color: var(--chrome-ink); font-size: 14px; line-height: 1.9; }
 .shared-footer__nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .shared-footer__nav h2 { margin: 0 0 14px; color: var(--chrome-gold); font: 500 16px/1.7 var(--chrome-font); letter-spacing: .06em; }
 .shared-footer__nav ul { margin: 0; padding: 0; list-style: none; }
@@ -83,8 +84,8 @@
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
         <a href="/" aria-label="フジ創アイノス ホーム"><img src="/images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" loading="lazy" decoding="async"></a>
-        <p>有限会社フジ創 / 一級建築士事務所</p>
-        <div class="shared-footer__area"><p>対応エリア</p><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></div>
+        <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
+        <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>

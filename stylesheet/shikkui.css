@@ -6,7 +6,7 @@
 .shikkui-hero h1 span { display:block; white-space:nowrap; }
 .shikkui-hero__copy>p:last-child { margin:30px 0 0; color:var(--shikkui-muted); font:400 15px/2.1 var(--serif); }
 .shikkui-hero figure,.shikkui-origin figure,.shikkui-belief figure { margin:0; }
-.shikkui-hero figure { padding:clamp(20px,3vw,38px); background:url('/img/common/footer-bg-white.jpg') center/cover; }
+.shikkui-hero figure { padding:clamp(20px,3vw,38px); background:url('../img/common/footer-bg-white.jpg') center/cover; }
 .shikkui-hero img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; }
 .shikkui-hero figcaption,.shikkui-origin figcaption,.shikkui-belief figcaption { margin-top:14px; color:var(--shikkui-muted); font:400 12px/1.8 var(--serif); }
 .shikkui-origin { width:min(1100px,calc(100% - var(--frame)*2)); margin:0 auto; padding:clamp(76px,10vw,140px) var(--sx); border-top:1px solid var(--shikkui-line); display:grid; grid-template-columns:minmax(260px,.8fr) minmax(300px,1.2fr); gap:clamp(34px,6vw,84px); }

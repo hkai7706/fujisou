@@ -129,7 +129,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -141,31 +141,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
-          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
-          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
+          <li><a href="../concept/index.html">私たちの家造り</a></li>
+          <li><a href="../staff/index.html">スタッフ紹介</a></li>
+          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
+          <li><a href="index.html">施工事例</a></li>
 
-          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
-          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
+          <li><a href="../land-info/index.html">土地情報</a></li>
+          <li><a href="../shikkui/index.html">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
-          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
-          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
+          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
+          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
-        <a class="shared-header__link" href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
+        <a class="shared-header__link" href="../staffblog/index.html">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -279,23 +279,23 @@
       <div class="project-heading__meta"><p>RESIDENCE 03</p><span>魚津市／二階建て・3LDK</span></div>
       <div class="project-heading__title"><h1>雪に強い<br>インナーガレージ付き住宅</h1><p>車から住まいへ、天候を気にせず移動できる家</p></div>
     </header>
-    <figure class="project-cover"><img src="/img/gallery/garage-01-exterior-enhanced-web.jpg" alt="右側にインナーガレージを備えた魚津市の二階建て住宅" width="1536" height="1024" fetchpriority="high" decoding="async"><figcaption><span>01</span>右側面にインナーガレージを備えた家。</figcaption></figure>
+    <figure class="project-cover"><img src="../img/gallery/garage-01-exterior-enhanced-web.jpg" alt="右側にインナーガレージを備えた魚津市の二階建て住宅" width="1536" height="1024" fetchpriority="high" decoding="async"><figcaption><span>01</span>右側面にインナーガレージを備えた家。</figcaption></figure>
     <section class="project-intro project-intro--garage" aria-label="この住まいについて">
       <p class="project-intro__label">ABOUT THIS HOME</p>
       <div><h2>雪の日の移動を楽にする、<br>住まいとつながるガレージ。</h2><p>インナーガレージから玄関へ移動しやすい動線を設け、雪や雨の日の負担を抑えました。室内は木の表情を生かし、家族が過ごすLDKから水まわりまで、使いやすく落ち着いた空間にまとめています。</p></div>
     </section>
     <section class="project-tour" aria-label="インナーガレージ付き住宅 写真一覧">
-      <figure class="project-shot project-shot--landscape project-shot--wide"><img src="/img/gallery/garage-02-garage.jpg" alt="住まいと直接つながるインナーガレージ" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>02</span>住まいと直接つながるインナーガレージ。</figcaption></figure>
-      <figure class="project-shot project-shot--landscape"><img src="/img/gallery/garage-03-entry.jpg" alt="明るく整えた玄関" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>03</span>家族と来客を迎える玄関。</figcaption></figure>
-      <figure class="project-shot project-shot--portrait"><img src="/img/gallery/garage-04-shoes-closet.jpg" alt="玄関横に設けたシューズクローゼット" width="401" height="603" loading="lazy" decoding="async"><figcaption><span>04</span>玄関を整えるシューズクローゼット。</figcaption></figure>
-      <figure class="project-shot project-shot--landscape project-shot--wide"><img src="/img/gallery/garage-05-living.jpg" alt="木の床と明るい窓を備えたリビング" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>05</span>木の温もりを感じるリビング。</figcaption></figure>
-      <figure class="project-shot project-shot--landscape"><img src="/img/gallery/garage-06-kitchen.jpg" alt="家族の様子が見える対面キッチン" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>06</span>リビングとつながる対面キッチン。</figcaption></figure>
-      <figure class="project-shot project-shot--landscape"><img src="/img/gallery/garage-07-wood-kitchen.jpg" alt="木の表情を取り入れたキッチン" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>07</span>木の温もりを感じるキッチン。</figcaption></figure>
-      <figure class="project-shot project-shot--landscape project-shot--wide"><img src="/img/gallery/garage-08-washroom.jpg" alt="収納と使いやすさを考えた洗面所" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>08</span>すっきりと使える洗面所。</figcaption></figure>
-      <figure class="project-shot project-shot--portrait"><img src="/img/gallery/garage-09-bathroom.jpg" alt="落ち着いた色合いのバスルーム" width="401" height="603" loading="lazy" decoding="async"><figcaption><span>09</span>落ち着いて使えるバスルーム。</figcaption></figure>
-      <figure class="project-shot project-shot--portrait"><img src="/img/gallery/garage-10-toilet.jpg" alt="漆喰に囲まれた清潔感のあるトイレ" width="401" height="603" loading="lazy" decoding="async"><figcaption><span>10</span>周囲を漆喰で仕上げたトイレ。</figcaption></figure>
-      <figure class="project-shot project-shot--portrait"><img src="/img/gallery/garage-11-stairs.jpg" alt="木を使った室内階段" width="401" height="603" loading="lazy" decoding="async"><figcaption><span>11</span>上下階をつなぐ木の階段。</figcaption></figure>
-      <figure class="project-shot project-shot--landscape"><img src="/img/gallery/garage-12-bedroom.jpg" alt="自然光が入る二階の洋室" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>12</span>自然光が入る二階の洋室。</figcaption></figure>
+      <figure class="project-shot project-shot--landscape project-shot--wide"><img src="../img/gallery/garage-02-garage.jpg" alt="住まいと直接つながるインナーガレージ" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>02</span>住まいと直接つながるインナーガレージ。</figcaption></figure>
+      <figure class="project-shot project-shot--landscape"><img src="../img/gallery/garage-03-entry.jpg" alt="明るく整えた玄関" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>03</span>家族と来客を迎える玄関。</figcaption></figure>
+      <figure class="project-shot project-shot--portrait"><img src="../img/gallery/garage-04-shoes-closet.jpg" alt="玄関横に設けたシューズクローゼット" width="401" height="603" loading="lazy" decoding="async"><figcaption><span>04</span>玄関を整えるシューズクローゼット。</figcaption></figure>
+      <figure class="project-shot project-shot--landscape project-shot--wide"><img src="../img/gallery/garage-05-living.jpg" alt="木の床と明るい窓を備えたリビング" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>05</span>木の温もりを感じるリビング。</figcaption></figure>
+      <figure class="project-shot project-shot--landscape"><img src="../img/gallery/garage-06-kitchen.jpg" alt="家族の様子が見える対面キッチン" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>06</span>リビングとつながる対面キッチン。</figcaption></figure>
+      <figure class="project-shot project-shot--landscape"><img src="../img/gallery/garage-07-wood-kitchen.jpg" alt="木の表情を取り入れたキッチン" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>07</span>木の温もりを感じるキッチン。</figcaption></figure>
+      <figure class="project-shot project-shot--landscape project-shot--wide"><img src="../img/gallery/garage-08-washroom.jpg" alt="収納と使いやすさを考えた洗面所" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>08</span>すっきりと使える洗面所。</figcaption></figure>
+      <figure class="project-shot project-shot--portrait"><img src="../img/gallery/garage-09-bathroom.jpg" alt="落ち着いた色合いのバスルーム" width="401" height="603" loading="lazy" decoding="async"><figcaption><span>09</span>落ち着いて使えるバスルーム。</figcaption></figure>
+      <figure class="project-shot project-shot--portrait"><img src="../img/gallery/garage-10-toilet.jpg" alt="漆喰に囲まれた清潔感のあるトイレ" width="401" height="603" loading="lazy" decoding="async"><figcaption><span>10</span>周囲を漆喰で仕上げたトイレ。</figcaption></figure>
+      <figure class="project-shot project-shot--portrait"><img src="../img/gallery/garage-11-stairs.jpg" alt="木を使った室内階段" width="401" height="603" loading="lazy" decoding="async"><figcaption><span>11</span>上下階をつなぐ木の階段。</figcaption></figure>
+      <figure class="project-shot project-shot--landscape"><img src="../img/gallery/garage-12-bedroom.jpg" alt="自然光が入る二階の洋室" width="900" height="598" loading="lazy" decoding="async"><figcaption><span>12</span>自然光が入る二階の洋室。</figcaption></figure>
     </section>
     <nav class="project-navigation" aria-label="施工事例の移動"><a href="post-31.shtml"><span class="project-navigation__arrow">←</span><span class="project-navigation__copy"><small>PREVIOUS PROJECT</small><b>憧れのホームシアター</b></span></a><a href="50ainos.shtml"><span class="project-navigation__copy"><small>NEXT PROJECT</small><b>築50年建築と現代の融合</b></span><span class="project-navigation__arrow">→</span></a></nav>
   </main>
@@ -397,13 +397,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="https://www.fujisou-ainos.com/contact/">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -414,28 +414,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
-          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
-          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
+          <li><a href="../concept/index.html">私たちの家造り</a></li>
+          <li><a href="../staff/index.html">スタッフ紹介</a></li>
+          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
-          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
-          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
+          <li><a href="index.html">施工事例</a></li>
+          <li><a href="../land-info/index.html">土地情報</a></li>
+          <li><a href="../shikkui/index.html">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
-          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
-          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
+          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
+          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
-          <a href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
+          <a href="../eventinfo/index.html">イベント情報</a>
+          <a href="../staffblog/index.html">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>

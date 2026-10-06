@@ -129,7 +129,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -141,31 +141,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
-          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
-          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
+          <li><a href="../concept/index.html">私たちの家造り</a></li>
+          <li><a href="../staff/index.html">スタッフ紹介</a></li>
+          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
+          <li><a href="index.html">施工事例</a></li>
 
-          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
-          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
+          <li><a href="../land-info/index.html">土地情報</a></li>
+          <li><a href="../shikkui/index.html">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
-          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
-          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
+          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
+          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
-        <a class="shared-header__link" href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
+        <a class="shared-header__link" href="../staffblog/index.html">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -281,7 +281,7 @@
       <div class="project-heading__title"><h1>築50年の記憶を、<br>これからの暮らしへ。</h1><p>残すものと新しくするものを丁寧に選んだ住まい</p></div>
     </header>
 
-    <figure class="project-cover project-cover--heritage"><img src="/img/gallery/renovation50-02-enhanced.jpg" alt="築50年の趣を受け継いで改修した砺波市の住宅外観" width="1539" height="1022" fetchpriority="high" decoding="async"><figcaption><span>01</span>黒い下見板と白壁の表情を受け継いだ外観。</figcaption></figure>
+    <figure class="project-cover project-cover--heritage"><img src="../img/gallery/renovation50-02-enhanced.jpg" alt="築50年の趣を受け継いで改修した砺波市の住宅外観" width="1539" height="1022" fetchpriority="high" decoding="async"><figcaption><span>01</span>黒い下見板と白壁の表情を受け継いだ外観。</figcaption></figure>
 
     <section class="heritage-intro" aria-label="この住まいについて">
       <div class="heritage-intro__copy"><p class="project-intro__label">ABOUT THIS HOME</p><h2>古い家の良さを残し、<br>日々の使いやすさを整える。</h2></div>
@@ -289,24 +289,24 @@
     </section>
 
     <section class="heritage-transition" aria-label="改修前と改修後">
-      <figure class="heritage-before"><img src="/img/gallery/renovation50-01-enhanced.jpg" alt="改修前の築50年住宅" width="1516" height="1038" loading="lazy" decoding="async"><figcaption><span>BEFORE</span>半世紀を重ねた住まいの佇まい。</figcaption></figure>
+      <figure class="heritage-before"><img src="../img/gallery/renovation50-01-enhanced.jpg" alt="改修前の築50年住宅" width="1516" height="1038" loading="lazy" decoding="async"><figcaption><span>BEFORE</span>半世紀を重ねた住まいの佇まい。</figcaption></figure>
       <div class="heritage-transition__note"><span>50 YEARS</span><p>受け継ぐ輪郭</p><i aria-hidden="true">→</i></div>
-      <figure class="heritage-after"><img src="/img/gallery/renovation50-12-enhanced.jpg" alt="改修後の黒い下見板外壁" width="1241" height="1268" loading="lazy" decoding="async"><figcaption><span>AFTER</span>既存の意匠に寄り添う、新しい外壁。</figcaption></figure>
+      <figure class="heritage-after"><img src="../img/gallery/renovation50-12-enhanced.jpg" alt="改修後の黒い下見板外壁" width="1241" height="1268" loading="lazy" decoding="async"><figcaption><span>AFTER</span>既存の意匠に寄り添う、新しい外壁。</figcaption></figure>
     </section>
 
     <section class="heritage-rooms" aria-label="築50年住宅の室内写真">
-      <figure class="heritage-room heritage-room--wide"><img src="/img/gallery/renovation50-03-enhanced.jpg" alt="改修後の玄関ホール" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>03</span><b>玄関</b>明るさと収納を整え、家族を迎える場所に。</figcaption></figure>
-      <figure class="heritage-room"><img src="/img/gallery/renovation50-04-enhanced.jpg" alt="既存の梁を生かした洋室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>04</span><b>梁のある部屋</b>昔の構造を、空間の個性として残しました。</figcaption></figure>
-      <figure class="heritage-room"><img src="/img/gallery/renovation50-05-enhanced.jpg" alt="深い木色でまとめたLDK" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>05</span><b>LDK</b>家の中心を、つながりのよい一室に。</figcaption></figure>
-      <figure class="heritage-room heritage-room--wide"><img src="/img/gallery/renovation50-06-enhanced.jpg" alt="収納を備えた木目のキッチン" width="1538" height="1022" loading="lazy" decoding="async"><figcaption><span>06</span><b>キッチン</b>作業と収納がすっきり収まる設計。</figcaption></figure>
-      <figure class="heritage-room"><img src="/img/gallery/renovation50-07-enhanced.jpg" alt="板張りの洗面脱衣室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>07</span><b>洗面室</b>木に包まれる、あたたかな水まわり。</figcaption></figure>
-      <figure class="heritage-room"><img src="/img/gallery/renovation50-08-enhanced.jpg" alt="板張りの収納室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>08</span><b>収納</b>暮らしの変化を受け止める余白。</figcaption></figure>
-      <figure class="heritage-room heritage-room--portrait"><img src="/img/gallery/renovation50-09-enhanced.jpg" alt="白壁で明るく整えたトイレ" width="1022" height="1538" loading="lazy" decoding="async"><figcaption><span>09</span><b>トイレ</b>素材感を生かした静かな空間。</figcaption></figure>
-      <figure class="heritage-room"><img src="/img/gallery/renovation50-10-enhanced.jpg" alt="勾配天井の二階洋室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>10</span><b>二階洋室</b>屋根の形を感じる、伸びやかな一室。</figcaption></figure>
-      <figure class="heritage-room heritage-room--wide heritage-room--final"><img src="/img/gallery/renovation50-11-enhanced.jpg" alt="隣室につながる二階の居室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>11</span><b>続き間</b>家族の時間に合わせて使い分けられます。</figcaption></figure>
+      <figure class="heritage-room heritage-room--wide"><img src="../img/gallery/renovation50-03-enhanced.jpg" alt="改修後の玄関ホール" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>03</span><b>玄関</b>明るさと収納を整え、家族を迎える場所に。</figcaption></figure>
+      <figure class="heritage-room"><img src="../img/gallery/renovation50-04-enhanced.jpg" alt="既存の梁を生かした洋室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>04</span><b>梁のある部屋</b>昔の構造を、空間の個性として残しました。</figcaption></figure>
+      <figure class="heritage-room"><img src="../img/gallery/renovation50-05-enhanced.jpg" alt="深い木色でまとめたLDK" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>05</span><b>LDK</b>家の中心を、つながりのよい一室に。</figcaption></figure>
+      <figure class="heritage-room heritage-room--wide"><img src="../img/gallery/renovation50-06-enhanced.jpg" alt="収納を備えた木目のキッチン" width="1538" height="1022" loading="lazy" decoding="async"><figcaption><span>06</span><b>キッチン</b>作業と収納がすっきり収まる設計。</figcaption></figure>
+      <figure class="heritage-room"><img src="../img/gallery/renovation50-07-enhanced.jpg" alt="板張りの洗面脱衣室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>07</span><b>洗面室</b>木に包まれる、あたたかな水まわり。</figcaption></figure>
+      <figure class="heritage-room"><img src="../img/gallery/renovation50-08-enhanced.jpg" alt="板張りの収納室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>08</span><b>収納</b>暮らしの変化を受け止める余白。</figcaption></figure>
+      <figure class="heritage-room heritage-room--portrait"><img src="../img/gallery/renovation50-09-enhanced.jpg" alt="白壁で明るく整えたトイレ" width="1022" height="1538" loading="lazy" decoding="async"><figcaption><span>09</span><b>トイレ</b>素材感を生かした静かな空間。</figcaption></figure>
+      <figure class="heritage-room"><img src="../img/gallery/renovation50-10-enhanced.jpg" alt="勾配天井の二階洋室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>10</span><b>二階洋室</b>屋根の形を感じる、伸びやかな一室。</figcaption></figure>
+      <figure class="heritage-room heritage-room--wide heritage-room--final"><img src="../img/gallery/renovation50-11-enhanced.jpg" alt="隣室につながる二階の居室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>11</span><b>続き間</b>家族の時間に合わせて使い分けられます。</figcaption></figure>
     </section>
 
-    <nav class="project-navigation" aria-label="施工事例の移動"><a href="toyama-inner-garage-house.shtml"><span class="project-navigation__arrow">←</span><span class="project-navigation__copy"><small>PREVIOUS PROJECT</small><b>インナーガレージ付き住宅</b></span></a><a href="https://www.fujisou-ainos.com/gallery/post-30.shtml"><span class="project-navigation__copy"><small>NEXT PROJECT</small><b>木の香りと暮らす家</b></span><span class="project-navigation__arrow">→</span></a></nav>
+    <nav class="project-navigation" aria-label="施工事例の移動"><a href="toyama-inner-garage-house.shtml"><span class="project-navigation__arrow">←</span><span class="project-navigation__copy"><small>PREVIOUS PROJECT</small><b>インナーガレージ付き住宅</b></span></a><a href="index.html"><span class="project-navigation__copy"><small>NEXT PROJECT</small><b>木の香りと暮らす家</b></span><span class="project-navigation__arrow">→</span></a></nav>
   </main>
 
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
@@ -406,13 +406,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="https://www.fujisou-ainos.com/contact/">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -423,28 +423,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
-          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
-          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
+          <li><a href="../concept/index.html">私たちの家造り</a></li>
+          <li><a href="../staff/index.html">スタッフ紹介</a></li>
+          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
-          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
-          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
+          <li><a href="index.html">施工事例</a></li>
+          <li><a href="../land-info/index.html">土地情報</a></li>
+          <li><a href="../shikkui/index.html">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
-          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
-          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
+          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
+          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
-          <a href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
+          <a href="../eventinfo/index.html">イベント情報</a>
+          <a href="../staffblog/index.html">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>

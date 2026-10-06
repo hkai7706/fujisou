@@ -30,11 +30,11 @@ const newsMoreLink = document.querySelector('[data-news-more]');
 const newsCategories = {
   blog: {
     label: 'ブログをもっと見る',
-    url: 'https://www.fujisou-ainos.com/staffblog/'
+    url: new URL('staffblog/index.html', document.querySelector('.shared-header__brand')?.href || document.baseURI).href
   },
   event: {
     label: 'イベント情報をもっと見る',
-    url: 'https://www.fujisou-ainos.com/eventinfo/'
+    url: new URL('eventinfo/index.html', document.querySelector('.shared-header__brand')?.href || document.baseURI).href
   }
 };
 

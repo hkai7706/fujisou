@@ -15,7 +15,7 @@ function Get-RelativePath([string]$FromDirectory, [string]$ToPath) {
 }
 
 $pageFiles = Get-ChildItem -LiteralPath $projectRoot -Recurse -File |
-  Where-Object { $_.FullName -notmatch '[\\/]node_modules[\\/]|[\\/]\.git[\\/]' -and $_.Extension -in '.html', '.shtml', '.css' }
+  Where-Object { $_.FullName -notmatch '[\\/](?:node_modules|\.git|backup|tmp|\.tmp|dist|output|docs)[\\/]' -and $_.Extension -in '.html', '.shtml', '.css' }
 
 $usedImages = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 foreach ($pageFile in $pageFiles) {

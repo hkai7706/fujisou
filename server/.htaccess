@@ -1,0 +1,79 @@
+# PRODUCTION: install at the www.fujisou-ainos.com document root.
+# For the sub.jp test folder use .htaccess.preview instead.
+DirectoryIndex index.html index.shtml
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Preserve old tracking cleanup for navigation only. As before, this
+  # discards ALL query parameters if a listed tracking parameter is present.
+  # Do not redirect form submissions or other non-GET/HEAD requests.
+  RewriteCond %{REQUEST_METHOD} ^(?:GET|HEAD)$
+  RewriteCond %{QUERY_STRING} (^|&)(_gl|_gcl_au|gclid)=[^&]+ [NC]
+  RewriteRule ^ https://www.fujisou-ainos.com%{REQUEST_URI} [R=301,L,QSD]
+
+  # Preserve paths and queries when redirecting hostnames or HTTPS.
+  RewriteCond %{HTTP_HOST} ^(?:fujisou-ainos\.sub\.jp|fujisou-ainos\.com)(?::[0-9]+)?$ [NC]
+  RewriteRule ^ https://www.fujisou-ainos.com%{REQUEST_URI} [R=301,L]
+
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} ^www\.fujisou-ainos\.com(?::[0-9]+)?$ [NC]
+  RewriteRule ^ https://www.fujisou-ainos.com%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# Return a genuine 404 instead of redirecting missing pages to the homepage.
+ErrorDocument 404 /404.html
+
+# Parse the .html landing page; existing .shtml handling remains with the host.
+<IfModule mod_include.c>
+  Options +Includes
+  AddOutputFilter INCLUDES .html .shtml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 7 days"
+  ExpiresByType image/png "access plus 7 days"
+  ExpiresByType image/webp "access plus 7 days"
+  ExpiresByType image/gif "access plus 7 days"
+  ExpiresByType image/svg+xml "access plus 7 days"
+  ExpiresByType image/x-icon "access plus 7 days"
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType text/javascript "access plus 1 day"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 1 hour"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType text/xml "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Stable filenames must refresh when their contents are replaced.
+  <FilesMatch "\.(?i:jpg|jpeg|png|gif|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=604800, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(?i:css|js)$">
+    Header set Cache-Control "public, max-age=86400, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(?i:woff2|woff|ttf|otf)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+  <FilesMatch "\.(?i:html|htm|shtml|shtm)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(?i:xml|json)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript text/javascript application/json application/xml image/svg+xml
+</IfModule>

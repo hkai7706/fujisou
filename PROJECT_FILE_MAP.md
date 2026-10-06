@@ -1,3 +1,7 @@
+# Current migration note
+
+Images are centralized under img/ by page group. All pages now include /include/header.shtml and /include/footer.shtml. These shared files supersede older embedded-component descriptions below. DEPLOY_SSI.md and tools/image-path-map.json provide the current layout and exact image mappings.
+
 # Fujisou Ainos project file map
 
 Project root:
@@ -18,7 +22,7 @@ page CSS: stylesheet/<page-name>.css when needed
     ↓
 shared JavaScript: script/fujisou-ainos.js when needed
     ↓
-images and other assets: images/
+images and other assets: img/
 ```
 
 The root landing page uses Apache Server Side Includes:
@@ -47,7 +51,7 @@ Connections from `index.html`:
 - Loads `script/fujisou-ainos.js` at the end of the page.
 - Includes `/header.shtml` and `/footer.shtml` through SSI.
 - Links to `concept/`, `gallery/`, `plans/`, `shikkui/`, `consultation/`, `eventinfo/`, `staffblog/`, `land-info/`, and contact actions.
-- Uses images directly from `images/` and its subdirectories.
+- Uses images directly from `img/` and its subdirectories.
 
 ## Shared files
 
@@ -87,7 +91,7 @@ Connections from `index.html`:
 | `/eventinfo/open-house/` | `eventinfo/open-house/index.html` | `open-house.css`, `nav-slot.css`, `breadcrumbs.css` | Inline behavior only |
 | `/staffblog/` | `staffblog/index.html` | `fujisou-ainos.css`, `staffblog.css`, `nav-slot.css`, `breadcrumbs.css` | `fujisou-ainos.js` |
 
-Event images are mainly stored in `images/eventinfo/`. Blog thumbnails are mainly stored in `images/staffblog/`.
+Event images are mainly stored in `img/eventinfo/`. Blog thumbnails are mainly stored in `img/staffblog/`.
 
 ### Construction gallery
 
@@ -101,7 +105,7 @@ Event images are mainly stored in `images/eventinfo/`. Blog thumbnails are mainl
 | `/gallery/post-32.shtml` | `gallery/post-32.shtml` | `project-detail.css` | `fujisou-ainos.js` |
 | `/gallery/toyama-inner-garage-house.shtml` | `gallery/toyama-inner-garage-house.shtml` | `project-detail.css` | `fujisou-ainos.js` |
 
-All gallery pages also load `fujisou-ainos.css`, `nav-slot.css`, and `breadcrumbs.css`. Gallery imagery is stored throughout `images/`, including project-specific image names.
+All gallery pages also load `fujisou-ainos.css`, `nav-slot.css`, and `breadcrumbs.css`. Gallery imagery is stored throughout `img/`, including project-specific image names.
 
 ### Construction plans
 
@@ -123,13 +127,13 @@ The arrows above are Apache rewrite rules defined in `.htaccess` for compatibili
 | `/pretty/` | `plans/products/pretty/index.html` | `fujisou-ainos.css`, `nav-slot.css`, `breadcrumbs.css` | `fujisou-ainos.js` |
 | `/simply/` | `plans/products/simply/index.html` | `fujisou-ainos.css`, `nav-slot.css`, `breadcrumbs.css` | `fujisou-ainos.js` |
 
-The original routes are redirected internally by `.htaccess`. Product imagery is mainly in `images/plans/` and root-level `images/plan-*` files.
+The original routes are redirected internally by `.htaccess`. Product imagery is mainly in `img/plans/` and root-level `img/plan-*` files.
 
 ### Plaster page
 
 | Public route | HTML file | CSS | JavaScript | Images |
 |---|---|---|---|---|
-| `/shikkui/` | `shikkui/index.html` | `fujisou-ainos.css`, `shikkui.css`, `nav-slot.css`, `breadcrumbs.css` | `fujisou-ainos.js` | `images/shikkui/` |
+| `/shikkui/` | `shikkui/index.html` | `fujisou-ainos.css`, `shikkui.css`, `nav-slot.css`, `breadcrumbs.css` | `fujisou-ainos.js` | `img/shikkui/` |
 
 ### Error page
 
@@ -143,11 +147,11 @@ The original routes are redirected internally by `.htaccess`. Product imagery is
 
 | Directory | Contents |
 |---|---|
-| `images/` | Shared logos, hero photographs, gallery images, landing images, QR code, and product images. |
-| `images/eventinfo/` | Event banners and event photography. |
-| `images/plans/` | Plan-specific imagery. |
-| `images/shikkui/` | Plaster-page photographs. |
-| `images/staffblog/` | Blog thumbnails and related images. |
+| `img/` | Shared logos, hero photographs, gallery images, landing images, QR code, and product images. |
+| `img/eventinfo/` | Event banners and event photography. |
+| `img/plans/` | Plan-specific imagery. |
+| `img/shikkui/` | Plaster-page photographs. |
+| `img/staffblog/` | Blog thumbnails and related images. |
 | `stylesheet/` | Global and page-specific CSS. |
 | `script/` | Browser JavaScript. |
 

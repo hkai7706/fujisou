@@ -10,15 +10,16 @@
   <meta property="og:title" content="築50年建築と現代の融合｜フジ創アイノス">
   <meta property="og:description" content="半世紀を重ねた家の記憶と、これからの暮らしをつなぐ改修事例です。">
   <meta property="og:url" content="https://www.fujisou-ainos.com/gallery/50ainos.shtml">
-  <meta property="og:image" content="https://www.fujisou-ainos.com/images/renovation50-02-enhanced.jpg">
+  <meta property="og:image" content="https://www.fujisou-ainos.com/img/gallery/renovation50-02-enhanced.jpg">
   <link rel="stylesheet" href="../stylesheet/fujisou-ainos.css">
   <link rel="stylesheet" href="../stylesheet/nav-slot.css">
   <link rel="stylesheet" href="../stylesheet/breadcrumbs.css">
   <link rel="stylesheet" href="../stylesheet/project-detail.css?v=20260919-12">
 </head>
 <body class="project-page project-page--heritage">
-  <!-- Local copy of header.shtml for direct local testing. -->
+
 <!-- Shared SSI header with its CSS and JavaScript included in this file. -->
+<!-- Shared SSI header: CSS/JS included; assets resolve from ../img/ at the domain root. -->
 <style>
 /* Shared SSI components. These selectors do not restyle page content. */
 .shared-header {
@@ -45,7 +46,8 @@
 
 .shared-header { position: sticky; z-index: 100; top: 0; border-top: 3px solid #806039; border-bottom: 1px solid var(--chrome-line); box-shadow: 0 3px 16px #493b3108; }
 .shared-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: min(1560px, 100%); min-height: 100px; margin-inline: auto; padding: 20px clamp(20px, 3vw, 48px); }
-.shared-header__brand { flex-shrink: 0; width: clamp(205px, 17vw, 250px); }
+.shared-header__brand { display: block; flex-shrink: 0; width: clamp(205px, 17vw, 250px); aspect-ratio: 3 / 1; }
+.shared-header .shared-header__brand img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 1; object-fit: contain; }
 .shared-header__identity { display: flex; flex: 0 1 auto; align-items: center; gap: clamp(12px, 1.25vw, 20px); min-width: 0; }
 .shared-header__identity .shared-header__brand { flex: 0 1 250px; }
 .shared-header__signature { position: relative; flex: 0 0 auto; padding: 3px 0 3px clamp(12px, 1.1vw, 18px); border-left: 1px solid #b89a72; color: var(--chrome-ink); line-height: 1.35; white-space: nowrap; }
@@ -83,14 +85,15 @@
 
 @media (max-width: 1120px) {
   .shared-header:not([data-enhanced]) { position: relative; }
-  .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 20px; min-height: 86px; padding: 18px 24px; }
+  .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 16px; min-height: 76px; padding: 12px 24px; }
   .shared-header__brand { width: 210px; }
   .shared-header__identity { flex: 1 1 auto; gap: 14px; min-width: 0; }
-  .shared-header__identity .shared-header__brand { flex: 0 1 210px; width: auto; }
+  .shared-header__identity .shared-header__brand { flex: 0 0 180px; width: 180px; }
+  .shared-header .shared-header__brand img { width: 100%; height: 60px; object-fit: contain; }
   .shared-header__signature strong { font-size: 15px; }
   .shared-header__signature small { font-size: 10px; }
   .shared-header__nav { flex: 0 0 100%; display: grid; gap: 0; padding-top: 16px; }
-  .shared-header[data-enhanced] .shared-header__toggle { display: flex; width: 44px; min-height: 44px; align-items: center; justify-content: center; margin-left: auto; padding: 0; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
+  .shared-header[data-enhanced] .shared-header__toggle { display: flex; flex: 0 0 44px; width: 44px; min-height: 44px; align-items: center; justify-content: center; margin-left: auto; padding: 0; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
   .shared-header__toggle-lines { position: relative; display: block; width: 22px; height: 14px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
   .shared-header__toggle-lines::before { position: absolute; top: 5px; left: 0; width: 22px; height: 1px; content: ''; background: currentColor; }
   .shared-header__toggle[aria-expanded="true"] .shared-header__toggle-lines { border-color: transparent; }
@@ -107,11 +110,12 @@
 @media (max-width: 820px) {
 }
 @media (max-width: 540px) {
-  .shared-header__inner { padding-inline: 18px; gap: 12px; }
-  .shared-header__identity { gap: 9px; }
-  .shared-header__identity .shared-header__brand { flex-basis: clamp(125px, 39vw, 180px); width: auto; }
-  .shared-header__signature { padding-left: 9px; }
-  .shared-header__signature strong { font-size: clamp(12px, 3.8vw, 15px); letter-spacing: .1em; }
+  .shared-header__inner { min-height: 64px; padding: 8px 14px; gap: 0 10px; }
+  .shared-header__identity { flex: 1 1 0; gap: 8px; }
+  .shared-header__identity .shared-header__brand { flex: 0 0 clamp(100px, 31vw, 150px); width: clamp(100px, 31vw, 150px); }
+  .shared-header .shared-header__brand img { height: clamp(33.333px, 10.333vw, 50px); }
+  .shared-header__signature { padding-left: 8px; }
+  .shared-header__signature strong { font-size: clamp(11px, 3vw, 14px); letter-spacing: .06em; }
   .shared-header__signature small { display: block; margin-top: 2px; font-size: 8px; letter-spacing: .03em; }
   .shared-header[data-enhanced] .shared-header__toggle { padding: 0; }
   .shared-header[data-enhanced] .shared-header__nav { padding-inline: 20px; }
@@ -125,8 +129,8 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
-      <img src="../images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" decoding="async">
+    <a class="shared-header__brand" href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム">
+      <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
     </div>
@@ -137,31 +141,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
+          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
+          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
+          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="../staffblog/index.html">社長のブログ</a>
+        <a class="shared-header__link" href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -171,7 +175,7 @@
   </div>
 </header>
 <script>
-/* SSI provides the markup. JavaScript only enhances navigation behavior. */
+/* JavaScript enhances the embedded navigation behavior. */
 (() => {
   'use strict';
   const header = document.querySelector('[data-shared-header]');
@@ -265,10 +269,6 @@
   toggle.hidden = false;
   header.setAttribute('data-enhanced', '');
   document.documentElement.classList.add('has-shared-header');
-  const updateHeight = () => document.documentElement.style.setProperty('--shared-header-height', Math.ceil(header.getBoundingClientRect().height) + 'px');
-  updateHeight();
-  if ('ResizeObserver' in window) new ResizeObserver(updateHeight).observe(header);
-  else window.addEventListener('resize', updateHeight);
 })();
 </script>
 
@@ -281,7 +281,7 @@
       <div class="project-heading__title"><h1>築50年の記憶を、<br>これからの暮らしへ。</h1><p>残すものと新しくするものを丁寧に選んだ住まい</p></div>
     </header>
 
-    <figure class="project-cover project-cover--heritage"><img src="../images/renovation50-02-enhanced.jpg" alt="築50年の趣を受け継いで改修した砺波市の住宅外観" width="1539" height="1022" fetchpriority="high" decoding="async"><figcaption><span>01</span>黒い下見板と白壁の表情を受け継いだ外観。</figcaption></figure>
+    <figure class="project-cover project-cover--heritage"><img src="/img/gallery/renovation50-02-enhanced.jpg" alt="築50年の趣を受け継いで改修した砺波市の住宅外観" width="1539" height="1022" fetchpriority="high" decoding="async"><figcaption><span>01</span>黒い下見板と白壁の表情を受け継いだ外観。</figcaption></figure>
 
     <section class="heritage-intro" aria-label="この住まいについて">
       <div class="heritage-intro__copy"><p class="project-intro__label">ABOUT THIS HOME</p><h2>古い家の良さを残し、<br>日々の使いやすさを整える。</h2></div>
@@ -289,27 +289,28 @@
     </section>
 
     <section class="heritage-transition" aria-label="改修前と改修後">
-      <figure class="heritage-before"><img src="../images/renovation50-01-enhanced.jpg" alt="改修前の築50年住宅" width="1516" height="1038" loading="lazy" decoding="async"><figcaption><span>BEFORE</span>半世紀を重ねた住まいの佇まい。</figcaption></figure>
+      <figure class="heritage-before"><img src="/img/gallery/renovation50-01-enhanced.jpg" alt="改修前の築50年住宅" width="1516" height="1038" loading="lazy" decoding="async"><figcaption><span>BEFORE</span>半世紀を重ねた住まいの佇まい。</figcaption></figure>
       <div class="heritage-transition__note"><span>50 YEARS</span><p>受け継ぐ輪郭</p><i aria-hidden="true">→</i></div>
-      <figure class="heritage-after"><img src="../images/renovation50-12-enhanced.jpg" alt="改修後の黒い下見板外壁" width="1241" height="1268" loading="lazy" decoding="async"><figcaption><span>AFTER</span>既存の意匠に寄り添う、新しい外壁。</figcaption></figure>
+      <figure class="heritage-after"><img src="/img/gallery/renovation50-12-enhanced.jpg" alt="改修後の黒い下見板外壁" width="1241" height="1268" loading="lazy" decoding="async"><figcaption><span>AFTER</span>既存の意匠に寄り添う、新しい外壁。</figcaption></figure>
     </section>
 
     <section class="heritage-rooms" aria-label="築50年住宅の室内写真">
-      <figure class="heritage-room heritage-room--wide"><img src="../images/renovation50-03-enhanced.jpg" alt="改修後の玄関ホール" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>03</span><b>玄関</b>明るさと収納を整え、家族を迎える場所に。</figcaption></figure>
-      <figure class="heritage-room"><img src="../images/renovation50-04-enhanced.jpg" alt="既存の梁を生かした洋室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>04</span><b>梁のある部屋</b>昔の構造を、空間の個性として残しました。</figcaption></figure>
-      <figure class="heritage-room"><img src="../images/renovation50-05-enhanced.jpg" alt="深い木色でまとめたLDK" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>05</span><b>LDK</b>家の中心を、つながりのよい一室に。</figcaption></figure>
-      <figure class="heritage-room heritage-room--wide"><img src="../images/renovation50-06-enhanced.jpg" alt="収納を備えた木目のキッチン" width="1538" height="1022" loading="lazy" decoding="async"><figcaption><span>06</span><b>キッチン</b>作業と収納がすっきり収まる設計。</figcaption></figure>
-      <figure class="heritage-room"><img src="../images/renovation50-07-enhanced.jpg" alt="板張りの洗面脱衣室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>07</span><b>洗面室</b>木に包まれる、あたたかな水まわり。</figcaption></figure>
-      <figure class="heritage-room"><img src="../images/renovation50-08-enhanced.jpg" alt="板張りの収納室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>08</span><b>収納</b>暮らしの変化を受け止める余白。</figcaption></figure>
-      <figure class="heritage-room heritage-room--portrait"><img src="../images/renovation50-09-enhanced.jpg" alt="白壁で明るく整えたトイレ" width="1022" height="1538" loading="lazy" decoding="async"><figcaption><span>09</span><b>トイレ</b>素材感を生かした静かな空間。</figcaption></figure>
-      <figure class="heritage-room"><img src="../images/renovation50-10-enhanced.jpg" alt="勾配天井の二階洋室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>10</span><b>二階洋室</b>屋根の形を感じる、伸びやかな一室。</figcaption></figure>
-      <figure class="heritage-room heritage-room--wide heritage-room--final"><img src="../images/renovation50-11-enhanced.jpg" alt="隣室につながる二階の居室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>11</span><b>続き間</b>家族の時間に合わせて使い分けられます。</figcaption></figure>
+      <figure class="heritage-room heritage-room--wide"><img src="/img/gallery/renovation50-03-enhanced.jpg" alt="改修後の玄関ホール" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>03</span><b>玄関</b>明るさと収納を整え、家族を迎える場所に。</figcaption></figure>
+      <figure class="heritage-room"><img src="/img/gallery/renovation50-04-enhanced.jpg" alt="既存の梁を生かした洋室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>04</span><b>梁のある部屋</b>昔の構造を、空間の個性として残しました。</figcaption></figure>
+      <figure class="heritage-room"><img src="/img/gallery/renovation50-05-enhanced.jpg" alt="深い木色でまとめたLDK" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>05</span><b>LDK</b>家の中心を、つながりのよい一室に。</figcaption></figure>
+      <figure class="heritage-room heritage-room--wide"><img src="/img/gallery/renovation50-06-enhanced.jpg" alt="収納を備えた木目のキッチン" width="1538" height="1022" loading="lazy" decoding="async"><figcaption><span>06</span><b>キッチン</b>作業と収納がすっきり収まる設計。</figcaption></figure>
+      <figure class="heritage-room"><img src="/img/gallery/renovation50-07-enhanced.jpg" alt="板張りの洗面脱衣室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>07</span><b>洗面室</b>木に包まれる、あたたかな水まわり。</figcaption></figure>
+      <figure class="heritage-room"><img src="/img/gallery/renovation50-08-enhanced.jpg" alt="板張りの収納室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>08</span><b>収納</b>暮らしの変化を受け止める余白。</figcaption></figure>
+      <figure class="heritage-room heritage-room--portrait"><img src="/img/gallery/renovation50-09-enhanced.jpg" alt="白壁で明るく整えたトイレ" width="1022" height="1538" loading="lazy" decoding="async"><figcaption><span>09</span><b>トイレ</b>素材感を生かした静かな空間。</figcaption></figure>
+      <figure class="heritage-room"><img src="/img/gallery/renovation50-10-enhanced.jpg" alt="勾配天井の二階洋室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>10</span><b>二階洋室</b>屋根の形を感じる、伸びやかな一室。</figcaption></figure>
+      <figure class="heritage-room heritage-room--wide heritage-room--final"><img src="/img/gallery/renovation50-11-enhanced.jpg" alt="隣室につながる二階の居室" width="1539" height="1022" loading="lazy" decoding="async"><figcaption><span>11</span><b>続き間</b>家族の時間に合わせて使い分けられます。</figcaption></figure>
     </section>
 
     <nav class="project-navigation" aria-label="施工事例の移動"><a href="toyama-inner-garage-house.shtml"><span class="project-navigation__arrow">←</span><span class="project-navigation__copy"><small>PREVIOUS PROJECT</small><b>インナーガレージ付き住宅</b></span></a><a href="https://www.fujisou-ainos.com/gallery/post-30.shtml"><span class="project-navigation__copy"><small>NEXT PROJECT</small><b>木の香りと暮らす家</b></span><span class="project-navigation__arrow">→</span></a></nav>
   </main>
-  <!-- Local copy of footer.shtml for direct local testing. -->
+
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
+<!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
 <style>
 .shared-footer {
   --chrome-ink: #493b31;
@@ -324,7 +325,7 @@
   color: var(--chrome-ink);
   border-top: 1px solid var(--chrome-line);
   background-color: #f5f5f4;
-  background-image: url('../images/footer-bg-white.jpg');
+  background-image: url('../img/common/footer-bg-white.webp');
   background-repeat: repeat;
   background-size: auto;
   font: 400 17px/1.85 var(--chrome-font);
@@ -337,7 +338,8 @@
 .shared-footer a:hover { color: var(--chrome-gold); }
 .shared-footer__inner { width: min(1380px, 100%); margin-inline: auto; padding: 56px clamp(20px, 4vw, 56px) 24px; }
 .shared-footer__top { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid var(--chrome-line); }
-.shared-footer__brand img { width: 230px; }
+.shared-footer__brand > a { display: block; width: 230px; max-width: 100%; aspect-ratio: 3 / 1; }
+.shared-footer .shared-footer__brand img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 1; object-fit: contain; }
 .shared-footer__brand { flex: 1 1 560px; min-width: 0; }
 .shared-footer__company { margin: 15px 0 0; color: var(--chrome-muted); font: 400 15px/1.85 var(--chrome-font); }
 .shared-footer__contact { display: flex; align-items: center; gap: 36px; }
@@ -354,7 +356,7 @@
 .shared-footer__area strong { color: var(--chrome-gold); font-size: 14px; font-weight: 600; white-space: nowrap; }
 .shared-footer__area span { color: var(--chrome-ink); font-size: 14px; line-height: 1.9; }
 .shared-footer__nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
-.shared-footer__nav h2 { margin: 0 0 14px; color: var(--chrome-gold); font: 500 16px/1.7 var(--chrome-font); letter-spacing: .06em; }
+.shared-footer__nav h2 { margin: 0 0 14px; color: #8f683b; font: 500 16px/1.7 var(--chrome-font); letter-spacing: .06em; }
 .shared-footer__nav ul { margin: 0; padding: 0; list-style: none; }
 .shared-footer__nav li { margin: 0; padding: 0; list-style: none; }
 .shared-footer__nav a { display: block; padding: 10px 0; font-size: 15px; line-height: 1.8; }
@@ -371,14 +373,21 @@
   .shared-footer__nav { gap: 18px; }
 }
 @media (max-width: 820px) {
-  .shared-footer__top { align-items: flex-start; flex-direction: column; }
+  .shared-footer__top { align-items: flex-start; flex-direction: column; gap: 24px; padding-bottom: 28px; }
+  .shared-footer__brand { flex: none; width: 100%; }
+  .shared-footer__brand > a { display: block; width: 180px; max-width: 100%; }
+  .shared-footer__brand img { width: 100%; }
   .shared-footer__contact { justify-content: space-between; width: 100%; }
   .shared-footer__grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .shared-footer__offices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
   .shared-footer__offices > a { grid-column: 1 / -1; }
 }
 @media (max-width: 540px) {
-  .shared-footer__inner { padding-top: 40px; }
+  .shared-footer__inner { padding: 32px 20px 24px; }
+  .shared-footer__brand > a { width: 160px; }
+  .shared-footer__company { margin-top: 12px; font-size: 14px; }
+  .shared-footer__area { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 12px; }
+  .shared-footer__phone { font-size: 26px; }
   .shared-footer__contact { align-items: flex-start; flex-direction: column; gap: 18px; }
   .shared-footer__inquiry { width: 100%; }
   .shared-footer__offices { grid-template-columns: minmax(0, 1fr); }
@@ -397,13 +406,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" loading="lazy" decoding="async"></a>
+        <a href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="https://www.fujisou-ainos.com/contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -414,28 +423,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
+          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
+          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
+          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
+          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="../staffblog/index.html">社長のブログ</a>
+          <a href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
+          <a href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>

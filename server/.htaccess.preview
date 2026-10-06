@@ -1,0 +1,24 @@
+# Apply only within the directory receiving this landing-page package.
+DirectoryIndex index.html index.shtml
+AddDefaultCharset UTF-8
+
+# Parse SSI in index.html without enabling executable SSI directives.
+<IfModule mod_include.c>
+  Options +IncludesNOEXEC
+  AddOutputFilter INCLUDES .html .shtml
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/xml image/svg+xml
+</IfModule>
+
+# Assets have stable filenames, so permit revalidation after future uploads.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType text/javascript "access plus 1 day"
+  ExpiresByType image/jpeg "access plus 7 days"
+  ExpiresByType image/png "access plus 7 days"
+  ExpiresByType image/webp "access plus 7 days"
+</IfModule>

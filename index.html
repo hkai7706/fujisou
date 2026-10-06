@@ -14,8 +14,8 @@
   <link rel="canonical" href="https://www.fujisou-ainos.com/">
   <link rel="sitemap" type="application/xml" href="https://www.fujisou-ainos.com/sitemap.xml">
   <link rel="alternate" type="text/plain" href="https://www.fujisou-ainos.com/llms.txt" title="フジ創アイノス llms.txt">
-  <link rel="icon" href="images/ainos-logo-360.webp" type="image/webp">
-  <link rel="preload" as="image" href="images/slide1-768.webp" imagesrcset="images/slide1-768.webp 768w, images/slide1-1440.webp 1440w" imagesizes="100vw" type="image/webp" fetchpriority="high">
+  <link rel="icon" href="/img/common/ainos-logo-360.webp" type="image/webp">
+  <link rel="preload" as="image" href="/img/home/slide1-768.webp" imagesrcset="/img/home/slide1-768.webp 768w, /img/home/slide1-1440.webp 1440w" imagesizes="100vw" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="stylesheet/fujisou-ainos.home.min.css">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
@@ -23,11 +23,11 @@
   <meta property="og:title" content="フジの平屋注文住宅｜天然素材×耐震で家造り（富山県高岡市）">
   <meta property="og:description" content="富山県高岡市で耐震性に優れた天然素材の平屋注文住宅ならフジ創アイノスにお任せください。家族の健康を考えた安心して子育てできる家を、納得の価格で提供します。">
   <meta property="og:url" content="https://www.fujisou-ainos.com/">
-  <meta property="og:image" content="https://www.fujisou-ainos.com/images/slide1.jpg">
+  <meta property="og:image" content="https://www.fujisou-ainos.com/img/home/slide1.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="フジの平屋注文住宅｜天然素材×耐震で家造り（富山県高岡市）">
   <meta name="twitter:description" content="富山県高岡市で、天然素材と耐震性を大切にした注文住宅・平屋をご提案します。">
-  <meta name="twitter:image" content="https://www.fujisou-ainos.com/images/slide1.jpg">
+  <meta name="twitter:image" content="https://www.fujisou-ainos.com/img/home/slide1.jpg">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -47,8 +47,8 @@
         "name":"フジ創アイノス",
         "legalName":"有限会社フジ創",
         "url":"https://www.fujisou-ainos.com/",
-        "logo":"https://www.fujisou-ainos.com/images/ainos-bridal-house-logo.png",
-        "image":"https://www.fujisou-ainos.com/images/slide1.jpg",
+        "logo":"https://www.fujisou-ainos.com/img/common/ainos-bridal-house-logo.png",
+        "image":"https://www.fujisou-ainos.com/img/home/slide1.jpg",
         "description":"富山県高岡市を拠点に、漆喰・無垢材を使った注文住宅、平屋、自然素材の家を手がける地域密着の工務店。",
         "telephone":"0800-200-2661",
         "email":"info@ainos.biz",
@@ -69,7 +69,7 @@
   </script>
 </head>
 <body>
-<!-- Shared header: markup, styles, and behavior are embedded for direct HTML use. -->
+<!-- Shared SSI header: CSS/JS included; assets resolve from img/ at the domain root. -->
 <style>
 /* Shared SSI components. These selectors do not restyle page content. */
 .shared-header {
@@ -96,7 +96,8 @@
 
 .shared-header { position: sticky; z-index: 100; top: 0; border-top: 3px solid #806039; border-bottom: 1px solid var(--chrome-line); box-shadow: 0 3px 16px #493b3108; }
 .shared-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: min(1560px, 100%); min-height: 100px; margin-inline: auto; padding: 20px clamp(20px, 3vw, 48px); }
-.shared-header__brand { flex-shrink: 0; width: clamp(205px, 17vw, 250px); }
+.shared-header__brand { display: block; flex-shrink: 0; width: clamp(205px, 17vw, 250px); aspect-ratio: 3 / 1; }
+.shared-header .shared-header__brand img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 1; object-fit: contain; }
 .shared-header__identity { display: flex; flex: 0 1 auto; align-items: center; gap: clamp(12px, 1.25vw, 20px); min-width: 0; }
 .shared-header__identity .shared-header__brand { flex: 0 1 250px; }
 .shared-header__signature { position: relative; flex: 0 0 auto; padding: 3px 0 3px clamp(12px, 1.1vw, 18px); border-left: 1px solid #b89a72; color: var(--chrome-ink); line-height: 1.35; white-space: nowrap; }
@@ -134,14 +135,15 @@
 
 @media (max-width: 1120px) {
   .shared-header:not([data-enhanced]) { position: relative; }
-  .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 20px; min-height: 86px; padding: 18px 24px; }
+  .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 16px; min-height: 76px; padding: 12px 24px; }
   .shared-header__brand { width: 210px; }
   .shared-header__identity { flex: 1 1 auto; gap: 14px; min-width: 0; }
-  .shared-header__identity .shared-header__brand { flex: 0 1 210px; width: auto; }
+  .shared-header__identity .shared-header__brand { flex: 0 0 180px; width: 180px; }
+  .shared-header .shared-header__brand img { width: 100%; height: 60px; object-fit: contain; }
   .shared-header__signature strong { font-size: 15px; }
   .shared-header__signature small { font-size: 10px; }
   .shared-header__nav { flex: 0 0 100%; display: grid; gap: 0; padding-top: 16px; }
-  .shared-header[data-enhanced] .shared-header__toggle { display: flex; width: 44px; min-height: 44px; align-items: center; justify-content: center; margin-left: auto; padding: 0; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
+  .shared-header[data-enhanced] .shared-header__toggle { display: flex; flex: 0 0 44px; width: 44px; min-height: 44px; align-items: center; justify-content: center; margin-left: auto; padding: 0; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
   .shared-header__toggle-lines { position: relative; display: block; width: 22px; height: 14px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
   .shared-header__toggle-lines::before { position: absolute; top: 5px; left: 0; width: 22px; height: 1px; content: ''; background: currentColor; }
   .shared-header__toggle[aria-expanded="true"] .shared-header__toggle-lines { border-color: transparent; }
@@ -158,11 +160,12 @@
 @media (max-width: 820px) {
 }
 @media (max-width: 540px) {
-  .shared-header__inner { padding-inline: 18px; gap: 12px; }
-  .shared-header__identity { gap: 9px; }
-  .shared-header__identity .shared-header__brand { flex-basis: clamp(125px, 39vw, 180px); width: auto; }
-  .shared-header__signature { padding-left: 9px; }
-  .shared-header__signature strong { font-size: clamp(12px, 3.8vw, 15px); letter-spacing: .1em; }
+  .shared-header__inner { min-height: 64px; padding: 8px 14px; gap: 0 10px; }
+  .shared-header__identity { flex: 1 1 0; gap: 8px; }
+  .shared-header__identity .shared-header__brand { flex: 0 0 clamp(100px, 31vw, 150px); width: clamp(100px, 31vw, 150px); }
+  .shared-header .shared-header__brand img { height: clamp(33.333px, 10.333vw, 50px); }
+  .shared-header__signature { padding-left: 8px; }
+  .shared-header__signature strong { font-size: clamp(11px, 3vw, 14px); letter-spacing: .06em; }
   .shared-header__signature small { display: block; margin-top: 2px; font-size: 8px; letter-spacing: .03em; }
   .shared-header[data-enhanced] .shared-header__toggle { padding: 0; }
   .shared-header[data-enhanced] .shared-header__nav { padding-inline: 20px; }
@@ -176,8 +179,8 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="index.html" aria-label="フジ創アイノス ホーム">
-      <img src="images/ainos-logo-360.webp" srcset="images/ainos-logo-360.webp 360w, images/ainos-logo-720.webp 720w" sizes="(max-width: 760px) 180px, 250px" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
+    <a class="shared-header__brand" href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム">
+      <img src="img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
     </div>
@@ -188,31 +191,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="concept/index.html">私たちの家造り</a></li>
-          <li><a href="staff/index.html">スタッフ紹介</a></li>
-          <li><a href="policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
+          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
+          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="gallery/index.html">施工事例</a></li>
+          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
 
-          <li><a href="land-info/index.html">土地情報</a></li>
-          <li><a href="shikkui/index.html">漆喰とは</a></li>
+          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
+          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="staffblog/index.html">社長のブログ</a>
+        <a class="shared-header__link" href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -322,13 +325,13 @@
   <main id="main">
     <section class="hybrid-hero" aria-labelledby="hybrid-hero-title" data-hybrid-slider>
       <div class="hybrid-hero__scene hybrid-hero__scene--intro hybrid-hero__scene--cover is-active" aria-hidden="false">
-        <article class="hybrid-hero__panel hybrid-hero__panel--material"><img src="images/slide1-1440.webp" srcset="images/slide1-768.webp 768w, images/slide1-1440.webp 1440w" sizes="100vw" alt="富山市の自然素材住宅・漆喰壁と無垢床のリビング" width="1440" height="810" fetchpriority="high" decoding="async"><div class="hybrid-hero__copy"><p>NATURAL MATERIALS HOUSE</p><h1 id="hybrid-hero-title">自然素材の家を、<br>無理のない価格で。</h1><span>無垢の床と漆喰の壁。耐震等級3と断熱にもこだわり、富山で一棟ずつつくっています。</span><div class="hybrid-hero__actions"><a href="#contact-title">家づくりを相談する</a><a href="#works">施工事例を見る</a></div><small class="hybrid-hero__note">土地がなくても、まだ建てると決めていなくても大丈夫です。</small></div></article>
+        <article class="hybrid-hero__panel hybrid-hero__panel--material"><img src="/img/home/slide1-1440.webp" srcset="/img/home/slide1-768.webp 768w, /img/home/slide1-1440.webp 1440w" sizes="100vw" alt="富山市の自然素材住宅・漆喰壁と無垢床のリビング" width="1440" height="810" fetchpriority="high" decoding="async"><div class="hybrid-hero__copy"><p>NATURAL MATERIALS HOUSE</p><h1 id="hybrid-hero-title">自然素材の家を、<br>無理のない価格で。</h1><span>無垢の床と漆喰の壁。耐震等級3と断熱にもこだわり、富山で一棟ずつつくっています。</span><div class="hybrid-hero__actions"><a href="#contact-title">家づくりを相談する</a><a href="#works">施工事例を見る</a></div><small class="hybrid-hero__note">土地がなくても、まだ建てると決めていなくても大丈夫です。</small></div></article>
       </div>
       <div class="hybrid-hero__scene hybrid-hero__scene--air" aria-hidden="true">
-        <article class="hybrid-hero__panel hybrid-hero__panel--full"><img src="images/exterior-safe-home-retouched-1536.webp" srcset="images/exterior-safe-home-retouched-768.webp 768w, images/exterior-safe-home-retouched-1536.webp 1535w" sizes="100vw" alt="富山市に建つ照明計画と屋根付き駐車場を備えたフジ創アイノスの住宅外観" width="1535" height="1024" loading="lazy" decoding="async"><div class="hybrid-hero__copy"><p>FUJISOU AINOS / WORKS</p><h2>家族らしさを、<br>かなえる家。</h2><span>間取りもデザインも、ご家族の暮らしに合わせて一棟ずつつくります。</span><a class="hybrid-hero__editorial-link" href="#works">施工事例を見る <b>→</b></a></div></article>
+        <article class="hybrid-hero__panel hybrid-hero__panel--full"><img src="/img/gallery/exterior-safe-home-retouched-1536.webp" srcset="/img/gallery/exterior-safe-home-retouched-768.webp 768w, /img/gallery/exterior-safe-home-retouched-1536.webp 1535w" sizes="100vw" alt="富山市に建つ照明計画と屋根付き駐車場を備えたフジ創アイノスの住宅外観" width="1535" height="1024" loading="lazy" decoding="async"><div class="hybrid-hero__copy"><p>FUJISOU AINOS / WORKS</p><h2>家族らしさを、<br>かなえる家。</h2><span>間取りもデザインも、ご家族の暮らしに合わせて一棟ずつつくります。</span><a class="hybrid-hero__editorial-link" href="#works">施工事例を見る <b>→</b></a></div></article>
       </div>
       <div class="hybrid-hero__scene hybrid-hero__scene--craft" aria-hidden="true">
-        <article class="hybrid-hero__panel hybrid-hero__panel--atelier"><img src="images/fujisou-kitchen-retouched-1536.webp" srcset="images/fujisou-kitchen-retouched-768.webp 768w, images/fujisou-kitchen-retouched-1536.webp 1538w" sizes="100vw" alt="天然木の天井と柱を生かしたフジ創アイノスのキッチン・ダイニング施工事例" width="1538" height="1023" loading="lazy" decoding="async"><div class="hybrid-hero__copy"><p>COMFORTABLE NATURAL HOME</p><h2>木のぬくもりを、<br>毎日の暮らしに。</h2><span>自然素材ならではの、あたたかさと気持ちよさを感じてください。</span></div></article>
+        <article class="hybrid-hero__panel hybrid-hero__panel--atelier"><img src="/img/home/fujisou-kitchen-retouched-1536.webp" srcset="/img/home/fujisou-kitchen-retouched-768.webp 768w, /img/home/fujisou-kitchen-retouched-1536.webp 1538w" sizes="100vw" alt="天然木の天井と柱を生かしたフジ創アイノスのキッチン・ダイニング施工事例" width="1538" height="1023" loading="lazy" decoding="async"><div class="hybrid-hero__copy"><p>COMFORTABLE NATURAL HOME</p><h2>木のぬくもりを、<br>毎日の暮らしに。</h2><span>自然素材ならではの、あたたかさと気持ちよさを感じてください。</span></div></article>
       </div>
       <div class="hybrid-hero__controls" role="group" aria-label="メインビジュアルを選ぶ"><button class="is-active" type="button" data-hybrid-dot="0" aria-label="スライド1を表示" aria-current="true"><span></span></button><button type="button" data-hybrid-dot="1" aria-label="スライド2を表示"><span></span></button><button type="button" data-hybrid-dot="2" aria-label="スライド3を表示"><span></span></button></div>
     </section>
@@ -336,7 +339,7 @@
     <section class="statement section" id="philosophy" aria-labelledby="statement-title">
       <div class="section-index reveal"><span>01</span><i></i>OUR PHILOSOPHY</div>
       <div class="statement__layout">
-        <div class="statement__photo reveal"><img src="images/natural-room-900.webp" srcset="images/natural-room-480.webp 480w, images/natural-room-720.webp 720w, images/natural-room-900.webp 900w" sizes="(max-width: 760px) calc(100vw - 56px), 50vw" alt="天然無垢材に包まれた明るい室内" width="900" height="600" loading="lazy" decoding="async"><p><b>自然素材</b><span>素材が呼吸する、心地よい室内環境。</span></p></div>
+        <div class="statement__photo reveal"><img src="/img/home/natural-room-900.webp" srcset="/img/home/natural-room-480.webp 480w, /img/home/natural-room-720.webp 720w, /img/home/natural-room-900.webp 900w" sizes="(max-width: 760px) calc(100vw - 56px), 50vw" alt="天然無垢材に包まれた明るい室内" width="900" height="600" loading="lazy" decoding="async"><p><b>自然素材</b><span>素材が呼吸する、心地よい室内環境。</span></p></div>
         <div class="statement__grid">
           <div class="statement__title reveal"><p class="kicker dark">OUR PROMISE</p><h2 id="statement-title">自分が住みたくない家は、<br>建てたくない。</h2></div>
           <div class="statement__text reveal"><p class="lead">食べ物と同じように、住まいの素材も家族の健康に関わります。だから私たちは、毎日触れる床や壁に、無垢材や漆喰などの天然素材を使います。</p><p>ただ安い家ではなく、安心して長く暮らせる家を納得できる価格で。無駄な経費を抑え、一棟ずつ正直に家づくりをしています。</p><ul class="statement__points" aria-label="フジ創アイノスが大切にする3つのこと"><li><b>漆喰</b><span>SHIKKUI</span></li><li><b>無垢材</b><span>SOLID WOOD</span></li><li><b>自社大工</b><span>CRAFTSMANSHIP</span></li></ul><a class="statement__more" href="concept/index.html"><span>フジ創の家づくりを詳しく見る</span><b aria-hidden="true">→</b></a></div>
@@ -356,7 +359,7 @@
     </section>
 
     <section class="value-story" aria-labelledby="value-title">
-      <div class="value-story__image reveal"><img src="images/natural-room-900.webp" srcset="images/natural-room-480.webp 480w, images/natural-room-720.webp 720w, images/natural-room-900.webp 900w" sizes="(max-width: 760px) calc(100vw - 56px), 50vw" alt="高岡市の無垢材と漆喰を使った注文住宅の室内" width="900" height="600" loading="lazy" decoding="async"></div>
+      <div class="value-story__image reveal"><img src="/img/home/natural-room-900.webp" srcset="/img/home/natural-room-480.webp 480w, /img/home/natural-room-720.webp 720w, /img/home/natural-room-900.webp 900w" sizes="(max-width: 760px) calc(100vw - 56px), 50vw" alt="高岡市の無垢材と漆喰を使った注文住宅の室内" width="900" height="600" loading="lazy" decoding="async"></div>
       <div class="value-story__copy reveal"><p class="kicker dark">HONEST VALUE</p><h2 id="value-title">自然素材の家は、<br>高いと思っていませんか？</h2><p>必要なところには、きちんとお金をかける。余計な経費は、できるだけ抑える。</p><p>私たちが目指すのは、安心して長く暮らせる家を、納得できる価格で届けることです。</p><a class="editorial-link" href="concept/index.html">価格への考え方を見る <span aria-hidden="true">→</span></a></div>
     </section>
 
@@ -374,27 +377,27 @@
       </header>
       <div class="exterior-works__grid">
         <a class="exterior-card exterior-card--featured reveal" href="https://www.fujisou-ainos.com/gallery/toyama-inner-garage-house.shtml">
-          <img src="images/garage-01-exterior-enhanced-web.jpg" alt="魚津市に建つ雪に強いインナーガレージ付き二階建て住宅の外観全景" width="1536" height="1024" loading="lazy" decoding="async">
+          <img src="/img/gallery/garage-01-exterior-enhanced-web.jpg" alt="魚津市に建つ雪に強いインナーガレージ付き二階建て住宅の外観全景" width="1536" height="1024" loading="lazy" decoding="async">
           <div class="exterior-card__copy"><span>魚津市 / 2階建て 3LDK</span><h3>雪に強いインナーガレージ付き住宅</h3><b>VIEW PROJECT →</b></div>
         </a>
         <a class="exterior-card reveal" href="https://www.fujisou-ainos.com/gallery/post-30.shtml">
-          <img src="images/exterior-tatami-home-720.webp" srcset="images/exterior-tatami-home-480.webp 480w, images/exterior-tatami-home-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="高岡市に建つ木の香りと暮らす畳コーナーのある家の外観" width="720" height="481" loading="lazy" decoding="async">
+          <img src="/img/gallery/exterior-tatami-home-720.webp" srcset="/img/gallery/exterior-tatami-home-480.webp 480w, /img/gallery/exterior-tatami-home-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="高岡市に建つ木の香りと暮らす畳コーナーのある家の外観" width="720" height="481" loading="lazy" decoding="async">
           <div class="exterior-card__copy"><span>高岡市 / NATURAL HOME</span><h3>木の香りと暮らす畳コーナーのある家</h3><b>VIEW PROJECT →</b></div>
         </a>
         <a class="exterior-card reveal" href="https://www.fujisou-ainos.com/gallery/post-15.shtml">
-          <img src="images/exterior-southern-home-720.webp" srcset="images/exterior-southern-home-480.webp 480w, images/exterior-southern-home-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="富山市に建つ赤い屋根と白い外壁の南欧風住宅の外観" width="720" height="470" loading="lazy" decoding="async">
+          <img src="/img/gallery/exterior-southern-home-720.webp" srcset="/img/gallery/exterior-southern-home-480.webp 480w, /img/gallery/exterior-southern-home-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="富山市に建つ赤い屋根と白い外壁の南欧風住宅の外観" width="720" height="470" loading="lazy" decoding="async">
           <div class="exterior-card__copy"><span>富山市 / SOUTHERN STYLE</span><h3>南欧風のかわいいおうち</h3><b>VIEW PROJECT →</b></div>
         </a>
         <a class="exterior-card reveal" href="https://www.fujisou-ainos.com/gallery/post-23.shtml">
-          <img src="images/exterior-hiraya-720.webp" srcset="images/exterior-hiraya-480.webp 480w, images/exterior-hiraya-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="南砺市に建つ将来の安心と安全を考えた白い平屋の外観" width="720" height="480" loading="lazy" decoding="async">
+          <img src="/img/gallery/exterior-hiraya-720.webp" srcset="/img/gallery/exterior-hiraya-480.webp 480w, /img/gallery/exterior-hiraya-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="南砺市に建つ将来の安心と安全を考えた白い平屋の外観" width="720" height="480" loading="lazy" decoding="async">
           <div class="exterior-card__copy"><span>南砺市 / SINGLE-STORY</span><h3>将来の安心と安全を考えた平屋</h3><b>VIEW PROJECT →</b></div>
         </a>
         <a class="exterior-card reveal" href="https://www.fujisou-ainos.com/gallery/post-22.shtml">
-          <img src="images/exterior-safe-home-720.webp" srcset="images/exterior-safe-home-480.webp 480w, images/exterior-safe-home-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="富山市に建つ安心と安全を大切に考えた住宅の夜景外観" width="720" height="481" loading="lazy" decoding="async">
+          <img src="/img/gallery/exterior-safe-home-720.webp" srcset="/img/gallery/exterior-safe-home-480.webp 480w, /img/gallery/exterior-safe-home-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="富山市に建つ安心と安全を大切に考えた住宅の夜景外観" width="720" height="481" loading="lazy" decoding="async">
           <div class="exterior-card__copy"><span>富山市 / NIGHT VIEW</span><h3>安心と安全を大切に考えた家</h3><b>VIEW PROJECT →</b></div>
         </a>
         <a class="exterior-card reveal" href="https://www.fujisou-ainos.com/gallery/post-11.shtml">
-          <img src="images/exterior-beach-house-720.webp" srcset="images/exterior-beach-house-480.webp 480w, images/exterior-beach-house-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="富山市の潮風香る町に建つビーチハウスの屋外デッキ" width="720" height="478" loading="lazy" decoding="async">
+          <img src="/img/gallery/exterior-beach-house-720.webp" srcset="/img/gallery/exterior-beach-house-480.webp 480w, /img/gallery/exterior-beach-house-720.webp 720w" sizes="(max-width: 560px) 100vw, (max-width: 759px) 50vw, 34vw" alt="富山市の潮風香る町に建つビーチハウスの屋外デッキ" width="720" height="478" loading="lazy" decoding="async">
           <div class="exterior-card__copy"><span>富山市 / BEACH HOUSE</span><h3>潮風香る町のビーチハウス</h3><b>VIEW PROJECT →</b></div>
         </a>
       </div>
@@ -403,7 +406,7 @@
 
     <section class="design-feature" aria-labelledby="design-feature-title">
       <figure class="design-feature__visual">
-        <img src="images/design-inspiration-walkway-retouched.jpg" alt="高岡市の施工事例：渡り廊下でつながる平屋と木目の外壁を備えた二階建て住宅" width="1619" height="971" loading="lazy" decoding="async">
+        <img src="/img/home/design-inspiration-walkway-retouched.jpg" alt="高岡市の施工事例：渡り廊下でつながる平屋と木目の外壁を備えた二階建て住宅" width="1619" height="971" loading="lazy" decoding="async">
         <figcaption>高岡市 / 渡り廊下がつなぐおうち（写真を補正）</figcaption>
       </figure>
       <div class="design-feature__copy">
@@ -420,17 +423,17 @@
       <div class="lineup__intro reveal"><div><p class="kicker dark">AINOS HOME COLLECTION</p><h2 id="lineup-title">あなたに合う家を、<br>一緒に考えます。</h2></div><p>家族構成、土地、予算、暮らし方は人それぞれ。一つの形を押しつけず、ご家族に合う住まいを考えます。</p></div>
 
       <article class="home home--simply reveal">
-        <div class="home__visual"><img src="images/simply-catalog.webp" alt="SIMPLY 洗練されたデザインの高性能注文住宅" width="2268" height="1506" loading="lazy" decoding="async"><span>01</span></div>
+        <div class="home__visual"><img src="/img/plans/simply-catalog.webp" alt="SIMPLY 洗練されたデザインの高性能注文住宅" width="2268" height="1506" loading="lazy" decoding="async"><span>01</span></div>
         <div class="home__body"><p class="home__roman">SIMPLY</p><h3>洗練 × 高性能</h3><p class="home__tagline">洗練されたデザインと、機能的な設計の高性能住宅。</p><ul><li>自然エネルギーを活用するZEH志向</li><li>天然素材を使った安全性への配慮</li><li>高性能設備による省エネ設計</li><li>セキュリティ対応設計</li><li>最長60年の長期保証プログラム</li></ul><p class="home__fit">FOR — シンプルな意匠、性能、光熱費のバランスを求める方</p></div>
       </article>
 
       <article class="home home--pretty reveal">
-        <div class="home__visual"><img src="images/pretty-catalog.webp" alt="Pretty かわいいが詰まった自然素材の注文住宅" width="1797" height="1212" loading="lazy" decoding="async"><span>02</span></div>
+        <div class="home__visual"><img src="/img/plans/pretty-catalog.webp" alt="Pretty かわいいが詰まった自然素材の注文住宅" width="1797" height="1212" loading="lazy" decoding="async"><span>02</span></div>
         <div class="home__body"><p class="home__roman">Pretty</p><h3>かわいい × DIY</h3><p class="home__tagline">セルフビルドでつくる、「かわいい」がいっぱい詰まった住宅。</p><ul><li>自然素材を生かすDIY住宅</li><li>シャビーシックやアンティークの表情</li><li>カラータイルとステンドグラス</li><li>無垢の木でつくるキッチン</li><li>省エネ性能と最長60年の長期保証</li></ul><p class="home__fit">FOR — 色、素材、手づくりの楽しさを住まいに取り入れたい方</p></div>
       </article>
 
       <article class="home home--healthy reveal">
-        <div class="home__visual"><img src="images/exterior-tatami-home.jpg" alt="Healthy 自然素材と健やかな暮らしを考えた高岡市の注文住宅外観" width="720" height="480" loading="lazy" decoding="async"><span>03</span></div>
+        <div class="home__visual"><img src="/img/gallery/exterior-tatami-home.jpg" alt="Healthy 自然素材と健やかな暮らしを考えた高岡市の注文住宅外観" width="720" height="480" loading="lazy" decoding="async"><span>03</span></div>
         <div class="home__body"><p class="home__roman">Healthy</p><h3>自然素材 × 健康</h3><p class="home__tagline">住む人の健康を第一に考えた、本物の自然素材住宅。</p><ul><li>不健康素材ゼロを目指す7つの挑戦</li><li>乾燥無垢材、無垢床、漆喰の塗り壁</li><li>セルロースファイバー断熱</li><li>耐震等級3の災害に強い設計</li><li>温湿度差を抑える快適性と省エネ設備</li></ul><p class="home__fit">FOR — 空気、素材、耐震性まで妥協せず家族の健康を守りたい方</p></div>
       </article>
     </section>
@@ -443,15 +446,15 @@
         </header>
         <div class="home-selector__grid">
           <a class="home-selector__item reveal" href="https://www.fujisou-ainos.com/simply/">
-            <div class="home-selector__image"><img src="images/plan-simply-exterior-retouched-900.webp" srcset="images/plan-simply-exterior-retouched-480.webp 480w, images/plan-simply-exterior-retouched-900.webp 900w, images/plan-simply-exterior-retouched-1400.webp 1400w" sizes="(max-width: 760px) 42vw, 32vw" alt="端正な白い外壁と木の玄関を備えた自由設計住宅 SIMPLY" width="1402" height="1122" loading="lazy" decoding="async"><span class="home-selector__index">01 / 03</span></div>
+            <div class="home-selector__image"><img src="/img/plans/plan-simply-exterior-retouched-900.webp" srcset="/img/plans/plan-simply-exterior-retouched-480.webp 480w, /img/plans/plan-simply-exterior-retouched-900.webp 900w, /img/plans/plan-simply-exterior-retouched-1400.webp 1400w" sizes="(max-width: 760px) 42vw, 32vw" alt="端正な白い外壁と木の玄関を備えた自由設計住宅 SIMPLY" width="1402" height="1122" loading="lazy" decoding="async"><span class="home-selector__index">01 / 03</span></div>
             <div class="home-selector__caption"><strong>SIMPLY</strong><small>シンプルで高性能な家</small><p>使いやすい間取りと省エネ性能で、毎日の暮らしを快適に。</p><span class="home-selector__arrow" aria-hidden="true">→</span></div>
           </a>
           <a class="home-selector__item reveal" href="https://www.fujisou-ainos.com/pretty/">
-            <div class="home-selector__image"><img src="images/plan-pretty-exterior-retouched-900.webp" srcset="images/plan-pretty-exterior-retouched-480.webp 480w, images/plan-pretty-exterior-retouched-900.webp 900w, images/plan-pretty-exterior-retouched-1400.webp 1400w" sizes="(max-width: 760px) 42vw, 32vw" alt="赤い屋根と淡いグリーンの玄関が印象的な自由設計住宅 Pretty" width="1402" height="1122" loading="lazy" decoding="async"><span class="home-selector__index">02 / 03</span></div>
+            <div class="home-selector__image"><img src="/img/plans/plan-pretty-exterior-retouched-900.webp" srcset="/img/plans/plan-pretty-exterior-retouched-480.webp 480w, /img/plans/plan-pretty-exterior-retouched-900.webp 900w, /img/plans/plan-pretty-exterior-retouched-1400.webp 1400w" sizes="(max-width: 760px) 42vw, 32vw" alt="赤い屋根と淡いグリーンの玄関が印象的な自由設計住宅 Pretty" width="1402" height="1122" loading="lazy" decoding="async"><span class="home-selector__index">02 / 03</span></div>
             <div class="home-selector__caption"><strong>Pretty</strong><small>かわいいを楽しむ家</small><p>タイルや無垢材、DIYを取り入れて、自分らしい住まいに。</p><span class="home-selector__arrow" aria-hidden="true">→</span></div>
           </a>
           <a class="home-selector__item reveal" href="https://www.fujisou-ainos.com/healthy/">
-            <div class="home-selector__image"><img src="images/plan-healthy-exterior-retouched-900.webp" srcset="images/plan-healthy-exterior-retouched-480.webp 480w, images/plan-healthy-exterior-retouched-900.webp 900w, images/plan-healthy-exterior-retouched-1400.webp 1400w" sizes="(max-width: 760px) 42vw, 32vw" alt="富山の暮らしに寄り添うシンプルな平屋住宅 Healthy" width="1537" height="1023" loading="lazy" decoding="async"><span class="home-selector__index">03 / 03</span></div>
+            <div class="home-selector__image"><img src="/img/plans/plan-healthy-exterior-retouched-900.webp" srcset="/img/plans/plan-healthy-exterior-retouched-480.webp 480w, /img/plans/plan-healthy-exterior-retouched-900.webp 900w, /img/plans/plan-healthy-exterior-retouched-1400.webp 1400w" sizes="(max-width: 760px) 42vw, 32vw" alt="富山の暮らしに寄り添うシンプルな平屋住宅 Healthy" width="1537" height="1023" loading="lazy" decoding="async"><span class="home-selector__index">03 / 03</span></div>
             <div class="home-selector__caption"><strong>Healthy</strong><small>家族の健康を考えた家</small><p>無垢材と漆喰を使い、安心して子育てできる住まいに。</p><span class="home-selector__arrow" aria-hidden="true">→</span></div>
           </a>
         </div>
@@ -461,11 +464,11 @@
 
     <section class="shikkui-story" aria-labelledby="shikkui-story-title">
       <div class="shikkui-story__copy reveal"><p class="kicker dark">SHIKKUI WALL</p><h2 id="shikkui-story-title">なぜフジ創は、<br>漆喰にこだわるのか。</h2><p>毎日目にし、空気に触れる壁だから。調湿性や不燃性といった特性に加え、年月を重ねても飽きにくい自然な表情を大切にしています。</p><a class="editorial-link" href="shikkui/index.html">漆喰について詳しく見る <span aria-hidden="true">→</span></a></div>
-      <div class="shikkui-story__image reveal"><img src="images/shikkui/wall-enhanced-web.jpg" alt="職人の手仕事で仕上げたフジ創アイノスの漆喰壁" width="1509" height="1042" loading="lazy" decoding="async"></div>
+      <div class="shikkui-story__image reveal"><img src="/img/shikkui/wall-enhanced-web.jpg" alt="職人の手仕事で仕上げたフジ創アイノスの漆喰壁" width="1509" height="1042" loading="lazy" decoding="async"></div>
     </section>
 
     <section class="seven section" aria-labelledby="seven-title">
-      <div class="seven__photo reveal"><img src="images/healthy-material-wood.jpg" alt="天然木を壁一面に使用したフジ創アイノスの自然素材住宅" width="1800" height="1200" loading="lazy" decoding="async"></div>
+      <div class="seven__photo reveal"><img src="/img/home/healthy-material-wood.jpg" alt="天然木を壁一面に使用したフジ創アイノスの自然素材住宅" width="1800" height="1200" loading="lazy" decoding="async"></div>
       <div class="seven__content">
         <div class="section-index reveal"><span>05</span><i></i>HEALTHY MATERIAL POLICY</div><p class="kicker reveal">SEVEN CHALLENGES</p><h2 id="seven-title" class="reveal">「何を使わないか」まで考える、<br>7つの素材選び。</h2><p class="seven__lead reveal">毎日を過ごす家だから、見える部分も見えない部分も素材を選びます。</p>
         <ol class="seven__list"><li class="reveal"><b>01</b><span><strong>集成材を使わない</strong>乾燥無垢材の構造</span></li><li class="reveal"><b>02</b><span><strong>合板フローリングを使わない</strong>無垢フローリング</span></li><li class="reveal"><b>03</b><span><strong>ビニールクロスを使わない</strong>漆喰の塗り壁</span></li><li class="reveal"><b>04</b><span><strong>素材を選ぶ断熱</strong>セルロースファイバー</span></li><li class="reveal"><b>05</b><span><strong>化粧合板建具を使わない</strong>無垢材建具</span></li><li class="reveal"><b>06</b><span><strong>樹脂造作材を使わない</strong>無垢造作材</span></li><li class="reveal"><b>07</b><span><strong>農薬系防蟻剤を使わない</strong>ホウ酸による防蟻</span></li></ol>
@@ -495,22 +498,22 @@
       </div>
       <div class="news-preview__grid" id="news-preview-list" aria-live="polite">
         <a class="preview-card reveal" data-news-category="blog" href="https://www.fujisou-ainos.com/staffblog/-nhk.shtml">
-          <img class="preview-card__image" src="images/staffblog/blog-01-hd.png" alt="家を借りられない単身世帯とこれからの住まいを考えるブログ記事" width="1120" height="630" loading="lazy" decoding="async">
+          <img class="preview-card__image" src="/img/staffblog/blog-01-hd.png" alt="家を借りられない単身世帯とこれからの住まいを考えるブログ記事" width="1120" height="630" loading="lazy" decoding="async">
           <span class="preview-card__meta"><span class="preview-card__type">BLOG</span><time datetime="2026-09-21">2026.09.21</time></span>
           <h3>NHKが特集した「家を借りられない単身世帯」〜これからの住まいは「借りる」だけでいいのか？〜</h3><b aria-hidden="true">↗</b>
         </a>
         <a class="preview-card reveal" data-news-category="blog" href="https://www.fujisou-ainos.com/staffblog/-100.shtml">
-          <img class="preview-card__image" src="images/staffblog/blog-02-hd.png" alt="相続した古い空き家の再生について紹介するブログ記事" width="1120" height="630" loading="lazy" decoding="async">
+          <img class="preview-card__image" src="/img/staffblog/blog-02-hd.png" alt="相続した古い空き家の再生について紹介するブログ記事" width="1120" height="630" loading="lazy" decoding="async">
           <span class="preview-card__meta"><span class="preview-card__type">BLOG</span><time datetime="2026-09-14">2026.09.14</time></span>
           <h3>富山市、高岡市で相続空き家が増えています。古い家を「これから100年住める家」に再生する</h3><b aria-hidden="true">↗</b>
         </a>
         <a class="preview-card reveal" data-news-category="blog" href="https://www.fujisou-ainos.com/staffblog/post-937.shtml">
-          <img class="preview-card__image" src="images/staffblog/blog-03-hd.png" alt="注文住宅を建てる際の住宅ローンについて紹介するブログ記事" width="1120" height="630" loading="lazy" decoding="async">
+          <img class="preview-card__image" src="/img/staffblog/blog-03-hd.png" alt="注文住宅を建てる際の住宅ローンについて紹介するブログ記事" width="1120" height="630" loading="lazy" decoding="async">
           <span class="preview-card__meta"><span class="preview-card__type">BLOG</span><time datetime="2026-09-07">2026.09.07</time></span>
           <h3>住宅ローンを味方につける考え方。注文住宅を建てるなら知っておきたいお金の話</h3><b aria-hidden="true">↗</b>
         </a>
         <a class="preview-card preview-card--event reveal" data-news-category="event" href="eventinfo/open-house/index.html" hidden>
-          <img class="preview-card__image" src="images/eventinfo/event-2026-tonami-open-house.jpg" alt="砺波市で開催する木と漆喰の自然素材の家 完成見学会" width="1672" height="737" loading="lazy" decoding="async">
+          <img class="preview-card__image" src="/img/eventinfo/event-2026-tonami-open-house.jpg" alt="砺波市で開催する木と漆喰の自然素材の家 完成見学会" width="1672" height="737" loading="lazy" decoding="async">
           <span class="preview-card__meta"><span class="preview-card__type">EVENT</span><time datetime="2026-09-18">2026.09.18</time></span>
           <h3>【9/26〜10/12開催】砺波市 完成見学会｜木と漆喰の自然素材の家</h3><b aria-hidden="true">↗</b>
         </a>
@@ -526,7 +529,7 @@
     </section>
 
     <section class="local section" aria-labelledby="local-title">
-      <div class="local__image reveal"><img src="images/design_ainos-900.webp" srcset="images/design_ainos-480.webp 480w, images/design_ainos-900.webp 900w, images/design_ainos-1400.webp 1400w" sizes="(max-width: 760px) 100vw, 50vw" alt="富山県で自然素材の注文住宅を手がけるフジ創アイノスの住まい" width="1774" height="887" loading="lazy" decoding="async"></div>
+      <div class="local__image reveal"><img src="/img/home/design_ainos-900.webp" srcset="/img/home/design_ainos-480.webp 480w, /img/home/design_ainos-900.webp 900w, /img/home/design_ainos-1400.webp 1400w" sizes="(max-width: 760px) 100vw, 50vw" alt="富山県で自然素材の注文住宅を手がけるフジ創アイノスの住まい" width="1774" height="887" loading="lazy" decoding="async"></div>
       <div class="local__copy reveal">
         <p class="kicker dark">LOCAL BUILDER IN TOYAMA</p>
         <h2 id="local-title">富山の家族に、富山の家を。</h2>
@@ -546,7 +549,7 @@
         <div class="contact__methods">
           <a class="contact-card contact-card--phone" href="tel:08002002661"><small>お電話で相談</small><strong>0800-200-2661</strong><span>受付 9:00–18:00<br>水曜・木曜定休</span><b>電話をかける</b></a>
           <a class="contact-card contact-card--email" href="mailto:info@ainos.biz"><small>メールで相談</small><strong>info@ainos.biz</strong><span>ご質問やご相談をいつでもお送りください</span><b>メールを送る</b></a>
-          <div class="contact-card contact-card--line"><div><small>LINEで相談</small><strong>友だち追加</strong><span>QRコードを読み取るか、ボタンから追加できます</span><a href="https://lin.ee/t6RziIw" target="_blank" rel="noopener">LINEで友だち追加</a></div><a class="contact-card__qr" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener" aria-label="フジ創アイノスをLINEで友だち追加"><img src="images/line-qr.png" alt="フジ創アイノス公式LINE友だち追加QRコード" width="320" height="320" loading="lazy" decoding="async"></a></div>
+          <div class="contact-card contact-card--line"><div><small>LINEで相談</small><strong>友だち追加</strong><span>QRコードを読み取るか、ボタンから追加できます</span><a href="https://lin.ee/t6RziIw" target="_blank" rel="noopener">LINEで友だち追加</a></div><a class="contact-card__qr" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener" aria-label="フジ創アイノスをLINEで友だち追加"><img src="/img/common/line-qr.png" alt="フジ創アイノス公式LINE友だち追加QRコード" width="320" height="320" loading="lazy" decoding="async"></a></div>
         </div>
         <p class="contact__note">しつこい営業はいたしません。ご相談だけでも安心してお問い合わせください。</p>
       </div>
@@ -554,8 +557,7 @@
   </main>
 
   <nav class="mobile-contact-bar" aria-label="すぐに相談する"><a href="https://lin.ee/t6RziIw" target="_blank" rel="noopener">LINE</a><a href="#contact-title">無料相談</a><a href="tel:08002002661">電話</a></nav>
-
-<!-- Shared footer: markup, styles, and behavior are embedded for direct HTML use. -->
+<!-- Shared SSI footer: CSS/JS included; assets resolve from img/ at the domain root. -->
 <style>
 .shared-footer {
   --chrome-ink: #493b31;
@@ -570,7 +572,7 @@
   color: var(--chrome-ink);
   border-top: 1px solid var(--chrome-line);
   background-color: #f5f5f4;
-  background-image: url('images/footer-bg-white.webp');
+  background-image: url('img/common/footer-bg-white.webp');
   background-repeat: repeat;
   background-size: auto;
   font: 400 17px/1.85 var(--chrome-font);
@@ -583,7 +585,8 @@
 .shared-footer a:hover { color: var(--chrome-gold); }
 .shared-footer__inner { width: min(1380px, 100%); margin-inline: auto; padding: 56px clamp(20px, 4vw, 56px) 24px; }
 .shared-footer__top { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid var(--chrome-line); }
-.shared-footer__brand img { width: 230px; }
+.shared-footer__brand > a { display: block; width: 230px; max-width: 100%; aspect-ratio: 3 / 1; }
+.shared-footer .shared-footer__brand img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 1; object-fit: contain; }
 .shared-footer__brand { flex: 1 1 560px; min-width: 0; }
 .shared-footer__company { margin: 15px 0 0; color: var(--chrome-muted); font: 400 15px/1.85 var(--chrome-font); }
 .shared-footer__contact { display: flex; align-items: center; gap: 36px; }
@@ -617,14 +620,21 @@
   .shared-footer__nav { gap: 18px; }
 }
 @media (max-width: 820px) {
-  .shared-footer__top { align-items: flex-start; flex-direction: column; }
+  .shared-footer__top { align-items: flex-start; flex-direction: column; gap: 24px; padding-bottom: 28px; }
+  .shared-footer__brand { flex: none; width: 100%; }
+  .shared-footer__brand > a { display: block; width: 180px; max-width: 100%; }
+  .shared-footer__brand img { width: 100%; }
   .shared-footer__contact { justify-content: space-between; width: 100%; }
   .shared-footer__grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .shared-footer__offices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
   .shared-footer__offices > a { grid-column: 1 / -1; }
 }
 @media (max-width: 540px) {
-  .shared-footer__inner { padding-top: 40px; }
+  .shared-footer__inner { padding: 32px 20px 24px; }
+  .shared-footer__brand > a { width: 160px; }
+  .shared-footer__company { margin-top: 12px; font-size: 14px; }
+  .shared-footer__area { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 12px; }
+  .shared-footer__phone { font-size: 26px; }
   .shared-footer__contact { align-items: flex-start; flex-direction: column; gap: 18px; }
   .shared-footer__inquiry { width: 100%; }
   .shared-footer__offices { grid-template-columns: minmax(0, 1fr); }
@@ -643,13 +653,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="index.html" aria-label="フジ創アイノス ホーム"><img src="images/ainos-logo-360.webp" srcset="images/ainos-logo-360.webp 360w, images/ainos-logo-720.webp 720w" sizes="230px" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム"><img src="img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="https://www.fujisou-ainos.com/contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -660,28 +670,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="concept/index.html">私たちの家造り</a></li>
-          <li><a href="staff/index.html">スタッフ紹介</a></li>
-          <li><a href="policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
+          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
+          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="gallery/index.html">施工事例</a></li>
-          <li><a href="land-info/index.html">土地情報</a></li>
-          <li><a href="shikkui/index.html">漆喰とは</a></li>
+          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
+          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
+          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="eventinfo/index.html">イベント情報</a>
-          <a href="staffblog/index.html">社長のブログ</a>
+          <a href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
+          <a href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>

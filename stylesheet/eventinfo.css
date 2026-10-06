@@ -19,7 +19,7 @@
   max-width: 42em; margin: 28px auto 0; color: #655b54; font: 400 16px/2.1 var(--sans);
 }
 
-.event-section {
+.event-section {5
   width: min(1260px, calc(100% - var(--frame) * 2)); margin: 0 auto;
   padding: clamp(42px, 6vw, 84px) var(--sx) clamp(72px, 8vw, 108px);
 }

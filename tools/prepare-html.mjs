@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist']);
+const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms']);
 
 function walk(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -52,7 +52,7 @@ for (const page of pages) {
     if (isPrimaryContentImage) foundPrimaryContentImage = true;
 
     const cleanSource = source.split(/[?#]/)[0];
-    const imagePath = path.resolve(path.dirname(page), cleanSource);
+    const imagePath = cleanSource.startsWith('/') ? path.join(root, cleanSource) : path.resolve(path.dirname(page), cleanSource);
     let result = tag;
     if ((!/\bwidth=/i.test(result) || !/\bheight=/i.test(result)) && fs.existsSync(imagePath)) {
       const dimensions = imageSize(imagePath);

@@ -4,14 +4,14 @@ import { transform } from "lightningcss";
 import { PurgeCSS } from "purgecss";
 
 const images = [
-  ["images/ainos-bridal-house-logo.png", "images/ainos-logo-360.webp", 360, 88],
-  ["images/ainos-bridal-house-logo.png", "images/ainos-logo-720.webp", 720, 88],
-  ["images/slide1.jpg", "images/slide1-768.webp", 768, 82],
-  ["images/slide1.jpg", "images/slide1-1440.webp", 1440, 84],
-  ["images/natural-room.webp", "images/natural-room-480.webp", 480, 80],
-  ["images/natural-room.webp", "images/natural-room-720.webp", 720, 81],
-  ["images/natural-room.webp", "images/natural-room-900.webp", 900, 82],
-  ["images/footer-bg-white.jpg", "images/footer-bg-white.webp", 1600, 78],
+  ["img/common/ainos-bridal-house-logo.png", "img/common/ainos-logo-360.webp", 360, 88],
+  ["img/common/ainos-bridal-house-logo.png", "img/common/ainos-logo-720.webp", 720, 88],
+  ["img/home/slide1.jpg", "img/home/slide1-768.webp", 768, 82],
+  ["img/home/slide1.jpg", "img/home/slide1-1440.webp", 1440, 84],
+  ["img/home/natural-room.webp", "img/home/natural-room-480.webp", 480, 80],
+  ["img/home/natural-room.webp", "img/home/natural-room-720.webp", 720, 81],
+  ["img/home/natural-room.webp", "img/home/natural-room-900.webp", 900, 82],
+  ["img/common/footer-bg-white.jpg", "img/common/footer-bg-white.webp", 1600, 78],
 ];
 
 await Promise.all(images.map(async ([input, output, width, quality]) => {
@@ -23,7 +23,7 @@ await Promise.all(images.map(async ([input, output, width, quality]) => {
 
 const css = await readFile("stylesheet/fujisou-ainos.css");
 const [{ css: homepageCss }] = await new PurgeCSS().purge({
-  content: ["index.html", "script/fujisou-ainos.js"],
+  content: ["index.html", "include/header.shtml", "include/footer.shtml", "script/fujisou-ainos.js"],
   css: [{ raw: css.toString(), extension: "css" }],
   safelist: {
     greedy: [/^is-/, /^has-/, /^js$/, /^no-scroll$/],

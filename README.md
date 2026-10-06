@@ -4,13 +4,13 @@ Static Japanese website for フジ創アイノス. The root `index.html` defines
 
 ## Local preview
 
-Run any static HTTP server from this folder. For example:
+Use an SSI-capable server from this folder. A plain static server will show page content but will not render the shared header/footer.
 
 ```powershell
 npx serve .
 ```
 
-The page files currently contain local copies of the shared header and footer so they also work without SSI during development. `header.shtml` and `footer.shtml` remain the canonical server-side include versions for a later SSI migration.
+All pages now contain real header/footer markup, CSS, and JavaScript for direct rendering. The `include/header.shtml` and `include/footer.shtml` sources remain available for a future SSI switch. Images are centralized under `/img/` with folders for common, home, gallery, plans, staff, and other page groups. See [DEPLOY_SSI.md](DEPLOY_SSI.md) for the image layout and optional SSI deployment requirements.
 
 ## Before deployment
 

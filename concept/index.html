@@ -13,9 +13,10 @@
   <link rel="stylesheet" href="../stylesheet/breadcrumbs.css">
 </head>
 <body class="company-concept">
-  <!-- Future SSI navigation: replace this entire placeholder with the shared include. -->
-  <!-- Local copy of header.shtml for direct local testing. -->
+
+
 <!-- Shared SSI header with its CSS and JavaScript included in this file. -->
+<!-- Shared SSI header: CSS/JS included; assets resolve from ../img/ at the domain root. -->
 <style>
 /* Shared SSI components. These selectors do not restyle page content. */
 .shared-header {
@@ -42,7 +43,8 @@
 
 .shared-header { position: sticky; z-index: 100; top: 0; border-top: 3px solid #806039; border-bottom: 1px solid var(--chrome-line); box-shadow: 0 3px 16px #493b3108; }
 .shared-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: min(1560px, 100%); min-height: 100px; margin-inline: auto; padding: 20px clamp(20px, 3vw, 48px); }
-.shared-header__brand { flex-shrink: 0; width: clamp(205px, 17vw, 250px); }
+.shared-header__brand { display: block; flex-shrink: 0; width: clamp(205px, 17vw, 250px); aspect-ratio: 3 / 1; }
+.shared-header .shared-header__brand img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 1; object-fit: contain; }
 .shared-header__identity { display: flex; flex: 0 1 auto; align-items: center; gap: clamp(12px, 1.25vw, 20px); min-width: 0; }
 .shared-header__identity .shared-header__brand { flex: 0 1 250px; }
 .shared-header__signature { position: relative; flex: 0 0 auto; padding: 3px 0 3px clamp(12px, 1.1vw, 18px); border-left: 1px solid #b89a72; color: var(--chrome-ink); line-height: 1.35; white-space: nowrap; }
@@ -80,14 +82,15 @@
 
 @media (max-width: 1120px) {
   .shared-header:not([data-enhanced]) { position: relative; }
-  .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 20px; min-height: 86px; padding: 18px 24px; }
+  .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 16px; min-height: 76px; padding: 12px 24px; }
   .shared-header__brand { width: 210px; }
   .shared-header__identity { flex: 1 1 auto; gap: 14px; min-width: 0; }
-  .shared-header__identity .shared-header__brand { flex: 0 1 210px; width: auto; }
+  .shared-header__identity .shared-header__brand { flex: 0 0 180px; width: 180px; }
+  .shared-header .shared-header__brand img { width: 100%; height: 60px; object-fit: contain; }
   .shared-header__signature strong { font-size: 15px; }
   .shared-header__signature small { font-size: 10px; }
   .shared-header__nav { flex: 0 0 100%; display: grid; gap: 0; padding-top: 16px; }
-  .shared-header[data-enhanced] .shared-header__toggle { display: flex; width: 44px; min-height: 44px; align-items: center; justify-content: center; margin-left: auto; padding: 0; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
+  .shared-header[data-enhanced] .shared-header__toggle { display: flex; flex: 0 0 44px; width: 44px; min-height: 44px; align-items: center; justify-content: center; margin-left: auto; padding: 0; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
   .shared-header__toggle-lines { position: relative; display: block; width: 22px; height: 14px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
   .shared-header__toggle-lines::before { position: absolute; top: 5px; left: 0; width: 22px; height: 1px; content: ''; background: currentColor; }
   .shared-header__toggle[aria-expanded="true"] .shared-header__toggle-lines { border-color: transparent; }
@@ -104,11 +107,12 @@
 @media (max-width: 820px) {
 }
 @media (max-width: 540px) {
-  .shared-header__inner { padding-inline: 18px; gap: 12px; }
-  .shared-header__identity { gap: 9px; }
-  .shared-header__identity .shared-header__brand { flex-basis: clamp(125px, 39vw, 180px); width: auto; }
-  .shared-header__signature { padding-left: 9px; }
-  .shared-header__signature strong { font-size: clamp(12px, 3.8vw, 15px); letter-spacing: .1em; }
+  .shared-header__inner { min-height: 64px; padding: 8px 14px; gap: 0 10px; }
+  .shared-header__identity { flex: 1 1 0; gap: 8px; }
+  .shared-header__identity .shared-header__brand { flex: 0 0 clamp(100px, 31vw, 150px); width: clamp(100px, 31vw, 150px); }
+  .shared-header .shared-header__brand img { height: clamp(33.333px, 10.333vw, 50px); }
+  .shared-header__signature { padding-left: 8px; }
+  .shared-header__signature strong { font-size: clamp(11px, 3vw, 14px); letter-spacing: .06em; }
   .shared-header__signature small { display: block; margin-top: 2px; font-size: 8px; letter-spacing: .03em; }
   .shared-header[data-enhanced] .shared-header__toggle { padding: 0; }
   .shared-header[data-enhanced] .shared-header__nav { padding-inline: 20px; }
@@ -122,8 +126,8 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
-      <img src="../images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" decoding="async">
+    <a class="shared-header__brand" href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム">
+      <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
     </div>
@@ -134,31 +138,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
+          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
+          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
+          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="../staffblog/index.html">社長のブログ</a>
+        <a class="shared-header__link" href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -168,7 +172,7 @@
   </div>
 </header>
 <script>
-/* SSI provides the markup. JavaScript only enhances navigation behavior. */
+/* JavaScript enhances the embedded navigation behavior. */
 (() => {
   'use strict';
   const header = document.querySelector('[data-shared-header]');
@@ -262,10 +266,6 @@
   toggle.hidden = false;
   header.setAttribute('data-enhanced', '');
   document.documentElement.classList.add('has-shared-header');
-  const updateHeight = () => document.documentElement.style.setProperty('--shared-header-height', Math.ceil(header.getBoundingClientRect().height) + 'px');
-  updateHeight();
-  if ('ResizeObserver' in window) new ResizeObserver(updateHeight).observe(header);
-  else window.addEventListener('resize', updateHeight);
 })();
 </script>
 
@@ -276,10 +276,10 @@
     <nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li><span aria-hidden="true">/</span><span aria-current="page">アイノスの家づくり</span></li></ol></nav>
     <section class="concept-hero" aria-labelledby="concept-title">
       <div class="concept-hero__copy"><h1 id="concept-title"><span>フジ創の</span><span>家づくり</span></h1><p class="concept-hero__subtitle">天然素材×高耐震の健康住宅</p><a href="#message">私たちの想い <span aria-hidden="true">↓</span></a></div>
-      <div class="concept-hero__visual"><img src="../images/concept-family.jpg" alt="無垢の床と木のキッチン、ハンモックのある明るい室内" width="1000" height="700" fetchpriority="high" decoding="async"></div>
+      <div class="concept-hero__visual"><img src="/img/concept/concept-family.jpg" alt="無垢の床と木のキッチン、ハンモックのある明るい室内" width="1000" height="700" fetchpriority="high" decoding="async"></div>
     </section>
     <section class="concept-message concept-block reveal" id="message" aria-label="私たちの想い"><header class="concept-message__heading"><h2><span>こどもの成長を一番に、</span>安心して子育てができる<br>天然素材の注文住宅</h2></header>
-      <div class="concept-message__photo"><img src="../images/concept-founder.jpg" alt="明るい室内で赤ちゃんを抱き上げる母親" width="1200" height="780" loading="lazy" decoding="async"></div>
+      <div class="concept-message__photo"><img src="/img/concept/concept-founder.jpg" alt="明るい室内で赤ちゃんを抱き上げる母親" width="1200" height="780" loading="lazy" decoding="async"></div>
       <div class="concept-prose">
                                 <h3>自分が住みたくない家を建てたくない。<br>「安物」ではなく「安全」な家を納得の価格で。</h3>
                                 <p class="text">
@@ -292,7 +292,7 @@
                                     無駄を徹底的に排除し、会社の利益を低く抑え「身体に良い天然素材を使った家」の低価格での提供が可能となりました。<br>これからの人生を育んでいくあなたの大切な家族のために、私たちのつくる「身体に良い天然素材を使った家」をご体感ください。
                                 </p><p class="concept-author">有限会社フジ創 代表取締役 荒井 一</p></div>
     </section>
-    <section class="concept-story concept-block reveal" id="home-story" aria-label="アイノスの家が生まれるまで"><header class="concept-story__heading"><h3><span>“住む人の<br>幸せな暮らし”</span>を実現する健康住宅</h3></header><div class="concept-story__label"><img src="../images/natural-room.webp" alt="木の素材を生かした住まいの室内" width="1697" height="1131" loading="lazy" decoding="async"></div><div class="concept-prose">
+    <section class="concept-story concept-block reveal" id="home-story" aria-label="アイノスの家が生まれるまで"><header class="concept-story__heading"><h3><span>“住む人の<br>幸せな暮らし”</span>を実現する健康住宅</h3></header><div class="concept-story__label"><img src="/img/home/natural-room.webp" alt="木の素材を生かした住まいの室内" width="1697" height="1131" loading="lazy" decoding="async"></div><div class="concept-prose">
                                     <p class="text">
                                         住む人の健康に配慮した天然素材を使った住宅をお客様にご提案すると、「フジ創さんの家の良さは良くわかるのですが、天然素材を使うと予算が合わなくて私たちには無理ですね」と言われることがありました。
                                         <br>また、見学会にいらした方に、「私たちの収入では、マイホームなんて一生無理だ」という方も多くいました。<br>そのような話をお聞きするたびに、“この人たちにも何とか健康に良い家で暮らす幸せを感じてもらいたい”という思いが芽生えてきたのです。<br>その思いを実現するために調べてみる事にしました。<br><br>高岡市内のアパートの家賃は6万円前後が主流です。<br>アパートに住んでいる方に家を建ててもらうためには、6万円の住宅ローンの支払いで土地と建物が購入できなければいけません。<br>返済を35年ローンで組むと、借入総額は2,030万円までとなります。予算が決まれば、その金額内での住宅を企画すればいいことになります。
@@ -300,7 +300,7 @@
                                     <p class="text">
                                         しかし、単に安いだけではアイノスの家づくりとはいえません。“住む人の幸せな暮らし”を実現しなければならないのです。<br>また、見積り後にお客様のご要望以外で追加料金が発生したり、オプションで価格が上がらないように、すべて込みの価格に設定しなければなりません。<br>「無垢の床材」「漆喰塗の壁」「無垢材張りの壁」など天然素材を取り入れ安心して子育てができる天然素材の注文住宅、このようにしてアイノスの家が出来上がったのです。
                                     </p></div></section>
-    <section class="concept-family concept-block reveal" aria-label="あなたの大切な家族のために"><div class="concept-family__visual"><img src="../images/family-catalog.webp" alt="春夏秋冬の暮らしに関するカタログの図解" width="1057" height="661" loading="lazy" decoding="async"></div><div class="concept-prose"><h3><span>あなたの大切な</span>家族のために</h3>
+    <section class="concept-family concept-block reveal" aria-label="あなたの大切な家族のために"><div class="concept-family__visual"><img src="/img/plans/family-catalog.webp" alt="春夏秋冬の暮らしに関するカタログの図解" width="1057" height="661" loading="lazy" decoding="async"></div><div class="concept-prose"><h3><span>あなたの大切な</span>家族のために</h3>
                                     <p class="text">
                                         アイノスの家は「ブライダルハウス」という名前でもご案内しています。<br>それはこれから、『結婚する人にこそ安心して子育てできる天然素材の注文住宅に住んでいただきたい』という思いからです。<br>一般には結婚すると親元を離れアパートに住む方が多いのですが、アパートは決して住み心地が良い住居ではありません。<br>まして、そこでのびのびと子育てをすることは難しいのです。<br>若いうちにこそ、ローンを組み、家族みんなが笑顔で生活できる家を建て、資産形成をしていくべきだと私は考えています。
                                     </p>
@@ -358,8 +358,9 @@
     <section class="concept-offices concept-block reveal" id="offices" aria-labelledby="offices-title"><header><h2 id="offices-title">アクセス</h2></header><div class="concept-office-grid"><article><span>TAKAOKA</span><h3>本社・高岡ショールーム</h3><address>〒933-0062 富山県高岡市江尻846-1</address><a class="concept-office-phone" href="tel:0766302582">0766-30-2582</a><p>受付時間：金〜火 9:00–18:00</p><a class="concept-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=富山県高岡市江尻846-1" target="_blank" rel="noopener">地図で見る <span aria-hidden="true">↗</span></a></article><article><span>TOYAMA</span><h3>富山事務所</h3><address>〒939-8006 富山県富山市山室256-4 SKビル 2-A</address><a class="concept-office-phone" href="tel:08002002661">0800-200-2661</a><p>受付時間：金〜火 9:00–18:00</p><a class="concept-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=富山県富山市山室256-4" target="_blank" rel="noopener">地図で見る <span aria-hidden="true">↗</span></a></article></div></section>
     <section class="concept-consultation reveal" aria-labelledby="consultation-title"><svg class="concept-consultation__drawing" viewBox="0 0 560 360" fill="none" aria-hidden="true" focusable="false"><g stroke="currentColor" stroke-width="1"><path d="M20 164 206 54l265 84-185 109Z M20 164v118l266 78V247 M471 138v119l-185 103 M206 54v117 M20 282l186-111 265 86 M104 189v118 M365 195v118 M206 171l80 24 M333 214v102 M397 176v116"/><path d="m-30 324 260-153 310 93 M206 12v320 M-20 146l330 101 M60 40l380 122" stroke-dasharray="3 7"/><path d="m128 298 36-21 48 15v45l-48-15v-45 M354 272l38-23v45l-38 23Z"/></g></svg><h2 id="consultation-title">家づくり無料相談</h2><p>暮らしのアンケートで<br>家族の理想の家づくりを発見</p><a href="https://www.fujisou-ainos.com/contact/">こちらからお気軽にお申し込みください <span aria-hidden="true">→</span></a></section>
   </main>
-  <!-- Local copy of footer.shtml for direct local testing. -->
+
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
+<!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
 <style>
 .shared-footer {
   --chrome-ink: #493b31;
@@ -374,7 +375,7 @@
   color: var(--chrome-ink);
   border-top: 1px solid var(--chrome-line);
   background-color: #f5f5f4;
-  background-image: url('../images/footer-bg-white.jpg');
+  background-image: url('../img/common/footer-bg-white.webp');
   background-repeat: repeat;
   background-size: auto;
   font: 400 17px/1.85 var(--chrome-font);
@@ -387,7 +388,8 @@
 .shared-footer a:hover { color: var(--chrome-gold); }
 .shared-footer__inner { width: min(1380px, 100%); margin-inline: auto; padding: 56px clamp(20px, 4vw, 56px) 24px; }
 .shared-footer__top { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid var(--chrome-line); }
-.shared-footer__brand img { width: 230px; }
+.shared-footer__brand > a { display: block; width: 230px; max-width: 100%; aspect-ratio: 3 / 1; }
+.shared-footer .shared-footer__brand img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 1; object-fit: contain; }
 .shared-footer__brand { flex: 1 1 560px; min-width: 0; }
 .shared-footer__company { margin: 15px 0 0; color: var(--chrome-muted); font: 400 15px/1.85 var(--chrome-font); }
 .shared-footer__contact { display: flex; align-items: center; gap: 36px; }
@@ -404,7 +406,7 @@
 .shared-footer__area strong { color: var(--chrome-gold); font-size: 14px; font-weight: 600; white-space: nowrap; }
 .shared-footer__area span { color: var(--chrome-ink); font-size: 14px; line-height: 1.9; }
 .shared-footer__nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
-.shared-footer__nav h2 { margin: 0 0 14px; color: var(--chrome-gold); font: 500 16px/1.7 var(--chrome-font); letter-spacing: .06em; }
+.shared-footer__nav h2 { margin: 0 0 14px; color: #8f683b; font: 500 16px/1.7 var(--chrome-font); letter-spacing: .06em; }
 .shared-footer__nav ul { margin: 0; padding: 0; list-style: none; }
 .shared-footer__nav li { margin: 0; padding: 0; list-style: none; }
 .shared-footer__nav a { display: block; padding: 10px 0; font-size: 15px; line-height: 1.8; }
@@ -421,14 +423,21 @@
   .shared-footer__nav { gap: 18px; }
 }
 @media (max-width: 820px) {
-  .shared-footer__top { align-items: flex-start; flex-direction: column; }
+  .shared-footer__top { align-items: flex-start; flex-direction: column; gap: 24px; padding-bottom: 28px; }
+  .shared-footer__brand { flex: none; width: 100%; }
+  .shared-footer__brand > a { display: block; width: 180px; max-width: 100%; }
+  .shared-footer__brand img { width: 100%; }
   .shared-footer__contact { justify-content: space-between; width: 100%; }
   .shared-footer__grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .shared-footer__offices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
   .shared-footer__offices > a { grid-column: 1 / -1; }
 }
 @media (max-width: 540px) {
-  .shared-footer__inner { padding-top: 40px; }
+  .shared-footer__inner { padding: 32px 20px 24px; }
+  .shared-footer__brand > a { width: 160px; }
+  .shared-footer__company { margin-top: 12px; font-size: 14px; }
+  .shared-footer__area { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 12px; }
+  .shared-footer__phone { font-size: 26px; }
   .shared-footer__contact { align-items: flex-start; flex-direction: column; gap: 18px; }
   .shared-footer__inquiry { width: 100%; }
   .shared-footer__offices { grid-template-columns: minmax(0, 1fr); }
@@ -447,13 +456,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" loading="lazy" decoding="async"></a>
+        <a href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="https://www.fujisou-ainos.com/contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -464,28 +473,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
+          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
+          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
+          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
+          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="../staffblog/index.html">社長のブログ</a>
+          <a href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
+          <a href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>

@@ -2,9 +2,10 @@
   <link rel="stylesheet" href="../stylesheet/breadcrumbs.css">
   <link rel="stylesheet" href="../stylesheet/shikkui.css">
 </head><body class="shikkui-page">
-  <!-- Future SSI navigation: replace this entire placeholder with the shared include. -->
-  <!-- Local copy of header.shtml for direct local testing. -->
+
+
 <!-- Shared SSI header with its CSS and JavaScript included in this file. -->
+<!-- Shared SSI header: CSS/JS included; assets resolve from ../img/ at the domain root. -->
 <style>
 /* Shared SSI components. These selectors do not restyle page content. */
 .shared-header {
@@ -31,7 +32,8 @@
 
 .shared-header { position: sticky; z-index: 100; top: 0; border-top: 3px solid #806039; border-bottom: 1px solid var(--chrome-line); box-shadow: 0 3px 16px #493b3108; }
 .shared-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: min(1560px, 100%); min-height: 100px; margin-inline: auto; padding: 20px clamp(20px, 3vw, 48px); }
-.shared-header__brand { flex-shrink: 0; width: clamp(205px, 17vw, 250px); }
+.shared-header__brand { display: block; flex-shrink: 0; width: clamp(205px, 17vw, 250px); aspect-ratio: 3 / 1; }
+.shared-header .shared-header__brand img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 1; object-fit: contain; }
 .shared-header__identity { display: flex; flex: 0 1 auto; align-items: center; gap: clamp(12px, 1.25vw, 20px); min-width: 0; }
 .shared-header__identity .shared-header__brand { flex: 0 1 250px; }
 .shared-header__signature { position: relative; flex: 0 0 auto; padding: 3px 0 3px clamp(12px, 1.1vw, 18px); border-left: 1px solid #b89a72; color: var(--chrome-ink); line-height: 1.35; white-space: nowrap; }
@@ -69,14 +71,15 @@
 
 @media (max-width: 1120px) {
   .shared-header:not([data-enhanced]) { position: relative; }
-  .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 20px; min-height: 86px; padding: 18px 24px; }
+  .shared-header__inner { position: relative; flex-wrap: wrap; gap: 0 16px; min-height: 76px; padding: 12px 24px; }
   .shared-header__brand { width: 210px; }
   .shared-header__identity { flex: 1 1 auto; gap: 14px; min-width: 0; }
-  .shared-header__identity .shared-header__brand { flex: 0 1 210px; width: auto; }
+  .shared-header__identity .shared-header__brand { flex: 0 0 180px; width: 180px; }
+  .shared-header .shared-header__brand img { width: 100%; height: 60px; object-fit: contain; }
   .shared-header__signature strong { font-size: 15px; }
   .shared-header__signature small { font-size: 10px; }
   .shared-header__nav { flex: 0 0 100%; display: grid; gap: 0; padding-top: 16px; }
-  .shared-header[data-enhanced] .shared-header__toggle { display: flex; width: 44px; min-height: 44px; align-items: center; justify-content: center; margin-left: auto; padding: 0; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
+  .shared-header[data-enhanced] .shared-header__toggle { display: flex; flex: 0 0 44px; width: 44px; min-height: 44px; align-items: center; justify-content: center; margin-left: auto; padding: 0; border: 0; color: var(--chrome-ink); background: transparent; font: 500 14px/1.6 var(--chrome-font); cursor: pointer; }
   .shared-header__toggle-lines { position: relative; display: block; width: 22px; height: 14px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
   .shared-header__toggle-lines::before { position: absolute; top: 5px; left: 0; width: 22px; height: 1px; content: ''; background: currentColor; }
   .shared-header__toggle[aria-expanded="true"] .shared-header__toggle-lines { border-color: transparent; }
@@ -93,11 +96,12 @@
 @media (max-width: 820px) {
 }
 @media (max-width: 540px) {
-  .shared-header__inner { padding-inline: 18px; gap: 12px; }
-  .shared-header__identity { gap: 9px; }
-  .shared-header__identity .shared-header__brand { flex-basis: clamp(125px, 39vw, 180px); width: auto; }
-  .shared-header__signature { padding-left: 9px; }
-  .shared-header__signature strong { font-size: clamp(12px, 3.8vw, 15px); letter-spacing: .1em; }
+  .shared-header__inner { min-height: 64px; padding: 8px 14px; gap: 0 10px; }
+  .shared-header__identity { flex: 1 1 0; gap: 8px; }
+  .shared-header__identity .shared-header__brand { flex: 0 0 clamp(100px, 31vw, 150px); width: clamp(100px, 31vw, 150px); }
+  .shared-header .shared-header__brand img { height: clamp(33.333px, 10.333vw, 50px); }
+  .shared-header__signature { padding-left: 8px; }
+  .shared-header__signature strong { font-size: clamp(11px, 3vw, 14px); letter-spacing: .06em; }
   .shared-header__signature small { display: block; margin-top: 2px; font-size: 8px; letter-spacing: .03em; }
   .shared-header[data-enhanced] .shared-header__toggle { padding: 0; }
   .shared-header[data-enhanced] .shared-header__nav { padding-inline: 20px; }
@@ -111,8 +115,8 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
-      <img src="../images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" decoding="async">
+    <a class="shared-header__brand" href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム">
+      <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
     </div>
@@ -123,31 +127,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
+          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
+          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
+          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="../staffblog/index.html">社長のブログ</a>
+        <a class="shared-header__link" href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -157,7 +161,7 @@
   </div>
 </header>
 <script>
-/* SSI provides the markup. JavaScript only enhances navigation behavior. */
+/* JavaScript enhances the embedded navigation behavior. */
 (() => {
   'use strict';
   const header = document.querySelector('[data-shared-header]');
@@ -251,10 +255,6 @@
   toggle.hidden = false;
   header.setAttribute('data-enhanced', '');
   document.documentElement.classList.add('has-shared-header');
-  const updateHeight = () => document.documentElement.style.setProperty('--shared-header-height', Math.ceil(header.getBoundingClientRect().height) + 'px');
-  updateHeight();
-  if ('ResizeObserver' in window) new ResizeObserver(updateHeight).observe(header);
-  else window.addEventListener('resize', updateHeight);
 })();
 </script>
 
@@ -262,18 +262,19 @@
 <main id="main">
     <nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li><span aria-hidden="true">/</span><span aria-current="page">漆喰とは</span></li></ol></nav>
 
-    <section class="shikkui-hero" aria-labelledby="shikkui-title"><div class="shikkui-hero__copy"><p>THE SECRET OF SHIKKUI</p><h1 id="shikkui-title"><span>呼吸する壁、</span><span>漆喰。</span></h1><p>昔から日本の住まいを守ってきた白い壁。自然から生まれ、空気と湿度を穏やかに整える漆喰を、フジ創アイノスは大切な標準素材として考えています。</p></div><figure><img src="../images/shikkui/hero-enhanced-web.jpg" alt="光をやわらかく受け止める美しい漆喰壁" fetchpriority="high" width="1165" height="1350" decoding="async"><figcaption>自然素材ならではの、やわらかな表情。</figcaption></figure></section>
+    <section class="shikkui-hero" aria-labelledby="shikkui-title"><div class="shikkui-hero__copy"><p>THE SECRET OF SHIKKUI</p><h1 id="shikkui-title"><span>呼吸する壁、</span><span>漆喰。</span></h1><p>昔から日本の住まいを守ってきた白い壁。自然から生まれ、空気と湿度を穏やかに整える漆喰を、フジ創アイノスは大切な標準素材として考えています。</p></div><figure><img src="/img/shikkui/hero-enhanced-web.jpg" alt="光をやわらかく受け止める美しい漆喰壁" fetchpriority="high" width="1165" height="1350" decoding="async"><figcaption>自然素材ならではの、やわらかな表情。</figcaption></figure></section>
 
-    <section class="shikkui-origin" aria-labelledby="shikkui-origin-title"><div class="shikkui-origin__heading"><p>WHAT IS SHIKKUI?</p><h2 id="shikkui-origin-title">石から生まれ、<br>ふたたび石へ。</h2></div><div class="shikkui-origin__content"><p>漆喰（しっくい）は、石灰石を加工して作られる消石灰（水酸化カルシウム）に、砂、海藻のり、すさなどを混ぜ、水で練った塗り壁材です。</p><p>調湿性・断熱性・防火性・可塑性などに優れ、内外壁や塀、彫塑材にも使われてきました。日本では古くから城や蔵の白壁に用いられ、その明るさと燃えにくさが建物を守ってきたといわれています。</p></div><figure><img src="../images/shikkui/wall-enhanced-web.jpg" alt="職人の手仕事による漆喰壁の質感" width="1509" height="1042" decoding="async" loading="lazy"><figcaption><span>01</span>左官の手仕事が、一つひとつ異なる壁の表情をつくります。</figcaption></figure></section>
+    <section class="shikkui-origin" aria-labelledby="shikkui-origin-title"><div class="shikkui-origin__heading"><p>WHAT IS SHIKKUI?</p><h2 id="shikkui-origin-title">石から生まれ、<br>ふたたび石へ。</h2></div><div class="shikkui-origin__content"><p>漆喰（しっくい）は、石灰石を加工して作られる消石灰（水酸化カルシウム）に、砂、海藻のり、すさなどを混ぜ、水で練った塗り壁材です。</p><p>調湿性・断熱性・防火性・可塑性などに優れ、内外壁や塀、彫塑材にも使われてきました。日本では古くから城や蔵の白壁に用いられ、その明るさと燃えにくさが建物を守ってきたといわれています。</p></div><figure><img src="/img/shikkui/wall-enhanced-web.jpg" alt="職人の手仕事による漆喰壁の質感" width="1509" height="1042" decoding="async" loading="lazy"><figcaption><span>01</span>左官の手仕事が、一つひとつ異なる壁の表情をつくります。</figcaption></figure></section>
 
-    <section class="shikkui-breathe" aria-labelledby="shikkui-breathe-title"><figure><img src="../images/shikkui/breathing-wall-enhanced-web.jpg" alt="室内を包む白い漆喰壁" width="1509" height="1042" decoding="async" loading="lazy"></figure><div><p>BREATHING WALL</p><h2 id="shikkui-breathe-title">壁が呼吸する、<br>ということ。</h2><p>漆喰の主原料である消石灰は、空気中の二酸化炭素を取り込みながら、時間をかけて石灰石へと戻り、固まっていきます。</p><p>細かな孔を持つ多孔質な塗り壁は、室内の湿気を吸ったり放したりする働きが期待できます。夏の湿気や冬の乾燥、結露を抑え、年間を通した心地よい室内環境を支えます。</p></div></section>
+    <section class="shikkui-breathe" aria-labelledby="shikkui-breathe-title"><figure><img src="/img/shikkui/breathing-wall-enhanced-web.jpg" alt="室内を包む白い漆喰壁" width="1509" height="1042" decoding="async" loading="lazy"></figure><div><p>BREATHING WALL</p><h2 id="shikkui-breathe-title">壁が呼吸する、<br>ということ。</h2><p>漆喰の主原料である消石灰は、空気中の二酸化炭素を取り込みながら、時間をかけて石灰石へと戻り、固まっていきます。</p><p>細かな孔を持つ多孔質な塗り壁は、室内の湿気を吸ったり放したりする働きが期待できます。夏の湿気や冬の乾燥、結露を抑え、年間を通した心地よい室内環境を支えます。</p></div></section>
 
-    <section class="shikkui-benefits" aria-labelledby="shikkui-benefits-title"><div class="shikkui-benefits__title"><p>SIX BENEFITS</p><h2 id="shikkui-benefits-title">漆喰が暮らしにもたらすこと。</h2></div><div class="shikkui-benefits__visual"><img src="../images/shikkui/flowers-enhanced-web.jpg" alt="自然素材と調和する明るい室内" width="1013" height="1552" decoding="async" loading="lazy"><img src="../images/shikkui/fire-sound-enhanced-web.jpg" alt="漆喰を使った落ち着きのある室内" width="1010" height="1557" decoding="async" loading="lazy"></div><dl><div><dt><span>01</span>調湿効果</dt><dd>多孔質な素材が湿気を吸放出し、室内の湿度を穏やかに整えます。</dd></div><div><dt><span>02</span>消臭効果</dt><dd>生活の中で生まれるにおいや有害物質を吸着し、空気を清潔に保つ働きが期待できます。</dd></div><div><dt><span>03</span>抗菌・防カビ</dt><dd>強アルカリ性という漆喰の性質が、細菌やカビの発生を抑えます。</dd></div><div><dt><span>04</span>耐火性能</dt><dd>漆喰は不燃性の壁材で、燃焼時に有毒ガスを発生しにくい素材です。</dd></div><div><dt><span>05</span>堅牢性</dt><dd>時間とともに硬化が進み、耐久性が増していくのも漆喰の特徴です。</dd></div><div><dt><span>06</span>吸音性</dt><dd>多孔質な構造が音をやわらげ、落ち着いた室内環境を支えます。</dd></div></dl></section>
+    <section class="shikkui-benefits" aria-labelledby="shikkui-benefits-title"><div class="shikkui-benefits__title"><p>SIX BENEFITS</p><h2 id="shikkui-benefits-title">漆喰が暮らしにもたらすこと。</h2></div><div class="shikkui-benefits__visual"><img src="/img/shikkui/flowers-enhanced-web.jpg" alt="自然素材と調和する明るい室内" width="1013" height="1552" decoding="async" loading="lazy"><img src="/img/shikkui/fire-sound-enhanced-web.jpg" alt="漆喰を使った落ち着きのある室内" width="1010" height="1557" decoding="async" loading="lazy"></div><dl><div><dt><span>01</span>調湿効果</dt><dd>多孔質な素材が湿気を吸放出し、室内の湿度を穏やかに整えます。</dd></div><div><dt><span>02</span>消臭効果</dt><dd>生活の中で生まれるにおいや有害物質を吸着し、空気を清潔に保つ働きが期待できます。</dd></div><div><dt><span>03</span>抗菌・防カビ</dt><dd>強アルカリ性という漆喰の性質が、細菌やカビの発生を抑えます。</dd></div><div><dt><span>04</span>耐火性能</dt><dd>漆喰は不燃性の壁材で、燃焼時に有毒ガスを発生しにくい素材です。</dd></div><div><dt><span>05</span>堅牢性</dt><dd>時間とともに硬化が進み、耐久性が増していくのも漆喰の特徴です。</dd></div><div><dt><span>06</span>吸音性</dt><dd>多孔質な構造が音をやわらげ、落ち着いた室内環境を支えます。</dd></div></dl></section>
 
-    <section class="shikkui-belief" aria-labelledby="shikkui-belief-title"><div class="shikkui-belief__copy"><p>NATURAL MATERIALS</p><h2 id="shikkui-belief-title">大切な家族が、<br>毎日触れるものだから。</h2><p>住宅の高気密・高断熱化が進む一方、化学物質を含む建材による室内環境への影響も考える必要があります。</p><p>フジ創アイノスは、家を建てた方が安心して健やかに暮らせるよう、漆喰や無垢材をはじめとする自然素材にこだわった家づくりを続けています。</p><a href="../consultation/index.html">自然素材の家を相談する <span>→</span></a></div><figure><img src="../images/shikkui/door-enhanced-web.jpg" alt="漆喰壁と木製ドアが調和した室内" width="1785" height="881" decoding="async" loading="lazy"><figcaption>素材の質感が、住まいの空気をつくる。</figcaption></figure></section>
+    <section class="shikkui-belief" aria-labelledby="shikkui-belief-title"><div class="shikkui-belief__copy"><p>NATURAL MATERIALS</p><h2 id="shikkui-belief-title">大切な家族が、<br>毎日触れるものだから。</h2><p>住宅の高気密・高断熱化が進む一方、化学物質を含む建材による室内環境への影響も考える必要があります。</p><p>フジ創アイノスは、家を建てた方が安心して健やかに暮らせるよう、漆喰や無垢材をはじめとする自然素材にこだわった家づくりを続けています。</p><a href="../consultation/index.html">自然素材の家を相談する <span>→</span></a></div><figure><img src="/img/shikkui/door-enhanced-web.jpg" alt="漆喰壁と木製ドアが調和した室内" width="1785" height="881" decoding="async" loading="lazy"><figcaption>素材の質感が、住まいの空気をつくる。</figcaption></figure></section>
   </main>
-  <!-- Local copy of footer.shtml for direct local testing. -->
+
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
+<!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
 <style>
 .shared-footer {
   --chrome-ink: #493b31;
@@ -288,7 +289,7 @@
   color: var(--chrome-ink);
   border-top: 1px solid var(--chrome-line);
   background-color: #f5f5f4;
-  background-image: url('../images/footer-bg-white.jpg');
+  background-image: url('../img/common/footer-bg-white.webp');
   background-repeat: repeat;
   background-size: auto;
   font: 400 17px/1.85 var(--chrome-font);
@@ -301,7 +302,8 @@
 .shared-footer a:hover { color: var(--chrome-gold); }
 .shared-footer__inner { width: min(1380px, 100%); margin-inline: auto; padding: 56px clamp(20px, 4vw, 56px) 24px; }
 .shared-footer__top { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid var(--chrome-line); }
-.shared-footer__brand img { width: 230px; }
+.shared-footer__brand > a { display: block; width: 230px; max-width: 100%; aspect-ratio: 3 / 1; }
+.shared-footer .shared-footer__brand img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 1; object-fit: contain; }
 .shared-footer__brand { flex: 1 1 560px; min-width: 0; }
 .shared-footer__company { margin: 15px 0 0; color: var(--chrome-muted); font: 400 15px/1.85 var(--chrome-font); }
 .shared-footer__contact { display: flex; align-items: center; gap: 36px; }
@@ -318,7 +320,7 @@
 .shared-footer__area strong { color: var(--chrome-gold); font-size: 14px; font-weight: 600; white-space: nowrap; }
 .shared-footer__area span { color: var(--chrome-ink); font-size: 14px; line-height: 1.9; }
 .shared-footer__nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
-.shared-footer__nav h2 { margin: 0 0 14px; color: var(--chrome-gold); font: 500 16px/1.7 var(--chrome-font); letter-spacing: .06em; }
+.shared-footer__nav h2 { margin: 0 0 14px; color: #8f683b; font: 500 16px/1.7 var(--chrome-font); letter-spacing: .06em; }
 .shared-footer__nav ul { margin: 0; padding: 0; list-style: none; }
 .shared-footer__nav li { margin: 0; padding: 0; list-style: none; }
 .shared-footer__nav a { display: block; padding: 10px 0; font-size: 15px; line-height: 1.8; }
@@ -335,14 +337,21 @@
   .shared-footer__nav { gap: 18px; }
 }
 @media (max-width: 820px) {
-  .shared-footer__top { align-items: flex-start; flex-direction: column; }
+  .shared-footer__top { align-items: flex-start; flex-direction: column; gap: 24px; padding-bottom: 28px; }
+  .shared-footer__brand { flex: none; width: 100%; }
+  .shared-footer__brand > a { display: block; width: 180px; max-width: 100%; }
+  .shared-footer__brand img { width: 100%; }
   .shared-footer__contact { justify-content: space-between; width: 100%; }
   .shared-footer__grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .shared-footer__offices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
   .shared-footer__offices > a { grid-column: 1 / -1; }
 }
 @media (max-width: 540px) {
-  .shared-footer__inner { padding-top: 40px; }
+  .shared-footer__inner { padding: 32px 20px 24px; }
+  .shared-footer__brand > a { width: 160px; }
+  .shared-footer__company { margin-top: 12px; font-size: 14px; }
+  .shared-footer__area { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 12px; }
+  .shared-footer__phone { font-size: 26px; }
   .shared-footer__contact { align-items: flex-start; flex-direction: column; gap: 18px; }
   .shared-footer__inquiry { width: 100%; }
   .shared-footer__offices { grid-template-columns: minmax(0, 1fr); }
@@ -361,13 +370,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../images/ainos-bridal-house-logo.png" alt="Bridal House Ainos 有限会社フジ創" width="2172" height="724" loading="lazy" decoding="async"></a>
+        <a href="https://www.fujisou-ainos.com/" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="https://www.fujisou-ainos.com/contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -378,28 +387,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="https://www.fujisou-ainos.com/concept/">私たちの家造り</a></li>
+          <li><a href="https://www.fujisou-ainos.com/staff/">スタッフ紹介</a></li>
+          <li><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="index.html">漆喰とは</a></li>
+          <li><a href="https://www.fujisou-ainos.com/gallery/">施工事例</a></li>
+          <li><a href="https://www.fujisou-ainos.com/land-info/">土地情報</a></li>
+          <li><a href="http://fujisou-ainos.sub.jp/shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-planning/">平屋住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-2f-planning/">２階建て住宅</a></li>
+          <li><a href="https://www.fujisou-ainos.com/ainos-custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="../staffblog/index.html">社長のブログ</a>
+          <a href="https://www.fujisou-ainos.com/eventinfo/">イベント情報</a>
+          <a href="https://www.fujisou-ainos.com/staffblog/">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="https://www.fujisou-ainos.com/policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>

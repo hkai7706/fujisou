@@ -4,9 +4,28 @@ import path from 'node:path';
 const root = process.argv[2]
   ? path.resolve(process.cwd(), process.argv[2])
   : path.resolve(import.meta.dirname, '..');
-const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist', 'backup', 'tmp', 'output']);
+const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms']);
 const failures = [];
 let checkedPages = 0;
+
+function checkReference(file, reference) {
+  if (/^(?:https?:|mailto:|tel:|data:|\/\/|#)/i.test(reference)) return;
+  const clean = reference.split(/[?#]/)[0];
+  if (!clean) return;
+  const target = clean.startsWith('/') ? path.join(root, clean) : path.resolve(path.dirname(file), clean);
+  if (!fs.existsSync(target)) failures.push(`${path.relative(root, file)}: broken local reference ${reference}`);
+}
+
+// Check responsive candidates and CSS assets as well as normal src/href links.
+for (const file of walk(root).filter(item => /\.(?:html|shtml|css)$/i.test(item))) {
+  const content = fs.readFileSync(file, 'utf8');
+  for (const match of content.matchAll(/(?:src|href)=["']([^"']+)["']/gi)) checkReference(file, match[1]);
+  for (const match of content.matchAll(/(?:srcset|imagesrcset)=["']([^"']+)["']/gi)) {
+    for (const item of match[1].split(',')) checkReference(file, item.trim().split(/\s+/)[0]);
+  }
+  for (const match of content.matchAll(/url\(\s*["']?([^"')\s]+)["']?\s*\)/g)) checkReference(file, match[1]);
+  for (const match of content.matchAll(/<!--#include virtual=["']([^"']*(?:header|footer)\.shtml)["']/g)) checkReference(file, match[1]);
+}
 
 function walk(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {

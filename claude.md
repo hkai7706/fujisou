@@ -141,7 +141,7 @@ The landing header uses `.site-header.landing-header`.
 
 Journal & Events thumbnails are 200–260px wide at 700px and above, with an 8:5 aspect ratio. They are 112×100px on mobile, reducing to 96×96px on very narrow screens. Preserve the larger thumbnail treatment.
 
-The Design Inspiration section currently uses `images/design-inspiration-walkway-retouched.jpg`, from the Fujisou project “渡り廊下がつなぐおうち.” Do not reuse a project already prominently pictured in the gallery when replacing this image.
+The Design Inspiration section currently uses `/img/home/design-inspiration-walkway-retouched.jpg`, from the Fujisou project “渡り廊下がつなぐおうち.” Do not reuse a project already prominently pictured in the gallery when replacing this image.
 
 ## Technical stack
 
@@ -178,7 +178,7 @@ Do not assume full ARIA tab keyboard navigation or complete no-JavaScript behavi
 
 ## Assets and image treatment
 
-- Assets live in `images/`; use local paths in delivered HTML.
+- Assets live in `img/`, organized by page folder name. Shared assets live in `img/common/`; use root-relative `/img/...` URLs.
 - Many images have responsive WebP variants at widths such as 480, 720, 768, 900, 1400, and 1536px.
 - Use `srcset` and `sizes` when suitable variants actually exist.
 - Set truthful `width` / `height`, descriptive Japanese alt text, `loading="lazy"` below the fold, and `fetchpriority="high"` for the primary image when appropriate.
@@ -197,9 +197,9 @@ Keep shared landing styles in `stylesheet/fujisou-ainos.css`, concept-specific s
 
 Scope subpage CSS to its page class or components. Avoid broad changes to shared `body`, heading, or navigation rules that unintentionally redesign other pages. The shared CSS contains substantial historical overrides; inspect the full cascade before editing. Prefer changing the relevant final rule over accumulating additional contradictory blocks.
 
-Use relative asset paths appropriate to page depth: `images/...` at the root, `../images/...` on the concept page, and `../../images/...` on the open house page. Some links intentionally lead to the existing live website. Do not rewrite all URLs automatically.
+Use root-relative image URLs such as `/img/concept/concept-family.jpg`, regardless of page depth. A subfolder deployment requires a consistent base prefix. Some navigation links intentionally lead to the existing live website.
 
-Shared header/footer SSI fragments are prepared but not wired into existing pages. Keep existing pages and their navigation placeholders unchanged until the user requests the migration. See `docs/ssi-includes.md`. Do not enable the commented Clarity tracking snippet from the old header source merely because it was provided as reference.
+All maintained pages currently embed real shared header/footer markup, CSS, and JavaScript. `/include/header.shtml` and `/include/footer.shtml` remain component sources for a later SSI switch; root/server header/footer files are compatibility wrappers. See `DEPLOY_SSI.md`. Do not enable the commented Clarity tracking snippet from the old header source merely because it was provided as reference.
 
 ## Local checks
 

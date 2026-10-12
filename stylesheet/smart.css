@@ -1,0 +1,68 @@
+.smart-page{font-family:var(--serif);color:#493b31;background:white}
+.smart-main section{margin-block:36px}
+.smart-main .smart-hero{margin-top:22px;gap:30px;padding:0 0 28px}
+.smart-hero h1{font:400 26px/1.4 var(--latin);margin:12px 0}
+.smart-hero h1 span{font-size:clamp(65px,7vw,90px)}
+.smart-hero figure{max-width:530px}
+.smart-hero .cute-hero__copy p{margin-block:10px}
+.smart-main .smart-lineup nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.smart-main .cute-lineup nav .cute-comparison__heading>span{font-family:var(--serif);font-size:23px}
+.smart-main .cute-lineup nav .cute-comparison img{aspect-ratio:1090/771}
+.smart-plan{padding-top:25px}
+.smart-plan header{margin-bottom:22px}
+.smart-plan__name{font-size:30px!important;color:#806039;margin:0;line-height:1.5!important}
+.smart-plan__name small{display:block;font:400 12px/1.8 var(--latin);letter-spacing:.12em;margin-top:5px}
+.smart-plan header h2{margin:12px 0;font-size:clamp(24px,2.5vw,31px)}
+.smart-plan .cute-plan__exterior{gap:35px}
+.smart-plan .cute-plan__drawings{margin:25px 0;gap:35px}
+.smart-plan .cute-plan__drawings img{max-height:350px}
+.smart-plan .cute-plan__pdf{margin:20px 0}
+.smart-related{display:grid;grid-template-columns:1fr auto;align-items:center;gap:35px;border-block:1px solid #d8cbb9;padding:25px 0}
+.smart-related h2{margin:12px 0}
+.smart-related a{display:flex;justify-content:space-between;gap:30px;border-bottom:1px solid #9b784d;padding:15px 0;text-decoration:none;font-size:17px}
+@media(max-width:600px){.smart-main section{margin-block:28px}.smart-main .smart-hero{gap:18px;padding-bottom:22px;margin-top:18px}.smart-hero figure{max-width:290px}.smart-main .smart-lineup nav{grid-template-columns:1fr;gap:24px}.smart-main .cute-lineup nav .cute-comparison img{max-width:360px;margin-inline:auto}.smart-main .cute-lineup nav .cute-comparison__heading>span{font-size:23px}.smart-plan__name{font-size:26px!important}.smart-plan .cute-plan__exterior{gap:18px}.smart-plan .cute-plan__drawings{gap:22px}.smart-related{grid-template-columns:1fr;gap:10px;text-align:center}.smart-related a{font-size:16px}.smart-plan .cute-plan__drawings img{max-height:300px}}
+
+/* Compact Smart catalogue; keep full exterior and floor-plan images visible. */
+.smart-main section{margin-block:26px}
+.smart-main .smart-hero{gap:24px;margin-top:16px;padding-bottom:20px}
+.smart-hero figure{max-width:430px}
+.smart-hero h1 span{font-size:clamp(58px,6vw,76px)}
+.smart-hero h2{margin-block:12px}
+.smart-main .smart-lineup .cute-lineup__heading{margin-bottom:20px}
+.smart-main .smart-lineup nav{gap:24px}
+.smart-main .cute-comparison__heading{padding-block:12px}
+.smart-main .cute-comparison__price{padding:14px 0 10px}
+.smart-main .cute-comparison__spec{padding-block:9px}
+.smart-main .cute-comparison__feature{margin-bottom:12px}
+.smart-main .cute-price-note{margin-top:18px}
+.smart-main .smart-plan{padding-top:20px}
+.smart-plan header{margin-bottom:16px}
+.smart-plan__name{font-size:27px!important}
+.smart-plan header h2{margin:8px 0;font-size:clamp(23px,2.3vw,28px)}
+.smart-plan .cute-plan__price{margin-block:8px}
+.smart-plan .cute-plan__exterior{gap:26px}
+.smart-plan .cute-plan__exterior>img{max-width:390px}
+.smart-plan .cute-plan__drawings{margin:18px 0;gap:26px}
+.smart-plan .cute-plan__drawings img{max-height:280px;max-width:400px}
+.smart-plan .cute-plan__pdf{margin:14px 0}
+.smart-plan .cute-plan__pdf a{padding:13px 20px}
+.smart-main .smart-related{padding-block:18px;gap:24px}
+.smart-main .cute-contact{padding-block:12px;gap:24px}
+@media(max-width:600px){
+.smart-main section{margin-block:22px}
+.smart-main .smart-hero{margin-top:14px;gap:14px;padding-bottom:18px}
+.smart-hero figure{max-width:250px}
+.smart-hero h1 span{font-size:62px}
+.smart-main .smart-lineup nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 16px}
+.smart-main .cute-lineup nav .cute-comparison__heading>span{font-size:18px}
+.smart-main .cute-comparison__heading{flex-wrap:wrap;gap:2px;padding-block:9px}
+.smart-main .cute-comparison__price strong{font-size:29px}
+.smart-main .cute-comparison__feature{font-size:14px;margin-bottom:10px}
+.smart-plan__name{font-size:24px!important}
+.smart-plan .cute-plan__exterior>img{max-width:270px}
+.smart-plan .cute-plan__exterior{gap:10px}
+.smart-plan .cute-plan__drawings{gap:16px;margin-block:16px}
+.smart-plan .cute-plan__drawings img{max-height:230px;max-width:280px}
+.smart-main figcaption{margin-top:8px}
+.smart-main .smart-related{gap:8px}
+}

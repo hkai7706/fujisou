@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://www.fujisou-ainos.com/simply/img/03-SIMPLY_Logo.png",
+    "file": "img/plans/simply/source-1.webp",
+    "width": 210,
+    "height": 100,
+    "alt": "SIMPLY - シンプリー -"
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/simply/img/03-1_500x380.jpg",
+    "file": "img/plans/simply/source-2.webp",
+    "width": 500,
+    "height": 380,
+    "alt": ""
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/simply/img/03-2_500x380.jpg",
+    "file": "img/plans/simply/source-3.webp",
+    "width": 500,
+    "height": 380,
+    "alt": ""
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/simply/img/03-3_500x380.jpg",
+    "file": "img/plans/simply/source-4.webp",
+    "width": 500,
+    "height": 380,
+    "alt": ""
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/img/mail_icon.svg",
+    "file": "img/plans/simply/source-5.webp",
+    "width": 64,
+    "height": 64,
+    "alt": "お問い合わせ"
+  }
+]

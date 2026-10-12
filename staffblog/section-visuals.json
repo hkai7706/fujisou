@@ -1,0 +1,62 @@
+{
+"single-person-housing-rental-challenges.shtml":[
+ {"anchor":"保証人がいない","title":"入居時に確認されるのは、家賃だけではない","kind":"parallel","items":[["wallet","家賃の支払い","毎月の住居費"],["people","保証人・連絡先","困ったときの連絡と対応"],["shield","住み続ける条件","病気などへの備え"]]},
+ {"anchor":"ちょうどいい家","title":"小さな家を選ぶときの確認点","kind":"parallel","items":[["plan","必要な部屋","人数と生活に合う広さ"],["tool","維持管理","掃除や修繕の負担"],["sun","毎月の費用","光熱費も含めて考える"]]}],
+"toyama-inherited-vacant-home-renovation.shtml":[
+ {"anchor":"断熱リノベーション","title":"断熱を見直す場所","kind":"envelope","items":[]},
+ {"anchor":"選択肢は4つ","title":"相続した家には、複数の選択肢がある","kind":"parallel","items":[["key","売却","手放す方法を検討"],["people","賃貸","貸すための条件を確認"],["tool","解体","費用と土地の使い方を確認"],["home","住む","改修して活かす方法を検討"]]}],
+"custom-home-mortgage-planning.shtml":[
+ {"anchor":"返せる金額","title":"借入可能額と、家計に合う返済額を分ける","kind":"compare","items":[["wallet","金融機関の判断","いくら借りられるか"],["people","家族の生活から判断","教育費・車・老後資金を残せるか"]]},
+ {"anchor":"繰り上げ返済","title":"返済と、手元資金の両方を確認","kind":"compare","items":[["key","返済に回すお金","ローン残高と利息を確認"],["shield","手元に残すお金","急な出費や将来の支出に備える"]]}],
+"mortgage-and-life-financial-planning.shtml":[
+ {"anchor":"土地選びを慎重","title":"土地の価格以外にも、確認する費用がある","kind":"sum","items":[["land","土地代","購入する費用"],["water","上下水道","引き込みの確認"],["tool","地盤・造成","必要な工事の確認"]]},
+ {"anchor":"断熱性能","title":"住宅の外まわりから、断熱を考える","kind":"envelope","items":[]}],
+"two-story-home-benefits-floor-plan.shtml":[
+ {"anchor":"プライベート空間","title":"共有する場所と、個人の場所を分ける","kind":"floors","items":[]},
+ {"anchor":"どちらが正解","title":"どちらが人気かより、暮らしに合うか","kind":"compare","items":[["home","平屋","ワンフロアの動線を重視"],["plan","2階建て","敷地の使い方と空間の分け方を重視"]]}],
+"hotel-style-home-floor-plan.shtml":[
+ {"anchor":"玄関からLDK","title":"見せる動線と、収納する場所を分ける","kind":"route","items":[]},
+ {"anchor":"引き算","title":"落ち着く空間のための整理","kind":"parallel","items":[["storage","収納へまとめる","日用品や掃除道具"],["sun","照明を整える","まぶしすぎない明かり"],["plan","余白を残す","家具を詰め込みすぎない"]]}],
+"home-building-decision-making.shtml":[
+ {"anchor":"家族の意見","title":"家族の希望を、判断できる条件へ","kind":"flow","items":[["people","希望を出す","それぞれの暮らし方"],["heart","優先順位をつける","大切にしたいこと"],["plan","条件をそろえる","同じ基準で比較"]]},
+ {"anchor":"急いで決める","title":"確認して決めるための順序","kind":"flow","items":[["search","分からない点を整理","疑問を残さない"],["people","相談して確認","条件の説明を受ける"],["shield","納得して検討","急ぐこととは別"]]}],
+"custom-home-price-differences.shtml":[
+ {"anchor":"見積もりに含まれる","title":"見積もりは、含まれる範囲をそろえて比較","kind":"sum","items":[["home","建物","本体の工事費"],["storage","設備・仕様","標準と追加の範囲"],["land","外構・諸費用","別途の項目も確認"]]},
+ {"anchor":"比較で確認","title":"同じ価格でも、中身は同じとは限らない","kind":"compare","items":[["plan","見積もりA","含まれる仕様・工事・保証を確認"],["plan","見積もりB","同じ項目にそろえて見比べる"]]}],
+"affordable-land-search-tips.shtml":[
+ {"anchor":"土地価格だけ","title":"土地を買うための費用と、建てるための費用","kind":"sum","items":[["land","土地購入","土地代"],["tool","建築の準備","造成・地盤改良など"],["water","設備の接続","上下水道など"]]},
+ {"anchor":"ハザードマップ","title":"土地の条件は、現地と資料の両方で確認","kind":"parallel","items":[["land","現地を見る","道路や周辺環境"],["search","資料を見る","ハザードマップなど"],["people","相談する","建築できる条件を確認"]]}],
+"barefoot-living-solid-wood-floors.shtml":[
+ {"anchor":"バランス感覚","title":"床を感じる、足裏の接点","kind":"feet","items":[]},
+ {"anchor":"異変に早く","title":"素足で過ごすときも、安全が前提","kind":"parallel","items":[["search","足の状態","傷や違和感に気づく"],["sun","冷えへの配慮","室温と床の感触を確認"],["shield","床の安全","けがにつながる物を避ける"]]}],
+"inherited-vacant-home-opportunities.shtml":[
+ {"anchor":"自分らしい住まい","title":"既存の家を、今の暮らしに合わせる","kind":"parallel","items":[["plan","間取り","生活に合う配置へ"],["water","設備","必要な機器を見直す"],["sun","断熱","住み心地を検討"]]},
+ {"anchor":"大切なポイント","title":"買う前に、改修まで含めた計画を","kind":"flow","items":[["search","建物を調べる","状態と修繕箇所"],["tool","工事を見積もる","必要な改修の範囲"],["wallet","総額を確認","取得費と改修費"]]}],
+"building-a-home-without-land.shtml":[
+ {"anchor":"自分たちに合う土地","title":"土地を、暮らしの条件から見る","kind":"parallel","items":[["people","通勤・通学","日々の移動"],["land","周辺環境","買い物や病院への距離"],["sun","日当たり","家の配置と合わせて確認"]]},
+ {"anchor":"建築会社と一緒","title":"土地の相談と、建物の相談をつなげる","kind":"compare","items":[["land","不動産会社","土地の情報を確認"],["home","建築会社","希望の家が建つか検討"]]}],
+"family-home-design-child-development.shtml":[
+ {"anchor":"リビングを必ず","title":"帰宅の動線に、家族の接点を","kind":"family","items":[]},
+ {"anchor":"スタディスペース","title":"学習する場所を、家族の近くに","kind":"study","items":[]}],
+"home-design-child-learning.shtml":[
+ {"anchor":"リビング学習ができる","title":"リビングの一角を、学ぶ場所に","kind":"study","items":[]},
+ {"anchor":"本が身近","title":"本を手に取りやすい場所を考える","kind":"parallel","items":[["storage","本棚","見える場所に置く"],["plan","読める場所","座って広げられる場所"],["people","家族との距離","話しかけやすい配置"]]}],
+"retirement-housing-location-risks.shtml":[
+ {"anchor":"若いうちから","title":"住まいの計画は、先の暮らしまで","kind":"flow","items":[["home","今の暮らし","必要な広さと住居費"],["people","将来の変化","人数や生活の変化"],["shield","住み続ける条件","修繕や住み替えを考える"]]},
+ {"anchor":"地域とのつながり","title":"住まいの安心は、周囲との関係も含めて","kind":"parallel","items":[["people","地域との接点","相談できるつながり"],["land","生活する場所","日々の暮らしの基盤"],["wallet","費用の備え","住居費と維持費"]]}],
+"toyama-soundproof-home-renovation.shtml":[
+ {"anchor":"専門知識","title":"音は、空気と建物の両方を伝わる","kind":"soundpaths","items":[]},
+ {"anchor":"オーダーメイド","title":"部屋で何を楽しむかを、設計の出発点に","kind":"parallel","items":[["plan","映画","映像と音響の使い方"],["people","楽器","楽器と演奏する時間"],["home","カラオケ","利用人数と使い方"]]}],
+"home-maintenance-after-construction.shtml":[
+ {"anchor":"設備保証が必要","title":"設備も、暮らしの中で使い続けるもの","kind":"parallel","items":[["water","給湯・水まわり","機器の不具合を確認"],["sun","換気・空調","設備の状態を確認"],["tool","修理の相談","保証対象と条件を確認"]]},
+ {"anchor":"建てた後の会社","title":"建てる会社とは、完成後も付き合う","kind":"flow","items":[["home","完成・引き渡し","暮らしが始まる"],["search","点検・相談","変化を伝える"],["tool","維持・修理","必要な対応を確認"]]}],
+"home-building-information-research.shtml":[
+ {"anchor":"本当に比較","title":"数字で分かることと、現場で分かること","kind":"compare","items":[["plan","資料で確認","性能・仕様・見積もり"],["search","現場と人を確認","施工・考え方・アフター対応"]]},
+ {"anchor":"納得感","title":"集めた情報を、自分たちの基準に戻す","kind":"flow","items":[["search","情報を集める","複数の選択肢を知る"],["heart","基準を決める","家族の優先順位"],["people","疑問を相談","納得できる条件を確認"]]}],
+"house-builder-vs-local-contractor.shtml":[
+ {"anchor":"本当に見るべき","title":"住宅会社の中身を見る、3つの確認点","kind":"parallel","items":[["tool","施工現場","実際につくる人と仕事"],["heart","会社の考え方","価値観が合うか"],["shield","完成後の対応","点検や修理の相談"]]},
+ {"anchor":"価格が安い","title":"建てる費用と、住み続ける費用","kind":"compare","items":[["wallet","建築時","初期費用と仕様を確認"],["tool","入居後","光熱費・修繕費も検討"]]}],
+"when-to-start-building-a-home.shtml":[
+ {"anchor":"不安がゼロ","title":"不安を、確認できる項目に分ける","kind":"parallel","items":[["wallet","予算","無理のない計画か"],["people","会社","信頼して相談できるか"],["home","土地・性能","将来の暮らしに合うか"]]},
+ {"anchor":"家づくりで悩んで","title":"迷っていることを、相談の入り口に","kind":"flow","items":[["heart","希望を整理","どんな暮らしをしたいか"],["plan","条件を整理","予算・土地・広さ"],["people","相談して確認","次に調べることを決める"]]}]
+}

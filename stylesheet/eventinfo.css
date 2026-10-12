@@ -3,23 +3,29 @@
 .event-list-page .site-breadcrumbs { position: relative; z-index: 2; }
 
 .event-index-hero {
-  width: min(1040px, calc(100% - var(--frame) * 2));
+  width: min(1260px, calc(100% - var(--frame) * 2));
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto clamp(64px, 8vw, 108px);
   padding: clamp(44px, 7vw, 94px) var(--sx) clamp(50px, 7vw, 88px);
-  border-bottom: 1px solid #d8cbb9;
+  background: linear-gradient(90deg, rgba(25, 24, 21, .57), rgba(25, 24, 21, .40)), url('../img/eventinfo/event-hero-wood-kitchen.webp') center 52% / cover;
   text-align: center;
 }
 .event-index-hero__label, .event-section__head > p, .event-contact .event-section__label {
   margin: 0 0 18px; color: #806039; font: 500 11px/1.6 var(--latin); letter-spacing: .18em;
 }
 .event-index-hero h1 {
-  margin: 0; color: #493b31; font: 500 clamp(38px, 5vw, 62px)/1.35 var(--serif); letter-spacing: .02em;
+  margin: 0; color: #fff; font: 500 clamp(38px, 5vw, 62px)/1.35 var(--serif); letter-spacing: .02em;
 }
+.event-index-hero .event-index-hero__label { color: #fff; }
 .event-index-hero__lead {
-  max-width: 42em; margin: 28px auto 0; color: #655b54; font: 400 16px/2.1 var(--sans);
+  max-width: 42em; margin: 28px auto 0; color: #fff; font: 400 16px/2.1 var(--serif);
 }
 
-.event-section {5
+.event-section {
   width: min(1260px, calc(100% - var(--frame) * 2)); margin: 0 auto;
   padding: clamp(42px, 6vw, 84px) var(--sx) clamp(72px, 8vw, 108px);
 }
@@ -36,9 +42,9 @@
 }
 .event-collection {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(48px, 6vw, 76px) clamp(22px, 3vw, 38px); counter-reset: event;
+  gap: clamp(48px, 6vw, 76px) clamp(22px, 3vw, 38px);
 }
-.event-card { min-width: 0; counter-increment: event; }
+.event-card { min-width: 0; }
 .event-card a { display: block; color: inherit; text-decoration: none; }
 .event-card figure {
   display: grid;
@@ -58,11 +64,7 @@
   transition: opacity .25s ease;
 }
 .event-card__text {
-  position: relative; min-height: 280px; padding: 46px 0 22px; border-bottom: 1px solid #d8cbb9;
-}
-.event-card__text::before {
-  position: absolute; top: 17px; left: 0; content: counter(event, decimal-leading-zero);
-  color: #9b784d; font: 400 11px/1 var(--latin); letter-spacing: .12em;
+  position: relative; min-height: 280px; padding: 24px 0 22px; border-bottom: 1px solid #d8cbb9;
 }
 .event-card__text > p {
   display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 13px;
@@ -112,7 +114,7 @@
   .event-contact { gap: 28px; }
 }
 @media (max-width: 640px) {
-  .event-index-hero { padding-top: 38px; }
+  .event-index-hero { width: 100%; min-height: 350px; padding: 38px 24px; background-position: center; }
   .event-index-hero h1 { font-size: clamp(28px, 9.5vw, 40px); }
   .event-index-hero__lead, .event-section__head div > p { font-size: 16px; line-height: 2; }
   .event-index-hero__lead br { display: none; }
@@ -125,3 +127,4 @@
   .event-contact { margin-bottom: 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .event-card img, .event-card__text i { transition: none; } }
+.event-list-pagination{display:flex;justify-content:center;gap:18px;margin-top:55px}.event-list-pagination a{padding:9px 12px;text-decoration:none;color:var(--ink);font-size:17px}.event-list-pagination [aria-current]{border-bottom:2px solid #887359}

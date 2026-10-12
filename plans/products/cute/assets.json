@@ -1,0 +1,245 @@
+[
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/00%20mv.png",
+    "alt": "",
+    "file": "img/plans/cute/00-mv.webp",
+    "width": 700,
+    "height": 450
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/00%20logo.png",
+    "alt": "かわいい平屋 Cute",
+    "file": "img/plans/cute/00-logo.webp",
+    "width": 420,
+    "height": 255
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/00%20catchcopy.png",
+    "alt": "はじめよう680万円からの家づくり",
+    "file": "img/plans/cute/00-catchcopy.webp",
+    "width": 367,
+    "height": 211
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/08_logo.jpg",
+    "alt": "Cute8 ロゴ",
+    "file": "img/plans/cute/08_logo.webp",
+    "width": 520,
+    "height": 100
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/08_mv.jpg",
+    "alt": "Cute8 MainVisual",
+    "file": "img/plans/cute/08-exterior-enhanced-700.webp",
+    "width": 700,
+    "height": 450,
+    "originalFile": "img/plans/cute/08_mv.webp",
+    "srcset": [
+      {
+        "file": "img/plans/cute/08-exterior-enhanced-360.webp",
+        "width": 360
+      },
+      {
+        "file": "img/plans/cute/08-exterior-enhanced-700.webp",
+        "width": 700
+      },
+      {
+        "file": "img/plans/cute/08-exterior-enhanced-1400.webp",
+        "width": 1400
+      }
+    ]
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/08_plan.jpg",
+    "alt": "Cute8 プラン例",
+    "file": "img/plans/cute/08_plan.webp",
+    "width": 1565,
+    "height": 1005
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/08_floor.jpg",
+    "alt": "Cute8 間取り",
+    "file": "img/plans/cute/08_floor.webp",
+    "width": 563,
+    "height": 355
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/08_room.jpg",
+    "alt": "Cute8 室内イメージ",
+    "file": "img/plans/cute/08_room.webp",
+    "width": 382,
+    "height": 300
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/10_logo.jpg",
+    "alt": "Cute10 ロゴ",
+    "file": "img/plans/cute/10_logo.webp",
+    "width": 600,
+    "height": 100
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/10_mv.jpg",
+    "alt": "Cute10 MainVisual",
+    "file": "img/plans/cute/10-exterior-enhanced-700.webp",
+    "width": 700,
+    "height": 441,
+    "originalFile": "img/plans/cute/10_mv.webp",
+    "srcset": [
+      {
+        "file": "img/plans/cute/10-exterior-enhanced-360.webp",
+        "width": 360
+      },
+      {
+        "file": "img/plans/cute/10-exterior-enhanced-700.webp",
+        "width": 700
+      },
+      {
+        "file": "img/plans/cute/10-exterior-enhanced-1400.webp",
+        "width": 1400
+      }
+    ]
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/10_DIY.jpg",
+    "alt": "Cute10 イメージ画像",
+    "file": "img/plans/cute/10_DIY.webp",
+    "width": 450,
+    "height": 200
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/10_floor.jpg",
+    "alt": "Cute10 間取り",
+    "file": "img/plans/cute/10_floor.webp",
+    "width": 563,
+    "height": 500
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/11_logo.jpg",
+    "alt": "Cute11 ロゴ",
+    "file": "img/plans/cute/11_logo.webp",
+    "width": 600,
+    "height": 100
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/11_mv.jpg",
+    "alt": "Cute11 MainVisual",
+    "file": "img/plans/cute/11-exterior-enhanced-700.webp",
+    "width": 700,
+    "height": 439,
+    "originalFile": "img/plans/cute/11_mv.webp",
+    "srcset": [
+      {
+        "file": "img/plans/cute/11-exterior-enhanced-360.webp",
+        "width": 360
+      },
+      {
+        "file": "img/plans/cute/11-exterior-enhanced-700.webp",
+        "width": 700
+      },
+      {
+        "file": "img/plans/cute/11-exterior-enhanced-1400.webp",
+        "width": 1400
+      }
+    ]
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/11_room.jpg",
+    "alt": "Cute11 イメージ画像",
+    "file": "img/plans/cute/11_room.webp",
+    "width": 300,
+    "height": 200
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/11_floor.jpg",
+    "alt": "Cute11 間取り",
+    "file": "img/plans/cute/11_floor.webp",
+    "width": 563,
+    "height": 470
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/15_logo.jpg",
+    "alt": "Cute15 ロゴ",
+    "file": "img/plans/cute/15_logo.webp",
+    "width": 600,
+    "height": 100
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/15_mv.jpg",
+    "alt": "Cute15 MainVisual",
+    "file": "img/plans/cute/15-exterior-enhanced-700.webp",
+    "width": 700,
+    "height": 441,
+    "originalFile": "img/plans/cute/15_mv.webp",
+    "srcset": [
+      {
+        "file": "img/plans/cute/15-exterior-enhanced-360.webp",
+        "width": 360
+      },
+      {
+        "file": "img/plans/cute/15-exterior-enhanced-700.webp",
+        "width": 700
+      },
+      {
+        "file": "img/plans/cute/15-exterior-enhanced-1400.webp",
+        "width": 1400
+      }
+    ]
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/15_room.jpg",
+    "alt": "Cute15 イメージ画像",
+    "file": "img/plans/cute/15_room.webp",
+    "width": 350,
+    "height": 150
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/15_floor.jpg",
+    "alt": "Cute15 間取り",
+    "file": "img/plans/cute/15_floor.webp",
+    "width": 563,
+    "height": 473
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/17_logo.jpg",
+    "alt": "Cute17 ロゴ",
+    "file": "img/plans/cute/17_logo.webp",
+    "width": 600,
+    "height": 100
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/17_mv.jpg",
+    "alt": "Cute17 MainVisual",
+    "file": "img/plans/cute/17-exterior-enhanced-700.webp",
+    "width": 700,
+    "height": 440,
+    "originalFile": "img/plans/cute/17_mv.webp",
+    "srcset": [
+      {
+        "file": "img/plans/cute/17-exterior-enhanced-360.webp",
+        "width": 360
+      },
+      {
+        "file": "img/plans/cute/17-exterior-enhanced-700.webp",
+        "width": 700
+      },
+      {
+        "file": "img/plans/cute/17-exterior-enhanced-1400.webp",
+        "width": 1400
+      }
+    ]
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/17_room.jpg",
+    "alt": "Cute17 イメージ画像",
+    "file": "img/plans/cute/17_room.webp",
+    "width": 277,
+    "height": 200
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/cute/img/17_floor.jpg",
+    "alt": "Cute17 間取り",
+    "file": "img/plans/cute/17_floor.webp",
+    "width": 563,
+    "height": 630
+  }
+]

@@ -2,6 +2,7 @@
   "name": "fujisou-ainos-website",
   "private": true,
   "scripts": {
+    "blog": "node tools/build-blog.mjs",
     "prepare": "node tools/prepare-html.mjs",
     "optimize": "node tools/optimize-assets.mjs",
     "sitemap": "node tools/generate-sitemap.mjs",

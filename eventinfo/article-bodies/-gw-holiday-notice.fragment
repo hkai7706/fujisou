@@ -1,0 +1,8 @@
+<section class="holiday-notice" aria-labelledby="gw-notice-heading">
+  <p class="holiday-notice__label">休業のご案内</p>
+  <h2 id="gw-notice-heading">ゴールデンウィーク<br>休業のお知らせ</h2>
+  <p>ゴールデンウィーク期間中は、下記の日程で休業いたします。</p>
+  <div class="holiday-notice__period"><p>2026年・休業期間</p><div><span><strong>4月29日</strong>（水）</span><span aria-hidden="true">〜</span><span><strong>5月6日</strong>（水）</span></div></div>
+  <dl class="holiday-notice__details"><div><dt>通常営業の再開</dt><dd><strong>2026年5月7日（木）</strong>より通常営業</dd></div><div><dt>お問い合わせ</dt><dd><a href="../contact/index.html">お問い合わせフォーム <span aria-hidden="true">→</span></a></dd></div></dl>
+  <p class="holiday-notice__signature">フジ創アイノス</p>
+</section>

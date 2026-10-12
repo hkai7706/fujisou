@@ -1253,3 +1253,16 @@ main section :where(small, time) {
     font-size: 14px !important;
   }
 }
+
+/* Complete Japanese heading phrases across the site. */
+main :is(h1,h2){word-break:normal;line-break:strict;text-wrap:balance}
+main .phrase-heading{container-type:inline-size}
+main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:min(1em,calc(100cqw / var(--phrase-length)));line-height:inherit;letter-spacing:inherit}
+
+/* Gold page-entry accent, decorative and nonblocking. */
+.site-loading-accent{position:fixed;inset:0 0 auto;height:2px;background:#9b784d;transform-origin:left;pointer-events:none;z-index:10000}
+@media(prefers-reduced-motion:reduce){.site-loading-accent{display:none}}
+
+/* Hero headline: never split 無理 between lines. */
+#hybrid-hero-title{container-type:inline-size}
+#hybrid-hero-title>.heading-phrase{display:block!important;white-space:nowrap!important;font-size:min(1em,calc(100cqw / var(--phrase-length)))!important;line-height:inherit;letter-spacing:inherit}

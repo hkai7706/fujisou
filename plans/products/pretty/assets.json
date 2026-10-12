@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://www.fujisou-ainos.com/pretty/img/02-Pretty_Logo.png",
+    "file": "img/plans/pretty/source-1.webp",
+    "width": 160,
+    "height": 100,
+    "alt": "Pretty - プリティ -"
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/pretty/img/02-1-fivestarPcs5-03.jpg",
+    "file": "img/plans/pretty/source-2.webp",
+    "width": 500,
+    "height": 380,
+    "alt": ""
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/pretty/img/02-2-fivestarPcs5-03.jpg",
+    "file": "img/plans/pretty/source-3.webp",
+    "width": 500,
+    "height": 380,
+    "alt": ""
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/pretty/img/02-3_500x380%20.jpg",
+    "file": "img/plans/pretty/source-4.webp",
+    "width": 500,
+    "height": 380,
+    "alt": ""
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/img/mail_icon.svg",
+    "file": "img/plans/pretty/source-5.webp",
+    "width": 64,
+    "height": 64,
+    "alt": "お問い合わせ"
+  }
+]

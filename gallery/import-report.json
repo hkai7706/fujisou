@@ -1,0 +1,18 @@
+{
+  "listings": [
+    "https://www.fujisou-ainos.com/gallery/",
+    "https://www.fujisou-ainos.com/gallery/index_2.shtml",
+    "https://www.fujisou-ainos.com/gallery/index_3.shtml"
+  ],
+  "discovered": 34,
+  "imported": 34,
+  "photos": 332,
+  "failures": [],
+  "imageIssues": [],
+  "recoveredImages": [
+    {
+      "source": "https://www.fujisou-ainos.com/gallery/uploads/_APS53.jpg",
+      "localFile": "img/gallery/post31-11-stairs-detail.jpg"
+    }
+  ]
+}

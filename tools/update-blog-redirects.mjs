@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const posts=JSON.parse(fs.readFileSync('staffblog/posts.json','utf8'));
+const renames=Object.fromEntries(posts.filter(p=>p.legacyFile&&p.legacyFile!==p.file).map(p=>[p.legacyFile,p.file]));
+fs.writeFileSync('staffblog/url-renames.json',JSON.stringify(renames,null,2)+'\n');
+const escape=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const rules=Object.entries(renames).map(([old,file])=>`  RewriteRule ^staffblog/${escape(old)}$ staffblog/${encodeURIComponent(file)} [R=301,L,NE]`).join('\n');
+let config=fs.readFileSync('.htaccess','utf8');
+config=config.replace(/^\s*# Descriptive blog URLs:[^\n]*\n/m,'\n').replace(/^\s*RewriteRule \^staffblog\/[^\n]*\n/gm,'');
+config=config.replace('  RewriteEngine On','  RewriteEngine On\n\n  # Descriptive blog URLs: preserve original article addresses.\n'+rules);
+fs.writeFileSync('.htaccess',config);
+console.log(`Updated ${Object.keys(renames).length} original blog URL redirects.`);

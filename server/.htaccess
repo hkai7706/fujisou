@@ -6,6 +6,29 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Descriptive blog URLs: preserve existing article addresses with permanent redirects.
+  RewriteRule ^staffblog/-nhk\.shtml$ staffblog/single-person-housing-rental-challenges.shtml [R=301,L]
+  RewriteRule ^staffblog/-100\.shtml$ staffblog/toyama-inherited-vacant-home-renovation.shtml [R=301,L]
+  RewriteRule ^staffblog/post-937\.shtml$ staffblog/custom-home-mortgage-planning.shtml [R=301,L]
+  RewriteRule ^staffblog/post-936\.shtml$ staffblog/mortgage-and-life-financial-planning.shtml [R=301,L]
+  RewriteRule ^staffblog/2-10\.shtml$ staffblog/two-story-home-benefits-floor-plan.shtml [R=301,L]
+  RewriteRule ^staffblog/post-935\.shtml$ staffblog/hotel-style-home-floor-plan.shtml [R=301,L]
+  RewriteRule ^staffblog/post-934\.shtml$ staffblog/home-building-decision-making.shtml [R=301,L]
+  RewriteRule ^staffblog/post-933\.shtml$ staffblog/custom-home-price-differences.shtml [R=301,L]
+  RewriteRule ^staffblog/10-1\.shtml$ staffblog/affordable-land-search-tips.shtml [R=301,L]
+  RewriteRule ^staffblog/ainos\.shtml$ staffblog/barefoot-living-solid-wood-floors.shtml [R=301,L]
+  RewriteRule ^staffblog/5000\.shtml$ staffblog/inherited-vacant-home-opportunities.shtml [R=301,L]
+  RewriteRule ^staffblog/post-932\.shtml$ staffblog/building-a-home-without-land.shtml [R=301,L]
+  RewriteRule ^staffblog/post-931\.shtml$ staffblog/family-home-design-child-development.shtml [R=301,L]
+  RewriteRule ^staffblog/post-930\.shtml$ staffblog/home-design-child-learning.shtml [R=301,L]
+  RewriteRule ^staffblog/100\.shtml$ staffblog/retirement-housing-location-risks.shtml [R=301,L]
+  RewriteRule ^staffblog/post-929\.shtml$ staffblog/toyama-soundproof-home-renovation.shtml [R=301,L]
+  RewriteRule ^staffblog/post-928\.shtml$ staffblog/home-maintenance-after-construction.shtml [R=301,L]
+  RewriteRule ^staffblog/post-927\.shtml$ staffblog/home-building-information-research.shtml [R=301,L]
+  RewriteRule ^staffblog/post-926\.shtml$ staffblog/house-builder-vs-local-contractor.shtml [R=301,L]
+  RewriteRule ^staffblog/post-925\.shtml$ staffblog/when-to-start-building-a-home.shtml [R=301,L]
+
+
   # Preserve old tracking cleanup for navigation only. As before, this
   # discards ALL query parameters if a listed tracking parameter is present.
   # Do not redirect form submissions or other non-GET/HEAD requests.

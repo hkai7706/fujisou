@@ -1,0 +1,27 @@
+/* The sticky header stays in document flow; do not reserve its height twice. */
+body > .shared-header ~ main {
+  margin-top: 0;
+  padding-top: 0;
+  display: flow-root;
+}
+body > .shared-header ~ main > .site-breadcrumbs {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+body > .shared-header ~ main > :is(.concept-hero, .gallery-hero, .event-index-hero, .planning-hero, .custom-hero, .product-hero, .shikkui-hero, .blog-hero, .policy-hero, .land-hero, .project-hero):first-of-type {
+  margin-top: 0;
+  padding-top: clamp(28px, 3vw, 48px);
+}
+/* Retire the old empty header placeholder if an older page still has one. */
+body > .shared-header ~ .site-nav-slot { display: none; }
+@media (max-width: 600px) {
+  body > .shared-header ~ main > .site-breadcrumbs {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  body > .shared-header ~ main > :is(.concept-hero, .gallery-hero, .event-index-hero, .planning-hero, .custom-hero, .product-hero, .shikkui-hero, .blog-hero, .policy-hero, .land-hero, .project-hero):first-of-type {
+    padding-top: 24px;
+  }
+}

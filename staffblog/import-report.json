@@ -1,0 +1,13 @@
+{
+  "discovered": 949,
+  "imported": 949,
+  "archivePages": 32,
+  "failures": [],
+  "mediaFailures": [
+    {
+      "article": "https://www.fujisou-ainos.com/staffblog/post-289.shtml",
+      "image": "/2e34e481067519bf735a052571a7e74f19edf8c7.png",
+      "error": "Input buffer contains unsupported image format"
+    }
+  ]
+}

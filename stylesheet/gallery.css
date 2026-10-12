@@ -104,3 +104,6 @@
   .gallery-footer { align-items: flex-start; flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) { .work-card figure img, .work-card__text i { transition: none; } }
+/* Preserve the complete original image within every construction-example card. */
+.gallery-works .work-card figure img{object-fit:contain;object-position:center;aspect-ratio:4/3;background:#fff}
+.gallery-page .gallery-hero__lead,.gallery-page .work-card__text,.gallery-page .work-card__text p,.gallery-page .work-card b{font-family:var(--serif)}

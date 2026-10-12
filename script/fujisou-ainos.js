@@ -1,6 +1,22 @@
 /* ===== PAGE INITIALIZATION, NAVIGATION, REVEALS AND NEWS ===== */
 document.documentElement.classList.add('js');
 
+/* Brief entrance accent; content and navigation remain usable immediately. */
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && Element.prototype.animate) {
+  const accent = document.createElement('div');
+  accent.className = 'site-loading-accent';
+  accent.setAttribute('aria-hidden', 'true');
+  document.body.append(accent);
+  accent.animate([
+    { transform: 'scaleX(0)', opacity: 0.6, offset: 0 },
+    { transform: 'scaleX(1)', opacity: 1, offset: 0.75 },
+    { transform: 'scaleX(1)', opacity: 0, offset: 1 }
+  ], { duration: 650, easing: 'ease-out' }).finished.finally(() => accent.remove());
+  document.querySelector('main')?.animate([
+    { opacity: 0.92 }, { opacity: 1 }
+  ], { duration: 400, easing: 'ease-out' });
+}
+
 const items = document.querySelectorAll('.reveal');
 const skipRevealTracking = window.matchMedia('(max-width: 819px), (prefers-reduced-motion: reduce)').matches;
 

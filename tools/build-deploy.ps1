@@ -5,6 +5,15 @@ if (-not $destinationRoot.StartsWith($projectRoot + [IO.Path]::DirectorySeparato
   throw 'Deployment destination is outside the project.'
 }
 
+# Reapply shared-code and byte-identical image optimizations after page generators.
+Push-Location -LiteralPath $projectRoot
+try {
+  foreach ($optimization in 'optimize-shared-chrome.mjs', 'deduplicate-image-references.mjs', 'build-home-css.mjs', 'version-public-assets.mjs') {
+    & node (Join-Path $PSScriptRoot $optimization)
+    if ($LASTEXITCODE -ne 0) { throw "Optimization failed: $optimization" }
+  }
+} finally { Pop-Location }
+
 if ([IO.Directory]::Exists($destinationRoot)) {
   Remove-Item -LiteralPath $destinationRoot -Recurse -Force
 }

@@ -1,0 +1,97 @@
+{
+  "tool": "Built-in image_gen",
+  "scope": "Five Cute exterior catalogue renderings",
+  "prompt": "Faithful high-resolution restoration: preserve house geometry, roof, window and door positions, colors, camera perspective and composition; improve compression and existing texture detail; no redesign, added objects, text, crop or zoom.",
+  "outputs": [
+    {
+      "source": "https://www.fujisou-ainos.com/cute/img/08_mv.jpg",
+      "original": "img/plans/cute/08_mv.webp",
+      "variants": [
+        {
+          "file": "img/plans/cute/08-exterior-enhanced-360.webp",
+          "width": 360
+        },
+        {
+          "file": "img/plans/cute/08-exterior-enhanced-700.webp",
+          "width": 700
+        },
+        {
+          "file": "img/plans/cute/08-exterior-enhanced-1400.webp",
+          "width": 1400
+        }
+      ]
+    },
+    {
+      "source": "https://www.fujisou-ainos.com/cute/img/10_mv.jpg",
+      "original": "img/plans/cute/10_mv.webp",
+      "variants": [
+        {
+          "file": "img/plans/cute/10-exterior-enhanced-360.webp",
+          "width": 360
+        },
+        {
+          "file": "img/plans/cute/10-exterior-enhanced-700.webp",
+          "width": 700
+        },
+        {
+          "file": "img/plans/cute/10-exterior-enhanced-1400.webp",
+          "width": 1400
+        }
+      ]
+    },
+    {
+      "source": "https://www.fujisou-ainos.com/cute/img/11_mv.jpg",
+      "original": "img/plans/cute/11_mv.webp",
+      "variants": [
+        {
+          "file": "img/plans/cute/11-exterior-enhanced-360.webp",
+          "width": 360
+        },
+        {
+          "file": "img/plans/cute/11-exterior-enhanced-700.webp",
+          "width": 700
+        },
+        {
+          "file": "img/plans/cute/11-exterior-enhanced-1400.webp",
+          "width": 1400
+        }
+      ]
+    },
+    {
+      "source": "https://www.fujisou-ainos.com/cute/img/15_mv.jpg",
+      "original": "img/plans/cute/15_mv.webp",
+      "variants": [
+        {
+          "file": "img/plans/cute/15-exterior-enhanced-360.webp",
+          "width": 360
+        },
+        {
+          "file": "img/plans/cute/15-exterior-enhanced-700.webp",
+          "width": 700
+        },
+        {
+          "file": "img/plans/cute/15-exterior-enhanced-1400.webp",
+          "width": 1400
+        }
+      ]
+    },
+    {
+      "source": "https://www.fujisou-ainos.com/cute/img/17_mv.jpg",
+      "original": "img/plans/cute/17_mv.webp",
+      "variants": [
+        {
+          "file": "img/plans/cute/17-exterior-enhanced-360.webp",
+          "width": 360
+        },
+        {
+          "file": "img/plans/cute/17-exterior-enhanced-700.webp",
+          "width": 700
+        },
+        {
+          "file": "img/plans/cute/17-exterior-enhanced-1400.webp",
+          "width": 1400
+        }
+      ]
+    }
+  ]
+}

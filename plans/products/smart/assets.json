@@ -1,0 +1,65 @@
+[
+  {
+    "url": "http://fujisou-ainos.sub.jp/smart/img/bed.jpg",
+    "alt": "Image 1",
+    "file": "img/plans/smart/bed.webp",
+    "width": 1800,
+    "height": 1196
+  },
+  {
+    "url": "http://fujisou-ainos.sub.jp/smart/img/1.png",
+    "alt": "Image 2",
+    "file": "img/plans/smart/1.webp",
+    "width": 1090,
+    "height": 771
+  },
+  {
+    "url": "http://fujisou-ainos.sub.jp/smart/img/floor-plan-1.png",
+    "alt": "Image 3",
+    "file": "img/plans/smart/floor-plan-1.webp",
+    "width": 615,
+    "height": 332
+  },
+  {
+    "url": "http://fujisou-ainos.sub.jp/smart/img/living-area.png",
+    "alt": "Image 1",
+    "file": "img/plans/smart/living-area.webp",
+    "width": 1092,
+    "height": 681
+  },
+  {
+    "url": "http://fujisou-ainos.sub.jp/smart/img/2.png",
+    "alt": "Image 2",
+    "file": "img/plans/smart/2.webp",
+    "width": 1090,
+    "height": 771
+  },
+  {
+    "url": "http://fujisou-ainos.sub.jp/smart/img/floor-plan2.png",
+    "alt": "Image 3",
+    "file": "img/plans/smart/floor-plan2.webp",
+    "width": 894,
+    "height": 493
+  },
+  {
+    "url": "http://fujisou-ainos.sub.jp/smart/img/living-area-2.png",
+    "alt": "Image 1",
+    "file": "img/plans/smart/living-area-2.webp",
+    "width": 1090,
+    "height": 671
+  },
+  {
+    "url": "http://fujisou-ainos.sub.jp/smart/img/3.png",
+    "alt": "Image 2",
+    "file": "img/plans/smart/3.webp",
+    "width": 1090,
+    "height": 771
+  },
+  {
+    "url": "http://fujisou-ainos.sub.jp/smart/img/floor-plan-3.png",
+    "alt": "Image 3",
+    "file": "img/plans/smart/floor-plan-3.webp",
+    "width": 807,
+    "height": 436
+  }
+]

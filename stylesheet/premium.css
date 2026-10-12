@@ -1,0 +1,93 @@
+.premium-page{font-family:var(--serif);color:#493b31;background:white}
+.premium-main section{margin-block:36px}
+.premium-main .premium-hero{margin-top:22px;gap:30px;padding:0 0 28px}
+.premium-hero h1{font:400 26px/1.4 var(--latin);margin:12px 0}
+.premium-hero h1 span{font-size:clamp(65px,7vw,90px)}
+.premium-hero figure{max-width:530px}
+.premium-hero .cute-hero__copy p{margin-block:10px}
+.premium-main .premium-lineup nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.premium-main .cute-lineup nav .cute-comparison__heading>span{font-family:var(--serif);font-size:23px}
+.premium-main .cute-lineup nav .cute-comparison img{aspect-ratio:1090/771}
+.premium-plan{padding-top:25px}
+.premium-plan header{margin-bottom:22px}
+.premium-plan__name{font-size:30px!important;color:#806039;margin:0;line-height:1.5!important}
+.premium-plan__name small{display:block;font:400 12px/1.8 var(--latin);letter-spacing:.12em;margin-top:5px}
+.premium-plan header h2{margin:12px 0;font-size:clamp(24px,2.5vw,31px)}
+.premium-plan .cute-plan__exterior{gap:35px}
+.premium-plan .cute-plan__drawings{margin:25px 0;gap:35px}
+.premium-plan .cute-plan__drawings img{max-height:350px}
+.premium-plan .cute-plan__pdf{margin:20px 0}
+.premium-related{display:grid;grid-template-columns:1fr auto;align-items:center;gap:35px;border-block:1px solid #d8cbb9;padding:25px 0}
+.premium-related h2{margin:12px 0}
+.premium-related a{display:flex;justify-content:space-between;gap:30px;border-bottom:1px solid #9b784d;padding:15px 0;text-decoration:none;font-size:17px}
+@media(max-width:600px){.premium-main section{margin-block:28px}.premium-main .premium-hero{gap:18px;padding-bottom:22px;margin-top:18px}.premium-hero figure{max-width:290px}.premium-main .premium-lineup nav{grid-template-columns:1fr;gap:24px}.premium-main .cute-lineup nav .cute-comparison img{max-width:360px;margin-inline:auto}.premium-main .cute-lineup nav .cute-comparison__heading>span{font-size:23px}.premium-plan__name{font-size:26px!important}.premium-plan .cute-plan__exterior{gap:18px}.premium-plan .cute-plan__drawings{gap:22px}.premium-related{grid-template-columns:1fr;gap:10px;text-align:center}.premium-related a{font-size:16px}.premium-plan .cute-plan__drawings img{max-height:300px}}
+
+/* Compact Smart catalogue; keep full exterior and floor-plan images visible. */
+.premium-main section{margin-block:26px}
+.premium-main .premium-hero{gap:24px;margin-top:16px;padding-bottom:20px}
+.premium-hero figure{max-width:430px}
+.premium-hero h1 span{font-size:clamp(58px,6vw,76px)}
+.premium-hero h2{margin-block:12px}
+.premium-main .premium-lineup .cute-lineup__heading{margin-bottom:20px}
+.premium-main .premium-lineup nav{gap:24px}
+.premium-main .cute-comparison__heading{padding-block:12px}
+.premium-main .cute-comparison__price{padding:14px 0 10px}
+.premium-main .cute-comparison__spec{padding-block:9px}
+.premium-main .cute-comparison__feature{margin-bottom:12px}
+.premium-main .cute-price-note{margin-top:18px}
+.premium-main .premium-plan{padding-top:20px}
+.premium-plan header{margin-bottom:16px}
+.premium-plan__name{font-size:27px!important}
+.premium-plan header h2{margin:8px 0;font-size:clamp(23px,2.3vw,28px)}
+.premium-plan .cute-plan__price{margin-block:8px}
+.premium-plan .cute-plan__exterior{gap:26px}
+.premium-plan .cute-plan__exterior>img{max-width:390px}
+.premium-plan .cute-plan__drawings{margin:18px 0;gap:26px}
+.premium-plan .cute-plan__drawings img{max-height:280px;max-width:400px}
+.premium-plan .cute-plan__pdf{margin:14px 0}
+.premium-plan .cute-plan__pdf a{padding:13px 20px}
+.premium-main .premium-related{padding-block:18px;gap:24px}
+.premium-main .cute-contact{padding-block:12px;gap:24px}
+@media(max-width:600px){
+.premium-main section{margin-block:22px}
+.premium-main .premium-hero{margin-top:14px;gap:14px;padding-bottom:18px}
+.premium-hero figure{max-width:250px}
+.premium-hero h1 span{font-size:62px}
+.premium-main .premium-lineup nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 16px}
+.premium-main .cute-lineup nav .cute-comparison__heading>span{font-size:18px}
+.premium-main .cute-comparison__heading{flex-wrap:wrap;gap:2px;padding-block:9px}
+.premium-main .cute-comparison__price strong{font-size:29px}
+.premium-main .cute-comparison__feature{font-size:14px;margin-bottom:10px}
+.premium-plan__name{font-size:24px!important}
+.premium-plan .cute-plan__exterior>img{max-width:270px}
+.premium-plan .cute-plan__exterior{gap:10px}
+.premium-plan .cute-plan__drawings{gap:16px;margin-block:16px}
+.premium-plan .cute-plan__drawings img{max-height:230px;max-width:280px}
+.premium-main figcaption{margin-top:8px}
+.premium-main .premium-related{gap:8px}
+}
+
+.premium-main .premium-lineup nav{grid-template-columns:repeat(3,minmax(0,1fr))}.premium-hero h1 span{font-size:clamp(48px,5vw,68px)}
+
+/* Editorial plan heading: identity on the left, specifications and price on the right. */
+.premium-main .premium-plan header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;max-width:none;text-align:left;margin-bottom:22px}
+.premium-plan .premium-plan__name{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px;margin:0}
+.premium-plan .premium-plan__name small{display:inline;margin:0;font-size:12px}
+.premium-plan header .premium-plan__identity h2{margin:8px 0 0;font-size:clamp(21px,2vw,25px);line-height:1.65}
+.premium-plan__facts{text-align:right}
+.premium-main .premium-plan__spec{margin:0 0 8px;font-size:15px;line-height:1.8}
+.premium-plan__facts .cute-plan__price{display:flex;align-items:baseline;justify-content:flex-end;gap:16px;margin:0!important}
+.premium-plan__facts .cute-plan__price>small{font-size:12px;color:#71665f}
+.premium-plan__facts .cute-plan__price>span{white-space:nowrap;font-size:15px}
+.premium-plan__facts .cute-plan__price strong{font-size:34px;margin:0 6px 0 0}
+@media(max-width:850px){.premium-main .premium-plan header{grid-template-columns:1fr;gap:14px}.premium-plan__facts{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 18px;text-align:left}.premium-main .premium-plan__spec{margin:0;font-size:14px}.premium-plan__facts .cute-plan__price{gap:10px}.premium-plan__facts .cute-plan__price strong{font-size:29px}}
+@media(max-width:600px){.premium-main .premium-lineup nav{grid-template-columns:repeat(2,minmax(0,1fr))}.premium-hero h1 span{font-size:54px}.premium-main .cute-comparison__heading>small{font-size:11px}.premium-main .cute-comparison__heading{align-items:start}}
+/* Give each plan's main headline a stronger visual hierarchy. */
+.premium-plan header .premium-plan__identity h2{font-size:clamp(28px,2.7vw,36px);line-height:1.55;color:#493b31;letter-spacing:.025em;margin-top:10px;font-weight:500}
+.premium-plan .premium-plan__name{color:#806039;font-size:24px!important}
+@media(max-width:600px){.premium-plan header .premium-plan__identity h2{font-size:27px;line-height:1.6}.premium-plan .premium-plan__name{font-size:22px!important}}
+/* The plan name, rather than its descriptive sentence, leads each heading. */
+.premium-plan .premium-plan__name{font-size:clamp(30px,3vw,40px)!important;line-height:1.45!important;color:#493b31;gap:10px 18px}
+.premium-plan .premium-plan__name small{font-size:clamp(15px,1.5vw,19px);line-height:1.6;color:#806039;letter-spacing:.13em}
+.premium-plan header .premium-plan__identity h2{font-size:clamp(21px,2vw,25px);line-height:1.65;font-weight:400;letter-spacing:normal;margin-top:9px}
+@media(max-width:600px){.premium-plan .premium-plan__name{font-size:30px!important}.premium-plan .premium-plan__name small{font-size:15px}.premium-plan header .premium-plan__identity h2{font-size:21px}}

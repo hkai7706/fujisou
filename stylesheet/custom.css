@@ -1,0 +1,6 @@
+/* Keep the custom-house headline in two complete Japanese phrases. */
+.custom-hero__copy{container-type:inline-size}
+.custom-hero h1{font-size:clamp(24px,9cqw,44px);line-height:1.6;letter-spacing:.025em}
+.custom-hero h1>span{display:block;white-space:nowrap}
+.custom-hero__copy>p:last-child{margin-top:20px}
+@media(max-width:600px){.custom-hero h1{font-size:clamp(24px,9cqw,34px);line-height:1.65}}

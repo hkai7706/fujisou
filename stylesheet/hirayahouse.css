@@ -1,0 +1,44 @@
+.hirayahouse-page{font-family:var(--serif);background:#fff;color:#493b31}
+.house-hero h1{font:400 clamp(36px,4.5vw,57px)/1.5 var(--serif);margin:15px 0 25px}
+.hirayahouse-main .house-hero h1 small{display:block;font-size:14px;letter-spacing:.1em;margin-top:12px;color:#806039}
+.hirayahouse-main .cute-lineup nav .house-comparison .cute-comparison__heading>span{font-family:var(--serif);font-size:30px}
+.house-comparison .cute-comparison__heading>span>small{display:block;font:400 11px/1.8 var(--latin);letter-spacing:.08em;color:#806039}
+.house-comparison .cute-comparison__heading{align-items:center}
+.house-plan__name{font:400 58px/1.3 var(--serif)!important;color:#806039;margin:0}
+.house-plan__name small{display:block;font:400 14px/1.8 var(--latin);letter-spacing:.14em;margin:10px 0}
+.house-plan .cute-plan__drawings{max-width:920px;margin-inline:auto;grid-template-columns:1.25fr .75fr}
+.house-plan .cute-drawing img{max-height:470px}
+.house-plan .cute-plan__drawings figure:last-child img{max-width:300px}
+.house-spec-note{font-size:13px!important;color:#71665f;max-width:950px;margin:25px auto 0}
+.house-related{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;padding:30px 0;border-bottom:1px solid #d8cbb9}
+.house-related>div>a{display:flex;justify-content:space-between;max-width:330px;padding:15px 0;border-bottom:1px solid #9b784d;text-decoration:none;font-size:17px}
+.house-related img{width:100%;max-width:440px;margin:auto}
+@media(max-width:600px){.house-hero h1{font-size:41px}.house-plan__name{font-size:46px!important}.house-plan .cute-plan__drawings{grid-template-columns:1fr}.house-plan .cute-drawing img{max-height:430px}.house-related{grid-template-columns:1fr;text-align:center;gap:25px}.house-related>div>a{margin:auto}.house-related img{max-width:290px}}
+
+/* Compact spacing for the Hiraya House catalogue. */
+.hirayahouse-main section{margin-block:36px}
+.hirayahouse-main .house-hero{margin-top:20px;padding:0 0 25px;gap:30px}
+.house-hero h1{margin:10px 0 16px}
+.house-hero h2{margin:12px 0}
+.house-hero .cute-hero__copy p{margin-block:10px}
+.house-hero figure{max-width:510px}
+.hirayahouse-main .cute-lineup__heading{margin-bottom:22px}
+.hirayahouse-main .cute-plan{padding-top:24px}
+.house-plan header{margin-bottom:18px}
+.house-plan__name{font-size:46px!important;line-height:1.15!important}
+.house-plan__name small{margin:5px 0;font-size:12px}
+.house-plan header h2{margin:10px 0;font-size:clamp(23px,2.5vw,30px)}
+.house-plan header .cute-plan__price{margin:12px 0}
+.house-plan .cute-plan__exterior{gap:32px}
+.house-plan .cute-plan__exterior>img{max-width:420px}
+.house-plan .cute-plan__exterior p{margin-block:10px}
+.house-plan .cute-plan__drawings{margin-block:22px;gap:30px;max-width:850px}
+.house-plan .cute-drawing img{max-height:390px}
+.house-plan .cute-plan__drawings figure:last-child img{max-width:260px}
+.house-plan .cute-plan__pdf{margin:18px 0}
+.house-performance{padding-block:24px}
+.house-performance .cute-section-head{margin-bottom:22px}
+.house-performance dl>div{padding-block:14px}
+.house-related{padding-block:20px;gap:30px}
+.hirayahouse-main .cute-contact{padding-block:15px;gap:30px}
+@media(max-width:600px){.hirayahouse-main section{margin-block:28px}.hirayahouse-main .house-hero{margin-top:16px;gap:18px;padding-bottom:22px}.house-hero h1{font-size:37px}.house-hero figure{max-width:275px}.house-plan__name{font-size:39px!important}.house-plan .cute-plan__exterior{gap:15px}.house-plan .cute-plan__exterior>img{max-width:285px}.house-plan .cute-plan__drawings{gap:20px;margin-block:20px}.house-plan .cute-drawing img{max-height:350px}.house-plan header h2{font-size:24px}.house-related{gap:18px}.hirayahouse-main .cute-contact{gap:18px}}

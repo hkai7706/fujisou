@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://www.fujisou-ainos.com/healthy/img/01-Healthy_Logo.png",
+    "file": "img/plans/healthy/source-1.webp",
+    "width": 210,
+    "height": 100,
+    "alt": "Healthy - ヘルシー -"
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/healthy/img/01-1_500x380.jpg",
+    "file": "img/plans/healthy/source-2.webp",
+    "width": 500,
+    "height": 380,
+    "alt": ""
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/healthy/img/01-2_500x380.jpg",
+    "file": "img/plans/healthy/source-3.webp",
+    "width": 500,
+    "height": 380,
+    "alt": ""
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/healthy/img/01-3_500x380.jpg",
+    "file": "img/plans/healthy/source-4.webp",
+    "width": 500,
+    "height": 380,
+    "alt": ""
+  },
+  {
+    "url": "https://www.fujisou-ainos.com/img/mail_icon.svg",
+    "file": "img/plans/healthy/source-5.webp",
+    "width": 64,
+    "height": 64,
+    "alt": "お問い合わせ"
+  }
+]

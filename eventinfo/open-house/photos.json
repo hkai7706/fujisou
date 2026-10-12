@@ -1,0 +1,170 @@
+[
+  {
+    "filename": "DJI_20260928181107_0224_D.JPG",
+    "slug": "kitchen-living",
+    "alt": "対面キッチンと木の収納、漆喰の壁がつながる室内",
+    "variants": [
+      {
+        "file": "img/eventinfo/tonami-house/kitchen-living-finished-door-768.webp",
+        "width": 768,
+        "height": 432
+      },
+      {
+        "file": "img/eventinfo/tonami-house/kitchen-living-finished-door-1600.webp",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "file": "img/eventinfo/tonami-house/kitchen-living-finished-door-1672.webp",
+        "width": 1672,
+        "height": 941
+      }
+    ],
+    "originalVariants": [
+      {
+        "file": "img/eventinfo/tonami-house/kitchen-living-768.webp",
+        "width": 768,
+        "height": 432
+      },
+      {
+        "file": "img/eventinfo/tonami-house/kitchen-living-1600.webp",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "file": "img/eventinfo/tonami-house/kitchen-living-3840.webp",
+        "width": 3840,
+        "height": 2160
+      }
+    ],
+    "doorVisualization": true
+  },
+  {
+    "filename": "DJI_20260928181037_0222_D.JPG",
+    "slug": "living-room",
+    "alt": "キッチンからつながるリビングと木の床",
+    "variants": [
+      {
+        "file": "img/eventinfo/tonami-house/living-room-768.webp",
+        "width": 768,
+        "height": 432
+      },
+      {
+        "file": "img/eventinfo/tonami-house/living-room-1600.webp",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "file": "img/eventinfo/tonami-house/living-room-3840.webp",
+        "width": 3840,
+        "height": 2160
+      }
+    ]
+  },
+  {
+    "filename": "DJI_20260928180949_0218_D.JPG",
+    "slug": "wood-closet",
+    "alt": "木で仕上げた収納の内部",
+    "variants": [
+      {
+        "file": "img/eventinfo/tonami-house/wood-closet-768.webp",
+        "width": 768,
+        "height": 432
+      },
+      {
+        "file": "img/eventinfo/tonami-house/wood-closet-1600.webp",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "file": "img/eventinfo/tonami-house/wood-closet-3840.webp",
+        "width": 3840,
+        "height": 2160
+      }
+    ]
+  },
+  {
+    "filename": "DJI_20260928181557_0252_D.JPG",
+    "slug": "plaster-counter",
+    "alt": "漆喰の壁と木のカウンター収納",
+    "variants": [
+      {
+        "file": "img/eventinfo/tonami-house/plaster-counter-finished-door-768.webp",
+        "width": 768,
+        "height": 432
+      },
+      {
+        "file": "img/eventinfo/tonami-house/plaster-counter-finished-door-1600.webp",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "file": "img/eventinfo/tonami-house/plaster-counter-finished-door-1672.webp",
+        "width": 1672,
+        "height": 941
+      }
+    ],
+    "originalVariants": [
+      {
+        "file": "img/eventinfo/tonami-house/plaster-counter-768.webp",
+        "width": 768,
+        "height": 432
+      },
+      {
+        "file": "img/eventinfo/tonami-house/plaster-counter-1600.webp",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "file": "img/eventinfo/tonami-house/plaster-counter-3840.webp",
+        "width": 3840,
+        "height": 2160
+      }
+    ],
+    "doorVisualization": true
+  },
+  {
+    "filename": "DJI_20260928180821_0214_D.JPG",
+    "slug": "plaster-room",
+    "alt": "漆喰の壁と木の床がある居室",
+    "variants": [
+      {
+        "file": "img/eventinfo/tonami-house/plaster-room-768.webp",
+        "width": 768,
+        "height": 432
+      },
+      {
+        "file": "img/eventinfo/tonami-house/plaster-room-1600.webp",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "file": "img/eventinfo/tonami-house/plaster-room-3840.webp",
+        "width": 3840,
+        "height": 2160
+      }
+    ]
+  },
+  {
+    "filename": "DJI_20260928183119_0289_D.JPG",
+    "slug": "staircase",
+    "alt": "漆喰の壁に囲まれた木の階段",
+    "variants": [
+      {
+        "file": "img/eventinfo/tonami-house/staircase-768.webp",
+        "width": 768,
+        "height": 432
+      },
+      {
+        "file": "img/eventinfo/tonami-house/staircase-1600.webp",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "file": "img/eventinfo/tonami-house/staircase-3840.webp",
+        "width": 3840,
+        "height": 2160
+      }
+    ]
+  }
+]

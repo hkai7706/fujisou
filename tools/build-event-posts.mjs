@@ -25,7 +25,7 @@ for(const [index,p] of posts.entries()){
 }
 const size=15,total=Math.ceil(posts.length/size);
 const href=n=>n===1?'index.html':`page-${n}.html`;
-const card=p=>`<article class="event-card"><a href="${esc(p.file)}">${p.image?`<figure><img src="${esc(p.image)}" alt="${esc(p.title)}" width="${p.imageWidth}" height="${p.imageHeight}" loading="lazy" decoding="async"></figure>`:''}<div class="event-card__text"><p><span>${p.date.replaceAll('-','.')}</span></p><h3>${esc(p.title)}</h3><b>詳しく見る <i>→</i></b></div></a></article>`;
+const card=p=>`<article class="event-card"><a href="${esc(p.file)}">${p.image?`<figure><img src="${esc(p.image)}"${p.imageSrcset?` srcset="${esc(p.imageSrcset)}" sizes="(max-width: 700px) calc(100vw - 40px), 420px"`:''} alt="${esc(p.imageAlt||p.title)}" width="${p.imageWidth}" height="${p.imageHeight}" loading="lazy" decoding="async"></figure>`:''}<div class="event-card__text"><p><span>${p.date.replaceAll('-','.')}</span></p><h3>${esc(p.title)}</h3><b>詳しく見る <i>→</i></b></div></a></article>`;
 for(let page=1;page<=total;page++){
  let html=listing.replace(/<div class="event-collection">[\s\S]*?<\/section>/,`<div class="event-collection">${posts.slice((page-1)*size,page*size).map(card).join('')}</div><nav class="event-list-pagination" aria-label="イベント一覧のページ">${Array.from({length:total},(_,i)=>`<a href="${href(i+1)}"${i+1===page?' aria-current="page"':''}>${i+1}</a>`).join('')}</nav></section>`).replace(/href="\.\.\/stylesheet\/eventinfo\.css(?:\?[^\"]*)?"/g,`href="../stylesheet/eventinfo.css?v=${version('stylesheet/eventinfo.css')}"`);
  html=html.replace(/<link rel="canonical"[^>]*>/,`<link rel="canonical" href="https://www.fujisou-ainos.com/eventinfo/${page===1?'':href(page)}">`);

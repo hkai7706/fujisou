@@ -14,6 +14,9 @@ const decode=text=>text.replaceAll('&quot;','"').replaceAll('&amp;','&').replace
 const plain=text=>decode(text.replace(/<[^>]*>/g,'').replace(/\s+/g,' ').trim());
 const escape=text=>text.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 for(const [index,post] of posts.entries()){
+  // Incremental refresh keeps historical article designs intact.
+  const recent = Number(process.argv.find(arg => arg.startsWith('--recent='))?.split('=')[1] || 0);
+  if (recent && index >= recent) continue;
   const bodyFile=path.join('staffblog/article-bodies',post.file.replace(/\.shtml$/,'.fragment'));
   const customBody=fs.existsSync(bodyFile);
   let body=customBody?fs.readFileSync(bodyFile,'utf8'):post.body;
@@ -55,7 +58,7 @@ ${post.image?`<figure class="blog-entry__visual"><img src="${escape(post.image)}
   fs.writeFileSync(path.join('staffblog',post.file),start+main+shellEnd);
 }
 // The archive builder creates paginated listings after all articles are rendered.
-for(const file of ['index.html','server/index.html']){
+for(const file of process.argv.some(arg => arg.startsWith('--recent=')) ? [] : ['index.html','server/index.html']){
   let html=fs.readFileSync(file,'utf8');
   const prefix=file.startsWith('server/')?'../':'';
   html=html.replace(/<a class="preview-card[^>]*>[\s\S]*?<\/a>/g,tag=>{

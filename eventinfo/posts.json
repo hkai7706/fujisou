@@ -13,15 +13,16 @@
   },
   {
     "source": "https://www.fujisou-ainos.com/eventinfo/tonami-open-house.shtml",
-    "title": "【9/26〜10/12開催】砺波市 完成見学会｜木と漆喰の自然素材の家｜フジ創アイノス",
+    "title": "【9/26〜10/18開催】砺波市 完成見学会｜木と漆喰の自然素材の家",
     "date": "2026-09-18",
     "thumbnail": "https://www.fujisou-ainos.com/eventinfo/img/new.jpg",
     "legacyFile": "tonami-open-house.shtml",
     "file": "open-house/index.html",
     "existing": true,
-    "image": "../img/eventinfo/event-2026-tonami-open-house-web.jpg",
+    "image": "../img/eventinfo/tonami-open-house-until-oct18.webp",
     "imageWidth": 1672,
-    "imageHeight": 737
+    "imageHeight": 941,
+    "imageAlt": "【9/26〜10/18開催】砺波市 完成見学会｜木と漆喰の自然素材の家"
   },
   {
     "source": "https://www.fujisou-ainos.com/eventinfo/obon.shtml",

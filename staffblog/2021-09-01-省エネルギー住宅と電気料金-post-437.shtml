@@ -13,7 +13,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -25,31 +25,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="./">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -62,7 +62,7 @@
 
 
 <main id="main">
-<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li aria-hidden="true">/</li><li><a href="index.html">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
+<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-hidden="true">/</li><li><a href="./">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
 <article class="blog-entry">
 <div class="blog-entry__opening"><header class="blog-entry__header"><p class="blog-eyebrow">社長のブログ</p><div class="blog-meta"><time datetime="2021-09-01">2021.09.01</time><span>家づくりについて</span></div><h1>省エネルギー住宅と電気料金</h1><a class="blog-entry__read-link" href="#article-reading">本文を読む <span aria-hidden="true">↓</span></a></header>
 <figure class="blog-entry__visual"><img src="../img/staffblog/articles/6936925634d4a1b7.webp" alt="省エネルギー住宅と電気料金" width="286" height="212" fetchpriority="high" decoding="async"></figure></div>
@@ -70,10 +70,10 @@
 <p>その理由は、家庭で使うエアコンの年間消費量は、全体の電気消費量の28％しか占めていないからです。<br>仮に年間の電気料金を120,000円とすると、エアコンが占める割合は、年間で33,600円だということですね。</p>
 <p><img src="../img/staffblog/articles/6936925634d4a1b7.webp" alt="電気代.png" width="286" height="212" loading="lazy" decoding="async"><br><br><span><strong>✔何に電気料金がかかっているのか</strong></span><br> <br>家の高性能化は、大幅な電気料金の削減につながるイメージがあると思います。<br>しかし、冷暖房以外にかかっているその他72％のものには、家の高性能化によって削減出来るものがないため、大幅な電気料金の削減にはつながりません。<br> <br>例えば、最も電気を消費するものは"冷蔵庫"、続いて電気を消費するのは"照明器具"なのですが、家の高性能化によってもこの電気料金は安くならないですね。<br> <br>テレビもエアコンよりも電気を消費します。<br>この他、給湯器はエアコンと同じぐらい電気を消費するのですが、これも家の高性能化とは関係はありませんよね。 <br> </p>
 <p><span><strong>✔電気料金を安くするための方法</strong></span></p>
-<p>電気料金は、終わりがある住宅ローンと違い一生払っていかなくてはいけない費用です。<br> また、今後は電気料金が上がっていくことが予想されます。<br> <br>電力の自由化をした国は、例外なく全ての国が、電気料金が上がっているし、実際、太陽光発電の売電収入は国民全ての電気料金から全て支払われていますが、このチャージ料金も年々上がっていっているからです。（現在は、電気料金の10％強を占めています）<br> <br>ですから、これから家づくりをするときには、この電気料金のことにも目を向けなくてはいけません。<br>そのために前向きに考えていただきたいのが、<strong>『太陽光発電の設置』</strong>です。<br><br><img src="../img/staffblog/articles/ed83de196c97ade2.webp" alt="太陽光.png" width="363" height="241" loading="lazy" decoding="async"><br> <br>太陽光発電には、肯定的なイメージよりも否定的なイメージが広がっていることもあって、どの情報を信じるか判断が難しいと思います。<br> <br>太陽光発電の設置について詳しくお話が聞きたいという方は、いつでもご連絡いただければと思います。<br><br><br><span>------------------------------------------------------------</span><br><span>フジ創アイノス</span><br><span>富山県高岡市江尻846-1</span><br><span>TEL0800-200-2661</span><br><a href="../index.html">https://www.fujisou-ainos.com/</a><br><span>-------------------------------------------------------------</span><br> </p><br></div></div>
-<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
+<p>電気料金は、終わりがある住宅ローンと違い一生払っていかなくてはいけない費用です。<br> また、今後は電気料金が上がっていくことが予想されます。<br> <br>電力の自由化をした国は、例外なく全ての国が、電気料金が上がっているし、実際、太陽光発電の売電収入は国民全ての電気料金から全て支払われていますが、このチャージ料金も年々上がっていっているからです。（現在は、電気料金の10％強を占めています）<br> <br>ですから、これから家づくりをするときには、この電気料金のことにも目を向けなくてはいけません。<br>そのために前向きに考えていただきたいのが、<strong>『太陽光発電の設置』</strong>です。<br><br><img src="../img/staffblog/articles/ed83de196c97ade2.webp" alt="太陽光.png" width="363" height="241" loading="lazy" decoding="async"><br> <br>太陽光発電には、肯定的なイメージよりも否定的なイメージが広がっていることもあって、どの情報を信じるか判断が難しいと思います。<br> <br>太陽光発電の設置について詳しくお話が聞きたいという方は、いつでもご連絡いただければと思います。<br><br><br><span>------------------------------------------------------------</span><br><span>フジ創アイノス</span><br><span>富山県高岡市江尻846-1</span><br><span>TEL0800-200-2661</span><br><a href="../">https://www.fujisou-ainos.com/</a><br><span>-------------------------------------------------------------</span><br> </p><br></div></div>
+<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
 <nav class="blog-entry__navigation" aria-label="前後の記事"><a href="2021-08-31-土地代を抑えるための知識2-post-436.shtml"><img src="../img/staffblog/articles/c84830ccb5a036a6.webp" alt="" width="304" height="247" loading="lazy" decoding="async"><div><small>前の記事 <b aria-hidden="true">↗</b></small><span>土地代を抑えるための知識②</span></div></a><a href="2021-09-02-キッチンまわりを作るポイント-post-438.shtml"><img src="../img/staffblog/articles/1ab287fcf8324bcf.webp" alt="" width="316" height="172" loading="lazy" decoding="async"><div><small>次の記事 <b aria-hidden="true">↗</b></small><span>キッチンまわりを作るポイント</span></div></a></nav>
-<div class="blog-entry__closing"><a class="blog-back" href="index.html">← 社長のブログ一覧へ</a><a href="../contact/index.html">家づくりについて相談する →</a></div>
+<div class="blog-entry__closing"><a class="blog-back" href="./">← 社長のブログ一覧へ</a><a href="../contact/">家づくりについて相談する →</a></div>
 </article></main>
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
 <!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
@@ -82,13 +82,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -99,28 +99,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="./">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -132,4 +132,4 @@
 </footer>
 
 
-<script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script></body></html>
+<script src="../script/fujisou-ainos.js?v=8153209f23" defer></script></body></html>

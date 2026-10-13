@@ -26,7 +26,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -38,31 +38,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="index.html">施工事例</a></li>
+          <li><a href="./">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="../staffblog/index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="../staffblog/">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -74,13 +74,13 @@
 
 
 
-  <main id="main" class="gallery-project"><nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li> / <a href="index.html">施工事例</a></li><li> / <span aria-current="page">雪に強いインナーガレージ付き住宅｜２階建て３LDK</span></li></ol></nav>
+  <main id="main" class="gallery-project"><nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li> / <a href="./">施工事例</a></li><li> / <span aria-current="page">雪に強いインナーガレージ付き住宅｜２階建て３LDK</span></li></ol></nav>
   <section class="project-masthead"><p>魚津市 / 施工事例</p><h1><span>雪に強いインナーガレージ付き住宅</span><small><span>２階建て３LDK</span></small></h1><a href="#project-photos">住まいの写真を見る <span aria-hidden="true">↓</span></a></section>
   <section class="project-cover-photo"><figure><a class="project-photo-link" href="../img/gallery/projects/enhanced/95c244b69f9414ee6bd3-1800.webp" data-project-photo data-caption="右側面にインナーガレージを装備した家" aria-label="右側面にインナーガレージを装備した家を拡大する"><img src="../img/gallery/projects/enhanced/95c244b69f9414ee6bd3-1800.webp" srcset="../img/gallery/projects/enhanced/95c244b69f9414ee6bd3-640.webp 640w, ../img/gallery/projects/enhanced/95c244b69f9414ee6bd3-1280.webp 1280w, ../img/gallery/projects/enhanced/95c244b69f9414ee6bd3-1800.webp 1800w" sizes="(max-width:600px) calc(100vw - 40px), 1120px" alt="右側面にインナーガレージを装備した家" width="900" height="600" fetchpriority="high" decoding="async"></a><figcaption>右側面にインナーガレージを装備した家</figcaption></figure></section>
 
   <div class="project-photo-story" id="project-photos" aria-label="雪に強いインナーガレージ付き住宅｜２階建て３LDKの写真一覧"><figure class=""><a class="project-photo-link" href="../img/gallery/projects/enhanced/acdb56e71a102fd3be9a-1800.webp" data-project-photo data-caption="インナーガレージ" aria-label="インナーガレージを拡大する"><img src="../img/gallery/projects/enhanced/acdb56e71a102fd3be9a-1800.webp" srcset="../img/gallery/projects/enhanced/acdb56e71a102fd3be9a-640.webp 640w, ../img/gallery/projects/enhanced/acdb56e71a102fd3be9a-1280.webp 1280w, ../img/gallery/projects/enhanced/acdb56e71a102fd3be9a-1800.webp 1800w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="インナーガレージ" width="900" height="598" loading="lazy" decoding="async"></a><figcaption>インナーガレージ</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class=""><a class="project-photo-link" href="../img/gallery/projects/enhanced/9f3c3756a64c8d975704-1800.webp" data-project-photo data-caption="玄関" aria-label="玄関を拡大する"><img src="../img/gallery/projects/enhanced/9f3c3756a64c8d975704-1800.webp" srcset="../img/gallery/projects/enhanced/9f3c3756a64c8d975704-640.webp 640w, ../img/gallery/projects/enhanced/9f3c3756a64c8d975704-1280.webp 1280w, ../img/gallery/projects/enhanced/9f3c3756a64c8d975704-1800.webp 1800w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="玄関" width="900" height="598" loading="lazy" decoding="async"></a><figcaption>玄関</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class="project-photo--portrait"><a class="project-photo-link" href="../img/gallery/projects/enhanced/7b101cb3e8a4a525ee14-1203.webp" data-project-photo data-caption="シューズクローゼット" aria-label="シューズクローゼットを拡大する"><img src="../img/gallery/projects/enhanced/7b101cb3e8a4a525ee14-1203.webp" srcset="../img/gallery/projects/enhanced/7b101cb3e8a4a525ee14-640.webp 640w, ../img/gallery/projects/enhanced/7b101cb3e8a4a525ee14-1203.webp 1203w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="シューズクローゼット" width="401" height="603" loading="lazy" decoding="async"></a><figcaption>シューズクローゼット</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class=""><a class="project-photo-link" href="../img/gallery/projects/enhanced/75506b4d34c123a038bc-1800.webp" data-project-photo data-caption="リビング" aria-label="リビングを拡大する"><img src="../img/gallery/projects/enhanced/75506b4d34c123a038bc-1800.webp" srcset="../img/gallery/projects/enhanced/75506b4d34c123a038bc-640.webp 640w, ../img/gallery/projects/enhanced/75506b4d34c123a038bc-1280.webp 1280w, ../img/gallery/projects/enhanced/75506b4d34c123a038bc-1800.webp 1800w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="リビング" width="900" height="598" loading="lazy" decoding="async"></a><figcaption>リビング</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class="project-photo--wide"><a class="project-photo-link" href="../img/gallery/projects/enhanced/cfb3529c3eb1d9883fc4-1800.webp" data-project-photo data-caption="対面キッチン" aria-label="対面キッチンを拡大する"><img src="../img/gallery/projects/enhanced/cfb3529c3eb1d9883fc4-1800.webp" srcset="../img/gallery/projects/enhanced/cfb3529c3eb1d9883fc4-640.webp 640w, ../img/gallery/projects/enhanced/cfb3529c3eb1d9883fc4-1280.webp 1280w, ../img/gallery/projects/enhanced/cfb3529c3eb1d9883fc4-1800.webp 1800w" sizes="(max-width:600px) calc(100vw - 40px), 1120px" alt="対面キッチン" width="900" height="598" loading="lazy" decoding="async"></a><figcaption>対面キッチン</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class=""><a class="project-photo-link" href="../img/gallery/projects/enhanced/ed0b8683a19e3638432b-1800.webp" data-project-photo data-caption="木のぬくもりを感じるキッチン" aria-label="木のぬくもりを感じるキッチンを拡大する"><img src="../img/gallery/projects/enhanced/ed0b8683a19e3638432b-1800.webp" srcset="../img/gallery/projects/enhanced/ed0b8683a19e3638432b-640.webp 640w, ../img/gallery/projects/enhanced/ed0b8683a19e3638432b-1280.webp 1280w, ../img/gallery/projects/enhanced/ed0b8683a19e3638432b-1800.webp 1800w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="木のぬくもりを感じるキッチン" width="900" height="598" loading="lazy" decoding="async"></a><figcaption>木のぬくもりを感じるキッチン</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class=""><a class="project-photo-link" href="../img/gallery/projects/enhanced/484f1db6813ca3a31b85-1800.webp" data-project-photo data-caption="洗面所" aria-label="洗面所を拡大する"><img src="../img/gallery/projects/enhanced/484f1db6813ca3a31b85-1800.webp" srcset="../img/gallery/projects/enhanced/484f1db6813ca3a31b85-640.webp 640w, ../img/gallery/projects/enhanced/484f1db6813ca3a31b85-1280.webp 1280w, ../img/gallery/projects/enhanced/484f1db6813ca3a31b85-1800.webp 1800w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="洗面所" width="900" height="598" loading="lazy" decoding="async"></a><figcaption>洗面所</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class="project-photo--portrait"><a class="project-photo-link" href="../img/gallery/projects/enhanced/5f4c87f0512ec39c3994-1203.webp" data-project-photo data-caption="バスルーム" aria-label="バスルームを拡大する"><img src="../img/gallery/projects/enhanced/5f4c87f0512ec39c3994-1203.webp" srcset="../img/gallery/projects/enhanced/5f4c87f0512ec39c3994-640.webp 640w, ../img/gallery/projects/enhanced/5f4c87f0512ec39c3994-1203.webp 1203w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="バスルーム" width="401" height="603" loading="lazy" decoding="async"></a><figcaption>バスルーム</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class="project-photo--portrait"><a class="project-photo-link" href="../img/gallery/projects/enhanced/00496ff3718bd2c1722e-1203.webp" data-project-photo data-caption="周りが漆喰のトイレ" aria-label="周りが漆喰のトイレを拡大する"><img src="../img/gallery/projects/enhanced/00496ff3718bd2c1722e-1203.webp" srcset="../img/gallery/projects/enhanced/00496ff3718bd2c1722e-640.webp 640w, ../img/gallery/projects/enhanced/00496ff3718bd2c1722e-1203.webp 1203w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="周りが漆喰のトイレ" width="401" height="603" loading="lazy" decoding="async"></a><figcaption>周りが漆喰のトイレ</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class="project-photo--portrait"><a class="project-photo-link" href="../img/gallery/projects/enhanced/8d793d55649b35322d59-1203.webp" data-project-photo data-caption="階段" aria-label="階段を拡大する"><img src="../img/gallery/projects/enhanced/8d793d55649b35322d59-1203.webp" srcset="../img/gallery/projects/enhanced/8d793d55649b35322d59-640.webp 640w, ../img/gallery/projects/enhanced/8d793d55649b35322d59-1203.webp 1203w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="階段" width="401" height="603" loading="lazy" decoding="async"></a><figcaption>階段</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class=""><a class="project-photo-link" href="../img/gallery/projects/enhanced/04c726229b1d4ed4c591-1800.webp" data-project-photo data-caption="洋室" aria-label="洋室を拡大する"><img src="../img/gallery/projects/enhanced/04c726229b1d4ed4c591-1800.webp" srcset="../img/gallery/projects/enhanced/04c726229b1d4ed4c591-640.webp 640w, ../img/gallery/projects/enhanced/04c726229b1d4ed4c591-1280.webp 1280w, ../img/gallery/projects/enhanced/04c726229b1d4ed4c591-1800.webp 1800w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="洋室" width="900" height="598" loading="lazy" decoding="async"></a><figcaption>洋室</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure></div>
   <section class="project-neighbours"><h2>ほかの住まいも見る</h2><nav aria-label="前後の施工事例"><a href="post-31.shtml"><img src="../img/gallery/projects/enhanced/d67f35a630efe14a038d-2200.webp" srcset="../img/gallery/projects/enhanced/d67f35a630efe14a038d-640.webp 640w, ../img/gallery/projects/enhanced/d67f35a630efe14a038d-1280.webp 1280w, ../img/gallery/projects/enhanced/d67f35a630efe14a038d-2200.webp 2200w" sizes="(max-width:600px) calc(100vw - 80px), 360px" alt="憧れのホームシアター｜２階建て LDK" width="3872" height="2592" loading="lazy" decoding="async"><div><small>富山県</small><p>憧れのホームシアター｜２階建て LDK <span aria-hidden="true">→</span></p></div></a><a href="50ainos.shtml"><img src="../img/gallery/projects/enhanced/67584ebbe4cc18502333-1280.webp" srcset="../img/gallery/projects/enhanced/67584ebbe4cc18502333-640.webp 640w, ../img/gallery/projects/enhanced/67584ebbe4cc18502333-1280.webp 1280w" sizes="(max-width:600px) calc(100vw - 80px), 360px" alt="築50年建築と現代の融合｜2階建て５LDK" width="597" height="600" loading="lazy" decoding="async"><div><small>砺波市</small><p>築50年建築と現代の融合｜2階建て５LDK <span aria-hidden="true">→</span></p></div></a></nav></section>
-  <section class="project-consultation"><div><h2>気になる住まいを、相談のきっかけに。</h2><p>素材や間取り、お好みの雰囲気をお聞かせください。</p></div><div><a href="../consultation/index.html">家づくり無料相談 <span aria-hidden="true">→</span></a><a href="index.html">施工事例一覧に戻る <span aria-hidden="true">→</span></a></div></section>
+  <section class="project-consultation"><div><h2>気になる住まいを、相談のきっかけに。</h2><p>素材や間取り、お好みの雰囲気をお聞かせください。</p></div><div><a href="../consultation/">家づくり無料相談 <span aria-hidden="true">→</span></a><a href="./">施工事例一覧に戻る <span aria-hidden="true">→</span></a></div></section>
   <dialog class="work-image-dialog" aria-label="施工事例の写真を拡大"><div class="work-image-dialog__controls"><button type="button" data-photo-prev aria-label="前の写真">←</button><span class="work-image-dialog__count"></span><button type="button" data-photo-next aria-label="次の写真">→</button><button type="button" class="work-image-dialog__close">閉じる ×</button></div><img alt="" width="1600" height="1000"><p></p></dialog></main>
 
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
@@ -90,13 +90,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -107,28 +107,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="./">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="../staffblog/index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="../staffblog/">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -141,6 +141,6 @@
 
 
 
-  <script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script>
+  <script src="../script/fujisou-ainos.js?v=8153209f23" defer></script>
 </body>
 </html>

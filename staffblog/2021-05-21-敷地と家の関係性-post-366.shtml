@@ -13,7 +13,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -25,31 +25,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="./">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -62,18 +62,18 @@
 
 
 <main id="main">
-<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li aria-hidden="true">/</li><li><a href="index.html">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
+<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-hidden="true">/</li><li><a href="./">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
 <article class="blog-entry">
 <div class="blog-entry__opening"><header class="blog-entry__header"><p class="blog-eyebrow">社長のブログ</p><div class="blog-meta"><time datetime="2021-05-21">2021.05.21</time><span>家づくりについて</span></div><h1>敷地と家の関係性</h1><a class="blog-entry__read-link" href="#article-reading">本文を読む <span aria-hidden="true">↓</span></a></header>
 <figure class="blog-entry__visual"><img src="../img/staffblog/articles/21c181466657ded2.webp" alt="敷地と家の関係性" width="580" height="384" fetchpriority="high" decoding="async"></figure></div>
 <div class="blog-entry__reading" id="article-reading"><div class="blog-entry__content"><p>こんにちは。富山で自然素材にこだわるホンモノの家、フジ創アイノスです。</p>
 <p>家づくりを始めて、SNSや住宅雑誌を見たり、モデルハウスや見学会に足を運び、たくさんの家に触れていると、実現したい様々な要望がどんどん積み重なっていくことと思います。<br> <br>しかし、間取りは要望だけで決まるのではなく、実際はその土地の環境に大きく左右されるため、土地を考えずに要望を固めていくことは、決してオススメ出来ることではありません。<br> <br>そ住みにくい家が出来上がってしまったり、無駄なコストが余分にかかることがないように、土地は慎重に選びましょう。<br> <br><strong>"間取りは環境に合わせてつくるものである"</strong>ということを覚えておいていただければと思います。<br> <br><img src="../img/staffblog/articles/21c181466657ded2.webp" alt="88f4148dd33cff48297068cb8c1574d6_s-580x384.jpg" width="580" height="384" loading="lazy" decoding="async"><br> <br>例えば、「南全面にリビングダイニングキッチンを配置したい」「南に大きな窓をつけたい」その実現が家づくりの絶対条件だと仮定します。<br> <br>しかし、すぐ南に家が建っている土地に家を建てないといけないとしたら。</p>
 <p>まず考えられることは、そもそも日が充分に当たらなくなり、南にリビングをつくったにも関わらず家が薄暗くなってしまうということです。<br> <br>またその土地は、すぐ南に建っている家の裏口や裏面が見えるため、いつも過ごすリビングの大きな窓から見える景色は、散乱したゴミや、換気扇や窓から垂れる汚れやコケ、エアコンの室外機や給湯器といった生活感に溢れたものばかりになってしまうため、それを隠すためカーテンを閉めざるを得なくなってしまい、さらに家の中を薄暗くすることになります。<br> <br>では、南に家が建っていなかったり、あるいは建つことがない土地であれば、その要望の実現は問題ないのでしょうか？<br> <br>この場合、日当たりを阻害するものがないため、一見南につくったリビングには日光がサンサンと降り注ぐように感じます。<br> <br>しかし、リビングが外から丸見えになってしまうとしたら、それを防ぐためにカーテンを閉めた状態にせざるを得なくなるし、この先ずっと、そのカーテンを開けることが出来ないかもしれません。<br><br><img src="../img/staffblog/articles/26567375c726e7af.webp" alt="光2.png" width="315" height="264" loading="lazy" decoding="async"><br> <br>ですので、その条件が絶対だとしたら、外からリビングが見られないような土地を選ばないといけないし、そうなれば家が密集して建っていない地域にする必要があります。<br> <br>つまり、土地の予算を上げずにその要望を実現しようと思うと、住む地域を変更せざるを得ないというわけですね。<br> <br>あるいは、それが出来ないのであれば、希望する地域でより広い土地を購入しつつ、敷地の南には視線を遮断するための塀の工事を施す必要があるかもしれません。<br> <br>つまり、土地代と庭代に、より多くのコストを掛けざるを得なくなってしまうというわけです。<br><br><img src="../img/staffblog/articles/0d8c1f0c251f0fb2.webp" alt="step0006.jpg" width="500" height="350" loading="lazy" decoding="async"><br><br>次回に続きます。<br><br></p>
-<p>------------------------------------------------------------<br>フジ創アイノス<br>富山県高岡市江尻846-1<br>TEL0800-200-2661<br><a href="../index.html">https://www.fujisou-ainos.com/</a><br>-------------------------------------------------------------</p>
+<p>------------------------------------------------------------<br>フジ創アイノス<br>富山県高岡市江尻846-1<br>TEL0800-200-2661<br><a href="../">https://www.fujisou-ainos.com/</a><br>-------------------------------------------------------------</p>
 <p></p><br></div></div>
-<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
+<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
 <nav class="blog-entry__navigation" aria-label="前後の記事"><a href="2021-05-19-フジ創アイノスの家づくり-3つのスタイル-post-365.shtml"><img src="../img/staffblog/articles/3f886a6f56afb719.webp" alt="" width="615" height="410" loading="lazy" decoding="async"><div><small>前の記事 <b aria-hidden="true">↗</b></small><span>フジ創アイノスの家づくり、３つのスタイル</span></div></a><a href="2021-05-22-敷地と家の関係性2-post-367.shtml"><img src="../img/staffblog/articles/010a5466435cb9b7.webp" alt="" width="414" height="277" loading="lazy" decoding="async"><div><small>次の記事 <b aria-hidden="true">↗</b></small><span>敷地と家の関係性②</span></div></a></nav>
-<div class="blog-entry__closing"><a class="blog-back" href="index.html">← 社長のブログ一覧へ</a><a href="../contact/index.html">家づくりについて相談する →</a></div>
+<div class="blog-entry__closing"><a class="blog-back" href="./">← 社長のブログ一覧へ</a><a href="../contact/">家づくりについて相談する →</a></div>
 </article></main>
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
 <!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
@@ -82,13 +82,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -99,28 +99,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="./">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -132,4 +132,4 @@
 </footer>
 
 
-<script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script></body></html>
+<script src="../script/fujisou-ainos.js?v=8153209f23" defer></script></body></html>

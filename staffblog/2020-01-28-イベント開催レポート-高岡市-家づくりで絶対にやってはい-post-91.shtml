@@ -13,7 +13,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -25,31 +25,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="./">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -62,7 +62,7 @@
 
 
 <main id="main">
-<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li aria-hidden="true">/</li><li><a href="index.html">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
+<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-hidden="true">/</li><li><a href="./">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
 <article class="blog-entry">
 <div class="blog-entry__opening"><header class="blog-entry__header"><p class="blog-eyebrow">社長のブログ</p><div class="blog-meta"><time datetime="2020-01-28">2020.01.28</time><span>イベント</span></div><h1>【イベント開催レポート】高岡市『家づくりで絶対にやってはいけない10のコト』</h1><a class="blog-entry__read-link" href="#article-reading">本文を読む <span aria-hidden="true">↓</span></a></header>
 <figure class="blog-entry__visual"><img src="../img/staffblog/articles/2d12fdbde0faacee.webp" alt="【イベント開催レポート】高岡市『家づくりで絶対にやってはいけない10のコト』" width="900" height="535" fetchpriority="high" decoding="async"></figure></div>
@@ -72,9 +72,9 @@
 <p>この日のために大阪から講演にお越し頂いた<strong>「SIMPLE NOTE」</strong>の<strong>釜鳴伸二</strong> 様<br>幅広い世代の方にお越し頂いているなかでの講演。元気でユーモアのある釜鳴さんの人柄と<br>各ご家族が気になっている話題にリーチした進行。<br><br>参加者のみなさんの表情も話が進むにつれ徐々に変化してゆく様子が、主催側としては嬉しい反応でした。</p>
 <p><img src="../img/staffblog/articles/f3e05e1bb8c6e3d3.webp" alt="83723256_1435862519903618_3730937450361520128_n.jpg" width="640" height="480" loading="lazy" decoding="async"><br><br>今回の釜鳴さんの講演で弊社自身も新しい時代に踏み出していく<br>「前向きでコンパクトな家づくり」へのイメージが大きく浮かび上がりました<br>なかなか他所では聞くことができない内容に<strong>参加者の皆様の反応も非常に良かった</strong>です。<br><br>ご参加いただいた皆様、興味を持ってくださった皆様ありがとうございます。<br><br><strong>フジ創では今後も家づくりで悩む皆さんに有益なイベントを開催していきたい</strong>と思います。<br>「ＳＩＭＰＬＥ ＮＯＴＥ」や、今後のイベントに関しての情報の詳細は随時ＨＰで更新していきます。<br><br>電話やお問合せフォームからも個別のご相談を受け付けておりますので、気軽にお問合せ下さい。</p>
 <p>--------------------------------------------<br>フジ創アイノス<br>TEL 0800-200-2661<br>高岡市江尻846-1<br>https://www.fujisou-ainos.com/<br>--------------------------------------------</p><br></div></div>
-<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
+<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
 <nav class="blog-entry__navigation" aria-label="前後の記事"><a href="2020-01-27-富山県で光熱費ゼロ住宅-住まいの資金と税金-post-90.shtml"><img src="../img/staffblog/articles/b9987f1609ddcc67.webp" alt="" width="800" height="753" loading="lazy" decoding="async"><div><small>前の記事 <b aria-hidden="true">↗</b></small><span>【富山県で光熱費ゼロ住宅】住まいの資金と税金</span></div></a><a href="2020-01-30-自然素材の家に宿る神様-五十猛命-post-92.shtml"><img src="../img/staffblog/articles/58dbf0e9d58dd7c7.webp" alt="" width="1600" height="1066" loading="lazy" decoding="async"><div><small>次の記事 <b aria-hidden="true">↗</b></small><span>【自然素材の家に宿る神様】五十猛命</span></div></a></nav>
-<div class="blog-entry__closing"><a class="blog-back" href="index.html">← 社長のブログ一覧へ</a><a href="../contact/index.html">家づくりについて相談する →</a></div>
+<div class="blog-entry__closing"><a class="blog-back" href="./">← 社長のブログ一覧へ</a><a href="../contact/">家づくりについて相談する →</a></div>
 </article></main>
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
 <!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
@@ -83,13 +83,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -100,28 +100,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="./">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -133,4 +133,4 @@
 </footer>
 
 
-<script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script></body></html>
+<script src="../script/fujisou-ainos.js?v=8153209f23" defer></script></body></html>

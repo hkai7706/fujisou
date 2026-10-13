@@ -13,7 +13,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -25,31 +25,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="./">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -62,16 +62,16 @@
 
 
 <main id="main">
-<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li aria-hidden="true">/</li><li><a href="index.html">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
+<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-hidden="true">/</li><li><a href="./">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
 <article class="blog-entry">
 <div class="blog-entry__opening"><header class="blog-entry__header"><p class="blog-eyebrow">社長のブログ</p><div class="blog-meta"><time datetime="2021-09-10">2021.09.10</time><span>家づくりについて</span></div><h1>２階建住宅で気を付けるべきこと②</h1><a class="blog-entry__read-link" href="#article-reading">本文を読む <span aria-hidden="true">↓</span></a></header>
 <figure class="blog-entry__visual"><img src="../img/staffblog/articles/35dc0e33f01a50e5.webp" alt="２階建住宅で気を付けるべきこと②" width="323" height="208" fetchpriority="high" decoding="async"></figure></div>
 <div class="blog-entry__reading" id="article-reading"><div class="blog-entry__content"><p><span>こんにちは。富山で自然素材にこだわるホンモノの家、フジ創アイノスです。</span></p>
 <p><span><strong>✔大事なのは、コストを上げずに解決すること</strong></span></p>
-<p>2階建ての家のリビングが散らかりやすくなる問題を解決する手段として、1階に「和室」をつくるという選択肢があります。<br>もう1つ部屋があれば、そこに子供の荷物だけじゃなく、服やバッグなども置いておくことが出来るからです。<br> <br>ですが、1階に和室をつくれば、その分面積が大きくなってしまい、必然的に家のコストは高くなります。<br>仮に和室の広さが6帖だとしたら、180万円〜200万円といった感じでしょうか。<br> <br>つまりお金さえ掛ければ、どんなことも解決出来るわけなんですが、その解決策がベストなのでしょうか。<br>200万円余分なコストを掛けそれを住宅ローンでまかなうとしたら、金利も含めると240万円ものお金が自由に使えなくなってしまうわけですからね。<br> <br>違う角度で見てみると、家族みんなで行く1回の旅行にかかる費用が40万円だとしたら、6回も思い出づくりと貴重な経験を紡いでしまうという風にも考えられますよね。<br> <br>ですので、まずはこの問題をコストを上げずに解決する方法を考えなければいけません。<br><br><img src="../img/staffblog/articles/35dc0e33f01a50e5.webp" alt="コスト.png" width="323" height="208" loading="lazy" decoding="async"><br> <br>それは、敷地によって異なるため一概には言えませんが、もし和室をつくるだけのゆとりが敷地にあるのなら、子供部屋か寝室を１階につくったらいいかもしれないし、同時にファミリークローゼットを1階につくったらいいかもしれません。<br> <br>あるいは、土地が狭く1階にリビング以外に部屋をつくるのが難しい場合は、収納のつくり方を工夫すると同時に、2階につくらざるを得ない子供部屋をずっと使いやすく出来る工夫がないかを考えてみてもいいかもしれません。<br> <br>いずれにせよ、家のコストが上がらないようにしつつ、その工夫を見いだすことが大切です。<br>これが出来れば、たとえ2階建ての家であろうとも、リビングダイニングが散らかりにくい家にすることが出来ると思います。<br> <br>もちろん、それでも片付けはしないと汚くはなってしまいますけどね（笑）<br>あくまで片付けの手間を減らすという意味合いですね。<br><br><img src="../img/staffblog/articles/3cb92ba354f82943.webp" alt="モデルハウス２.png" width="399" height="282" loading="lazy" decoding="async"><br> <br>ということで、どうしても2階建ての家を建てざるを得ない場合は、まずはリビングダイニングの片付けやすさを実際の暮らしを想像しながら考えてみていただければと思います。<br><br><br><span>------------------------------------------------------------</span><br><span>フジ創アイノス</span><br><span>富山県高岡市江尻846-1</span><br><span>TEL0800-200-2661</span><br><a href="../index.html">https://www.fujisou-ainos.com/</a><br><span>-------------------------------------------------------------</span></p><br></div></div>
-<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
+<p>2階建ての家のリビングが散らかりやすくなる問題を解決する手段として、1階に「和室」をつくるという選択肢があります。<br>もう1つ部屋があれば、そこに子供の荷物だけじゃなく、服やバッグなども置いておくことが出来るからです。<br> <br>ですが、1階に和室をつくれば、その分面積が大きくなってしまい、必然的に家のコストは高くなります。<br>仮に和室の広さが6帖だとしたら、180万円〜200万円といった感じでしょうか。<br> <br>つまりお金さえ掛ければ、どんなことも解決出来るわけなんですが、その解決策がベストなのでしょうか。<br>200万円余分なコストを掛けそれを住宅ローンでまかなうとしたら、金利も含めると240万円ものお金が自由に使えなくなってしまうわけですからね。<br> <br>違う角度で見てみると、家族みんなで行く1回の旅行にかかる費用が40万円だとしたら、6回も思い出づくりと貴重な経験を紡いでしまうという風にも考えられますよね。<br> <br>ですので、まずはこの問題をコストを上げずに解決する方法を考えなければいけません。<br><br><img src="../img/staffblog/articles/35dc0e33f01a50e5.webp" alt="コスト.png" width="323" height="208" loading="lazy" decoding="async"><br> <br>それは、敷地によって異なるため一概には言えませんが、もし和室をつくるだけのゆとりが敷地にあるのなら、子供部屋か寝室を１階につくったらいいかもしれないし、同時にファミリークローゼットを1階につくったらいいかもしれません。<br> <br>あるいは、土地が狭く1階にリビング以外に部屋をつくるのが難しい場合は、収納のつくり方を工夫すると同時に、2階につくらざるを得ない子供部屋をずっと使いやすく出来る工夫がないかを考えてみてもいいかもしれません。<br> <br>いずれにせよ、家のコストが上がらないようにしつつ、その工夫を見いだすことが大切です。<br>これが出来れば、たとえ2階建ての家であろうとも、リビングダイニングが散らかりにくい家にすることが出来ると思います。<br> <br>もちろん、それでも片付けはしないと汚くはなってしまいますけどね（笑）<br>あくまで片付けの手間を減らすという意味合いですね。<br><br><img src="../img/staffblog/articles/3cb92ba354f82943.webp" alt="モデルハウス２.png" width="399" height="282" loading="lazy" decoding="async"><br> <br>ということで、どうしても2階建ての家を建てざるを得ない場合は、まずはリビングダイニングの片付けやすさを実際の暮らしを想像しながら考えてみていただければと思います。<br><br><br><span>------------------------------------------------------------</span><br><span>フジ創アイノス</span><br><span>富山県高岡市江尻846-1</span><br><span>TEL0800-200-2661</span><br><a href="../">https://www.fujisou-ainos.com/</a><br><span>-------------------------------------------------------------</span></p><br></div></div>
+<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
 <nav class="blog-entry__navigation" aria-label="前後の記事"><a href="2021-09-09-2階建住宅で気を付けるべきこと-post-443.shtml"><img src="../img/staffblog/articles/1ab287fcf8324bcf.webp" alt="" width="316" height="172" loading="lazy" decoding="async"><div><small>前の記事 <b aria-hidden="true">↗</b></small><span>２階建住宅で気を付けるべきこと</span></div></a><a href="2021-09-13-自然素材の魅力-post-445.shtml"><img src="../img/staffblog/articles/3086efb1b73106ac.webp" alt="" width="577" height="384" loading="lazy" decoding="async"><div><small>次の記事 <b aria-hidden="true">↗</b></small><span>自然素材の魅力</span></div></a></nav>
-<div class="blog-entry__closing"><a class="blog-back" href="index.html">← 社長のブログ一覧へ</a><a href="../contact/index.html">家づくりについて相談する →</a></div>
+<div class="blog-entry__closing"><a class="blog-back" href="./">← 社長のブログ一覧へ</a><a href="../contact/">家づくりについて相談する →</a></div>
 </article></main>
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
 <!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
@@ -80,13 +80,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -97,28 +97,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="./">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -130,4 +130,4 @@
 </footer>
 
 
-<script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script></body></html>
+<script src="../script/fujisou-ainos.js?v=8153209f23" defer></script></body></html>

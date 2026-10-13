@@ -13,7 +13,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -25,31 +25,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="./">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -62,16 +62,16 @@
 
 
 <main id="main">
-<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li aria-hidden="true">/</li><li><a href="index.html">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
+<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-hidden="true">/</li><li><a href="./">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
 <article class="blog-entry">
 <div class="blog-entry__opening"><header class="blog-entry__header"><p class="blog-eyebrow">社長のブログ</p><div class="blog-meta"><time datetime="2020-10-07">2020.10.07</time><span>家づくりについて</span></div><h1>家づくりと同時に考えるべきお金のこと</h1><a class="blog-entry__read-link" href="#article-reading">本文を読む <span aria-hidden="true">↓</span></a></header>
 <figure class="blog-entry__visual"><img src="../img/staffblog/articles/00486623b32e1622.webp" alt="家づくりと同時に考えるべきお金のこと" width="500" height="375" fetchpriority="high" decoding="async"></figure></div>
 <div class="blog-entry__reading" id="article-reading"><div class="blog-entry__content"><p>こんにちは。富山で自然素材にこだわるホンモノの家、フジ創アイノスです。</p>
 <p>もしもの時や将来のことを考えて、<br>お金を貯めていくためは、収入を増やすことはもちろん、<br>貯蓄の方法をどうするのかも大切です。<br><br><img src="../img/staffblog/articles/00486623b32e1622.webp" alt="140520lowcost.jpg" width="500" height="375" loading="lazy" decoding="async"><br><br></p>
-<p><span><strong>▼銀行でお金は増えるのか</strong></span><br> <br>銀行にお金を預けておけば、<br>時間外にお金を引き出さない限りお金が減ることはありません。<br>ですので単なる貯蓄先として考えれば、<br>決して間違った選択肢ではありません。<br> <br>しかし、銀行にお金を預けていても、<br>お金は全く増えません。<br>普通預金金利は、わずか0.001%だし、<br>定期預金金利でも、わずか0.01%しかないからです。<br> <br>貯蓄に回せる資金を全て銀行に預けておくというのは、<br>あまり賢明な選択肢ではないと言えます。<br> <br><span><strong>▼貯蓄型の生命保険はどうなのか？</strong></span><br> <br>もう1つ、多くの方が貯蓄性に期待して<br>お金を預けているのが、生命保険ではないでしょうか？<br> <br>保険は中長期で見れば、保険会社からの提案通り、<br>貯まるだけじゃなくお金は増えます。<br> <br>しかし、満期保険金や契約返戻金には税金がかかるため、<br>満額受け取ることが出来るわけじゃない、<br>ということも理解しておかないといけません。<br> <br>つまり、受取時にどうなるのかをよく理解した上で<br>加入することが大切だということですね。<br><br><img src="../img/staffblog/articles/1b1382c73c3672ff.webp" alt="26614-featured-496x260.jpg" width="496" height="260" loading="lazy" decoding="async"><br> <br><span><strong>▼銀行や保険とは違う金融商品</strong></span><br> <br>お金を貯めながら増やすためには、<br>ただ単に増えるかどうかだけじゃなく、<br>税制面のことも考えながら加入する必要があります。<br>銀行や保険とは違う金融商品があります。<br><br>例えばある商品は、一旦加入すると<br>60歳までお金を下ろすことが出来ない年金なのですが、<br>預けたお金を受け取る時、ほぼ税金がかかりません。<br>（退職所得控除や公的年金控除の対象になるからです）<br> <br>その商品は、預けたお金をどのように運用するかを<br>自分自身で決めることが出来るし、<br>途中で運用方法を変更することも出来るのですが、<br>運用によって増えたお金にも一切税金がかかりません。<br>（通常20.315％の税金がかかります）<br> <br>そして、その商品の素晴らしいところは、<br>毎月23,000円を上限として加入出来るのですが、<br>掛けたお金は、全額所得控除の対象となります。<br>（公務員さんは12,000円が上限です）<br> <br>仮に、あなたとあなたの奥さんが共働きで、<br>2人とも23,000円ずつ掛けたとし、<br>（年間で552,000円の貯蓄となります）<br>2人とも所得税も住民税も10％ずつだとしたら、<br>2人で年間約11万円も税金が安くなるということになります。<br> <br>つまり、貯蓄と節税とを合わせると、<br>合計約66万円の貯金が出来ていっているというわけですね。<br><br><img src="../img/staffblog/articles/035544f9770d4ed8.webp" alt="88.png" width="478" height="321" loading="lazy" decoding="async"><br> <br>これから先の混沌とした時代を豊かに生き抜いていくためにも、<br>ある程度金融知識をつけていただき、<br>住宅ローンをどうするのかだけじゃなく、<br>保険をはじめとした様々な金融商品を、<br>積極的に有効活用していっていただければと思います。<br><br>------------------------------------------------------------<br>フジ創アイノス<br>富山県高岡市江尻846-1<br>TEL0800-200-2661<br><a href="../index.html">https://www.fujisou-ainos.com/</a><br>-------------------------------------------------------------</p><br></div></div>
-<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
+<p><span><strong>▼銀行でお金は増えるのか</strong></span><br> <br>銀行にお金を預けておけば、<br>時間外にお金を引き出さない限りお金が減ることはありません。<br>ですので単なる貯蓄先として考えれば、<br>決して間違った選択肢ではありません。<br> <br>しかし、銀行にお金を預けていても、<br>お金は全く増えません。<br>普通預金金利は、わずか0.001%だし、<br>定期預金金利でも、わずか0.01%しかないからです。<br> <br>貯蓄に回せる資金を全て銀行に預けておくというのは、<br>あまり賢明な選択肢ではないと言えます。<br> <br><span><strong>▼貯蓄型の生命保険はどうなのか？</strong></span><br> <br>もう1つ、多くの方が貯蓄性に期待して<br>お金を預けているのが、生命保険ではないでしょうか？<br> <br>保険は中長期で見れば、保険会社からの提案通り、<br>貯まるだけじゃなくお金は増えます。<br> <br>しかし、満期保険金や契約返戻金には税金がかかるため、<br>満額受け取ることが出来るわけじゃない、<br>ということも理解しておかないといけません。<br> <br>つまり、受取時にどうなるのかをよく理解した上で<br>加入することが大切だということですね。<br><br><img src="../img/staffblog/articles/1b1382c73c3672ff.webp" alt="26614-featured-496x260.jpg" width="496" height="260" loading="lazy" decoding="async"><br> <br><span><strong>▼銀行や保険とは違う金融商品</strong></span><br> <br>お金を貯めながら増やすためには、<br>ただ単に増えるかどうかだけじゃなく、<br>税制面のことも考えながら加入する必要があります。<br>銀行や保険とは違う金融商品があります。<br><br>例えばある商品は、一旦加入すると<br>60歳までお金を下ろすことが出来ない年金なのですが、<br>預けたお金を受け取る時、ほぼ税金がかかりません。<br>（退職所得控除や公的年金控除の対象になるからです）<br> <br>その商品は、預けたお金をどのように運用するかを<br>自分自身で決めることが出来るし、<br>途中で運用方法を変更することも出来るのですが、<br>運用によって増えたお金にも一切税金がかかりません。<br>（通常20.315％の税金がかかります）<br> <br>そして、その商品の素晴らしいところは、<br>毎月23,000円を上限として加入出来るのですが、<br>掛けたお金は、全額所得控除の対象となります。<br>（公務員さんは12,000円が上限です）<br> <br>仮に、あなたとあなたの奥さんが共働きで、<br>2人とも23,000円ずつ掛けたとし、<br>（年間で552,000円の貯蓄となります）<br>2人とも所得税も住民税も10％ずつだとしたら、<br>2人で年間約11万円も税金が安くなるということになります。<br> <br>つまり、貯蓄と節税とを合わせると、<br>合計約66万円の貯金が出来ていっているというわけですね。<br><br><img src="../img/staffblog/articles/035544f9770d4ed8.webp" alt="88.png" width="478" height="321" loading="lazy" decoding="async"><br> <br>これから先の混沌とした時代を豊かに生き抜いていくためにも、<br>ある程度金融知識をつけていただき、<br>住宅ローンをどうするのかだけじゃなく、<br>保険をはじめとした様々な金融商品を、<br>積極的に有効活用していっていただければと思います。<br><br>------------------------------------------------------------<br>フジ創アイノス<br>富山県高岡市江尻846-1<br>TEL0800-200-2661<br><a href="../">https://www.fujisou-ainos.com/</a><br>-------------------------------------------------------------</p><br></div></div>
+<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
 <nav class="blog-entry__navigation" aria-label="前後の記事"><a href="2020-10-06-泥棒が狙いたいと思わない家2-post-213.shtml"><img src="../img/staffblog/articles/010a5466435cb9b7.webp" alt="" width="414" height="277" loading="lazy" decoding="async"><div><small>前の記事 <b aria-hidden="true">↗</b></small><span>泥棒が狙いたいと思わない家②</span></div></a><a href="2020-10-08-シックハウス症候群-post-216.shtml"><img src="../img/staffblog/articles/090b9acf534b1f06.webp" alt="" width="470" height="363" loading="lazy" decoding="async"><div><small>次の記事 <b aria-hidden="true">↗</b></small><span>シックハウス症候群</span></div></a></nav>
-<div class="blog-entry__closing"><a class="blog-back" href="index.html">← 社長のブログ一覧へ</a><a href="../contact/index.html">家づくりについて相談する →</a></div>
+<div class="blog-entry__closing"><a class="blog-back" href="./">← 社長のブログ一覧へ</a><a href="../contact/">家づくりについて相談する →</a></div>
 </article></main>
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
 <!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
@@ -80,13 +80,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -97,28 +97,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="./">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -130,4 +130,4 @@
 </footer>
 
 
-<script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script></body></html>
+<script src="../script/fujisou-ainos.js?v=8153209f23" defer></script></body></html>

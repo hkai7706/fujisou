@@ -115,7 +115,7 @@
   content: ''; flex: 0 0 30px; width: 30px; height: 1px; background: currentColor;
 }
 .concept-message__photo {
-  position: sticky; top: 30px; grid-column: 1; grid-row: 1/3;
+  position: sticky; top: calc(var(--concept-header-height, 110px) + 24px); grid-column: 1; grid-row: 1/3;
   margin: 0 18px 18px 0; isolation: isolate;
 }
 .concept-message__photo::after {

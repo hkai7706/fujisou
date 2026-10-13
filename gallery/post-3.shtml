@@ -26,7 +26,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -38,31 +38,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="index.html">施工事例</a></li>
+          <li><a href="./">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="../staffblog/index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="../staffblog/">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -74,14 +74,14 @@
 
 
 
-  <main id="main" class="gallery-project"><nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li> / <a href="index.html">施工事例</a></li><li> / <span aria-current="page">使い勝手の良いコンパクトハウス</span></li></ol></nav>
+  <main id="main" class="gallery-project"><nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li> / <a href="./">施工事例</a></li><li> / <span aria-current="page">使い勝手の良いコンパクトハウス</span></li></ol></nav>
   <section class="project-masthead"><p> / 施工事例</p><h1>使い勝手の良いコンパクトハウス</h1><a href="#project-photos">住まいの写真を見る <span aria-hidden="true">↓</span></a></section>
   <section class="project-cover-photo"><figure><a class="project-photo-link" href="../img/gallery/projects/enhanced/bbb412d0067cc868253a-1600.webp" data-project-photo data-caption="リビング・ダイニング" aria-label="リビング・ダイニングを拡大する"><img src="../img/gallery/projects/enhanced/bbb412d0067cc868253a-1600.webp" srcset="../img/gallery/projects/enhanced/bbb412d0067cc868253a-640.webp 640w, ../img/gallery/projects/enhanced/bbb412d0067cc868253a-1280.webp 1280w, ../img/gallery/projects/enhanced/bbb412d0067cc868253a-1600.webp 1600w" sizes="(max-width:600px) calc(100vw - 40px), 1120px" alt="リビング・ダイニング" width="800" height="533" fetchpriority="high" decoding="async"></a><figcaption>リビング・ダイニング</figcaption></figure></section>
   <section class="project-original-copy" aria-label="この住まいについて"><p>シンプルモダンな使い勝手の良いコンパクトハウス。</p>
 <p>月々の返済もアパート家賃より安く、安心して暮らすことができます。</p></section>
   <div class="project-photo-story" id="project-photos" aria-label="使い勝手の良いコンパクトハウスの写真一覧"><figure class=""><a class="project-photo-link" href="../img/gallery/projects/enhanced/95f7befb0200285f57af-1600.webp" data-project-photo data-caption="リビング・ダイニング" aria-label="リビング・ダイニングを拡大する"><img src="../img/gallery/projects/enhanced/95f7befb0200285f57af-1600.webp" srcset="../img/gallery/projects/enhanced/95f7befb0200285f57af-640.webp 640w, ../img/gallery/projects/enhanced/95f7befb0200285f57af-1280.webp 1280w, ../img/gallery/projects/enhanced/95f7befb0200285f57af-1600.webp 1600w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="リビング・ダイニング" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>リビング・ダイニング</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class="project-photo--portrait"><a class="project-photo-link" href="../img/gallery/projects/enhanced/cd814c1caa1545d4c458-1280.webp" data-project-photo data-caption="廊下" aria-label="廊下を拡大する"><img src="../img/gallery/projects/enhanced/cd814c1caa1545d4c458-1280.webp" srcset="../img/gallery/projects/enhanced/cd814c1caa1545d4c458-640.webp 640w, ../img/gallery/projects/enhanced/cd814c1caa1545d4c458-1280.webp 1280w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="廊下" width="453" height="680" loading="lazy" decoding="async"></a><figcaption>廊下</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure><figure class=""><a class="project-photo-link" href="../img/gallery/projects/enhanced/f3616a2fc52e4eb4a62b-1600.webp" data-project-photo data-caption="洋室" aria-label="洋室を拡大する"><img src="../img/gallery/projects/enhanced/f3616a2fc52e4eb4a62b-1600.webp" srcset="../img/gallery/projects/enhanced/f3616a2fc52e4eb4a62b-640.webp 640w, ../img/gallery/projects/enhanced/f3616a2fc52e4eb4a62b-1280.webp 1280w, ../img/gallery/projects/enhanced/f3616a2fc52e4eb4a62b-1600.webp 1600w" sizes="(max-width:600px) calc(100vw - 40px), 570px" alt="洋室" width="800" height="533" loading="lazy" decoding="async"></a><figcaption>洋室</figcaption><span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure></div>
   <section class="project-neighbours"><h2>ほかの住まいも見る</h2><nav aria-label="前後の施工事例"><a href="post-4.shtml"><img src="../img/gallery/projects/enhanced/a1e94e7a5ec95c5d4731-1800.webp" srcset="../img/gallery/projects/enhanced/a1e94e7a5ec95c5d4731-640.webp 640w, ../img/gallery/projects/enhanced/a1e94e7a5ec95c5d4731-1280.webp 1280w, ../img/gallery/projects/enhanced/a1e94e7a5ec95c5d4731-1800.webp 1800w" sizes="(max-width:600px) calc(100vw - 80px), 360px" alt="家族が集い、ゆったりと過ごすことができるおうち" width="1000" height="666" loading="lazy" decoding="async"><div><small></small><p>家族が集い、ゆったりと過ごすことができるおうち <span aria-hidden="true">→</span></p></div></a><a href="post-2.shtml"><img src="../img/gallery/projects/enhanced/cf965627905f7d25534c-1280.webp" srcset="../img/gallery/projects/enhanced/cf965627905f7d25534c-640.webp 640w, ../img/gallery/projects/enhanced/cf965627905f7d25534c-1280.webp 1280w" sizes="(max-width:600px) calc(100vw - 80px), 360px" alt="広々とした空間作りでこだわりいっぱいのおうち" width="588" height="396" loading="lazy" decoding="async"><div><small></small><p>広々とした空間作りでこだわりいっぱいのおうち <span aria-hidden="true">→</span></p></div></a></nav></section>
-  <section class="project-consultation"><div><h2>気になる住まいを、相談のきっかけに。</h2><p>素材や間取り、お好みの雰囲気をお聞かせください。</p></div><div><a href="../consultation/index.html">家づくり無料相談 <span aria-hidden="true">→</span></a><a href="index.html">施工事例一覧に戻る <span aria-hidden="true">→</span></a></div></section>
+  <section class="project-consultation"><div><h2>気になる住まいを、相談のきっかけに。</h2><p>素材や間取り、お好みの雰囲気をお聞かせください。</p></div><div><a href="../consultation/">家づくり無料相談 <span aria-hidden="true">→</span></a><a href="./">施工事例一覧に戻る <span aria-hidden="true">→</span></a></div></section>
   <dialog class="work-image-dialog" aria-label="施工事例の写真を拡大"><div class="work-image-dialog__controls"><button type="button" data-photo-prev aria-label="前の写真">←</button><span class="work-image-dialog__count"></span><button type="button" data-photo-next aria-label="次の写真">→</button><button type="button" class="work-image-dialog__close">閉じる ×</button></div><img alt="" width="1600" height="1000"><p></p></dialog></main>
 
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
@@ -91,13 +91,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -108,28 +108,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="./">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="../staffblog/index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="../staffblog/">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -142,6 +142,6 @@
 
 
 
-  <script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script>
+  <script src="../script/fujisou-ainos.js?v=8153209f23" defer></script>
 </body>
 </html>

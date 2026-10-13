@@ -13,7 +13,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -25,31 +25,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="./">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -62,15 +62,15 @@
 
 
 <main id="main">
-<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li aria-hidden="true">/</li><li><a href="index.html">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
+<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-hidden="true">/</li><li><a href="./">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
 <article class="blog-entry">
 <div class="blog-entry__opening"><header class="blog-entry__header"><p class="blog-eyebrow">社長のブログ</p><div class="blog-meta"><time datetime="2021-07-15">2021.07.15</time><span>家づくりについて</span></div><h1>家の予算の基本的な考え方</h1><a class="blog-entry__read-link" href="#article-reading">本文を読む <span aria-hidden="true">↓</span></a></header>
 <figure class="blog-entry__visual"><img src="../img/staffblog/articles/f8b5d521b3405949.webp" alt="家の予算の基本的な考え方" width="333" height="215" fetchpriority="high" decoding="async"></figure></div>
 <div class="blog-entry__reading" id="article-reading"><div class="blog-entry__content"><p>こんにちは。富山で自然素材にこだわるホンモノの家、フジ創アイノスです。<br><br>家づくりの予算は、自己資金が多いか少ないかによって大きな差が生まれます。</p>
-<p>例えば、家づくりの総予算が3500万円だとしたら、自己資金が1000万円あれば銀行からの借入れは2500万円で済むため、これを35年返済で試算してみると、毎月の返済は約70,000円となるのですが、自己資金が100万円だとしたら銀行から3400万円借入れせざるを得なくなり、毎月の返済は約100,000円となってしまいます。<br> <br>自己資金100万円の方が、無理なく支払っていくことが出来る金額が毎月70,000円だとしたら、900万円予算を圧縮する必要があります。<br><br><img src="../img/staffblog/articles/f8b5d521b3405949.webp" alt="家づくり.png" width="333" height="215" loading="lazy" decoding="async"><br> <br><br>しかし、900万円もの予算を家だけで圧縮しようとしても100％不可能です。<br>2000万円であれば1100万円にしないといけないし、1800万円であれば900万円にしないといけないわけですからね。<br>これでは家なんて建てられません。<br> <br>この場合、家だけで予算を圧縮することを考えるのではなく、家はもちろん土地や外構工事の予算も同時に見直す必要があります。<br>家で予算を400万円圧縮、土地で予算を400万円圧縮、庭で予算を100万円圧縮という感じですね。<br> <br>3500万円の総予算が、土地代として1000万円、家代として2100万円、庭代として200万円、諸経費として200万円だとしたら<br>↓<br>土地代を600万円、家代を1700万円、庭代を100万円、諸経費を200万円、といった風に、それぞれの予算を圧縮していかなくてはいけません。<br><br><img src="../img/staffblog/articles/298ef63bdb04df8e.webp" alt="コスト削減.png" width="301" height="239" loading="lazy" decoding="async"><br> <br>となると、必然的に土地を探す地域を変えざるを得なくなるかもしれないし、あるいは地域変更が無理なら、土地面積を小さくするか、あるいは形や日当たりが悪そうな、いわゆる条件の悪い土地を探さざるを得ません。<br> <br>また、家に関しても、使う材料や設備のコストを抑えると同時に、面積を小さくすることによってコストを抑えざるを得なくなります。<br>外構に関しても、余分な装飾工事を施さなくていい家にする、また、土地に無駄な余白をつくらないようするなどの工夫が必要となってきます。<br><br>次回に続きます。<br><br><br>------------------------------------------------------------<br>フジ創アイノス<br>富山県高岡市江尻846-1<br>TEL0800-200-2661<br><a href="../index.html">https://www.fujisou-ainos.com/</a><br>-------------------------------------------------------------</p><br></div></div>
-<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
+<p>例えば、家づくりの総予算が3500万円だとしたら、自己資金が1000万円あれば銀行からの借入れは2500万円で済むため、これを35年返済で試算してみると、毎月の返済は約70,000円となるのですが、自己資金が100万円だとしたら銀行から3400万円借入れせざるを得なくなり、毎月の返済は約100,000円となってしまいます。<br> <br>自己資金100万円の方が、無理なく支払っていくことが出来る金額が毎月70,000円だとしたら、900万円予算を圧縮する必要があります。<br><br><img src="../img/staffblog/articles/f8b5d521b3405949.webp" alt="家づくり.png" width="333" height="215" loading="lazy" decoding="async"><br> <br><br>しかし、900万円もの予算を家だけで圧縮しようとしても100％不可能です。<br>2000万円であれば1100万円にしないといけないし、1800万円であれば900万円にしないといけないわけですからね。<br>これでは家なんて建てられません。<br> <br>この場合、家だけで予算を圧縮することを考えるのではなく、家はもちろん土地や外構工事の予算も同時に見直す必要があります。<br>家で予算を400万円圧縮、土地で予算を400万円圧縮、庭で予算を100万円圧縮という感じですね。<br> <br>3500万円の総予算が、土地代として1000万円、家代として2100万円、庭代として200万円、諸経費として200万円だとしたら<br>↓<br>土地代を600万円、家代を1700万円、庭代を100万円、諸経費を200万円、といった風に、それぞれの予算を圧縮していかなくてはいけません。<br><br><img src="../img/staffblog/articles/298ef63bdb04df8e.webp" alt="コスト削減.png" width="301" height="239" loading="lazy" decoding="async"><br> <br>となると、必然的に土地を探す地域を変えざるを得なくなるかもしれないし、あるいは地域変更が無理なら、土地面積を小さくするか、あるいは形や日当たりが悪そうな、いわゆる条件の悪い土地を探さざるを得ません。<br> <br>また、家に関しても、使う材料や設備のコストを抑えると同時に、面積を小さくすることによってコストを抑えざるを得なくなります。<br>外構に関しても、余分な装飾工事を施さなくていい家にする、また、土地に無駄な余白をつくらないようするなどの工夫が必要となってきます。<br><br>次回に続きます。<br><br><br>------------------------------------------------------------<br>フジ創アイノス<br>富山県高岡市江尻846-1<br>TEL0800-200-2661<br><a href="../">https://www.fujisou-ainos.com/</a><br>-------------------------------------------------------------</p><br></div></div>
+<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
 <nav class="blog-entry__navigation" aria-label="前後の記事"><a href="2021-07-14-木材と睡眠の関係-post-403.shtml"><img src="../img/staffblog/articles/6434b30c956a2b50.webp" alt="" width="430" height="318" loading="lazy" decoding="async"><div><small>前の記事 <b aria-hidden="true">↗</b></small><span>木材と睡眠の関係</span></div></a><a href="2021-07-16-家の予算の基本的な考え方2-post-405.shtml"><img src="../img/staffblog/articles/317eb15d9ff4c0cc.webp" alt="" width="399" height="223" loading="lazy" decoding="async"><div><small>次の記事 <b aria-hidden="true">↗</b></small><span>家の予算の基本的な考え方②</span></div></a></nav>
-<div class="blog-entry__closing"><a class="blog-back" href="index.html">← 社長のブログ一覧へ</a><a href="../contact/index.html">家づくりについて相談する →</a></div>
+<div class="blog-entry__closing"><a class="blog-back" href="./">← 社長のブログ一覧へ</a><a href="../contact/">家づくりについて相談する →</a></div>
 </article></main>
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
 <!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
@@ -79,13 +79,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -96,28 +96,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="./">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -129,4 +129,4 @@
 </footer>
 
 
-<script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script></body></html>
+<script src="../script/fujisou-ainos.js?v=8153209f23" defer></script></body></html>

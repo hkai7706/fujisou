@@ -13,7 +13,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -25,31 +25,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="./">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -62,15 +62,15 @@
 
 
 <main id="main">
-<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li aria-hidden="true">/</li><li><a href="index.html">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
+<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-hidden="true">/</li><li><a href="./">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
 <article class="blog-entry">
 <div class="blog-entry__opening"><header class="blog-entry__header"><p class="blog-eyebrow">社長のブログ</p><div class="blog-meta"><time datetime="2021-08-03">2021.08.03</time><span>家づくりについて</span></div><h1>カットできる固定費②</h1><a class="blog-entry__read-link" href="#article-reading">本文を読む <span aria-hidden="true">↓</span></a></header>
 <figure class="blog-entry__visual"><img src="../img/staffblog/articles/105708eefa314321.webp" alt="カットできる固定費②" width="303" height="202" fetchpriority="high" decoding="async"></figure></div>
 <div class="blog-entry__reading" id="article-reading"><div class="blog-entry__content"><p>こんにちは。富山で自然素材にこだわるホンモノの家、フジ創アイノスです。<br><br>もう1つ見直していただきたい固定費が、<strong>『家づくりにかける費用』</strong>です。</p>
-<p>例えば、iDeCoに掛けるお金が毎月23,000円足りなかったと仮定して、保険を10,000円減らすことが出来たとしたら、家づくりの費用を削ることによって、毎月のローン返済額を13,000円減らせないか？<br>ということを考えていただきたいということです。<br> <br>毎月の返済額を13,000円減らすためには、35年返済で考えるとしたら、450万円ほど家づくりに掛ける予算を減らす必要があります。<br><br><img src="../img/staffblog/articles/105708eefa314321.webp" alt="かかる.png" width="303" height="202" loading="lazy" decoding="async"><br> <br><span><strong>✔︎家づくりの予算の圧縮方法</strong></span><br> <br>この場合、家だけで予算を縮めようとするのではなく、土地や外構工事といった費用にも目を向けることで、バランス良く予算を縮めていくようにします。<br> <br>土地で200万円予算圧縮、<br>家で200万円予算圧縮、<br>外構工事で50万円予算圧縮という風にです。<br> <br>そして、それを実現するためには、土地に関しても、また家に関しても、現実的な方法を知っていただく必要があります。<br> <br>土地に関して言えば、<strong>土地の日当たりにこだわり過ぎないことと</strong>、<strong>自分が買うべき土地の広さを知ること</strong>、です。<br> <br>家に関して言えば、自分たちにとって適切な家の大きさを知ることと、予算が上がる要素だけじゃなく、予算を下げることが出来る要素も知ることです。<br> <br>このようなことをご理解いただいた上で、土地探しを行い、家の設計を行えば、なにかに妥協することなく、450万円もの予算を圧縮することが出来ます。<br>あるいは、それ以上の予算圧縮も可能となります。<br><br><img src="../img/staffblog/articles/2f57decceebab2d3.webp" alt="ローン.png" width="306" height="173" loading="lazy" decoding="async"><br> <br>ということで、２つの固定費について、当たり前や固定概念から一度脱出していただき、その分固定費を削減することで、コツコツと合理的にお金を増やしていっていただき、家を建てつつも、お金に不安のない状態で一生暮らし続けていっていただければと思います。<br><br><br><br> ------------------------------------------------------------<br>フジ創アイノス<br>富山県高岡市江尻846-1<br>TEL0800-200-2661<br><a href="../index.html">https://www.fujisou-ainos.com/</a><br>-------------------------------------------------------------</p><br></div></div>
-<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
+<p>例えば、iDeCoに掛けるお金が毎月23,000円足りなかったと仮定して、保険を10,000円減らすことが出来たとしたら、家づくりの費用を削ることによって、毎月のローン返済額を13,000円減らせないか？<br>ということを考えていただきたいということです。<br> <br>毎月の返済額を13,000円減らすためには、35年返済で考えるとしたら、450万円ほど家づくりに掛ける予算を減らす必要があります。<br><br><img src="../img/staffblog/articles/105708eefa314321.webp" alt="かかる.png" width="303" height="202" loading="lazy" decoding="async"><br> <br><span><strong>✔︎家づくりの予算の圧縮方法</strong></span><br> <br>この場合、家だけで予算を縮めようとするのではなく、土地や外構工事といった費用にも目を向けることで、バランス良く予算を縮めていくようにします。<br> <br>土地で200万円予算圧縮、<br>家で200万円予算圧縮、<br>外構工事で50万円予算圧縮という風にです。<br> <br>そして、それを実現するためには、土地に関しても、また家に関しても、現実的な方法を知っていただく必要があります。<br> <br>土地に関して言えば、<strong>土地の日当たりにこだわり過ぎないことと</strong>、<strong>自分が買うべき土地の広さを知ること</strong>、です。<br> <br>家に関して言えば、自分たちにとって適切な家の大きさを知ることと、予算が上がる要素だけじゃなく、予算を下げることが出来る要素も知ることです。<br> <br>このようなことをご理解いただいた上で、土地探しを行い、家の設計を行えば、なにかに妥協することなく、450万円もの予算を圧縮することが出来ます。<br>あるいは、それ以上の予算圧縮も可能となります。<br><br><img src="../img/staffblog/articles/2f57decceebab2d3.webp" alt="ローン.png" width="306" height="173" loading="lazy" decoding="async"><br> <br>ということで、２つの固定費について、当たり前や固定概念から一度脱出していただき、その分固定費を削減することで、コツコツと合理的にお金を増やしていっていただき、家を建てつつも、お金に不安のない状態で一生暮らし続けていっていただければと思います。<br><br><br><br> ------------------------------------------------------------<br>フジ創アイノス<br>富山県高岡市江尻846-1<br>TEL0800-200-2661<br><a href="../">https://www.fujisou-ainos.com/</a><br>-------------------------------------------------------------</p><br></div></div>
+<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
 <nav class="blog-entry__navigation" aria-label="前後の記事"><a href="2021-08-02-カットできる固定費-post-416.shtml"><img src="../img/staffblog/articles/298ef63bdb04df8e.webp" alt="" width="301" height="239" loading="lazy" decoding="async"><div><small>前の記事 <b aria-hidden="true">↗</b></small><span>カットできる固定費</span></div></a><a href="2021-08-04-夏は涼しいアイノスの家-post-418.shtml"><img src="../img/staffblog/articles/4a21aa7a6bc1cb6a.webp" alt="" width="292" height="172" loading="lazy" decoding="async"><div><small>次の記事 <b aria-hidden="true">↗</b></small><span>夏は涼しいアイノスの家</span></div></a></nav>
-<div class="blog-entry__closing"><a class="blog-back" href="index.html">← 社長のブログ一覧へ</a><a href="../contact/index.html">家づくりについて相談する →</a></div>
+<div class="blog-entry__closing"><a class="blog-back" href="./">← 社長のブログ一覧へ</a><a href="../contact/">家づくりについて相談する →</a></div>
 </article></main>
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
 <!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
@@ -79,13 +79,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -96,28 +96,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="./">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -129,4 +129,4 @@
 </footer>
 
 
-<script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script></body></html>
+<script src="../script/fujisou-ainos.js?v=8153209f23" defer></script></body></html>

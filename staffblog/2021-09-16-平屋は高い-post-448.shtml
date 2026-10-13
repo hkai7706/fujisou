@@ -13,7 +13,7 @@
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
-    <a class="shared-header__brand" href="../index.html" aria-label="フジ創アイノス ホーム">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
       <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
@@ -25,31 +25,31 @@
       <details class="shared-header__group">
         <summary>会社紹介</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../gallery/index.html">施工事例</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
 
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul>
       </details>
       <details class="shared-header__group">
         <summary>施工プラン</summary>
         <ul class="shared-header__dropdown">
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul>
       </details>
       <div class="shared-header__stack">
-        <a class="shared-header__link" href="../eventinfo/index.html">イベント情報</a>
-        <a class="shared-header__link" href="index.html">社長のブログ</a>
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="./">社長のブログ</a>
       </div>
       <div class="shared-header__utility">
         <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
@@ -62,16 +62,16 @@
 
 
 <main id="main">
-<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li aria-hidden="true">/</li><li><a href="index.html">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
+<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-hidden="true">/</li><li><a href="./">社長のブログ</a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>
 <article class="blog-entry">
 <div class="blog-entry__opening"><header class="blog-entry__header"><p class="blog-eyebrow">社長のブログ</p><div class="blog-meta"><time datetime="2021-09-16">2021.09.16</time><span>家づくりについて</span></div><h1>平屋は高い？</h1><a class="blog-entry__read-link" href="#article-reading">本文を読む <span aria-hidden="true">↓</span></a></header>
 <figure class="blog-entry__visual"><img src="../img/staffblog/articles/18028c379757363e.webp" alt="平屋は高い？" width="318" height="212" fetchpriority="high" decoding="async"></figure></div>
 <div class="blog-entry__reading" id="article-reading"><div class="blog-entry__content"><p>こんにちは。富山で自然素材にこだわるホンモノの家、フジ創アイノスです。</p>
 <p>『平屋』には多くの魅力やメリットがありますが、"高い"というイメージを持っている方が多いです。<br> 住宅会社に行っても、"平屋は高いですよ"と言われることがあります。<br>また、土地探しの時、不動産屋さんからも"平屋となると大きな土地が必要ですね"と言われることが多いため、これも平屋を諦めてしまう大きな要因となってしまいます。<br>家だけじゃなく、土地までも負担が大きくなってしまうと考えると、とてもじゃないけど前向きには考えられないでしょうからね。<br><br>しかし、平屋は決して高くもなければ、みんなが2階建てを建てている土地の広さがあれば、充分平屋を建てることが出来ます。<br><br><img src="../img/staffblog/articles/18028c379757363e.webp" alt="間取り.png" width="318" height="212" loading="lazy" decoding="async"><br> <br><span><strong>✔なぜ、平屋は高くないのか？</strong></span><br> <br>平屋になると、2階建てに比べて基礎と屋根の面積は大きくなるため、そこに掛かるコストは割高になってしまいます。（基礎、床下断熱、屋根、屋根断熱、など）<br> <br>しかし、何もかもが2階建てに比べて高くなるわけではなく、実は外壁の面積は、2階建てに比べて少なくなるため、そこに掛かるコストは割安になります。（壁断熱、外装材、ボード、クロス、など）<br>また、平屋には階段が必要ないため、階段に必要となる面積をカットすることが出来るし、それ以外でも、2階建てでは必要なものをカットすることが出来ます。<br><br><img src="../img/staffblog/articles/298ef63bdb04df8e.webp" alt="コスト削減.png" width="301" height="239" loading="lazy" decoding="async"><br><br> <br>まず、2階建ての場合2つ必要となるトイレが1つしかいらなくなります。<br>そして、2階建てでは、どうしても2階に廊下が出来てしまいますが、平屋になると、この廊下をゼロに近づけることが出来ます。<br>さらに、平屋になると子供部屋も1階につくることになるため、和室をつくる必要がなくなります。<br>子供部屋が、和室が果たす役割も同時に果たしてくれるようになるからです。<br> <br>子供が小さいうちは、親御さんが泊まりにくることがあると思いますが、子供たちは自分の部屋で寝ていないため、親御さんに子供部屋で寝てもらうことができます。<br>また、子供部屋が1階にあることで、自分の部屋に荷物を片付けさせやすくなるため、リビングダイニングが散らかりにくくなり、友達やお客さんを、心おきなくリビングに案内しやすくなります。</p>
-<p><img src="../img/staffblog/articles/317eb15d9ff4c0cc.webp" alt="解放感.png" width="399" height="223" loading="lazy" decoding="async"><br> <br>このように平屋になれば、家をコンパクトに出来るので、実は、平屋はそう高いわけではありません。<br>確かに2階建てに比べて面積は小さくなってしまうし、坪単価で考えると割高にはなってしまうでしょう。<br> <br>しかし、家の予算で大切なことは、家の大きさでもなく、家の坪単価でもなく、<span>総予算が一体いくらになるのか</span>、ということです。<br>その視点で考えると、『平屋』はとても合理的で、割安なコストで建てることが出来るお家です、<br> <br>ということで、"平屋は高い"というイメージを一度払拭していただき、本当に住みやすい魅力たっぷりなお家を手に入れていただければと思います。<br><br><br><span>------------------------------------------------------------</span><br><span>フジ創アイノス</span><br><span>富山県高岡市江尻846-1</span><br><span>TEL0800-200-2661</span><br><a href="../index.html">https://www.fujisou-ainos.com/</a><br><span>-------------------------------------------------------------</span></p><br></div></div>
-<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
+<p><img src="../img/staffblog/articles/317eb15d9ff4c0cc.webp" alt="解放感.png" width="399" height="223" loading="lazy" decoding="async"><br> <br>このように平屋になれば、家をコンパクトに出来るので、実は、平屋はそう高いわけではありません。<br>確かに2階建てに比べて面積は小さくなってしまうし、坪単価で考えると割高にはなってしまうでしょう。<br> <br>しかし、家の予算で大切なことは、家の大きさでもなく、家の坪単価でもなく、<span>総予算が一体いくらになるのか</span>、ということです。<br>その視点で考えると、『平屋』はとても合理的で、割安なコストで建てることが出来るお家です、<br> <br>ということで、"平屋は高い"というイメージを一度払拭していただき、本当に住みやすい魅力たっぷりなお家を手に入れていただければと思います。<br><br><br><span>------------------------------------------------------------</span><br><span>フジ創アイノス</span><br><span>富山県高岡市江尻846-1</span><br><span>TEL0800-200-2661</span><br><a href="../">https://www.fujisou-ainos.com/</a><br><span>-------------------------------------------------------------</span></p><br></div></div>
+<section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
 <nav class="blog-entry__navigation" aria-label="前後の記事"><a href="2021-09-15-片付けやすい家づくり-post-447.shtml"><img src="../img/staffblog/articles/11c85e6b469b3b6e.webp" alt="" width="321" height="210" loading="lazy" decoding="async"><div><small>前の記事 <b aria-hidden="true">↗</b></small><span>片付けやすい家づくり</span></div></a><a href="2021-09-17-平屋は広い土地が必要-post-449.shtml"><img src="../img/staffblog/articles/91cfb59c70c49e84.webp" alt="" width="322" height="211" loading="lazy" decoding="async"><div><small>次の記事 <b aria-hidden="true">↗</b></small><span>平屋は広い土地が必要？</span></div></a></nav>
-<div class="blog-entry__closing"><a class="blog-back" href="index.html">← 社長のブログ一覧へ</a><a href="../contact/index.html">家づくりについて相談する →</a></div>
+<div class="blog-entry__closing"><a class="blog-back" href="./">← 社長のブログ一覧へ</a><a href="../contact/">家づくりについて相談する →</a></div>
 </article></main>
 <!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
 <!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
@@ -80,13 +80,13 @@
   <div class="shared-footer__inner">
     <div class="shared-footer__top">
       <div class="shared-footer__brand">
-        <a href="../index.html" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
         <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
         <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
       </div>
       <div class="shared-footer__contact">
         <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
-        <a class="shared-footer__inquiry" href="../contact/index.html">お問い合わせ<span aria-hidden="true">→</span></a>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="shared-footer__grid">
@@ -97,28 +97,28 @@
       </div>
       <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
         <div><h2>会社紹介</h2><ul>
-          <li><a href="../concept/index.html">私たちの家造り</a></li>
-          <li><a href="../staff/index.html">スタッフ紹介</a></li>
-          <li><a href="../policy/index.html">プライバシーポリシー</a></li>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
         </ul></div>
         <div><h2>家造り情報</h2><ul>
-          <li><a href="../gallery/index.html">施工事例</a></li>
-          <li><a href="../land-info/index.html">土地情報</a></li>
-          <li><a href="../shikkui/index.html">漆喰とは</a></li>
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
         </ul></div>
         <div><h2>施工プラン</h2><ul>
-          <li><a href="../plans/hiraya/index.html">平屋住宅</a></li>
-          <li><a href="../plans/two-story/index.html">２階建て住宅</a></li>
-          <li><a href="../plans/custom/index.html">オーダーメイド住宅</a></li>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
         </ul></div>
         <div class="shared-footer__standalone">
-          <a href="../eventinfo/index.html">イベント情報</a>
-          <a href="index.html">社長のブログ</a>
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="./">社長のブログ</a>
         </div>
       </nav>
     </div>
     <div class="shared-footer__bottom">
-      <div class="shared-footer__legal"><a href="../policy/index.html">プライバシーポリシー</a></div>
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
       <nav class="shared-footer__social" aria-label="公式SNS">
         <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -130,4 +130,4 @@
 </footer>
 
 
-<script src="../script/fujisou-ainos.js?v=f9b8d29dab" defer></script></body></html>
+<script src="../script/fujisou-ainos.js?v=8153209f23" defer></script></body></html>

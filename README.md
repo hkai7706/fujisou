@@ -4,7 +4,7 @@ Static Japanese website for フジ創アイノス. The root `index.html` defines
 
 ## Local preview
 
-Use an SSI-capable server from this folder. A plain static server will show page content but will not render the shared header/footer.
+Use a local web server from this folder. Every page includes its header and footer directly; SSI is not required.
 
 ```powershell
 npx serve .
@@ -23,13 +23,7 @@ npm run build
 
 `prepare` adds stable image dimensions, asynchronous decoding, and lazy loading where appropriate. `sitemap` rebuilds the sitemap from canonical URLs. `check` verifies page metadata, image accessibility attributes, and local file references without network access. `build` creates a clean `dist` folder containing only deployable files and referenced assets.
 
-For large newly added JPG or PNG files, run:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File tools/optimize-images.ps1
-```
-
-The optimizer keeps original source images, creates smaller `-web.jpg` delivery copies, and updates page references only when the generated copy is smaller.
+For lossless image optimization, run `npm run optimize`. This consolidates identical files and uses smaller lossless WebP copies only after verifying identical decoded pixels. Image dimensions stay unchanged.
 
 ## Lolipop deployment
 

@@ -1,6 +1,6 @@
 # Shared image and SSI layout
 
-Current state: header/footer code has been embedded back into all 30 maintained pages. They render without header/footer SSI processing. The shared include files and the optional SSI instructions below are retained for later use. Image organization remains unchanged.
+Current state: all maintained pages embed the shared header/footer. They render on static hosting without SSI. The include files remain editable sources; run `node tools/embed-shared-chrome.mjs` after editing them. SSI instructions below describe the optional alternate mode.
 
 All maintained website pages now use one shared image tree at the domain root:
 

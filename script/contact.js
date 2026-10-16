@@ -22,7 +22,7 @@ if (location.protocol === 'file:') {
   script.charset = 'UTF-8';
   script.async = false;
   script.onload = () => {
-    if (!window.mfp) {
+    if (!window.mfp || window.mfp.Ready !== true) {
       status.textContent = '現在フォームの準備中です。お電話またはLINEでお問い合わせください。';
       return;
     }

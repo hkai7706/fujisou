@@ -1,10 +1,10 @@
 {
   "method": "Same-photo higher-resolution source selection; strict pixel comparison plus visually verified exterior source.",
   "images": {
-    "img/gallery/projects/660270ba6d880f47bafd.jpg": "img/gallery/projects/0717d454c9b7b5869648.jpg",
-    "img/gallery/projects/e2a4a33d9d31dfe0a442.jpg": "img/gallery/projects/acfdb1be7c09fe395740.jpg",
-    "img/gallery/projects/734a9be7f9e0e2dca038.jpg": "img/gallery/projects/7168457294fe3fec25d5.jpg",
-    "img/gallery/projects/1d365f85c6a9ed964875.jpg": "img/gallery/projects/02a5cc1c32df459076b0.jpg",
-    "img/gallery/projects/5745a75611f554f2f131.webp": "img/gallery/projects/9b4e608b219e303ed663.jpg"
+    "img/gallery/gallery-25-walkway-home.jpg": "img/home/inspiration-walkway-original.jpg",
+    "img/gallery/gallery-27-wood-stove.jpg": "img/gallery/projects/acfdb1be7c09fe395740.jpg",
+    "img/gallery/gallery-29-family-gathering.jpg": "img/gallery/projects/7168457294fe3fec25d5.jpg",
+    "img/gallery/gallery-33-baby-safe.jpg": "img/gallery/projects/02a5cc1c32df459076b0.jpg",
+    "img/home/work-1.webp": "img/gallery/gallery-wakon-yosai.jpg"
   }
 }

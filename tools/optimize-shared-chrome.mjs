@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {transform} from 'lightningcss';
+await import('./embed-shared-chrome.mjs');
 
 const pages=[];
 const excluded=new Set(['backup','dist','tmp','.git','node_modules','tools','server','include']);

@@ -1,7 +1,7 @@
 {
   "method": "Lanczos3 resizing and gentle edge sharpening; lossless WebP encoding",
   "images": {
-    "img/gallery/projects/5745a75611f554f2f131.webp": {
+    "img/home/work-1.webp": {
       "sourceSHA256": "9e489ed207b64941739b43aa46a192330369357be09d4c1fe85ef25e72460c8b",
       "sourceWidth": 360,
       "variants": [
@@ -25,7 +25,7 @@
         "bytes": 412506
       }
     },
-    "img/gallery/projects/d487b8ec440f0e993b8e.jpg": {
+    "img/gallery/post32-02-blue-room.jpg": {
       "sourceSHA256": "f7dcb889f3e9e7929da349953dd2b7932eaed4c67b594f96ccbbf6aa8517994b",
       "sourceWidth": 3872,
       "variants": [
@@ -55,7 +55,7 @@
         "bytes": 2682182
       }
     },
-    "img/gallery/projects/7b496f0c73a6abcc7c37.jpg": {
+    "img/gallery/post32-05-elegant-room.jpg": {
       "sourceSHA256": "49eeff3f1bce3eb4b12242069c491852e2d6b58f37c4d507b92bf1711a5fe846",
       "sourceWidth": 3872,
       "variants": [
@@ -85,7 +85,7 @@
         "bytes": 2807878
       }
     },
-    "img/gallery/projects/520255de529df9611195.jpg": {
+    "img/gallery/post32-03-hall.jpg": {
       "sourceSHA256": "60b61e0ce2dac551746ad0ba1b06227b5bdb96b75ac3df60381f4b213684cb1d",
       "sourceWidth": 2592,
       "variants": [
@@ -115,7 +115,7 @@
         "bytes": 5493938
       }
     },
-    "img/gallery/projects/3a30a04903a5d64d795b.jpg": {
+    "img/gallery/post32-04-japanese-room.jpg": {
       "sourceSHA256": "b7132869e8f962dbaf2b40066ba31ed365bbabe8f07f9386976222af08513705",
       "sourceWidth": 2592,
       "variants": [
@@ -145,7 +145,7 @@
         "bytes": 5571834
       }
     },
-    "img/gallery/projects/e8d555c7c97209406f4f.jpg": {
+    "img/gallery/post32-07-stair-hall.jpg": {
       "sourceSHA256": "5a620d98ca28547c191ee88fa4f8500791aba90635464f13736ddc98570e52fb",
       "sourceWidth": 3872,
       "variants": [
@@ -175,7 +175,7 @@
         "bytes": 2541218
       }
     },
-    "img/gallery/projects/1e562503a5f1a2902aeb.jpg": {
+    "img/gallery/post32-08-iron-railing.jpg": {
       "sourceSHA256": "5490bafbbfdf67f79dea918c7b94252b65c31b350b77cf14ded37d2de5e7252b",
       "sourceWidth": 3872,
       "variants": [
@@ -205,7 +205,7 @@
         "bytes": 3049764
       }
     },
-    "img/gallery/projects/ede0fc6eb9ae4d803642.jpg": {
+    "img/gallery/post32-06-dining.jpg": {
       "sourceSHA256": "91d9a030260749badf99d508cef453fbcb1e1106374d8dbe5aa39417e1262e47",
       "sourceWidth": 2592,
       "variants": [
@@ -235,7 +235,7 @@
         "bytes": 5072220
       }
     },
-    "img/gallery/projects/03d69c8e6f4ab464ed1e.jpg": {
+    "img/gallery/post32-09-bedroom.jpg": {
       "sourceSHA256": "bfd743dab6462327295648a5724c1c15f4720771fd733256962cdfa90bc41587",
       "sourceWidth": 3872,
       "variants": [
@@ -265,7 +265,7 @@
         "bytes": 2614198
       }
     },
-    "img/gallery/projects/645fab424e0ef5a52bc7.jpg": {
+    "img/gallery/post32-12-door.jpg": {
       "sourceSHA256": "5f62fe969cff66ca75f7cccc54754aa4570902372a633d43fbccc0cf38fc5c35",
       "sourceWidth": 3872,
       "variants": [
@@ -295,7 +295,7 @@
         "bytes": 2508488
       }
     },
-    "img/gallery/projects/71f4fd200b15e15eb209.jpg": {
+    "img/gallery/post32-10-open-ceiling.jpg": {
       "sourceSHA256": "cba6d9f6376bf10a55d2c0e3a863a40b1274ee70f8256c210fb51063ec0ea94e",
       "sourceWidth": 2592,
       "variants": [
@@ -325,7 +325,7 @@
         "bytes": 4498518
       }
     },
-    "img/gallery/projects/c9619687099c246845cb.jpg": {
+    "img/gallery/post32-11-wall-detail.jpg": {
       "sourceSHA256": "39b0afa5b471553573c35eb41f52755d5196998849db0af9a350e004c94c8525",
       "sourceWidth": 2592,
       "variants": [
@@ -355,7 +355,7 @@
         "bytes": 4724804
       }
     },
-    "img/gallery/projects/9b4e608b219e303ed663.jpg": {
+    "img/gallery/gallery-wakon-yosai.jpg": {
       "sourceSHA256": "6d75317fba7b7617f0bb8a2cb31926ccadb2160b9f346ebadc7b9cfa212246cb",
       "sourceWidth": 3872,
       "variants": [
@@ -385,7 +385,7 @@
         "bytes": 3293482
       }
     },
-    "img/gallery/projects/0ab293288184d1cb9d82.webp": {
+    "img/home/work-2.webp": {
       "sourceSHA256": "ed8342dbefe995ba04c43c45422e2b5e7e37a0a3bccc0502502449c4d9492d6b",
       "sourceWidth": 400,
       "variants": [
@@ -409,7 +409,7 @@
         "bytes": 451374
       }
     },
-    "img/gallery/projects/9cad4e3a8fa01ddaca31.jpg": {
+    "img/gallery/post32-14-antique-light.jpg": {
       "sourceSHA256": "968525aff429e8a2aef8b6ca709d307a6bb1fab20c3108272207df566f8d512f",
       "sourceWidth": 2592,
       "variants": [
@@ -439,7 +439,7 @@
         "bytes": 4297726
       }
     },
-    "img/gallery/projects/f86b64096e3db3e43079.jpg": {
+    "img/gallery/post32-13-chandelier.jpg": {
       "sourceSHA256": "7dac9a13ba3c8a036f235ff1097a2484af442d6c2003a2c5dcd11f85da7b5a84",
       "sourceWidth": 2592,
       "variants": [
@@ -469,7 +469,7 @@
         "bytes": 6344986
       }
     },
-    "img/gallery/projects/a26bca6e057ee5ad19d1.jpg": {
+    "img/gallery/post31-02-theater.jpg": {
       "sourceSHA256": "ad8291ff09e6ceaeb9801601927f70bf024d751480328a9219ed84069949c243",
       "sourceWidth": 3872,
       "variants": [
@@ -499,7 +499,7 @@
         "bytes": 3220962
       }
     },
-    "img/gallery/projects/4b102e376e7446267bd6.jpg": {
+    "img/gallery/post31-04-ldk.jpg": {
       "sourceSHA256": "55cc870a9e9ec9f0e4a0db585b88010e2cfcb3f429473e630f9406bba125369d",
       "sourceWidth": 3872,
       "variants": [
@@ -529,7 +529,7 @@
         "bytes": 2540594
       }
     },
-    "img/gallery/projects/778fb7df25bb522bc4d3.jpg": {
+    "img/gallery/post31-03-low-table.jpg": {
       "sourceSHA256": "0f4d193bacdc114a57bb87f5fa7d7c4315b675ded800aef162c2b8676e63853e",
       "sourceWidth": 2592,
       "variants": [
@@ -559,7 +559,7 @@
         "bytes": 4968550
       }
     },
-    "img/gallery/projects/31b04f12f5292e19d3d0.jpg": {
+    "img/gallery/post31-05-stairs.jpg": {
       "sourceSHA256": "8bffdfeabc2af0f432b52f93ec0e6dd89c5978990a237ecfd1f68cd2e313a3d7",
       "sourceWidth": 2592,
       "variants": [
@@ -589,7 +589,7 @@
         "bytes": 4777524
       }
     },
-    "img/gallery/projects/97467e11753a566c6f5a.jpg": {
+    "img/gallery/post31-06-living.jpg": {
       "sourceSHA256": "12e1f1b4a6514520b8ba56e271ff22938c0caa893262a7eb1f19fd6aaaa7e695",
       "sourceWidth": 2592,
       "variants": [
@@ -619,7 +619,7 @@
         "bytes": 7669066
       }
     },
-    "img/gallery/projects/0132e86dd8af30ab6df9.jpg": {
+    "img/gallery/post31-07-theater-screen.jpg": {
       "sourceSHA256": "770e4f93b3576e1444e15fe3a5ffd5673498042a41d59a10cda585161a11286e",
       "sourceWidth": 2592,
       "variants": [
@@ -649,7 +649,7 @@
         "bytes": 8243488
       }
     },
-    "img/gallery/projects/44a2c81793e98e3d1fde.jpg": {
+    "img/gallery/post31-09-modern-tatami.jpg": {
       "sourceSHA256": "8e68bf03f2970ec8156dd4e3a5754d928f74b135a29916379ed09d907eda6593",
       "sourceWidth": 2592,
       "variants": [
@@ -679,7 +679,7 @@
         "bytes": 2063620
       }
     },
-    "img/gallery/projects/25a8ce49ba9d57df3168.jpg": {
+    "img/gallery/post31-11-stairs-detail.jpg": {
       "sourceSHA256": "6f5c3f13d565b1091111f1d7226626326f934e3a875bd4e8caab74f30875a0f0",
       "sourceWidth": 2592,
       "variants": [
@@ -709,7 +709,7 @@
         "bytes": 2467738
       }
     },
-    "img/gallery/projects/119161904658a65ff7da.jpg": {
+    "img/gallery/post31-11-stairs-detail.jpg": {
       "sourceSHA256": "6f5c3f13d565b1091111f1d7226626326f934e3a875bd4e8caab74f30875a0f0",
       "sourceWidth": 2592,
       "variants": [
@@ -739,7 +739,7 @@
         "bytes": 2467738
       }
     },
-    "img/gallery/projects/ffc727d7df1e5b71ab67.jpg": {
+    "img/gallery/post31-08-living-wide.jpg": {
       "sourceSHA256": "1ec2aad425f33e3674fb50d947a57f769b4407ad156fe8ceb677a08f076621ab",
       "sourceWidth": 2592,
       "variants": [
@@ -769,7 +769,7 @@
         "bytes": 6774944
       }
     },
-    "img/gallery/projects/239ae289fc011449814b.jpg": {
+    "img/gallery/gallery-home-theater.jpg": {
       "sourceSHA256": "d67f35a630efe14a038d1df888ed977b0f6c5edcdc3854cf5d5e67ae76fc7ada",
       "sourceWidth": 3872,
       "variants": [
@@ -799,7 +799,7 @@
         "bytes": 2918138
       }
     },
-    "img/gallery/projects/e8e75d2045906369a9db.jpg": {
+    "img/gallery/garage-01-exterior.jpg": {
       "sourceSHA256": "95c244b69f9414ee6bd3ab1a5fc493712014a282121715ccad3d2aa12b7e08cf",
       "sourceWidth": 900,
       "variants": [
@@ -829,7 +829,7 @@
         "bytes": 752138
       }
     },
-    "img/gallery/projects/ece348f69298413f18d8.jpg": {
+    "img/gallery/garage-02-garage.jpg": {
       "sourceSHA256": "acdb56e71a102fd3be9ac39a4f96953fd4c8890d6fa2ebbcb654e1990d3fa058",
       "sourceWidth": 900,
       "variants": [
@@ -859,7 +859,7 @@
         "bytes": 626472
       }
     },
-    "img/gallery/projects/87d9dc7974d2f96499ef.jpg": {
+    "img/gallery/post31-10-night-porch.jpg": {
       "sourceSHA256": "d4d182f30efaadb5798bf12fd21286cd1bdfcb0494f4f60b9616051154b2ad78",
       "sourceWidth": 2592,
       "variants": [
@@ -889,7 +889,7 @@
         "bytes": 7340270
       }
     },
-    "img/gallery/projects/d2fb87cf76389f1c78db.jpg": {
+    "img/gallery/garage-04-shoes-closet.jpg": {
       "sourceSHA256": "7b101cb3e8a4a525ee1424c8c10b81c5834421d43028e21ca99474f8ddaebd71",
       "sourceWidth": 401,
       "variants": [
@@ -913,7 +913,7 @@
         "bytes": 726320
       }
     },
-    "img/gallery/projects/39c51e7dc992c26ba9ab.jpg": {
+    "img/gallery/garage-03-entry.jpg": {
       "sourceSHA256": "9f3c3756a64c8d97570425ba79f7a553706bd9da951de8df8a6dcc89b9c7a1ff",
       "sourceWidth": 900,
       "variants": [
@@ -943,7 +943,7 @@
         "bytes": 643672
       }
     },
-    "img/gallery/projects/15cd474e7208fa886a8b.jpg": {
+    "img/gallery/garage-05-living.jpg": {
       "sourceSHA256": "75506b4d34c123a038bc94b6c428baac7546ec2f1039333d1d0ac3af3b54f376",
       "sourceWidth": 900,
       "variants": [
@@ -973,7 +973,7 @@
         "bytes": 705726
       }
     },
-    "img/gallery/projects/151699d38d2cf10beb6b.jpg": {
+    "img/gallery/garage-06-kitchen.jpg": {
       "sourceSHA256": "cfb3529c3eb1d9883fc47afea27e546df864489bfc089c985785eb24edf48823",
       "sourceWidth": 900,
       "variants": [
@@ -1003,7 +1003,7 @@
         "bytes": 814172
       }
     },
-    "img/gallery/projects/9b24ead3862bf5cec4e1.jpg": {
+    "img/gallery/garage-07-wood-kitchen.jpg": {
       "sourceSHA256": "ed0b8683a19e3638432b63cffde79692f5bc8799ea67ee43103d86dce879ccdd",
       "sourceWidth": 900,
       "variants": [
@@ -1033,7 +1033,7 @@
         "bytes": 1098214
       }
     },
-    "img/gallery/projects/f12e8b1293ab201dbced.jpg": {
+    "img/gallery/garage-08-washroom.jpg": {
       "sourceSHA256": "484f1db6813ca3a31b85cf1a019a0043316071c549f795e9b9e408ab91a9d58c",
       "sourceWidth": 900,
       "variants": [
@@ -1063,7 +1063,7 @@
         "bytes": 795668
       }
     },
-    "img/gallery/projects/b60232a138667ffeb021.jpg": {
+    "img/gallery/garage-10-toilet.jpg": {
       "sourceSHA256": "00496ff3718bd2c1722efece91ea3f136352c7fe1416947f4cfd17c6cd276c39",
       "sourceWidth": 401,
       "variants": [
@@ -1087,7 +1087,7 @@
         "bytes": 476560
       }
     },
-    "img/gallery/projects/59b6f964bd20584dea88.jpg": {
+    "img/gallery/garage-09-bathroom.jpg": {
       "sourceSHA256": "5f4c87f0512ec39c39946931e55af7de7859a24520741a61c529d5a512026ec1",
       "sourceWidth": 401,
       "variants": [
@@ -1111,7 +1111,7 @@
         "bytes": 558812
       }
     },
-    "img/gallery/projects/a968c108b373328f17e4.jpg": {
+    "img/gallery/garage-11-stairs.jpg": {
       "sourceSHA256": "8d793d55649b35322d5934697b587d582995dd60218df59d0c179839f58504cf",
       "sourceWidth": 401,
       "variants": [
@@ -1135,7 +1135,7 @@
         "bytes": 524928
       }
     },
-    "img/gallery/projects/194f84092ef8547f4e32.jpg": {
+    "img/gallery/exterior-inner-garage.jpg": {
       "sourceSHA256": "7f8d9e83ac8e4c32a0e8005d9e4f45de4572bcf5718b9bca854859372a3506cd",
       "sourceWidth": 720,
       "variants": [
@@ -1165,7 +1165,7 @@
         "bytes": 572982
       }
     },
-    "img/gallery/projects/4c1778115c104d78aa19.jpg": {
+    "img/gallery/garage-12-bedroom.jpg": {
       "sourceSHA256": "04c726229b1d4ed4c5912647f8125001d527d73bd4b6e8541a1d204e458fb96a",
       "sourceWidth": 900,
       "variants": [
@@ -1195,7 +1195,7 @@
         "bytes": 648968
       }
     },
-    "img/gallery/projects/986a49c4e9b6c2e372cf.jpg": {
+    "img/gallery/renovation50-01.jpg": {
       "sourceSHA256": "3fb26d8bc256f577654d03b58c5993e334bf7fbb61a23b60ddf81e7a1579fe49",
       "sourceWidth": 876,
       "variants": [
@@ -1225,7 +1225,7 @@
         "bytes": 669586
       }
     },
-    "img/gallery/projects/cdcb40e0eda583e5d22c.jpg": {
+    "img/gallery/renovation50-03.jpg": {
       "sourceSHA256": "41cf67a62e6f728d61e12a4baf169346a66c1bbf3f617bfeb4630a5e46573773",
       "sourceWidth": 903,
       "variants": [
@@ -1255,7 +1255,7 @@
         "bytes": 849274
       }
     },
-    "img/gallery/projects/be8c587777253ba97bf5.jpg": {
+    "img/gallery/renovation50-02.jpg": {
       "sourceSHA256": "4f78871f6cfe001ec02ee3158dfc7097b5f8deaf1d9d5cae948641dddc4b2796",
       "sourceWidth": 903,
       "variants": [
@@ -1285,7 +1285,7 @@
         "bytes": 1315620
       }
     },
-    "img/gallery/projects/338969e2189c5dd1b0cf.jpg": {
+    "img/gallery/renovation50-04.jpg": {
       "sourceSHA256": "570be877c5d52ebbad0f3235d8e1485349ad13ff8f0820250c3a2adcc3cfb9da",
       "sourceWidth": 903,
       "variants": [
@@ -1315,7 +1315,7 @@
         "bytes": 693380
       }
     },
-    "img/gallery/projects/7180c078c37c652b43e3.jpg": {
+    "img/gallery/renovation50-05.jpg": {
       "sourceSHA256": "39415be420333dd729a99e5f7b77d9740cf57960ef04e475dd2d4f49b25ca9d4",
       "sourceWidth": 903,
       "variants": [
@@ -1345,7 +1345,7 @@
         "bytes": 897976
       }
     },
-    "img/gallery/projects/7b7117b1de0c677e675d.jpg": {
+    "img/gallery/renovation50-06.jpg": {
       "sourceSHA256": "1439989af9c4f286ab6311e2fb72e34c26665db0ede699375a4b4c8b7a30dfdb",
       "sourceWidth": 903,
       "variants": [
@@ -1375,7 +1375,7 @@
         "bytes": 1198818
       }
     },
-    "img/gallery/projects/9deb83e40e9160b5bb7b.jpg": {
+    "img/gallery/renovation50-07.jpg": {
       "sourceSHA256": "27224b5fcb1bf145fbce1bed4827480b467f3f1618cfd6d52a1a0b6e6c54f58c",
       "sourceWidth": 903,
       "variants": [
@@ -1405,7 +1405,7 @@
         "bytes": 1359224
       }
     },
-    "img/gallery/projects/6fe74e501b27d5b8bf7e.jpg": {
+    "img/gallery/renovation50-09.jpg": {
       "sourceSHA256": "7ed744d4a1d492fc1e76f1618426887d95ebf1a1ec0b34f24d7cc765494d1169",
       "sourceWidth": 399,
       "variants": [
@@ -1429,7 +1429,7 @@
         "bytes": 567612
       }
     },
-    "img/gallery/projects/acaa43ca295b962fd786.jpg": {
+    "img/gallery/renovation50-08.jpg": {
       "sourceSHA256": "f7793cd20ecff97ca884323d8ccbe6525f4a901047329ba0779baf75120e1e97",
       "sourceWidth": 903,
       "variants": [
@@ -1459,7 +1459,7 @@
         "bytes": 1227690
       }
     },
-    "img/gallery/projects/80dbd8bd2d92e19805b4.jpg": {
+    "img/gallery/renovation50-10.jpg": {
       "sourceSHA256": "0e153923c91f1ac1406e0caf3d40aa803fc1d1f10f45ff1e3ea6617e57cd89a0",
       "sourceWidth": 903,
       "variants": [
@@ -1489,7 +1489,7 @@
         "bytes": 696696
       }
     },
-    "img/gallery/projects/55e455c42249362e4079.jpg": {
+    "img/gallery/renovation50-11.jpg": {
       "sourceSHA256": "897f77ab452748776a82fa84d6353433dc4c067beac94f7581b60083dc711b30",
       "sourceWidth": 903,
       "variants": [
@@ -1519,31 +1519,31 @@
         "bytes": 789156
       }
     },
-    "img/gallery/projects/275531009dc40f6bb915.jpg": {
+    "img/gallery/renovation50-12.jpg": {
       "sourceSHA256": "d74f2152eec482ebadfcbe6719f9d73ee6e470bc092e9c4b277981a71b2de30e",
       "sourceWidth": 597,
       "variants": [
         {
-          "file": "img/gallery/projects/enhanced/d74f2152eec482ebadfc-640.webp",
+          "file": "img/gallery/projects/enhanced/67584ebbe4cc18502333-640.webp",
           "width": 640,
           "height": 643,
           "bytes": 292076
         },
         {
-          "file": "img/gallery/projects/enhanced/d74f2152eec482ebadfc-1280.webp",
+          "file": "img/gallery/projects/enhanced/67584ebbe4cc18502333-1280.webp",
           "width": 1280,
           "height": 1286,
           "bytes": 688036
         }
       ],
       "full": {
-        "file": "img/gallery/projects/enhanced/d74f2152eec482ebadfc-1280.webp",
+        "file": "img/gallery/projects/enhanced/67584ebbe4cc18502333-1280.webp",
         "width": 1280,
         "height": 1286,
         "bytes": 688036
       }
     },
-    "img/gallery/projects/47ded3890938f90ed116.jpg": {
+    "img/gallery/gallery-renovation-50.jpg": {
       "sourceSHA256": "67584ebbe4cc18502333afcac71a6cd7f4a815632885a643c5e525e8723042b1",
       "sourceWidth": 597,
       "variants": [
@@ -1903,7 +1903,7 @@
         "bytes": 670872
       }
     },
-    "img/gallery/projects/4871904e584b8a3af58a.jpg": {
+    "img/gallery/exterior-tatami-home.jpg": {
       "sourceSHA256": "73eeb5e2f00df05a12eeaa93400b211e1b5af59e6af0cccc897e213595cfb03c",
       "sourceWidth": 720,
       "variants": [
@@ -2233,7 +2233,7 @@
         "bytes": 2954478
       }
     },
-    "img/gallery/projects/8d09a71ede072945f925.jpg": {
+    "img/gallery/exterior-beach-house.jpg": {
       "sourceSHA256": "e0a509b6fa04531cc56a2a98ba576127a4b91ab9aeb398d1fd8c38a01a07e873",
       "sourceWidth": 720,
       "variants": [
@@ -2443,7 +2443,7 @@
         "bytes": 3076894
       }
     },
-    "img/gallery/projects/a87a035370f6a27032b1.jpg": {
+    "img/gallery/gallery-sunlit-wood.jpg": {
       "sourceSHA256": "a891fab84e0789aee05de74451bf261ceb432ac2853fd8014367cf2aa428b31e",
       "sourceWidth": 720,
       "variants": [
@@ -2845,7 +2845,7 @@
         "bytes": 391666
       }
     },
-    "img/gallery/projects/5f0408e977de81694894.jpg": {
+    "img/gallery/gallery-elegant-home.jpg": {
       "sourceSHA256": "350c700bbabeb9982c67a94c5a23e8b207f75aa5c6d3d2bfc70fd89ae9abda5b",
       "sourceWidth": 720,
       "variants": [
@@ -3217,7 +3217,7 @@
         "bytes": 604542
       }
     },
-    "img/gallery/projects/46243119bbf57d1cc32c.jpg": {
+    "img/gallery/gallery-compact-home.jpg": {
       "sourceSHA256": "c2def2cd6ef58d9640046882852b4573c036e02ff443a864d276530cf22d3871",
       "sourceWidth": 720,
       "variants": [
@@ -3571,7 +3571,7 @@
         "bytes": 745008
       }
     },
-    "img/gallery/projects/c00607ec780a15806f53.jpg": {
+    "img/gallery/exterior-southern-home.jpg": {
       "sourceSHA256": "852ef33289732c6ae819b54ca45189339f2466d03ad23518f69b5d0bb2bf0449",
       "sourceWidth": 720,
       "variants": [
@@ -3943,7 +3943,7 @@
         "bytes": 567300
       }
     },
-    "img/gallery/projects/ca63a85ec052c95c5da2.jpg": {
+    "img/gallery/exterior-hiraya.jpg": {
       "sourceSHA256": "1f0407b13457eb379933239c640813a7befaef2275bb8e06d1ad0b33a9186cfd",
       "sourceWidth": 720,
       "variants": [
@@ -4153,7 +4153,7 @@
         "bytes": 981810
       }
     },
-    "img/gallery/projects/5e6e96211f0a421d086b.jpg": {
+    "img/gallery/gallery-compact-hiraya.jpg": {
       "sourceSHA256": "d21bf2c605913fe3ed4f4529b1b9344577980b5e3e95e158e3e1ed4ac05b47e2",
       "sourceWidth": 720,
       "variants": [
@@ -4333,7 +4333,7 @@
         "bytes": 1390058
       }
     },
-    "img/gallery/projects/557ba7129de3c4110efb.jpg": {
+    "img/gallery/gallery-outdoor-garage.jpg": {
       "sourceSHA256": "eb53cc956da3daa5a566cbca6d46dc6b639641ad5146a2198c95633b63d52017",
       "sourceWidth": 720,
       "variants": [
@@ -4423,7 +4423,7 @@
         "bytes": 501716
       }
     },
-    "img/gallery/projects/bb43b94249dae7ee9299.jpg": {
+    "img/gallery/exterior-safe-home-hq.jpg": {
       "sourceSHA256": "f855aea2be0df51a4373ce4140e62b02523749e27383b08a754ca2c26a8c2945",
       "sourceWidth": 900,
       "variants": [
@@ -4735,7 +4735,7 @@
         "bytes": 1035864
       }
     },
-    "img/gallery/projects/e0800d0f39c27f6ccf62.jpg": {
+    "img/gallery/exterior-safe-home.jpg": {
       "sourceSHA256": "77f7e332069b44300b66a1d577a3cbd3dd914bb92087b57aa615c3157a172d37",
       "sourceWidth": 720,
       "variants": [
@@ -5083,7 +5083,7 @@
         "bytes": 1001580
       }
     },
-    "img/gallery/projects/38bcfea65d2e5bd42fc3.jpg": {
+    "img/gallery/gallery-15-renovated-house.jpg": {
       "sourceSHA256": "63111ec867a11bb7b839f3fe3da3edf80dc395cf207396b66f2615574046cdac",
       "sourceWidth": 720,
       "variants": [
@@ -5443,7 +5443,7 @@
         "bytes": 701020
       }
     },
-    "img/gallery/projects/6c3a04203c21c542027a.jpg": {
+    "img/gallery/gallery-16-compact-land.jpg": {
       "sourceSHA256": "f57d1ea11ebae20380d667e35c0cc8fbc8c4e992ffd35cc7d62e3b6db87ac0e3",
       "sourceWidth": 720,
       "variants": [
@@ -5833,7 +5833,7 @@
         "bytes": 584564
       }
     },
-    "img/gallery/projects/25dba298fdd556be4db7.jpg": {
+    "img/plans/two-story/works-everyday.jpg": {
       "sourceSHA256": "29c073113e96ff8a158fc3199997dc8602ba374eb92c96c50458145c3ca7eb13",
       "sourceWidth": 720,
       "variants": [
@@ -6223,7 +6223,7 @@
         "bytes": 711714
       }
     },
-    "img/gallery/projects/2f1c5c73cc6d1ef194e9.jpg": {
+    "img/gallery/gallery-18-courtyard-hiraya.jpg": {
       "sourceSHA256": "c8075bcfd43c20b095e71efc8c103dc5d62e392391acbd57946e88a81a741449",
       "sourceWidth": 720,
       "variants": [
@@ -6493,7 +6493,7 @@
         "bytes": 782224
       }
     },
-    "img/gallery/projects/e5ec22f238ce31df482d.jpg": {
+    "img/gallery/gallery-19-single-hiraya.jpg": {
       "sourceSHA256": "1d338c102293a77c87558ce896b9c20d855f1519ef76185a0fbe24c619b715ae",
       "sourceWidth": 720,
       "variants": [
@@ -7333,7 +7333,7 @@
         "bytes": 3272328
       }
     },
-    "img/gallery/projects/6f7b5f75e3bc8599378f.jpg": {
+    "img/gallery/gallery-21-play-learn-rest.jpg": {
       "sourceSHA256": "3ef05783afafe856fa4ab05088702b1dd140acada343d1fe27ccafd93b4cc6dc",
       "sourceWidth": 720,
       "variants": [
@@ -7543,7 +7543,7 @@
         "bytes": 3074216
       }
     },
-    "img/gallery/projects/3042caf4bba66fc1fd7c.jpg": {
+    "img/gallery/gallery-22-couple-home.jpg": {
       "sourceSHA256": "27e4f53badbb05cc2a554c2294d2d8375b833dfa426c974ebc4ccfcb7259e2ad",
       "sourceWidth": 720,
       "variants": [
@@ -7813,7 +7813,7 @@
         "bytes": 3020868
       }
     },
-    "img/gallery/projects/820fb3cce91025c7d27b.jpg": {
+    "img/gallery/gallery-23-antique-natural.jpg": {
       "sourceSHA256": "09a0a59f2d5da3973861719cffc29279bf56eebba964987c1df66c0d7358fb88",
       "sourceWidth": 720,
       "variants": [
@@ -8143,7 +8143,7 @@
         "bytes": 1246950
       }
     },
-    "img/gallery/projects/6cddda5d1bad1e2d6195.jpg": {
+    "img/gallery/gallery-24-family-wrap.jpg": {
       "sourceSHA256": "b2745ba4952a8350dd2a61c4d267e435907560c400e02904915191fcce6cefaa",
       "sourceWidth": 720,
       "variants": [
@@ -8203,7 +8203,7 @@
         "bytes": 1166038
       }
     },
-    "img/gallery/projects/0717d454c9b7b5869648.jpg": {
+    "img/home/inspiration-walkway-original.jpg": {
       "sourceSHA256": "65a9c9f4e01eef67f38ef169748f1a55a7967ae4f4885474f3599be125834035",
       "sourceWidth": 1000,
       "variants": [
@@ -8473,7 +8473,7 @@
         "bytes": 1055278
       }
     },
-    "img/gallery/projects/660270ba6d880f47bafd.jpg": {
+    "img/gallery/gallery-25-walkway-home.jpg": {
       "sourceSHA256": "213854c316d5e9251cdca972692c952d38f687b4ff79e6d74ef46df69958c3e4",
       "sourceWidth": 720,
       "variants": [
@@ -8677,25 +8677,25 @@
         "bytes": 593976
       }
     },
-    "img/gallery/projects/1c6c08dca0d88a7b7d52.jpg": {
+    "img/gallery/gallery-26-kids-cats.jpg": {
       "sourceSHA256": "67656a38ca63f3c9b1d413add6ca0cbfdb7d3309861f2e0fadec5dfb618511dd",
       "sourceWidth": 595,
       "variants": [
         {
-          "file": "img/gallery/projects/enhanced/67656a38ca63f3c9b1d4-640.webp",
+          "file": "img/gallery/projects/enhanced/26209cfabcda6f4ca2b1-640.webp",
           "width": 640,
           "height": 441,
           "bytes": 265732
         },
         {
-          "file": "img/gallery/projects/enhanced/67656a38ca63f3c9b1d4-1280.webp",
+          "file": "img/gallery/projects/enhanced/26209cfabcda6f4ca2b1-1280.webp",
           "width": 1280,
           "height": 882,
           "bytes": 718154
         }
       ],
       "full": {
-        "file": "img/gallery/projects/enhanced/67656a38ca63f3c9b1d4-1280.webp",
+        "file": "img/gallery/projects/enhanced/26209cfabcda6f4ca2b1-1280.webp",
         "width": 1280,
         "height": 882,
         "bytes": 718154
@@ -8983,7 +8983,7 @@
         "bytes": 1722448
       }
     },
-    "img/gallery/projects/e2a4a33d9d31dfe0a442.jpg": {
+    "img/gallery/gallery-27-wood-stove.jpg": {
       "sourceSHA256": "7a51f83e28a2f193126af2aec43783b37d331e045fa4cc3fc57393db91f7895c",
       "sourceWidth": 720,
       "variants": [
@@ -9013,7 +9013,7 @@
         "bytes": 720812
       }
     },
-    "img/gallery/projects/211866bfffa039ea6299.jpg": {
+    "img/gallery/gallery-28-nature-home.jpg": {
       "sourceSHA256": "a28e4f1d94e5f2d0a890593d5323345630e3a5130d494c88590745139de4e809",
       "sourceWidth": 615,
       "variants": [
@@ -9181,7 +9181,7 @@
         "bytes": 789994
       }
     },
-    "img/gallery/projects/65d808d846e95dbad9cc.jpg": {
+    "img/gallery/gallery-28-nature-home.jpg": {
       "sourceSHA256": "a28e4f1d94e5f2d0a890593d5323345630e3a5130d494c88590745139de4e809",
       "sourceWidth": 615,
       "variants": [
@@ -9607,7 +9607,7 @@
         "bytes": 1815328
       }
     },
-    "img/gallery/projects/734a9be7f9e0e2dca038.jpg": {
+    "img/gallery/gallery-29-family-gathering.jpg": {
       "sourceSHA256": "d5ae97d1bc1b4fad451f973724ef568f2b289f1485a7f31ab7a31508a440fea8",
       "sourceWidth": 720,
       "variants": [
@@ -9781,7 +9781,7 @@
         "bytes": 589404
       }
     },
-    "img/gallery/projects/03d57b78ea956e2db4d8.jpg": {
+    "img/gallery/gallery-31-spacious-home.jpg": {
       "sourceSHA256": "cf965627905f7d25534c79311503444d939642c6803a0bed139262cdf9a7143d",
       "sourceWidth": 588,
       "variants": [
@@ -9805,7 +9805,7 @@
         "bytes": 673674
       }
     },
-    "img/gallery/projects/33363b07968a3d8f784e.jpg": {
+    "img/gallery/gallery-30-compact-house.jpg": {
       "sourceSHA256": "6a0bbd9316894cd5ae5b94602d8a80400893385e1f585a61305defb8abe7cf4e",
       "sourceWidth": 720,
       "variants": [
@@ -9979,7 +9979,7 @@
         "bytes": 447416
       }
     },
-    "img/gallery/projects/545acc450bc115582ea2.jpg": {
+    "img/gallery/gallery-31-spacious-home.jpg": {
       "sourceSHA256": "cf965627905f7d25534c79311503444d939642c6803a0bed139262cdf9a7143d",
       "sourceWidth": 588,
       "variants": [
@@ -10207,7 +10207,7 @@
         "bytes": 801436
       }
     },
-    "img/gallery/projects/8f9431a714d25e2bf928.jpg": {
+    "img/gallery/gallery-32-zero-energy.jpg": {
       "sourceSHA256": "773d66cbb4c195c46ff607aa450152b9ed81c7bc4a90964118768d27243b1b72",
       "sourceWidth": 720,
       "variants": [
@@ -10351,7 +10351,7 @@
         "bytes": 552522
       }
     },
-    "img/gallery/projects/1d365f85c6a9ed964875.jpg": {
+    "img/gallery/gallery-33-baby-safe.jpg": {
       "sourceSHA256": "7d7e50e9e20dd7868801943334f5d482bc95949008dccd82ce0a67df189aee51",
       "sourceWidth": 720,
       "variants": [
@@ -10416,20 +10416,20 @@
       "sourceWidth": 546,
       "variants": [
         {
-          "file": "img/gallery/projects/enhanced/d6df6bf4c954e7bd35c4-640.webp",
+          "file": "img/gallery/projects/enhanced/883f0c7b7853f69623f8-640.webp",
           "width": 640,
           "height": 481,
           "bytes": 268600
         },
         {
-          "file": "img/gallery/projects/enhanced/d6df6bf4c954e7bd35c4-1280.webp",
+          "file": "img/gallery/projects/enhanced/883f0c7b7853f69623f8-1280.webp",
           "width": 1280,
           "height": 961,
           "bytes": 666402
         }
       ],
       "full": {
-        "file": "img/gallery/projects/enhanced/d6df6bf4c954e7bd35c4-1280.webp",
+        "file": "img/gallery/projects/enhanced/883f0c7b7853f69623f8-1280.webp",
         "width": 1280,
         "height": 961,
         "bytes": 666402
@@ -10507,7 +10507,7 @@
         "bytes": 505860
       }
     },
-    "img/gallery/projects/dc97176cf7f67396e3a9.jpg": {
+    "img/gallery/gallery-34-circular-plan.jpg": {
       "sourceSHA256": "883f0c7b7853f69623f82c79bbb613070ad35e7f6d09bf2ca92435d619ba4038",
       "sourceWidth": 546,
       "variants": [

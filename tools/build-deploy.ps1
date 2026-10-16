@@ -8,7 +8,7 @@ if (-not $destinationRoot.StartsWith($projectRoot + [IO.Path]::DirectorySeparato
 # Reapply shared-code and byte-identical image optimizations after page generators.
 Push-Location -LiteralPath $projectRoot
 try {
-  foreach ($optimization in 'optimize-shared-chrome.mjs', 'deduplicate-image-references.mjs', 'build-home-css.mjs', 'normalize-folder-links.mjs', 'version-public-assets.mjs') {
+  foreach ($optimization in 'optimize-shared-chrome.mjs', 'deduplicate-image-references.mjs', 'build-home-css.mjs', 'normalize-folder-links.mjs', 'add-favicons.mjs', 'version-public-assets.mjs') {
     & node (Join-Path $PSScriptRoot $optimization)
     if ($LASTEXITCODE -ne 0) { throw "Optimization failed: $optimization" }
   }
@@ -30,9 +30,18 @@ function Copy-PublicFile([string]$SourcePath) {
 }
 
 $publicExtensions = '.html', '.shtml', '.css', '.js', '.xml', '.txt'
-$publicFiles = Get-ChildItem -LiteralPath $projectRoot -Recurse -File | Where-Object {
-  $_.FullName -notmatch '[\\/](?:\.git|node_modules|tools|docs|dist|backup|tmp|\.tmp|output|cms|server)[\\/]' -and $_.Extension -in $publicExtensions
+$excludedDirectories = @('.git', 'node_modules', 'tools', 'docs', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'mailformpro', 'mfp.statics', 'iplogs')
+function Get-PublicFiles([string]$Directory) {
+  foreach ($entry in Get-ChildItem -LiteralPath $Directory -Force) {
+    if ($entry.Attributes -band [IO.FileAttributes]::ReparsePoint) { continue }
+    if ($entry.PSIsContainer) {
+      if ($entry.Name -notin $excludedDirectories) { Get-PublicFiles $entry.FullName }
+    } elseif ($entry.Extension -in $publicExtensions) {
+      $entry
+    }
+  }
 }
+$publicFiles = @(Get-PublicFiles $projectRoot)
 
 foreach ($file in $publicFiles) { Copy-PublicFile $file.FullName }
 foreach ($rootFile in '.htaccess', 'robots.txt', 'sitemap.xml', 'llms.txt') {

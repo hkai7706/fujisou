@@ -28,3 +28,8 @@ backup/
 # Local generated reports and temporary rendering files
 output/
 tmp/
+
+# Local Mailform Pro runtime and private configuration
+contact/mailformpro/
+contact/mfp.statics/
+contact/iplogs/

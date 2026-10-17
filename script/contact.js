@@ -2,6 +2,7 @@
 (() => {
   const form = document.querySelector('[data-contact-form]');
   if (!form) return;
+  const availability=document.querySelector('[data-contact-availability]');
   const status = form.querySelector('[data-contact-status]');
   const service = form.querySelector('[data-contact-service]');
   const retry = form.querySelector('[data-contact-retry]');
@@ -20,6 +21,8 @@
     booking.hidden = !show;
     booking.disabled = !show;
     booking.querySelectorAll('input,select').forEach(input => { input.disabled = !show; });
+    const attendees=booking.querySelector('[data-contact-attendees]');
+    if(attendees){attendees.hidden=category.value!=='見学のご相談';attendees.querySelector('select').disabled=attendees.hidden;}
     booking.querySelectorAll('input[type="date"]').forEach(input => { input.min = today(); });
   };
   const topic = new URLSearchParams(location.search).get('topic');
@@ -58,6 +61,7 @@
     service.textContent = location.hostname.endsWith('github.io') || location.protocol === 'file:'
       ? 'プレビューではメール送信を行いません。フォームの入力項目をご確認いただけます。'
       : '送信サービスに接続できていません。再接続しても入力内容は消えません。';
+    if(availability){availability.hidden=false;availability.textContent=service.textContent;}
     retry.hidden = location.protocol === 'file:' || location.hostname.endsWith('github.io');
   }
   function connect() {
@@ -74,6 +78,17 @@
     script.onload = () => {
       clearTimeout(timer); loading=false;
       if (!window.mfp || window.mfp.Ready !== true) { unavailable(); return; }
+      // Only one confirmed send may leave this page, even on a rapid double click.
+      let sending = false;
+      const sendmail = window.mfp.sendmail;
+      window.mfp.sendmail = function (...args) {
+        if (sending) return false;
+        if (this.SendFlag) sending = true;
+        try { return sendmail.apply(this, args); }
+        catch (error) { sending = false; throw error; }
+      };
+      window.addEventListener('pageshow', () => { sending = false; });
+      if(availability){availability.hidden=true;availability.textContent='';}
       ready=true; button.disabled=false; service.textContent='入力内容を確認してから送信できます。送信後に受付完了画面をご案内します。'; status.textContent=''; retry.hidden=true;
       updateBooking();
       window.mfp.extend.event("send",()=>{saveDraft();try{sessionStorage.removeItem(`fujisou-contact-receipt:${new URL(".",location.href).pathname}`);sessionStorage.setItem(`fujisou-contact-pending:${new URL(".",location.href).pathname}`,JSON.stringify({time:Date.now(),id:Date.now().toString(36)+Math.random().toString(36).slice(2)}));}catch{}});

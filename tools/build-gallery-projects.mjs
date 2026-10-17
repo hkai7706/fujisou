@@ -2,12 +2,13 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import {renderProjectFacts} from './project-facts.mjs';
 const projects=JSON.parse(fs.readFileSync('gallery/projects.json','utf8'));
-const listingTemplate=fs.readFileSync('gallery/index.html','utf8');
+const listingTemplate=fs.readFileSync('gallery/index.html','utf8').replace(/<div class="gallery-discovery"[\s\S]*?<\/p><\/div>/g,'').replace(/<p data-gallery-empty[^>]*>[\s\S]*?<\/p>/g,'').replace(/<script[^>]*src="[^"]*gallery-filter\.js[^"]*"[^>]*><\/script>/g,'').replace(/<nav class="gallery-pagination"[\s\S]*?<\/nav>/g,'');
 const detailTemplate=fs.readFileSync('gallery/post-32.shtml','utf8');
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const plain=s=>s.replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
 const version=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex').slice(0,10);
 const enhancements=fs.existsSync('gallery/image-enhancements.json')?JSON.parse(fs.readFileSync('gallery/image-enhancements.json','utf8')).images:{};
+const viewingImages=JSON.parse(fs.readFileSync('gallery/viewing-images.json','utf8')).images;
 const sourceUpgrades=fs.existsSync('gallery/image-source-upgrades.json')?JSON.parse(fs.readFileSync('gallery/image-source-upgrades.json','utf8')).images:{};
 const originalAssets=new Map(projects.flatMap(p=>[...p.photos,p.thumbnail]).map(image=>[image.file,image]));
 const bestSource=image=>originalAssets.get(sourceUpgrades[image.file])||image;
@@ -18,8 +19,8 @@ function variants(image){
   if(image.width<=1280){const original={file:image.file,width:image.width,height:image.height,bytes:fs.statSync(image.file).size};if(!all.length||original.bytes<=Math.max(...all.map(v=>v.bytes)))return[original];}
   return all;
 }
-function picture(image,alt,{eager=false,cover=false,thumbnail=false}={}){image=bestSource(image);const candidates=variants(image);if(cover&&image.width>candidates.at(-1).width)candidates.push({file:image.file,width:image.width,height:image.height});const largest=candidates.at(-1);return `<img src="../${largest.file}" srcset="${candidates.map(v=>`../${v.file} ${v.width}w`).join(', ')}" sizes="${thumbnail?'(max-width:600px) calc(100vw - 80px), 360px':cover?'(max-width:600px) calc(100vw - 40px), 1120px':'(max-width:600px) calc(100vw - 40px), 570px'}" alt="${esc(alt)}" width="${image.width}" height="${image.height}" ${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async">`;}
-const photoLink=(photo,caption,options)=>{photo=bestSource(photo);const enhanced=enhancements[photo.file];const full=enhanced&&enhanced.full.width>photo.width?enhanced.full.file:photo.file;return `<a class="project-photo-link" href="../${full}" data-project-photo data-caption="${esc(caption)}" aria-label="${esc(caption)}を拡大する">${picture(photo,caption,options)}</a>`;};
+function picture(image,alt,{eager=false,cover=false,thumbnail=false}={}){image=bestSource(image);const candidates=variants(image);const largest=candidates.at(-1);return `<img src="../${largest.file}" srcset="${candidates.map(v=>`../${v.file} ${v.width}w`).join(', ')}" sizes="${thumbnail?'(max-width:600px) calc(100vw - 80px), 360px':cover?'(max-width:600px) calc(100vw - 40px), 1120px':'(max-width:600px) calc(100vw - 40px), 570px'}" alt="${esc(alt)}" width="${image.width}" height="${image.height}" ${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async">`;}
+const photoLink=(photo,caption,options)=>{photo=bestSource(photo);const enhanced=enhancements[photo.file];const full=viewingImages[photo.file]?.file||(enhanced&&enhanced.full.width>photo.width?enhanced.full.file:photo.file);return `<a class="project-photo-link" href="../${full}" data-project-photo data-caption="${esc(caption)}" aria-label="${esc(caption)}を拡大する">${picture(photo,caption,options)}</a>`;};
 const photoCaption=(photo,p)=>photo.caption||(/\.(?:jpe?g|png|webp)$/i.test(photo.alt)?'':photo.alt)||`${p.title}の写真`;
 const titleBreaks={
   'post-30.shtml':['木の香りと暮らす','癒しの畳コーナのある家'],
@@ -40,6 +41,7 @@ const titleBreaks={
   'post-1.shtml':['自然素材で赤ちゃんにも','安心なおうち'],
   'post.shtml':['家事も楽々！','回遊性のある間取りのおうち']
 };
+function houseType(p){const text=p.title+' '+plain(p.description);return /リフォーム|リノベーション/.test(text)?'renovation':/平屋|平家/.test(text)?'hiraya':/２階建|2階建|二階建/.test(text)?'two-story':'other';}
 function headline(p){
   const separator=p.title.match(/\s*[—｜~]\s*/);
   if(separator){const [title,subtitle]=p.title.split(separator[0]);return `<span>${esc(title)}</span><small>${subtitle.split(/(?<=、)/).map(part=>`<span>${esc(part)}</span>`).join('')}</small>`;}
@@ -78,16 +80,17 @@ for(const [index,p]of projects.entries()){
 }
 const perPage=14,totalPages=Math.ceil(projects.length/perPage);
 for(let page=1;page<=totalPages;page++){
-  const filename=page===1?'index.html':`page-${page}.html`,rows=projects.slice((page-1)*perPage,page*perPage);
-  const cards=rows.map(p=>`<article class="work-card"><a href="${esc(p.file)}"><figure>${picture(p.thumbnail,p.title,{thumbnail:true})}</figure><div class="work-card__text"><p><span>${esc(p.area)}</span></p><h2>${esc(p.title)}</h2><b>詳しく見る <i>→</i></b></div></a></article>`).join('\n');
+  const filename=page===1?'index.html':`page-${page}.html`,rows=page===1?projects:projects.slice((page-1)*perPage,page*perPage);
+  const cards=rows.map(p=>`<article class="work-card" data-house-type="${houseType(p)}" data-location="${esc(p.area)}"><a href="${esc(p.file)}"><figure>${picture(p.thumbnail,p.title,{thumbnail:true})}</figure><div class="work-card__text"><p><span>${esc(p.area)}</span></p><h2>${esc(p.title)}</h2><b>詳しく見る <i>→</i></b></div></a></article>`).join('\n');
   const url=n=>n===1?'index.html':`page-${n}.html`;
   const pagination=`<nav class="gallery-pagination" aria-label="施工事例のページ切り替え">${page>1?`<a href="${url(page-1)}">← 前のページ</a>`:'<span></span>'}<div class="gallery-pagination__numbers">${Array.from({length:totalPages},(_,i)=>`<a href="${url(i+1)}" ${i+1===page?'aria-current="page"':''}>${i+1}</a>`).join('')}</div>${page<totalPages?`<a href="${url(page+1)}">次のページ →</a>`:'<span></span>'}</nav>`;
-  let html=listingTemplate.replace(/<section class="gallery-works"[^>]*>[\s\S]*?<\/section>/,`<section class="gallery-works" aria-label="施工事例一覧">${cards}</section>`).replace(/<nav class="gallery-pagination"[\s\S]*?<\/nav>/,pagination).replace(/<body[^>]*>/,`<body class="gallery-page${page>1?' gallery-page--'+page:''}">`).replace(/<figure class="gallery-hero__visual">[\s\S]*?<\/figure>/,'').replace(/<main>/,'<main id="main">');
+  let html=listingTemplate.replace(/<section class="gallery-works"[^>]*>[\s\S]*?<\/section>/,`${page===1?'<div class="gallery-discovery" data-gallery-controls hidden><div role="group" aria-label="建物の種類"><button type="button" data-gallery-type="" aria-pressed="true">すべて</button><button type="button" data-gallery-type="hiraya" aria-pressed="false">平屋</button><button type="button" data-gallery-type="two-story" aria-pressed="false">２階建て</button><button type="button" data-gallery-type="renovation" aria-pressed="false">リフォーム</button></div><label>地域<select data-gallery-location><option value="">すべての地域</option>'+[...new Set(projects.map(p=>p.area))].sort().map(area=>'<option>'+esc(area)+'</option>').join('')+'</select></label><p data-gallery-count role="status"></p></div>':''}<section class="gallery-works" aria-label="施工事例一覧">${cards}</section>${page===1?'<p data-gallery-empty hidden>条件に合う事例はありません。種類や地域を変えてご覧ください。</p>':pagination}`).replace(/<body[^>]*>/,`<body class="gallery-page${page>1?' gallery-page--'+page:''}">`).replace(/<figure class="gallery-hero__visual">[\s\S]*?<\/figure>/,'').replace(/<main>/,'<main id="main">');
   html=html.replace(/<link rel="(?:next|prev)"[^>]*>/g,'').replace(/<link rel="canonical"[^>]*>/,`<link rel="canonical" href="https://www.fujisou-ainos.com/gallery/${page===1?'':`index_${page}.shtml`}">`);
   if(page>1)html=html.replace(/<title>[\s\S]*?<\/title>/,`<title>施工事例 ${page}ページ目｜フジ創アイノス</title>`);
   const socialThumbnail=bestSource(rows[0].thumbnail),socialImage=enhancements[socialThumbnail.file]?.full.file||socialThumbnail.file;
   html=html.replace(/<meta property="og:image"[^>]*>/,`<meta property="og:image" content="https://www.fujisou-ainos.com/${socialImage}">`);
   html=html.replace(/<link rel="stylesheet" href="[^\"]*gallery\.css[^\"]*">/,`<link rel="stylesheet" href="../stylesheet/gallery.css?v=${version('stylesheet/gallery.css')}">`);
+  if(page===1)html=html.replace('</head>','<script src="../script/gallery-filter.js" defer></script></head>');
   fs.writeFileSync('gallery/'+filename,html);
 }
 console.log(`Built ${projects.length} gallery details and ${totalPages} listing pages with local project links.`);

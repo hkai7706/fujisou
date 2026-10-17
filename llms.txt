@@ -5,11 +5,16 @@
 ## Main pages
 
 - [ホーム](https://www.fujisou-ainos.com/): フジ創アイノスの家づくり、住宅プラン、性能、保証、施工事例
-- [家づくりの考え方](https://www.fujisou-ainos.com/concept/): 天然素材と健康住宅への考え方
+- [家づくりの考え方](https://www.fujisou-ainos.com/concept/): 無垢材と漆喰を生かした家づくりの考え方
 - [施工事例](https://www.fujisou-ainos.com/gallery/): 富山県内の注文住宅・平屋・二階建て住宅
 - [イベント情報](https://www.fujisou-ainos.com/eventinfo/): 完成見学会や相談会
 - [ブログ](https://www.fujisou-ainos.com/staffblog/): 富山での家づくりに役立つ情報
 - [お問い合わせ](https://www.fujisou-ainos.com/contact/): 資料請求、無料相談、来店予約
+
+- [動画](https://www.fujisou-ainos.com/videos/): 実際の住まいのルームツアーと写真
+- [構造・断熱・仕様](https://www.fujisou-ainos.com/performance/): 商品と個別設計で確認する性能
+- [価格と総予算](https://www.fujisou-ainos.com/cost/): 掲載価格の範囲とローン計算例の条件
+- [保証・点検](https://www.fujisou-ainos.com/aftercare/): 保証の対象・延長・維持管理の確認
 
 ## Homepage sections
 
@@ -20,9 +25,9 @@
 
 ## Housing plans
 
-- [SIMPLY](https://www.fujisou-ainos.com/simply/): シンプルな意匠と住宅性能を大切にした自由設計住宅
-- [Pretty](https://www.fujisou-ainos.com/pretty/): 自然素材、タイル、DIYを楽しむ自由設計住宅
-- [Healthy](https://www.fujisou-ainos.com/healthy/): 無垢材と漆喰を使い、家族の健康を考えた自由設計住宅
+- [SIMPLY](https://www.fujisou-ainos.com/plans/products/simply/): シンプルな意匠と住宅性能を大切にした自由設計住宅
+- [Pretty](https://www.fujisou-ainos.com/plans/products/pretty/): 自然素材、タイル、DIYを楽しむ自由設計住宅
+- [Healthy](https://www.fujisou-ainos.com/plans/products/healthy/): 無垢材と漆喰を使い、素材と室内環境を考えた自由設計住宅
 
 ## Business information
 

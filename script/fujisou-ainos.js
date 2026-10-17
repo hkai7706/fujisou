@@ -57,11 +57,13 @@ const newsCategories = {
 newsTabs.forEach((tab) => {
   tab.addEventListener('click', () => {
     const selectedCategory = tab.dataset.newsTab;
+    document.querySelector('#news-preview-list')?.setAttribute('aria-labelledby',tab.id);
 
     newsTabs.forEach((item) => {
       const isSelected = item === tab;
       item.classList.toggle('is-current', isSelected);
       item.setAttribute('aria-selected', String(isSelected));
+      item.tabIndex=isSelected?0:-1;
     });
 
     newsCards.forEach((card) => {
@@ -96,35 +98,27 @@ blogFilters.forEach((filter) => {
 /* ===== HOMEPAGE INTERACTIONS ===== */
 
 const hybridSlider=document.querySelector('[data-hybrid-slider]');
-    if(hybridSlider){
-      const scenes=[...hybridSlider.querySelectorAll('.hybrid-hero__scene')];
-      const dots=[...hybridSlider.querySelectorAll('[data-hybrid-dot]')];
-      const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-      let activeScene=0,hybridTimer,touchStart=0;
-      const showScene=(index)=>{
-        activeScene=(index+scenes.length)%scenes.length;
-        scenes.forEach((scene,i)=>{const active=i===activeScene;scene.classList.toggle('is-active',active);scene.setAttribute('aria-hidden',String(!active))});
-        dots.forEach((dot,i)=>{const active=i===activeScene;dot.classList.toggle('is-active',active);if(active)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current')});
-      };
-      const stopSlider=()=>clearTimeout(hybridTimer);
-      const startSlider=()=>{
-        stopSlider();
-        if(!reduceMotion.matches&&!document.hidden){
-          hybridTimer=setTimeout(()=>{
-            showScene((activeScene+1)%scenes.length);
-            startSlider();
-          },3700);
-        }
-      };
-      dots.forEach(dot=>dot.addEventListener('click',()=>{showScene(Number(dot.dataset.hybridDot));startSlider()}));
-      hybridSlider.addEventListener('touchstart',event=>{touchStart=event.changedTouches[0].clientX},{passive:true});
-      hybridSlider.addEventListener('touchend',event=>{const distance=event.changedTouches[0].clientX-touchStart;if(Math.abs(distance)>50){showScene(activeScene+(distance<0?1:-1));startSlider()}},{passive:true});
-      document.addEventListener('visibilitychange',()=>document.hidden?stopSlider():startSlider());
-      reduceMotion.addEventListener?.('change',startSlider);
-      const queueSlider=()=>window.setTimeout(startSlider,5000);
-      if(document.readyState==='complete')queueSlider();
-      else window.addEventListener('load',queueSlider,{once:true});
-    }
+if(hybridSlider){
+ const scenes=[...hybridSlider.querySelectorAll('.hybrid-hero__scene')];
+ const dots=[...hybridSlider.querySelectorAll('[data-hybrid-dot]')];
+ const pause=hybridSlider.querySelector('[data-hybrid-pause]');
+ const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
+ let active=0,timer,paused=reduceMotion.matches,touchStart=0;
+ const stop=()=>clearTimeout(timer);
+ const show=index=>{active=(index+scenes.length)%scenes.length;scenes.forEach((scene,i)=>{scene.classList.toggle('is-active',i===active);scene.setAttribute('aria-hidden',String(i!==active));});dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===active);if(i===active)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');});};
+ const update=()=>{pause.disabled=reduceMotion.matches;pause.textContent=reduceMotion.matches?'自動切替なし':paused?'自動再生':'一時停止';pause.setAttribute('aria-label',reduceMotion.matches?'スライドの自動切替なし（動きを減らす設定）':paused?'スライドの自動再生を開始':'スライドの自動切替を一時停止');hybridSlider.toggleAttribute('data-paused',paused);};
+ const start=()=>{stop();if(!paused&&!reduceMotion.matches&&!document.hidden&&!hybridSlider.contains(document.activeElement))timer=setTimeout(()=>{show(active+1);start();},7000);};
+ pause.addEventListener('click',()=>{paused=!paused;update();start();});
+ dots.forEach(dot=>dot.addEventListener('click',()=>{show(Number(dot.dataset.hybridDot));start();}));
+ hybridSlider.addEventListener('focusin',()=>{paused=true;update();stop();});
+ hybridSlider.addEventListener('focusout',()=>setTimeout(start,0));
+ hybridSlider.addEventListener('pointerenter',stop);hybridSlider.addEventListener('pointerleave',start);
+ hybridSlider.addEventListener('touchstart',event=>{touchStart=event.changedTouches[0].clientX;stop();},{passive:true});
+ hybridSlider.addEventListener('touchend',event=>{const distance=event.changedTouches[0].clientX-touchStart;if(Math.abs(distance)>50)show(active+(distance<0?1:-1));start();},{passive:true});
+ document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+ reduceMotion.addEventListener('change',()=>{if(reduceMotion.matches)paused=true;update();start();});
+ update();if(document.readyState==='complete')start();else addEventListener('load',start,{once:true});
+}
     const buildingSteps=[
       ['話','まずは気軽にご相談','希望の暮らし、予算、土地の有無、不安に感じていることを伺います。','無料相談'],
       ['計','家づくり計画','ご家族の希望と優先順位を整理し、家づくりの方向性を一緒に考えます。','希望を整理'],
@@ -136,7 +130,8 @@ const hybridSlider=document.querySelector('[data-hybrid-slider]');
     ];
     document.querySelectorAll('.step-tab').forEach((tab)=>tab.addEventListener('click',()=>{
       const item=buildingSteps[Number(tab.dataset.step)];
-      document.querySelectorAll('.step-tab').forEach((button)=>button.setAttribute('aria-selected','false'));
+      document.querySelectorAll('.step-tab').forEach(button=>{button.setAttribute('aria-selected','false');button.tabIndex=-1;});
+      tab.tabIndex=0;document.querySelector('#step-detail').setAttribute('aria-labelledby',tab.id);
       tab.setAttribute('aria-selected','true');
       document.querySelector('#step-mark').textContent=item[0];
       document.querySelector('#step-title').textContent=item[1];
@@ -201,3 +196,6 @@ const hybridSlider=document.querySelector('[data-hybrid-slider]');
     mobile.addEventListener('change', () => closeMenu());
   }
 }
+
+// Arrow keys select adjacent tabs; Home/End jump to the first/last item.
+for(const selector of ['.step-tabs','[aria-label="最新情報のカテゴリー"]']){const list=document.querySelector(selector);if(!list)continue;list.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;const tabs=[...list.querySelectorAll('[role="tab"]')],index=tabs.indexOf(document.activeElement);if(index<0)return;event.preventDefault();const next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].focus();tabs[next].click();});}

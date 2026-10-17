@@ -41,6 +41,14 @@ for (const file of walk(root).filter((item) => /\.(?:html|shtml)$/i.test(item)))
   const relativeFile = path.relative(root, file);
   const html = fs.readFileSync(file, 'utf8');
 
+  const ids = [...html.matchAll(/\sid=["']([^"']+)["']/g)].map(match => match[1]);
+  const seenIds = new Set();
+  for (const id of ids) {
+    if (seenIds.has(id)) failures.push(`${relativeFile}: duplicate ID ${id}`);
+    seenIds.add(id);
+  }
+  if (/href=["']#main["']/.test(html) && !seenIds.has('main')) failures.push(`${relativeFile}: skip link has no main target`);
+
   if (!/<html\b[^>]*\blang=["']ja["']/i.test(html)) failures.push(`${relativeFile}: missing lang="ja"`);
   if (!/<meta\b[^>]*name=["']viewport["']/i.test(html)) failures.push(`${relativeFile}: missing viewport metadata`);
   if (!/<title>[^<]+<\/title>/i.test(html)) failures.push(`${relativeFile}: missing title`);

@@ -1,29 +1,11 @@
-# Privacy policy redesign
+﻿# Privacy-policy implementation notes
 
-Source: https://www.fujisou-ainos.com/policy/ (retrieved 2026-09-18).
+The former page copied the original policy, including an unrelated section 05 and repeated contact paragraphs. These defects were corrected during the combined audit review on 17 October 2026.
 
-`policy/index.html` preserves the introduction, eight section headings, all
-paragraphs and list items, and contact wording from the original policy.
-The repeated contact explanation and the original disclosure/correction section
-are intentionally retained without editorial or legal rewriting.
+The current page describes inquiry/booking/data use, a contact route for disclosure/correction/stopping use, identity verification before processing requests, browser-tab draft recovery, and YouTube/external-service use. Removed membership-login and advertising-forwarding purposes that are not part of this website's implemented service. Shared business contact details are unchanged.
 
-One malformed closing tag (`場合/li>`) was repaired to `場合</li>`.
-The contact form points to the existing live `/contact/` page because the local
-contact page is still a placeholder. Home links return to the new local homepage.
+This is an implementation based on the current website, not legal certification. The business owner must confirm actual operations, delegation, request handling and policy scope before production release. No fee, turnaround time or unsupported guarantee was invented.
 
-The page uses shared font and spacing variables plus scoped `stylesheet/policy.css`.
-Following the user's typography correction, all privacy page text uses the shared
-`--serif` Mincho stack, matching the staff page, including body copy and links.
-No global navigation or tracking scripts were added. A homepage footer link and a
-sitemap entry make the policy discoverable.
+Reference: https://www.ppc.go.jp/personalinfo/faq/APPI_QA/
 
-The privacy page's photograph is from the Takaoka project
-“木の空間演出~太陽を迎えるおうち”:
-https://www.fujisou-ainos.com/gallery/post-12.shtml
-Original: https://www.fujisou-ainos.com/gallery/uploads/DSR_1394.jpg
-Local delivery files: `images/policy-sunlit-takaoka-600.jpg` and
-`images/policy-sunlit-takaoka-1200.jpg`, resized from the original with no
-generative retouching. This replaces the reused `natural-room.webp` photo.
-
-Validation: source text comparison for the introduction and all eight sections,
-CSS parsing, local asset checks, and browser checks at 1440, 768, 390, and 320px.
+The existing warm layout, serif typography and Takaoka project photograph remain. See [the implementation review](AUDIT_IMPLEMENTATION_2026-10-17.md) for checks and unresolved launch gates.

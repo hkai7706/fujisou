@@ -30,6 +30,10 @@ foreach my $key ('第1希望日', '第2希望日') {
         if (!$year || $month < 1 || $month > 12 || $day < 1 || $day > $days[$month] || $value lt $_ENV{'mfp_day'}) { $site_error = '希望日は本日以降の有効な日付を選択してください。'; }
     }
 }
+if ($_POST{'参加人数'} ne '' && $_POST{'参加人数'} !~ /\A(?:[1-8]名|9名以上)\z/) { $site_error = '参加人数をご確認ください。'; }
+foreach my $key ('第1希望時間', '第2希望時間') {
+    if ($_POST{$key} ne '' && $_POST{$key} !~ /\A(?:午前（9:00〜12:00）|午後（13:00〜16:00）|夕方（16:00〜18:00）)\z/) { $site_error = '希望時間帯をご確認ください。'; }
+}
 if ($site_error eq '') {
     use Digest::MD5 ();
     use Fcntl qw(:flock);

@@ -962,14 +962,15 @@ ErrorDocument 404 /404.html
   RewriteRule ^staffblog/post-3\.shtml$ staffblog/2019-07-18-%E4%B8%96%E7%95%8C%E5%85%B1%E9%80%9A%E3%81%AE%E5%AE%B6-post-3.shtml [R=301,L,NE]
   RewriteRule ^staffblog/post-4\.shtml$ staffblog/2019-07-16-%E8%87%AA%E7%94%B1%E3%81%A8%E4%BC%81%E7%94%BB-post-4.shtml [R=301,L,NE]
 
-  RewriteRule ^ainos-planning/?$ plans/hiraya/index.html [L]
-  RewriteRule ^ainos-2f-planning/?$ plans/two-story/index.html [L]
-  RewriteRule ^ainos-custom/?$ plans/custom/index.html [L]
-  RewriteRule ^cute/?$ plans/products/cute/index.html [L]
-  RewriteRule ^healthy/?$ plans/products/healthy/index.html [L]
-  RewriteRule ^hirayahouse/?$ plans/products/hirayahouse/index.html [L]
-  RewriteRule ^pretty/?$ plans/products/pretty/index.html [L]
-  RewriteRule ^simply/?$ plans/products/simply/index.html [L]
+  RewriteRule ^gallery/index_([23])\.shtml$ gallery/page-$1.html [R=301,L]
+  RewriteRule ^ainos-planning/?$ plans/hiraya/ [R=301,L]
+  RewriteRule ^ainos-2f-planning/?$ plans/two-story/ [R=301,L]
+  RewriteRule ^ainos-custom/?$ plans/custom/ [R=301,L]
+  RewriteRule ^cute/?$ plans/products/cute/ [R=301,L]
+  RewriteRule ^healthy/?$ plans/products/healthy/ [R=301,L]
+  RewriteRule ^hirayahouse/?$ plans/products/hirayahouse/ [R=301,L]
+  RewriteRule ^pretty/?$ plans/products/pretty/ [R=301,L]
+  RewriteRule ^simply/?$ plans/products/simply/ [R=301,L]
 </IfModule>
 
 <IfModule mod_deflate.c>

@@ -1266,3 +1266,23 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
 /* Hero headline: never split 無理 between lines. */
 #hybrid-hero-title{container-type:inline-size}
 #hybrid-hero-title>.heading-phrase{display:block!important;white-space:nowrap!important;font-size:min(1em,calc(100cqw / var(--phrase-length)))!important;line-height:inherit;letter-spacing:inherit}
+
+/* A stable message and inquiry action remain available while imagery changes. */
+.hybrid-hero::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,#181511a8,transparent 85%),linear-gradient(0deg,#18151180,transparent 80%)}
+.hybrid-hero>.hybrid-hero__copy--persistent{z-index:3;top:auto;right:auto;bottom:84px;left:clamp(28px,6vw,86px);width:min(610px,70%);color:#fff;text-shadow:0 2px 14px #18151180}
+.hybrid-hero__copy--persistent h1{font-size:clamp(32px,4.2vw,62px);line-height:1.4}
+.hybrid-hero__copy--persistent .hybrid-hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hybrid-hero__copy--persistent .hybrid-hero__actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 20px;background:#f5efe5;color:#493b31;border:1px solid #f5efe5;font-size:14px;text-shadow:none}
+.hybrid-hero__copy--persistent .hybrid-hero__actions a:last-child{background:#18151150;color:#fff}
+.hybrid-hero__copy--persistent .hybrid-hero__note{display:block;margin-top:12px;font-size:12px;line-height:1.8}
+.hybrid-hero .hybrid-hero__controls{right:24px;bottom:18px;transform:none;align-items:center}
+.hybrid-hero__controls button{min-width:44px;min-height:44px}
+.hybrid-hero__controls .hybrid-hero__pause{width:auto;padding:8px 14px;color:#fff;background:#181511a8;border:1px solid #fff9;font:inherit;font-size:12px}
+.hybrid-hero[data-paused] .hybrid-hero__panel>img,.hybrid-hero[data-paused] .hybrid-hero__controls button span{animation-play-state:paused}
+@media(max-width:819px){.hybrid-hero>.hybrid-hero__copy--persistent{left:20px;right:20px;width:auto;bottom:84px}.hybrid-hero__copy--persistent h1{font-size:clamp(27px,7.5vw,40px)}.hybrid-hero__copy--persistent>p{font-size:9px}.hybrid-hero__copy--persistent>span{font-size:13px;line-height:1.8;max-width:360px}.hybrid-hero__copy--persistent .hybrid-hero__actions{gap:8px;margin-top:16px}.hybrid-hero__copy--persistent .hybrid-hero__actions a{font-size:12px;padding:10px 12px}.hybrid-hero__copy--persistent .hybrid-hero__note{font-size:11px}.hybrid-hero::after{background:linear-gradient(0deg,#181511d9,transparent 100%)}}
+.hybrid-hero .hybrid-hero__scene .hybrid-hero__panel::after{background:transparent!important}
+@media(max-width:540px){
+ .hybrid-hero{display:flex;align-items:flex-end;height:auto!important;min-height:440px!important;padding:32px 20px 84px;box-sizing:border-box}
+ .hybrid-hero>.hybrid-hero__copy--persistent{position:relative;left:auto;right:auto;bottom:auto;width:100%;margin:0}
+}
+.home-selector .home-selector__note,.home-selector .home-selector__note a{color:#71665f}

@@ -10,10 +10,11 @@
   const mobile = window.matchMedia('(max-width: 1120px)');
   const hover = window.matchMedia('(hover: hover) and (pointer: fine)');
   let closeTimer;
+  const openedByHover=new WeakSet();
 
   const closeGroups = () => {
     clearTimeout(closeTimer);
-    groups.forEach(group => { group.open = false; });
+    groups.forEach(group => { group.open = false; openedByHover.delete(group); });
   };
   const closeMenu = (restoreFocus = false) => {
     header.removeAttribute('data-menu-open');
@@ -32,9 +33,13 @@
     }
   });
   groups.forEach(group => {
+    group.querySelector('summary').addEventListener('click',event=>{
+      if(event.detail>0&&!mobile.matches&&hover.matches&&group.open&&openedByHover.has(group)){event.preventDefault();openedByHover.delete(group);}
+    });
     group.addEventListener('pointerenter', event => {
       if (mobile.matches || !hover.matches || event.pointerType !== 'mouse') return;
       clearTimeout(closeTimer);
+      if(!group.open)openedByHover.add(group);
       groups.forEach(other => { other.open = other === group; });
     });
     group.addEventListener('pointerleave', () => {

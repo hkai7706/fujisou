@@ -1,0 +1,334 @@
+{
+  "images": {
+    "img/gallery/post32-02-blue-room.jpg": {
+      "file": "img/gallery/viewers/f7dcb889f3e9e7929da3-2000.webp",
+      "width": 2000,
+      "height": 1339,
+      "bytes": 263034
+    },
+    "img/gallery/post32-03-hall.jpg": {
+      "file": "img/gallery/viewers/60b61e0ce2dac551746a-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 231214
+    },
+    "img/gallery/post32-04-japanese-room.jpg": {
+      "file": "img/gallery/viewers/b7132869e8f962dbaf2b-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 238682
+    },
+    "img/gallery/post32-05-elegant-room.jpg": {
+      "file": "img/gallery/viewers/49eeff3f1bce3eb4b122-2000.webp",
+      "width": 2000,
+      "height": 1339,
+      "bytes": 251046
+    },
+    "img/gallery/post32-06-dining.jpg": {
+      "file": "img/gallery/viewers/91d9a030260749badf99-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 150762
+    },
+    "img/gallery/post32-07-stair-hall.jpg": {
+      "file": "img/gallery/viewers/5a620d98ca28547c191e-2000.webp",
+      "width": 2000,
+      "height": 1339,
+      "bytes": 238164
+    },
+    "img/gallery/post32-08-iron-railing.jpg": {
+      "file": "img/gallery/viewers/5490bafbbfdf67f79dea-2000.webp",
+      "width": 2000,
+      "height": 1339,
+      "bytes": 356872
+    },
+    "img/gallery/post32-09-bedroom.jpg": {
+      "file": "img/gallery/viewers/bfd743dab64623272956-2000.webp",
+      "width": 2000,
+      "height": 1339,
+      "bytes": 210128
+    },
+    "img/gallery/post32-10-open-ceiling.jpg": {
+      "file": "img/gallery/viewers/cba6d9f6376bf10a55d2-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 206262
+    },
+    "img/gallery/post32-11-wall-detail.jpg": {
+      "file": "img/gallery/viewers/39b0afa5b471553573c3-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 119710
+    },
+    "img/gallery/post32-12-door.jpg": {
+      "file": "img/gallery/viewers/5f62fe969cff66ca75f7-2000.webp",
+      "width": 2000,
+      "height": 1339,
+      "bytes": 215262
+    },
+    "img/gallery/post32-13-chandelier.jpg": {
+      "file": "img/gallery/viewers/7dac9a13ba3c8a036f23-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 296044
+    },
+    "img/gallery/post32-14-antique-light.jpg": {
+      "file": "img/gallery/viewers/968525aff429e8a2aef8-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 170508
+    },
+    "img/gallery/post31-02-theater.jpg": {
+      "file": "img/gallery/viewers/ad8291ff09e6ceaeb980-2000.webp",
+      "width": 2000,
+      "height": 1339,
+      "bytes": 361134
+    },
+    "img/gallery/post31-06-living.jpg": {
+      "file": "img/gallery/viewers/12e1f1b4a6514520b8ba-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 432660
+    },
+    "img/gallery/post31-07-theater-screen.jpg": {
+      "file": "img/gallery/viewers/770e4f93b3576e1444e1-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 629968
+    },
+    "img/gallery/post31-08-living-wide.jpg": {
+      "file": "img/gallery/viewers/1ec2aad425f33e3674fb-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 350214
+    },
+    "img/gallery/post31-10-night-porch.jpg": {
+      "file": "img/gallery/viewers/d4d182f30efaadb5798b-2000.webp",
+      "width": 1339,
+      "height": 2000,
+      "bytes": 375558
+    },
+    "img/gallery/projects/14cc02151eaee0ecaee3.jpg": {
+      "file": "img/gallery/viewers/dcccde0e88e387f3a9a5-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 319202
+    },
+    "img/gallery/projects/13c340b161b5c13a7f74.jpg": {
+      "file": "img/gallery/viewers/531bfea35afea826ea95-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 312636
+    },
+    "img/gallery/projects/046c9728c4f33301c3a0.jpg": {
+      "file": "img/gallery/viewers/a2424b8eb0a3b133f9c2-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 204430
+    },
+    "img/gallery/projects/4cb2f36ba9c89ff2238d.jpg": {
+      "file": "img/gallery/viewers/2b20183906de8043627d-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 396428
+    },
+    "img/gallery/projects/6205c34c0ba31aa1a5c0.jpg": {
+      "file": "img/gallery/viewers/cd55320df0c8014b6a6f-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 269932
+    },
+    "img/gallery/projects/ef7e369d2b739a022db0.jpg": {
+      "file": "img/gallery/viewers/3efd1673297c92292dbb-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 241656
+    },
+    "img/gallery/projects/ebf5258a2639b9bc5ba2.jpg": {
+      "file": "img/gallery/viewers/fee314687d21e161f8fb-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 273358
+    },
+    "img/gallery/projects/d7f76478d9fa664bd779.jpg": {
+      "file": "img/gallery/viewers/b986a38e90c19ecbbf68-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 234214
+    },
+    "img/gallery/projects/0f7b5ceaa8bc71d827e1.jpg": {
+      "file": "img/gallery/viewers/96e3cf6c4cb0d4cd33da-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 265072
+    },
+    "img/gallery/projects/3bbd4dd0e11d3ebe3f9f.jpg": {
+      "file": "img/gallery/viewers/263399df216768bc60d3-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 144148
+    },
+    "img/gallery/projects/8623841f4a32d86792b3.jpg": {
+      "file": "img/gallery/viewers/aca60a7ef4a989db807e-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 324346
+    },
+    "img/gallery/projects/c79dd3c6e738ccfeeee8.jpg": {
+      "file": "img/gallery/viewers/3187cb09e442be36651e-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 368748
+    },
+    "img/gallery/projects/fb74364eaf02f517f217.jpg": {
+      "file": "img/gallery/viewers/95b3d6e27fe249aa7e11-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 344538
+    },
+    "img/gallery/projects/fd5a27ab02827ed628d4.jpg": {
+      "file": "img/gallery/viewers/e04871837ea33299ba1d-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 340022
+    },
+    "img/gallery/projects/69e2cacb5f5bd72909e1.jpg": {
+      "file": "img/gallery/viewers/3dd9e129c7016b169f80-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 299114
+    },
+    "img/gallery/projects/a254ac7a13e4de8fea56.jpg": {
+      "file": "img/gallery/viewers/203bf27cf15b07fa1f1a-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 272118
+    },
+    "img/gallery/projects/f29217033b4a2529dec6.jpg": {
+      "file": "img/gallery/viewers/4c039bdf846a1ef91afd-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 353124
+    },
+    "img/gallery/projects/39483ce782fd2205ab31.jpg": {
+      "file": "img/gallery/viewers/4de9697f4b34f7a8d989-2000.webp",
+      "width": 2000,
+      "height": 1396,
+      "bytes": 373556
+    },
+    "img/gallery/projects/db159a2e918f8f74e325.jpg": {
+      "file": "img/gallery/viewers/4a3232ae11a213311712-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 326144
+    },
+    "img/gallery/projects/ec4c5ad0d6745862e5e6.jpg": {
+      "file": "img/gallery/viewers/38394c3affc2aa545dd2-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 569320
+    },
+    "img/gallery/projects/e50d434c5e96d74a0c63.jpg": {
+      "file": "img/gallery/viewers/520f96f204a6208fa932-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 216472
+    },
+    "img/gallery/projects/519a996c48e2084993c6.jpg": {
+      "file": "img/gallery/viewers/6fcb5ee2be68b5df7edd-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 280552
+    },
+    "img/gallery/projects/14d25ad4b4129fffe213.jpg": {
+      "file": "img/gallery/viewers/78261a69611c4853511e-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 253236
+    },
+    "img/gallery/projects/fdc2822d9a3421dd6645.jpg": {
+      "file": "img/gallery/viewers/e68573e8aa1203f19a5c-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 271402
+    },
+    "img/gallery/projects/82c6c6f7f52b2d7ae782.jpg": {
+      "file": "img/gallery/viewers/a9dff3515bc926b86a2b-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 307230
+    },
+    "img/gallery/projects/5e902604ed0cb16776b2.jpg": {
+      "file": "img/gallery/viewers/721c74c3bbd110522cc5-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 324304
+    },
+    "img/gallery/projects/aaf95bdaa5409a88f2fc.jpg": {
+      "file": "img/gallery/viewers/17cb377434c932646d7b-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 298134
+    },
+    "img/gallery/projects/97075c8e894d918ab57b.jpg": {
+      "file": "img/gallery/viewers/44bd5e33bbf00fc2c1f6-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 452346
+    },
+    "img/gallery/projects/dbdf09b9fa7322e7f59a.jpg": {
+      "file": "img/gallery/viewers/b1aef51c43dd0087e6f4-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 289088
+    },
+    "img/gallery/projects/d6c29581235dea02aa55.jpg": {
+      "file": "img/gallery/viewers/ca475f1f8fd3ebdf9885-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 241004
+    },
+    "img/gallery/projects/6fc0f297d6e63c1a91d4.jpg": {
+      "file": "img/gallery/viewers/d776503303944111beef-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 292390
+    },
+    "img/gallery/projects/0041ada4c0fa356484a8.jpg": {
+      "file": "img/gallery/viewers/73227dbfe29a3713ce89-2000.webp",
+      "width": 2000,
+      "height": 1527,
+      "bytes": 314982
+    },
+    "img/gallery/projects/202e1d282baf6b4ed701.jpg": {
+      "file": "img/gallery/viewers/352ae2cef73fb7f91655-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 354690
+    },
+    "img/gallery/projects/257f81e62c38a1d89cd0.jpg": {
+      "file": "img/gallery/viewers/ea9a098e83a2499e247a-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 50722
+    },
+    "img/gallery/projects/2f04f21c0e243269cbf7.jpg": {
+      "file": "img/gallery/viewers/48758ed3142bdfc5dab4-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 80860
+    },
+    "img/gallery/projects/419e2905c0edf41b6037.jpg": {
+      "file": "img/gallery/viewers/6520f02ad02c32105e17-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 271350
+    },
+    "img/gallery/projects/2b5daf353bac7c6d67ea.jpg": {
+      "file": "img/gallery/viewers/9dbb80f26b071077bb9d-2000.webp",
+      "width": 2000,
+      "height": 1328,
+      "bytes": 476074
+    }
+  }
+}

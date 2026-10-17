@@ -1,0 +1,124 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>住宅ローン返済シミュレーション｜土地・新築の資金計画｜フジ創アイノス</title><meta name="description" content="土地購入と新築工事の費用、自己資金、金利、返済期間から住宅ローンの毎月返済額と総返済額の目安を試算できます。"><link rel="stylesheet" href="../stylesheet/fujisou-ainos.css?v=334b6f9158">  <link rel="stylesheet" href="../stylesheet/nav-slot.css?v=467c553ead">
+  <link rel="stylesheet" href="../stylesheet/breadcrumbs.css?v=9ded9c5593">
+  <link rel="stylesheet" href="../stylesheet/page-start.css?v=749818468d">
+<link rel="stylesheet" href="../stylesheet/contact.css?v=7944bb118c"><link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../favicon.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../apple-touch-icon.png"><link rel="stylesheet" href="../stylesheet/loan-simulation.css?v=00acaa6ecd"><script type="module" src="../script/loan-simulation.mjs?v=5abb5f8e8d"></script><link rel="stylesheet" href="../stylesheet/shared-chrome.min.css?v=13c78fbf3e"><link rel="stylesheet" href="../stylesheet/inquiry-journey.css?v=8b771abdaf"><script src="../script/shared-chrome.js?v=fd14ae8842" defer></script><script src="../script/inquiry-tracking.js?v=b8a84b86d9" defer></script><link rel="canonical" href="https://www.fujisou-ainos.com/loan-simulation/"><meta property="og:type" content="website"><meta property="og:title" content="住宅ローン返済シミュレーション｜土地・新築の資金計画｜フジ創アイノス"><meta property="og:description" content="土地購入と新築工事の費用、自己資金、金利、返済期間から住宅ローンの毎月返済額と総返済額の目安を試算できます。"><meta property="og:url" content="https://www.fujisou-ainos.com/loan-simulation/"><meta property="og:image" content="https://www.fujisou-ainos.com/img/home/slide1-1440.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="住宅ローン返済シミュレーション｜土地・新築の資金計画｜フジ創アイノス"><meta name="twitter:description" content="土地購入と新築工事の費用、自己資金、金利、返済期間から住宅ローンの毎月返済額と総返済額の目安を試算できます。"><meta name="twitter:image" content="https://www.fujisou-ainos.com/img/home/slide1-1440.webp"><meta name="robots" content="noindex,follow" data-preview-robots></head><body>
+
+
+<!-- Shared SSI header with its CSS and JavaScript included in this file. -->
+<!-- Shared SSI header: CSS/JS included; assets resolve from ../img/ at the domain root. -->
+
+<header class="shared-header" data-shared-header>
+  <a class="shared-header__skip" href="#main">本文へ移動</a>
+  <div class="shared-header__inner">
+    <div class="shared-header__identity">
+    <a class="shared-header__brand" href="../" aria-label="フジ創アイノス ホーム">
+      <img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
+    </a>
+    <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
+    </div>
+    <button class="shared-header__toggle" type="button" aria-expanded="false" aria-controls="shared-site-navigation" aria-label="メニューを開く" hidden>
+      <span class="shared-header__toggle-lines" aria-hidden="true"></span>
+    </button>
+    <div class="shared-header__actions"><a class="shared-header__contact" href="../contact/#mailformpro">お問い合わせ</a><a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a></div>
+
+    <nav class="shared-header__nav" id="shared-site-navigation" aria-label="メインナビゲーション">
+      <details class="shared-header__group">
+        <summary>会社紹介</summary>
+        <ul class="shared-header__dropdown">
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
+        </ul>
+      </details>
+      <details class="shared-header__group">
+        <summary>家造り情報</summary>
+        <ul class="shared-header__dropdown">
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../videos/">動画</a></li>
+
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li>
+        </ul>
+      </details>
+      <details class="shared-header__group">
+        <summary>施工プラン</summary>
+        <ul class="shared-header__dropdown">
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
+          <li><a href="../loan-simulation/">返済シミュレーション</a></li>
+        </ul>
+      </details>
+      <div class="shared-header__stack">
+        <a class="shared-header__link" href="../eventinfo/">イベント情報</a>
+        <a class="shared-header__link" href="../staffblog/">社長のブログ</a>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+
+
+<main id="main" class="loan-page"><nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">ホーム</a></li><li aria-current="page">住宅ローン返済シミュレーション</li></ol></nav><header class="loan-intro"><p>家づくりの資金計画</p><h1>住宅ローン返済シミュレーション</h1><p>土地・建物の費用と借入条件から、毎月の返済額を試算します。<br>土地をお持ちの方は「建物のみ」をお選びください。</p></header><div class="loan-layout"><form class="loan-form" id="loan-calculator" data-loan-form autocomplete="off"><fieldset><legend>費用と自己資金</legend><div class="loan-field"><label for="loan-purpose">試算する内容</label><select id="loan-purpose" name="purpose"><option value="land-build">土地＋建物</option><option value="build">建物のみ（土地をお持ちの方）</option><option value="land">土地のみ</option></select></div><div class="loan-field" data-loan-field="land"><label for="loan-land">土地代</label><div class="loan-input"><input id="loan-land" name="land" type="number" min="0" max="100000" step="0.01" value="0" inputmode="decimal" required aria-describedby="loan-land-hint"><span>万円</span></div><small id="loan-land-hint">土地の購入価格。</small></div><div class="loan-field" data-loan-field="building"><label for="loan-building">建物・工事費</label><div class="loan-input"><input id="loan-building" name="building" type="number" min="0" max="100000" step="0.01" value="0" inputmode="decimal" required aria-describedby="loan-building-hint"><span>万円</span></div><small id="loan-building-hint">税込みの見積額。</small></div><div class="loan-field" data-loan-field="expenses"><label for="loan-expenses">付帯工事・諸費用</label><div class="loan-input"><input id="loan-expenses" name="expenses" type="number" min="0" max="100000" step="0.01" value="0" inputmode="decimal" required aria-describedby="loan-expenses-hint"><span>万円</span></div><small id="loan-expenses-hint">外構・給排水・登記・融資費用など。建物見積と重複しないように入力してください。</small></div><div class="loan-field" data-loan-field="deposit"><label for="loan-deposit">自己資金（頭金）</label><div class="loan-input"><input id="loan-deposit" name="deposit" type="number" min="0" max="100000" step="0.01" value="0" inputmode="decimal" required aria-describedby="loan-deposit-hint"><span>万円</span></div><small id="loan-deposit-hint">費用の合計から差し引く金額。</small></div></fieldset><fieldset><legend>借入条件</legend><div class="loan-field"><label for="loan-rate">借入金利（年利）</label><div class="loan-input"><input id="loan-rate" name="rate" type="number" min="0" max="20" step="0.001" placeholder="例：1.5" required inputmode="decimal" aria-describedby="loan-rate-hint"><span>％</span></div><small id="loan-rate-hint">金融機関から提示された金利などを入力してください。表示例は現在の適用金利ではありません。</small></div><div class="loan-field"><label for="loan-years">返済期間</label><div class="loan-input"><input id="loan-years" name="years" type="number" min="1" max="50" step="1" value="35" required inputmode="numeric"><span>年</span></div><small>試算は1〜50年に対応します。実際に選べる期間は年齢・商品・審査等によります。</small></div></fieldset><p class="loan-error" data-loan-error role="alert" tabindex="-1"></p><div class="loan-actions"><button type="submit" disabled data-loan-submit>返済額を試算する</button><button type="reset">リセット</button></div><noscript><p>試算にはJavaScriptが必要です。<a href="https://www.zenginkyo.or.jp/article/simulation/loan-new/">全国銀行協会のシミュレーション</a>もご利用いただけます。</p></noscript></form><div class="loan-summary"><div class="loan-result-empty" data-loan-empty><h2>試算結果</h2><p>費用と借入条件を入力し、<br>「返済額を試算する」を押してください。</p><dl><dt>借入額の計算</dt><dd>土地代＋建物・工事費＋諸費用<br>− 自己資金</dd></dl></div><section class="loan-result" data-loan-result hidden tabindex="-1" aria-labelledby="loan-result-title"><h2 id="loan-result-title">返済額の目安</h2><p class="loan-assumptions" data-loan-assumptions></p><div class="loan-monthly"><p>毎月の返済額</p><strong data-loan-value="monthly"></strong> 円</div><dl><div><dt>費用の合計</dt><dd><span data-loan-value="budget"></span> 円</dd></div><div><dt>自己資金</dt><dd><span data-loan-value="deposit"></span> 円</dd></div><div><dt>借入額の目安</dt><dd><span data-loan-value="principal"></span> 円</dd></div><div><dt>年間返済額</dt><dd><span data-loan-value="annual"></span> 円</dd></div><div><dt>利息の合計</dt><dd><span data-loan-value="interest"></span> 円</dd></div><div><dt>借入の総返済額</dt><dd><span data-loan-value="total"></span> 円</dd></div><div><dt>自己資金＋総返済額</dt><dd><span data-loan-value="outlay"></span> 円</dd></div></dl><p>端数処理などにより、金融機関の試算と金額が異なる場合があります。</p><a href="../contact/?topic=consultation#mailformpro">資金計画について相談する →</a></section></div></div><section class="loan-explanation"><p class="loan-method">元利均等返済 ／ 全期間金利一定 ／ ボーナス返済なし</p><details><summary>計算条件・含まれない費用について</summary><ul><li>元利均等返済・毎月返済・ボーナス返済なしで計算します。入力した金利が全期間変わらない仮定です。</li><li>変動金利の将来の変化、金利優遇、住宅ローン控除、繰上返済は反映しません。</li><li>自己資金・借入額以外に必要な費用は、金額を入力した範囲だけを反映します。保険料、税金、修繕費などが自動で加算されることはありません。</li><li>土地先行融資・つなぎ融資の利息や手数料、工事中の支払いは別途確認が必要です。土地のみの購入や諸費用を借入に含められるかも、金融機関によって異なります。</li><li>実際の返済額・借入可能額・融資条件を保証するものではありません。最新の金利・商品条件は金融機関でご確認ください。</li></ul><p>入力した金額は、この画面の計算だけに使用します。保存やお問い合わせフォームへの自動転記は行いません。</p><p><a href="https://www.zenginkyo.or.jp/article/simulation/loan-new/" target="_blank" rel="noopener">全国銀行協会の住宅ローンシミュレーション ↗</a><br><a href="../cost/">家づくりの総予算・価格例を見る →</a></p></details></section></main>
+
+<!-- Shared SSI footer with its CSS and JavaScript included in this file. -->
+<!-- Shared SSI footer: CSS/JS included; assets resolve from ../img/ at the domain root. -->
+
+<footer class="shared-footer" aria-label="サイトフッター">
+  <div class="shared-footer__inner">
+    <div class="shared-footer__top">
+      <div class="shared-footer__brand">
+        <a href="../" aria-label="フジ創アイノス ホーム"><img src="../img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" loading="lazy" decoding="async"></a>
+        <p class="shared-footer__company">有限会社フジ創 / 一級建築士事務所</p>
+        <p class="shared-footer__area"><strong>対応エリア</strong><span>高岡市、富山市、射水市、砺波市、小矢部市、南砺市、滑川市、魚津市</span></p>
+      </div>
+      <div class="shared-footer__contact">
+        <div><a class="shared-footer__phone" href="tel:08002002661">0800-200-2661</a><p>受付 9:00–18:00 / 水曜・木曜定休</p></div>
+        <a class="shared-footer__inquiry" href="../contact/">お問い合わせ<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="shared-footer__grid">
+      <div class="shared-footer__offices">
+        <div><p>本社・ショールーム</p><address>〒933-0062<br>富山県高岡市江尻846-1</address></div>
+        <div><p>富山事務所</p><address>〒939-8006<br>富山県富山市山室256-4 SKビル 2-A</address></div>
+        <a href="mailto:info@ainos.biz">info@ainos.biz</a>
+      </div>
+      <nav class="shared-footer__nav" aria-label="フッターナビゲーション">
+        <div><h2>会社紹介</h2><ul>
+          <li><a href="../concept/">私たちの家造り</a></li>
+          <li><a href="../staff/">スタッフ紹介</a></li>
+          <li><a href="../policy/">プライバシーポリシー</a></li>
+        </ul></div>
+        <div><h2>家造り情報</h2><ul>
+          <li><a href="../gallery/">施工事例</a></li>
+          <li><a href="../videos/">動画</a></li>
+          <li><a href="../land-info/">土地情報</a></li>
+          <li><a href="../shikkui/">漆喰とは</a></li><li><a href="../performance/">構造・断熱・仕様</a></li><li><a href="../cost/">価格と総予算</a></li><li><a href="../aftercare/">保証・点検</a></li>
+        </ul></div>
+        <div><h2>施工プラン</h2><ul>
+          <li><a href="../plans/hiraya/">平屋住宅</a></li>
+          <li><a href="../plans/two-story/">２階建て住宅</a></li>
+          <li><a href="../plans/custom/">オーダーメイド住宅</a></li>
+          <li><a href="../loan-simulation/">返済シミュレーション</a></li>
+        </ul></div>
+        <div class="shared-footer__standalone">
+          <a href="../eventinfo/">イベント情報</a>
+          <a href="../staffblog/">社長のブログ</a>
+        </div>
+      </nav>
+    </div>
+    <div class="shared-footer__bottom">
+      <div class="shared-footer__legal"><a href="../policy/">プライバシーポリシー</a></div>
+      <nav class="shared-footer__social" aria-label="公式SNS">
+        <a href="https://www.instagram.com/fujisouainos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@hajime-ainosu/shorts" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer">LINE</a>
+      </nav>
+      <small class="shared-footer__copyright">&copy; FUJISOU AINOS</small>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../script/fujisou-ainos.js?v=b216012977" defer></script></body></html>

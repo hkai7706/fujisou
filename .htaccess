@@ -1,6 +1,7 @@
 # Fujisou Ainos production settings for Apache / Lolipop
 DirectoryIndex index.html index.shtml
 AddDefaultCharset UTF-8
+AddType text/javascript .mjs
 <IfModule mod_include.c>
   Options +Includes
   AddOutputFilter INCLUDES .html .shtml

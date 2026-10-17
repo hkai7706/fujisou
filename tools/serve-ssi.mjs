@@ -4,7 +4,7 @@ import http from 'node:http';
 
 const root = path.resolve(import.meta.dirname, '..');
 const port = Number(process.env.PORT || 5501);
-const mime = { '.html': 'text/html; charset=utf-8', '.shtml': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.pdf': 'application/pdf' };
+const mime = { '.html': 'text/html; charset=utf-8', '.shtml': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.pdf': 'application/pdf' };
 function resolve(url) {
   const file = path.resolve(root, '.' + url);
   if (file !== root && !file.startsWith(root + path.sep)) throw new Error('Invalid path');

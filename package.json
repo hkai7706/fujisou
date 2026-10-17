@@ -4,6 +4,7 @@
   "scripts": {
     "preview": "node tools/serve-ssi.mjs",
     "blog": "node tools/build-blog.mjs",
+    "videos": "node tools/build-videos.mjs",
     "prepare": "node tools/prepare-html.mjs",
     "optimize": "node tools/optimize-assets.mjs",
     "sitemap": "node tools/generate-sitemap.mjs",

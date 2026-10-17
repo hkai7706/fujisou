@@ -32,3 +32,7 @@ Both commands recreate ignored `dist/`. Upload its CONTENTS, including hidden `.
 See [docs/INQUIRY_UPDATE.md](docs/INQUIRY_UPDATE.md) for source evidence, tests, unresolved business details and the precise upload/live email checklist. [docs/CONTACT_FORM.md](docs/CONTACT_FORM.md) describes form settings. No production upload or actual inbox-delivery verification has been performed for this update.
 
 For lossless image optimization use `npm.cmd run optimize`. It consolidates identical files and uses smaller lossless encodings after checking decoded pixels. Responsive event-poster variants retain the full-size original. See [DEPLOY_SSI.md](DEPLOY_SSI.md) for optional SSI deployment details; SSI is not required by the current embedded pages.
+
+## Video section
+
+`videos/` is linked from 家造り情報 and the shared footer. Add confirmed YouTube records to `videos/posts.json`, then run `npm.cmd run videos`; deployment builds also generate the listing and individual watch pages. See [docs/VIDEOS.md](docs/VIDEOS.md) for record fields and maintenance.

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="stylesheet/shared-chrome.min.css?v=13c78fbf3e"><script src="script/shared-chrome.js?v=a99515b127" defer></script><link rel="stylesheet" href="./stylesheet/inquiry-journey.css?v=5ab5527530"><script src="./script/inquiry-tracking.js?v=b8a84b86d9" defer></script><header class="shared-header" data-shared-header>
+<link rel="stylesheet" href="./stylesheet/shared-chrome.min.css?v=13c78fbf3e"><link rel="stylesheet" href="./stylesheet/inquiry-journey.css?v=5ab5527530"><script src="./script/shared-chrome.js?v=a99515b127" defer></script><script src="./script/inquiry-tracking.js?v=b8a84b86d9" defer></script><header class="shared-header" data-shared-header>
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
@@ -24,6 +24,7 @@
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
           <li><a href="./gallery/">施工事例</a></li>
+          <li><a href="./videos/">動画</a></li>
 
           <li><a href="./land-info/">土地情報</a></li>
           <li><a href="./shikkui/">漆喰とは</a></li>

@@ -1,3 +1,4 @@
+param([switch]$Production, [switch]$IncludeMailform)
 $ErrorActionPreference = 'Stop'
 $projectRoot = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
 $destinationRoot = [IO.Path]::GetFullPath((Join-Path $projectRoot 'dist'))
@@ -8,7 +9,7 @@ if (-not $destinationRoot.StartsWith($projectRoot + [IO.Path]::DirectorySeparato
 # Reapply shared-code and byte-identical image optimizations after page generators.
 Push-Location -LiteralPath $projectRoot
 try {
-  foreach ($optimization in 'optimize-shared-chrome.mjs', 'deduplicate-image-references.mjs', 'build-home-css.mjs', 'normalize-folder-links.mjs', 'add-favicons.mjs', 'version-public-assets.mjs') {
+  foreach ($optimization in 'review-health-copy.mjs', 'optimize-shared-chrome.mjs', 'deduplicate-image-references.mjs', 'build-home-css.mjs', 'normalize-folder-links.mjs', 'add-favicons.mjs', 'prepare-seo.mjs', 'generate-sitemap.mjs', 'version-public-assets.mjs') {
     & node (Join-Path $PSScriptRoot $optimization)
     if ($LASTEXITCODE -ne 0) { throw "Optimization failed: $optimization" }
   }
@@ -74,6 +75,34 @@ foreach ($file in $publicFiles) {
 }
 
 foreach ($asset in $assetReferences) { Copy-PublicFile $asset }
+
+if ($IncludeMailform) {
+  & node (Join-Path $PSScriptRoot 'harden-contact-mailform.mjs')
+  if ($LASTEXITCODE -ne 0) { throw 'Mailform runtime is missing or could not be prepared.' }
+  foreach ($folder in 'mailformpro', 'mfp.statics') {
+    $runtime = Join-Path $projectRoot "contact/$folder"
+    if (-not (Test-Path -LiteralPath $runtime)) { throw "Missing contact/$folder" }
+    foreach ($file in Get-ChildItem -LiteralPath $runtime -Recurse -File -Force) {
+      # Never package customer submissions, logs, sessions, or generated JS caches.
+      $runtimeRelative = $file.FullName.Substring($runtime.Length).TrimStart('\', '/').Replace('\', '/')
+      if ($folder -eq 'mailformpro' -and $runtimeRelative.StartsWith('data/') -and $file.Name -ne '.htaccess') { continue }
+      Copy-PublicFile $file.FullName
+    }
+    if ($folder -eq 'mailformpro') {
+      foreach ($directory in Get-ChildItem -LiteralPath (Join-Path $runtime 'data') -Directory -Recurse) {
+        $relative = $directory.FullName.Substring($projectRoot.Length).TrimStart('\', '/')
+        [void][IO.Directory]::CreateDirectory((Join-Path $destinationRoot $relative))
+      }
+      [IO.File]::WriteAllText((Join-Path $destinationRoot 'contact/mailformpro/data/dat.mailformpro.cgi'), '0,0,0,0', [Text.UTF8Encoding]::new($false))
+    }
+  }
+}
+if ($Production) {
+  & node (Join-Path $PSScriptRoot 'prepare-seo.mjs') $destinationRoot --production
+} else {
+  & node (Join-Path $PSScriptRoot 'prepare-seo.mjs') $destinationRoot
+}
+if ($LASTEXITCODE -ne 0) { throw 'Deployment indexing preparation failed.' }
 
 $files = Get-ChildItem -LiteralPath $destinationRoot -Recurse -File
 [PSCustomObject]@{

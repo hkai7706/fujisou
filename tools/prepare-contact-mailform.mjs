@@ -38,3 +38,4 @@ config = config.replace(/push @mailto,'[^']+';/, "push @mailto,'hkai7706@gmail.c
   .replace("$config{'mailfrom'} = $mailto[0];", "$config{'mailfrom'} = 'info@ainos.biz';");
 fs.writeFileSync(configPath, config);
 console.log('Prepared local Mailform Pro runtime with fresh data; recipient hkai7706@gmail.com, sender info@ainos.biz.');
+await import('./harden-contact-mailform.mjs');

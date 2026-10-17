@@ -9,6 +9,7 @@
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
     </div>
+    <div class="shared-header__actions"><a class="shared-header__contact" href="/contact/#mailformpro">お問い合わせ</a><a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a></div>
     <button class="shared-header__toggle" type="button" aria-expanded="false" aria-controls="shared-site-navigation" aria-label="メニューを開く" hidden>
       <span class="shared-header__toggle-lines" aria-hidden="true"></span>
     </button>
@@ -41,9 +42,6 @@
       <div class="shared-header__stack">
         <a class="shared-header__link" href="/eventinfo/">イベント情報</a>
         <a class="shared-header__link" href="/staffblog/">社長のブログ</a>
-      </div>
-      <div class="shared-header__utility">
-        <a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a>
       </div>
 
     </nav>

@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
+import {renderProjectFacts} from './project-facts.mjs';
 const projects=JSON.parse(fs.readFileSync('gallery/projects.json','utf8'));
 const listingTemplate=fs.readFileSync('gallery/index.html','utf8');
 const detailTemplate=fs.readFileSync('gallery/post-32.shtml','utf8');
@@ -63,6 +64,7 @@ for(const [index,p]of projects.entries()){
   const main=`<main id="main" class="gallery-project"><nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li> / <a href="index.html">施工事例</a></li><li> / <span aria-current="page">${esc(p.title)}</span></li></ol></nav>
   <section class="project-masthead"><p>${esc(p.area)} / 施工事例</p><h1>${headline(p)}</h1><a href="#project-photos">住まいの写真を見る <span aria-hidden="true">↓</span></a></section>
   <section class="project-cover-photo"><figure>${photoLink(cover,photoCaption(cover,p),{eager:true,cover:true})}${cover.caption?`<figcaption>${esc(cover.caption)}</figcaption>`:''}</figure></section>
+  ${renderProjectFacts(p)}
   ${originalCopy?`<section class="project-original-copy" aria-label="この住まいについて">${originalCopy}</section>`:''}
   <div class="project-photo-story" id="project-photos" aria-label="${esc(p.title)}の写真一覧">${p.photos.slice(1).map((photo,i)=>{const portrait=photo.height>photo.width,wide=!portrait&&i%5===4;const caption=photoCaption(photo,p);return `<figure class="${portrait?'project-photo--portrait':wide?'project-photo--wide':''}">${photoLink(photo,caption,{cover:wide})}${photo.caption?`<figcaption>${esc(photo.caption)}</figcaption>`:''}<span class="project-photo-hint">写真を大きく見る <span aria-hidden="true">↗</span></span></figure>`;}).join('')}</div>
   <section class="project-neighbours"><h2>ほかの住まいも見る</h2><nav aria-label="前後の施工事例">${neighbours.map(n=>`<a href="${esc(n.file)}">${picture(n.thumbnail,n.title,{thumbnail:true})}<div><small>${esc(n.area)}</small><p>${esc(n.title)} <span aria-hidden="true">→</span></p></div></a>`).join('')}</nav></section>

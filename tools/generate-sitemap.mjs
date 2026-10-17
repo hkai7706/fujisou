@@ -2,7 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'include']);
+const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'include', 'mailformpro', 'mfp.statics', 'iplogs']);
+const articles = new Set(JSON.parse(fs.readFileSync(path.join(root, 'docs/sitemap-articles.json'), 'utf8')));
+const events = JSON.parse(fs.readFileSync(path.join(root, 'eventinfo/posts.json'), 'utf8'));
+const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const activeEventFiles = new Set(events.filter(post => (post.existing && (post.file!=='open-house/index.html'||today<='2026-10-18'))||post.legacyFile==='post-16.shtml').map(post => post.file.replaceAll('\\','/')));
 
 function walk(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -16,6 +20,10 @@ const urls = new Set();
 for (const file of walk(root).filter((item) => /\.(?:html|shtml)$/i.test(item))) {
   if (['404.html', 'header.shtml', 'footer.shtml'].includes(path.basename(file))) continue;
   const html = fs.readFileSync(file, 'utf8');
+  const relative = path.relative(root,file).replaceAll('\\','/');
+  if (html.includes('data-archive-robots')) continue;
+  if (relative.startsWith('staffblog/') && relative !== 'staffblog/index.html' && !articles.has(relative.slice('staffblog/'.length))) continue;
+  if (relative.startsWith('eventinfo/') && relative !== 'eventinfo/index.html' && !activeEventFiles.has(relative.slice('eventinfo/'.length))) continue;
   const canonical = html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)/i)?.[1]
     ?? html.match(/<link\b[^>]*href=["']([^"']+)["'][^>]*rel=["']canonical["']/i)?.[1];
   if (canonical) urls.add(canonical);

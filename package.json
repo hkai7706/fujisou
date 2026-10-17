@@ -8,7 +8,9 @@
     "optimize": "node tools/optimize-assets.mjs",
     "sitemap": "node tools/generate-sitemap.mjs",
     "check": "node tools/site-check.mjs",
-    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1"
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1",
+    "build:preview": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -IncludeMailform",
+    "build:production": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -Production -IncludeMailform"
   },
   "devDependencies": {
     "lighthouse": "^13.5.0",

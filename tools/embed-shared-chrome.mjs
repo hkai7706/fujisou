@@ -29,8 +29,10 @@ function walk(directory) {
     html = html.replace(/<header\b[^>]*data-shared-header[^>]*>[\s\S]*?<\/header>/g, relative(header))
       .replace(/<footer\b[^>]*class="shared-footer"[^>]*>[\s\S]*?<\/footer>/g, relative(footer));
     html = html.replace(/<link\b[^>]*href="[^"\n]*shared-chrome\.min\.css[^"\n]*"[^>]*>/g, '')
+      .replace(/<link\b[^>]*href="[^"\n]*inquiry-journey\.css[^"\n]*"[^>]*>/g, '')
+      .replace(/<script\b[^>]*src="[^"\n]*inquiry-tracking\.js[^"\n]*"[^>]*><\/script>/g, '')
       .replace(/<script\b[^>]*src="[^"\n]*shared-chrome\.js[^"\n]*"[^>]*><\/script>/g, '');
-    const assets = `<link rel="stylesheet" href="${prefix}stylesheet/shared-chrome.min.css?v=${hash('stylesheet/shared-chrome.min.css')}"><script src="${prefix}script/shared-chrome.js?v=${hash('script/shared-chrome.js')}" defer></script>`;
+    const assets = `<link rel="stylesheet" href="${prefix}stylesheet/shared-chrome.min.css?v=${hash('stylesheet/shared-chrome.min.css')}"><link rel="stylesheet" href="${prefix}stylesheet/inquiry-journey.css?v=${hash('stylesheet/inquiry-journey.css')}"><script src="${prefix}script/shared-chrome.js?v=${hash('script/shared-chrome.js')}" defer></script><script src="${prefix}script/inquiry-tracking.js?v=${hash('script/inquiry-tracking.js')}" defer></script>`;
     html = html.includes('</head>') ? html.replace('</head>', assets + '</head>') : assets + html;
     if (html !== original) { fs.writeFileSync(file, html); count++; }
   }

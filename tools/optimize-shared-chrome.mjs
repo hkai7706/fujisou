@@ -19,6 +19,8 @@ let saved=0,count=0;
 for(const file of pages){const original=fs.readFileSync(file,'utf8');if(!original.includes('data-shared-header'))continue;let html=original.replace(/<(style|script)>\s*([\s\S]*?)<\/\1>/g,(all,tag,body)=>/shared-header|shared-footer/.test(body)?'':all);
 html=html.replace(/<link[^>]*href="[^\"]*shared-chrome\.min\.css[^\"]*"[^>]*>/g,'').replace(/<script[^>]*src="[^\"]*shared-chrome\.js[^\"]*"[^>]*><\/script>/g,'');
 const root=path.relative(path.dirname(file),'.').replaceAll('\\','/');const prefix=root?root+'/':'';
-html=html.replace('</head>',`<link rel="stylesheet" href="${prefix}stylesheet/shared-chrome.min.css?v=${version('stylesheet/shared-chrome.min.css')}"><script src="${prefix}script/shared-chrome.js?v=${version('script/shared-chrome.js')}" defer></script></head>`);
+const sharedAssets=`<link rel="stylesheet" href="${prefix}stylesheet/shared-chrome.min.css?v=${version('stylesheet/shared-chrome.min.css')}"><script src="${prefix}script/shared-chrome.js?v=${version('script/shared-chrome.js')}" defer></script>`;
+const journey=/<link[^>]*href="[^\"]*inquiry-journey\.css[^\"]*"[^>]*>/;
+html=journey.test(html)?html.replace(journey,match=>sharedAssets+match):html.replace('</head>',sharedAssets+'</head>');
 if(html!==original){saved+=Buffer.byteLength(original)-Buffer.byteLength(html);fs.writeFileSync(file,html);count++;}}
 console.log(`Shared chrome: ${count} pages, ${(saved/1024/1024).toFixed(2)} MiB removed from repeated HTML.`);

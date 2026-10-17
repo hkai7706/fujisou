@@ -34,3 +34,7 @@ The supplied official Ainos video is _UZrtXhPSKQ. Its title and thumbnail were v
 Responsive checks passed at 390, 768, 1440 and 1920px. Private fixtures checked filtering, search, newest/oldest ordering, 12-per-page pagination and HTML escaping. The embedded player loads only after a click. Fullscreen and an external YouTube link are provided.
 
 YouTube watch metadata says playableInEmbed=true. Both player modes returned auth/unavailable on the local test origin, so playback was subsequently checked on the published GitHub Pages watch page. That live check passed: YouTube reported isPlayable=true, player state 1 (playing), no error, and playback advanced to 0:02. Both the listing and watch URLs returned HTTP 200, and preview noindex remained present. The local-origin error did not occur on the published origin.
+
+## Homepage feature
+
+The default video build also refreshes the homepage's compact video section from the newest record. `tools/home-videos.mjs` maintains one marked section and its dedicated stylesheet link. Its thumbnail links to the watch page; 「動画一覧を見る」 links to the archive. No player iframe is loaded on the homepage. Fixture builds with a temporary output directory do not modify the homepage. If the video records become empty, the feature is removed.

@@ -8,7 +8,7 @@ const production=process.argv.includes('--production');
 const skip=new Set(['.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','include','mailformpro','mfp.statics','iplogs']);
 const events=JSON.parse(fs.readFileSync(path.join(project,'eventinfo/posts.json'),'utf8'));
 const archivedEvents=new Set(events.filter(post=>!post.existing&&post.legacyFile!=='post-16.shtml').map(post=>'eventinfo/'+post.file));
-const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
+const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const decode=value=>value.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>');
 let count=0,archives=0;
 function walk(directory){for(const item of fs.readdirSync(directory,{withFileTypes:true})){
@@ -26,7 +26,8 @@ function walk(directory){for(const item of fs.readdirSync(directory,{withFileTyp
   html=html.replace(/<meta\b(?=[^>]*data-preview-robots)[^>]*>/g,'');
   const permanentNoindex=/<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/.test(html);
   const archive=relative.startsWith('server/')||archivedEvents.has(relative)||/^(staffblog|eventinfo|gallery)\/(?:category-[^/]+|page-\d+)\.html$/.test(relative)||['404.html','contact/thanks.html'].includes(relative);
-  html=html.replace(/<meta\b[^>]*(?:property="og:[^"]+"|name="twitter:[^"]+"|name="robots")[^>]*>/g,'').replace(/<link\b[^>]*rel="canonical"[^>]*>/g,'');
+  // A literal > inside a quoted description must not truncate tag removal.
+  html=html.replace(/<meta\b(?:[^"'<>]|"[^"]*"|'[^']*')*>/g,tag=>/(?:property="og:|name="(?:twitter:|robots"))/.test(tag)?'':tag).replace(/<link\b[^>]*rel="canonical"[^>]*>/g,'');
   let meta=`<link rel="canonical" href="${canonical}"><meta property="og:type" content="${/^videos\/[^/]+\/index\.html$/.test(relative)?'video.other':/^(staffblog|gallery)\/.+\.shtml$/.test(relative)?'article':'website'}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${esc(image)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${esc(image)}">`;
   if(archive||permanentNoindex){meta+='<meta name="robots" content="noindex,follow" data-archive-robots>';archives++;}
   else if(!production)meta+='<meta name="robots" content="noindex,follow" data-preview-robots>';

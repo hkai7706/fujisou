@@ -38,3 +38,11 @@ YouTube watch metadata says playableInEmbed=true. Both player modes returned aut
 ## Homepage feature
 
 The default video build also refreshes the homepage's compact video section from the newest record. `tools/home-videos.mjs` maintains one marked section and its dedicated stylesheet link. Its thumbnail links to the watch page; 「動画一覧を見る」 links to the archive. No player iframe is loaded on the homepage. Fixture builds with a temporary output directory do not modify the homepage. If the video records become empty, the feature is removed.
+
+## House photographs and floor plan
+
+The first video includes verified house features and 14 selected photographs from the 65 supplied originals. Web assets use descriptive names under img/videos/modern-hiraya-black-wood/. The originals are preserved in its ignored originals/ subfolder and excluded from builds. Web derivatives are resized for display and encoded as lossless WebP; full-resolution originals remain unchanged. Run node tools/prepare-video-house-images.mjs only when those local originals are available.
+
+The catalogue was reviewed; no exact catalogue model or floor area was assigned without the actual floor plan. There are no substitute/reference floor-plan illustrations. The visible floor-plan space is intentionally pending. When the actual plan is supplied, set house.floorPlan to an object with src (local img/ path), width, height and caption, then rebuild. House facts and photographs live in the house object in videos/posts.json.
+
+On mobile widths up to 760px the header is one row; contact and LINE appear when the menu is opened. Desktop controls remain visible. The menu button precedes these actions in keyboard order.

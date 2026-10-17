@@ -33,3 +33,6 @@ tmp/
 contact/mailformpro/
 contact/mfp.statics/
 contact/iplogs/
+
+# Full-resolution supplied photography; publish only prepared web assets.
+/img/videos/**/originals/

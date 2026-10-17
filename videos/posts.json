@@ -9,6 +9,207 @@
     "description": "黒の金属サイディングと木目を組み合わせた、モダンな平屋住宅のルームツアーです。\n自然光が入るLDK、無垢材のフローリング、漆喰壁、対面キッチン、ウォークインクローゼットなど、室内の素材と動線をご覧いただけます。",
     "channelName": "Ainos 有限会社フジ創",
     "channelUrl": "https://www.youtube.com/@Ainos-fujiso",
-    "highResolutionThumbnail": true
+    "highResolutionThumbnail": true,
+    "house": {
+      "title": "黒と木目が映える、無垢材と漆喰の平屋",
+      "intro": "木張りの玄関から、無垢床のリビングへ。対面キッチンを中心に、洋室や収納、水まわりへとつながる平屋の住まいです。動画と写真で、素材の表情や部屋のつながりをご覧ください。",
+      "facts": [
+        [
+          "建物タイプ",
+          "平屋・注文住宅"
+        ],
+        [
+          "外観",
+          "黒の金属サイディングと木目の組み合わせ"
+        ],
+        [
+          "内装",
+          "無垢材のフローリング・漆喰壁"
+        ],
+        [
+          "キッチン",
+          "ダークグレーの対面キッチン・背面収納"
+        ],
+        [
+          "収納",
+          "玄関まわりの可動棚・ウォークインクローゼット"
+        ],
+        [
+          "水まわり",
+          "洗面・脱衣室・浴室"
+        ]
+      ],
+      "floorPlan": null,
+      "photos": [
+        {
+          "src": "img/videos/modern-hiraya-black-wood/black-wood-hiraya-exterior-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/black-wood-hiraya-exterior-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "黒の外壁と木目を組み合わせた平屋の外観",
+          "original": "DJI_20260823115534_0049_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/wood-entrance-porch-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/wood-entrance-porch-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "木張りで仕上げた玄関ポーチ",
+          "original": "DJI_20260823115551_0050_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/entrance-hall-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/entrance-hall-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "無垢床と白い壁でまとめた玄関ホール",
+          "original": "DJI_20260823115637_0053_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/open-living-dining-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/open-living-dining-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "キッチンとつながるリビング・ダイニング",
+          "original": "DJI_20260823115918_0064_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/dark-grey-kitchen-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/dark-grey-kitchen-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "ダークグレーの対面キッチンと背面収納",
+          "original": "DJI_20260823120015_0068_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/living-window-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/living-window-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "大きな窓に面したリビング",
+          "original": "DJI_20260823115847_0062_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/bedroom-closet-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/bedroom-closet-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "収納を備えた洋室",
+          "original": "DJI_20260823115757_0058_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/corner-bedroom-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/corner-bedroom-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "二面の窓から光が入る洋室",
+          "original": "DJI_20260823120055_0073_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/entrance-adjustable-shelves-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/entrance-adjustable-shelves-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "玄関まわりに設けた木の可動棚",
+          "original": "DJI_20260823115706_0055_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/wood-walk-in-closet-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/wood-walk-in-closet-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "木張りで仕上げたウォークインクローゼット",
+          "original": "DJI_20260823120138_0076_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/washroom-dressing-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/washroom-dressing-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "洗面台と作業カウンターを設けた脱衣室",
+          "original": "DJI_20260823120201_0078_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/bathroom-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/bathroom-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "落ち着いた色合いの浴室",
+          "original": "DJI_20260823120231_0080_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/living-track-lighting-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/living-track-lighting-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "リビングのスポットライト",
+          "original": "DJI_20260823120404_0088_D.JPG"
+        },
+        {
+          "src": "img/videos/modern-hiraya-black-wood/plaster-wall-texture-1800.webp",
+          "width": 1800,
+          "height": 1013,
+          "small": {
+            "src": "img/videos/modern-hiraya-black-wood/plaster-wall-texture-900.webp",
+            "width": 900,
+            "height": 506
+          },
+          "caption": "漆喰壁の表情と壁付けの操作パネル",
+          "original": "DJI_20260823120416_0089_D.JPG"
+        }
+      ]
+    }
   }
 ]

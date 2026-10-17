@@ -33,4 +33,4 @@ The supplied official Ainos video is _UZrtXhPSKQ. Its title and thumbnail were v
 
 Responsive checks passed at 390, 768, 1440 and 1920px. Private fixtures checked filtering, search, newest/oldest ordering, 12-per-page pagination and HTML escaping. The embedded player loads only after a click. Fullscreen and an external YouTube link are provided.
 
-YouTube watch metadata says playableInEmbed=true. Both standard and privacy-enhanced players returned an auth/unavailable response in the automated local browser. In-page playback must be checked in a normal browser on the published site; these tests do not establish successful playback.
+YouTube watch metadata says playableInEmbed=true. Both player modes returned auth/unavailable on the local test origin, so playback was subsequently checked on the published GitHub Pages watch page. That live check passed: YouTube reported isPlayable=true, player state 1 (playing), no error, and playback advanced to 0:02. Both the listing and watch URLs returned HTTP 200, and preview noindex remained present. The local-origin error did not occur on the published origin.

@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {updateHomeVideos} from './home-videos.mjs';
 import {renderVideoHouse} from './video-house-details.mjs';
+import {videoThumbnail} from './video-thumbnail.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
 const args=process.argv.slice(2);
@@ -27,7 +28,7 @@ const thumb=v=>`https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`;
 const date=v=>v.publishedAt.replaceAll('-','.');
 const poster=v=>v.highResolutionThumbnail?`https://i.ytimg.com/vi/${v.youtubeId}/maxresdefault.jpg`:thumb(v);
 const picture=(v,eager=false)=>`<img src="${poster(v)}" ${v.highResolutionThumbnail?`srcset="${thumb(v)} 480w, ${poster(v)} 1280w" sizes="${eager?'(max-width:850px) calc(100vw - 40px), 1040px':'(max-width:540px) calc(100vw - 40px), 440px'}"`:''} alt="" width="${v.highResolutionThumbnail?1280:480}" height="${v.highResolutionThumbnail?720:360}" ${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async" referrerpolicy="strict-origin-when-cross-origin">`;
-function card(v,prefix,related=false){return `<article class="video-card${related?' video-card--related':''}" data-video-card data-category="${esc(v.category)}"><a href="${prefix}${v.slug}/"><div class="video-card__image">${v.house?.photos?.[0]?`<img src="${prefix?'../../':'../'}${esc(v.house.photos[0].small.src)}" alt="${esc(v.house.photos[0].caption)}" width="${v.house.photos[0].small.width}" height="${v.house.photos[0].small.height}" loading="lazy" decoding="async">`:picture(v)}<span class="video-play" aria-hidden="true">▶</span></div><div class="video-card__copy"><p class="video-card__meta"><span>${esc(v.category)}</span><time datetime="${v.publishedAt}">${date(v)}</time></p><h2>${esc(v.displayTitle||v.title)}</h2><p class="video-card__description">${esc(v.description)}</p><span class="video-card__link">動画を見る <span aria-hidden="true">→</span></span></div></a></article>`;}
+function card(v,prefix,related=false){return `<article class="video-card${related?' video-card--related':''}" data-video-card data-category="${esc(v.category)}"><a href="${prefix}${v.slug}/"><div class="video-card__image">${videoThumbnail(v,prefix?'../../':'../')||picture(v)}<span class="video-play" aria-hidden="true">▶</span></div><div class="video-card__copy"><p class="video-card__meta"><span>${esc(v.category)}</span><time datetime="${v.publishedAt}">${date(v)}</time></p><h2>${esc(v.displayTitle||v.title)}</h2><p class="video-card__description">${esc(v.description)}</p><span class="video-card__link">動画を見る <span aria-hidden="true">→</span></span></div></a></article>`;}
 function page({title,description,route,main,depth=1,image,structured,empty=false}){
   const prefix='../'.repeat(depth),canonical='https://www.fujisou-ainos.com/videos/'+route;
   const relative=s=>s.replace(/((?:src|href)=["'])\/(?!\/)/g,'$1'+prefix);

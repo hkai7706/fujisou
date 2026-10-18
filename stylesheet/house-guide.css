@@ -1,0 +1,19 @@
+﻿.house-guide{margin:0;padding:46px 28px;color:#493b31;background:#f8f6f1}
+.house-guide__inner{max-width:1200px;margin:auto}
+.house-guide header{display:flex;align-items:baseline;justify-content:space-between;gap:16px 32px;margin-bottom:26px}
+.house-guide h2{font:500 clamp(23px,2.4vw,30px)/1.7 var(--serif);margin:0}
+.house-guide header p{font-size:14px;line-height:1.9;color:#71665f;margin:0}
+.house-guide nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #c4b6a4;border-bottom:1px solid #c4b6a4}
+.house-guide nav>a{display:flex;flex-direction:column;padding:24px 26px;color:inherit;text-decoration:none;min-width:0}
+.house-guide nav>a:first-child{padding-left:0}.house-guide nav>a:last-child{padding-right:0}
+.house-guide nav>a+a{border-left:1px solid #ded4c5}
+.house-guide h3{font:500 21px/1.7 var(--serif);margin:0 0 10px}
+.house-guide nav p{font-size:14px;line-height:1.9;margin:0 0 16px;color:#71665f}
+.house-guide nav>a>span{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:28px;margin-top:auto;font-size:13px;color:#604426}
+.house-guide nav>a:hover h3{text-decoration:underline;text-underline-offset:6px}
+.house-guide nav>a:focus-visible{outline:2px solid #806039;outline-offset:5px}
+.house-guide--compact{max-width:1200px;margin:48px auto;padding:0 28px;background:transparent;box-sizing:border-box}
+.house-guide--compact h2{font-size:24px}
+.house-guide--compact h3{font-size:20px}
+@media(max-width:760px){.house-guide{padding:32px 20px}.house-guide header{display:block;margin-bottom:20px}.house-guide header p{margin-top:10px}.house-guide nav{grid-template-columns:1fr}.house-guide nav>a,.house-guide nav>a:first-child,.house-guide nav>a:last-child{padding:20px 0}.house-guide nav>a+a{border-left:0;border-top:1px solid #ded4c5}.house-guide h3{font-size:20px;margin-bottom:7px}.house-guide nav p{font-size:13px;margin-bottom:10px}.house-guide--compact{margin:36px auto;padding:0 20px}.house-guide--compact h2{font-size:23px}}
+@media(max-width:760px){.house-guide nav>a,.house-guide nav>a:first-child,.house-guide nav>a:last-child{position:relative;padding:16px 28px 16px 0}.house-guide nav>a>span{position:absolute;right:0;top:20px;min-height:0;font-size:0}.house-guide nav>a>span>span{font-size:18px}.house-guide nav p{margin-bottom:0}}

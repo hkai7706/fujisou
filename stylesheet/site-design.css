@@ -1,0 +1,114 @@
+/* Interior-page design system, drawn from the homepage. Loaded after page styles.
+   Keep photography, article contents and functional controls in their own templates. */
+body[data-site-design="interior"] {
+  --design-ink: #493b31;
+  --design-muted: #71665f;
+  --design-accent: #806039;
+  --design-line: #d8cbb9;
+  --design-space: clamp(40px, 5vw, 72px);
+  --plan-ink: var(--design-ink);
+  --plan-muted: var(--design-muted);
+  --plan-gold: var(--design-accent);
+  --plan-line: var(--design-line);
+  --blog-ink: var(--design-ink);
+  --blog-muted: var(--design-muted);
+  --blog-gold: var(--design-accent);
+  --blog-line: var(--design-line);
+  color: var(--design-ink);
+  background: #fff;
+}
+[data-site-design="interior"] main { background-color: #fff; }
+[data-site-design="interior"] main :is(h1,h2,h3) {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: .025em;
+  overflow-wrap: break-word;
+}
+[data-site-design="interior"] main :is(a,button,input,select,textarea,summary):focus-visible {
+  outline: 2px solid var(--design-accent);
+  outline-offset: 4px;
+}
+[data-site-design="interior"] main :is(input,select,textarea) {
+  font-family: var(--sans);
+  font-size: max(16px, 1em);
+  border-radius: 0;
+}
+[data-site-design="interior"] main textarea { line-height: 1.8; }
+[data-site-design="interior"] .site-breadcrumbs { font-family: var(--serif); color: var(--design-muted); }
+[data-site-design="interior"] :is(.evidence-page,.contact-page,.loan-page) > .site-breadcrumbs { padding-inline: 0; }
+[data-site-design="interior"] .concept-hero { min-height: clamp(420px,56svh,580px); }
+[data-site-design="interior"] :is(.gallery-hero,.blog-hero,.video-intro,.land-hero,.staff-hero,.shikkui-hero,.policy-hero) h1 {
+  font-size: clamp(30px, 3.5vw, 48px);
+  line-height: 1.55;
+  white-space: normal;
+}
+[data-site-design="interior"] :is(.gallery-hero,.event-index-hero) {
+  margin-bottom: var(--design-space);
+  padding-block: clamp(36px, 5vw, 64px);
+}
+[data-site-design="interior"] .event-index-hero { min-height: 320px; }
+[data-site-design="interior"] .event-index-hero h1 { font-size: clamp(32px,4vw,52px); line-height: 1.55; }
+[data-site-design="interior"] .gallery-works { padding-top: 28px; }
+[data-site-design="interior"] :is(.planning-hero__copy,.planning-hero__images figure:last-child) { box-shadow: none; }
+[data-site-design="interior"] :is(.planning-choices,.planning-gallery,.planning-product,.custom-intro,.custom-style) {
+  padding-block: var(--design-space);
+}
+[data-site-design="interior"] :is(.planning-section-title,.planning-product__heading) h2 {
+  font-size: clamp(27px,3vw,40px);
+  line-height: 1.65;
+}
+[data-site-design="interior"] :is(.video-intro,.loan-intro) { padding-bottom: 28px; }
+[data-site-design="interior"] :is(.evidence-page,.contact-page,.loan-page) {
+  width: min(1100px,calc(100% - var(--frame)*2));
+  margin-inline: auto;
+  padding: 0 var(--sx) var(--design-space);
+}
+[data-site-design="interior"] :is(.evidence-page,.contact-page) > h1 {
+  margin: 28px 0 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--design-line);
+  font-size: clamp(30px,3.5vw,46px);
+  line-height: 1.55;
+}
+[data-site-design="interior"] .evidence-page section { margin-top: var(--design-space); }
+[data-site-design="interior"] .evidence-page h2 {
+  margin: 0 0 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--design-line);
+}
+[data-site-design="interior"] :is(.evidence-page,.contact-page) p {
+  max-width: 48em;
+  font-size: 16px;
+  line-height: 2;
+}
+[data-site-design="interior"] .evidence-page li { font-size: 16px; line-height: 2; }
+[data-site-design="interior"] .evidence-page .evidence-source { font-size: 13px; }
+[data-site-design="interior"] .evidence-page .evidence-note { font-size: 14px; }
+[data-site-design="interior"] .evidence-table :is(th,td) { padding: 18px 12px; }
+[data-site-design="interior"] .contact-direct { gap: 16px 36px; }
+[data-site-design="interior"] .contact-direct a { min-height: 44px; display: inline-flex; align-items: center; font-size: 18px; }
+[data-site-design="interior"] .contact-form button { min-height: 48px; border-radius: 0; }
+[data-site-design="interior"] :is(.gallery-consultation,.event-contact,.staff-contact,.planning-contact) {
+  border-radius: 0;
+  box-shadow: none;
+}
+@media(max-width:600px) {
+  [data-site-design="interior"] :is(.gallery-hero,.event-index-hero) { margin-bottom: 32px; }
+  [data-site-design="interior"] .event-index-hero { min-height: 260px; }
+  [data-site-design="interior"] .concept-hero { min-height: 420px; }
+  [data-site-design="interior"] .planning-hero__copy { padding: 24px 8px 32px; margin-bottom: 0; }
+  [data-site-design="interior"] .planning-hero__images { margin-left: 0; }
+  [data-site-design="interior"] .planning-hero { padding-bottom: 56px; }
+  [data-site-design="interior"] :is(.evidence-page,.contact-page,.loan-page) { width: 100%; padding-inline: 20px; }
+  [data-site-design="interior"] .evidence-table :is(th,td) { padding: 13px 6px; }
+  [data-site-design="interior"] .planning-product > * { margin-bottom: 30px; }
+  [data-site-design="interior"] .contact-direct { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  [data-site-design="interior"] { scroll-behavior: auto; }
+  [data-site-design="interior"] main *,[data-site-design="interior"] main *::before,[data-site-design="interior"] main *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

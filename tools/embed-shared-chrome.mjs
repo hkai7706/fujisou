@@ -33,7 +33,14 @@ function walk(directory) {
       .replace(/<script\b[^>]*src="[^"\n]*inquiry-tracking\.js[^"\n]*"[^>]*><\/script>/g, '')
       .replace(/<script\b[^>]*src="[^"\n]*shared-chrome\.js[^"\n]*"[^>]*><\/script>/g, '');
     const assets = `<link rel="stylesheet" href="${prefix}stylesheet/shared-chrome.min.css?v=${hash('stylesheet/shared-chrome.min.css')}"><link rel="stylesheet" href="${prefix}stylesheet/inquiry-journey.css?v=${hash('stylesheet/inquiry-journey.css')}"><script src="${prefix}script/shared-chrome.js?v=${hash('script/shared-chrome.js')}" defer></script><script src="${prefix}script/inquiry-tracking.js?v=${hash('script/inquiry-tracking.js')}" defer></script>`;
-    html = html.includes('</head>') ? html.replace('</head>', assets + '</head>') : assets + html;
+    html = html.replace(/<link\b[^>]*href="[^"\n]*site-design\.css[^"\n]*"[^>]*>/g, '');
+    // Apply the homepage's design language to every interior template, including
+    // regenerated articles. The homepage itself remains the reference design.
+    const interior = path.resolve(file) !== path.join(root, 'index.html');
+    html = html.replace(/<body\b([^>]*)>/i, (_, attrs) => `<body${attrs.replace(/\sdata-site-design="[^"]*"/g, '')}${interior ? ' data-site-design="interior"' : ''}>`);
+    const design = interior ? `<link rel="stylesheet" href="${prefix}stylesheet/site-design.css?v=${hash('stylesheet/site-design.css')}">` : '';
+    html = html.includes('</head>') ? html.replace('</head>', assets + design + '</head>') : assets + design + html;
+    html = html.replace(/^[\t ]+(?=\r?$)/gm, '');
     if (html !== original) { fs.writeFileSync(file, html); count++; }
   }
 }

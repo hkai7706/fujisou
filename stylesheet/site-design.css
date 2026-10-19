@@ -47,7 +47,9 @@ body[data-site-design="interior"] {
   padding-block: clamp(36px, 5vw, 64px);
 }
 [data-site-design="interior"] .event-index-hero { min-height: 320px; }
-[data-site-design="interior"] .event-index-hero h1 { font-size: clamp(32px,4vw,52px); line-height: 1.55; }
+[data-site-design="interior"] .event-index-hero h1 { font-size: clamp(28px,3.4vw,44px); line-height: 1.55; }
+[data-site-design="interior"] .event-index-hero__lead { font-size: 15px; }
+[data-site-design="interior"] .event-hero h1 { font-size: clamp(30px,3.4vw,48px); }
 [data-site-design="interior"] .gallery-works { padding-top: 28px; }
 [data-site-design="interior"] :is(.planning-hero__copy,.planning-hero__images figure:last-child) { box-shadow: none; }
 [data-site-design="interior"] :is(.planning-choices,.planning-gallery,.planning-product,.custom-intro,.custom-style) {

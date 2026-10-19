@@ -1267,22 +1267,48 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
 #hybrid-hero-title{container-type:inline-size}
 #hybrid-hero-title>.heading-phrase{display:block!important;white-space:nowrap!important;font-size:min(1em,calc(100cqw / var(--phrase-length)))!important;line-height:inherit;letter-spacing:inherit}
 
-/* A stable message and inquiry action remain available while imagery changes. */
-.hybrid-hero::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,#181511a8,transparent 85%),linear-gradient(0deg,#18151180,transparent 80%)}
-.hybrid-hero>.hybrid-hero__copy--persistent{z-index:3;top:auto;right:auto;bottom:84px;left:clamp(28px,6vw,86px);width:min(610px,70%);color:#fff;text-shadow:0 2px 14px #18151180}
-.hybrid-hero__copy--persistent h1{font-size:clamp(32px,4.2vw,62px);line-height:1.4}
-.hybrid-hero__copy--persistent .hybrid-hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.hybrid-hero__copy--persistent .hybrid-hero__actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 20px;background:#f5efe5;color:#493b31;border:1px solid #f5efe5;font-size:14px;text-shadow:none}
-.hybrid-hero__copy--persistent .hybrid-hero__actions a:last-child{background:#18151150;color:#fff}
-.hybrid-hero__copy--persistent .hybrid-hero__note{display:block;margin-top:12px;font-size:12px;line-height:1.8}
+/* Original per-slide hero layout, restored from the September 29 backup. */
+@media(min-width:820px){
+ .hybrid-hero{height:clamp(440px,65svh,640px)!important;min-height:0!important;max-height:640px!important;aspect-ratio:auto}
+}
 .hybrid-hero .hybrid-hero__controls{right:24px;bottom:18px;transform:none;align-items:center}
 .hybrid-hero__controls button{min-width:44px;min-height:44px}
-.hybrid-hero__controls .hybrid-hero__pause{width:auto;padding:8px 14px;color:#fff;background:#181511a8;border:1px solid #fff9;font:inherit;font-size:12px}
 .hybrid-hero[data-paused] .hybrid-hero__panel>img,.hybrid-hero[data-paused] .hybrid-hero__controls button span{animation-play-state:paused}
-@media(max-width:819px){.hybrid-hero>.hybrid-hero__copy--persistent{left:20px;right:20px;width:auto;bottom:84px}.hybrid-hero__copy--persistent h1{font-size:clamp(27px,7.5vw,40px)}.hybrid-hero__copy--persistent>p{font-size:9px}.hybrid-hero__copy--persistent>span{font-size:13px;line-height:1.8;max-width:360px}.hybrid-hero__copy--persistent .hybrid-hero__actions{gap:8px;margin-top:16px}.hybrid-hero__copy--persistent .hybrid-hero__actions a{font-size:12px;padding:10px 12px}.hybrid-hero__copy--persistent .hybrid-hero__note{font-size:11px}.hybrid-hero::after{background:linear-gradient(0deg,#181511d9,transparent 100%)}}
-.hybrid-hero .hybrid-hero__scene .hybrid-hero__panel::after{background:transparent!important}
-@media(max-width:540px){
- .hybrid-hero{display:flex;align-items:flex-end;height:auto!important;min-height:440px!important;padding:32px 20px 84px;box-sizing:border-box}
- .hybrid-hero>.hybrid-hero__copy--persistent{position:relative;left:auto;right:auto;bottom:auto;width:100%;margin:0}
+@media(max-width:819px){
+ .hybrid-hero .hybrid-hero__controls{bottom:0}
+ .hybrid-hero__scene--cover .hybrid-hero__panel--material .hybrid-hero__copy{bottom:60px!important}
+ /* Keep the restored slide layouts readable and usable on touch screens. */
+ .hybrid-hero{height:clamp(420px,60svh,540px)!important;min-height:420px!important}
+ .hybrid-hero__scene--cover .hybrid-hero__copy>p{font-size:10px!important;letter-spacing:.12em!important}
+ .hybrid-hero__scene--cover .hybrid-hero__copy>span{font-size:13px!important;line-height:1.75!important}
+ .hybrid-hero__scene--cover .hybrid-hero__actions{margin-top:16px!important;gap:8px!important}
+ .hybrid-hero__scene--cover .hybrid-hero__actions a{min-height:44px!important;padding:9px 8px!important;font-size:12px!important;line-height:1.5!important}
+ .hybrid-hero__scene--air .hybrid-hero__panel--full .hybrid-hero__copy{bottom:60px}
+ .hybrid-hero__scene--air .hybrid-hero__panel--full .hybrid-hero__copy>p,
+ .hybrid-hero__scene--craft .hybrid-hero__panel--atelier:last-child .hybrid-hero__copy>p{font-size:10px;line-height:1.6}
+ .hybrid-hero__scene--air .hybrid-hero__panel--full .hybrid-hero__copy>span,
+ .hybrid-hero__scene--craft .hybrid-hero__panel--atelier:last-child .hybrid-hero__copy>span{font-size:13px;line-height:1.75}
+ .hybrid-hero__scene--air .hybrid-hero__panel--full .hybrid-hero__editorial-link{min-height:44px;font-size:12px;display:inline-flex;align-items:center}
 }
 .home-selector .home-selector__note,.home-selector .home-selector__note a{color:#71665f}
+
+/* Mobile hero: full uncropped photo, with compact text inside the image. */
+@media(max-width:819px){
+ .hybrid-hero{display:grid!important;grid-template-columns:minmax(0,1fr)!important;height:auto!important;min-height:0!important;padding:0!important;background:transparent}
+ .hybrid-hero .hybrid-hero__scene{position:absolute!important;inset:0!important;grid-area:1/1;display:block!important;min-width:0;height:auto!important;align-self:start}
+ .hybrid-hero .hybrid-hero__scene.is-active{position:relative!important;inset:auto!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel{display:block!important;position:relative!important;inset:auto!important;width:100%!important;height:auto!important;min-height:0!important;overflow:hidden;background:#f3eee6}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel>img{position:relative!important;inset:auto!important;display:block;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;animation:none!important;transform:none!important;filter:none!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel::after{display:block!important;position:absolute!important;inset:0!important;height:auto!important;background:linear-gradient(0deg,#181511e8,#18151166 75%,#18151115)!important;pointer-events:none}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy{position:absolute!important;z-index:2;top:auto!important;right:12px!important;bottom:12px!important;left:12px!important;transform:none!important;width:auto!important;max-width:none!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;background:transparent!important;color:#fff!important;border:0!important;box-shadow:none!important;text-shadow:0 1px 8px #18151180!important;backdrop-filter:none!important;text-align:left!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy>p{display:none!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy :is(h1,h2){color:#fff!important;font-size:clamp(20px,5.6vw,32px)!important;line-height:1.25!important;margin:0!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy>span{color:#fff!important;font-size:clamp(11px,2.8vw,14px)!important;line-height:1.5!important;max-width:40em!important;margin:6px 0 0!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__actions{margin-top:8px!important;gap:8px!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__actions a{min-height:44px!important;padding:5px 6px!important;font-size:11px!important;line-height:1.4!important;background:#f5efe5!important;border-color:#f5efe5!important;color:#493b31!important;text-shadow:none}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__actions a:last-child{background:#18151155!important;color:#fff!important;border-color:#ffffffaa!important}
+ .hybrid-hero .hybrid-hero__controls{display:none}
+ .hybrid-hero .hybrid-hero__controls button span{background:#b6a48c}
+ .hybrid-hero .hybrid-hero__controls button.is-active span{background:#604426}
+ .hybrid-hero .hybrid-hero__controls button:focus-visible{outline-color:#604426}
+}

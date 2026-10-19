@@ -101,14 +101,12 @@ const hybridSlider=document.querySelector('[data-hybrid-slider]');
 if(hybridSlider){
  const scenes=[...hybridSlider.querySelectorAll('.hybrid-hero__scene')];
  const dots=[...hybridSlider.querySelectorAll('[data-hybrid-dot]')];
- const pause=hybridSlider.querySelector('[data-hybrid-pause]');
  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
  let active=0,timer,paused=reduceMotion.matches,touchStart=0;
  const stop=()=>clearTimeout(timer);
  const show=index=>{active=(index+scenes.length)%scenes.length;scenes.forEach((scene,i)=>{scene.classList.toggle('is-active',i===active);scene.setAttribute('aria-hidden',String(i!==active));});dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===active);if(i===active)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');});};
- const update=()=>{pause.disabled=reduceMotion.matches;pause.textContent=reduceMotion.matches?'自動切替なし':paused?'自動再生':'一時停止';pause.setAttribute('aria-label',reduceMotion.matches?'スライドの自動切替なし（動きを減らす設定）':paused?'スライドの自動再生を開始':'スライドの自動切替を一時停止');hybridSlider.toggleAttribute('data-paused',paused);};
+ const update=()=>{hybridSlider.toggleAttribute('data-paused',paused);};
  const start=()=>{stop();if(!paused&&!reduceMotion.matches&&!document.hidden&&!hybridSlider.contains(document.activeElement))timer=setTimeout(()=>{show(active+1);start();},7000);};
- pause.addEventListener('click',()=>{paused=!paused;update();start();});
  dots.forEach(dot=>dot.addEventListener('click',()=>{show(Number(dot.dataset.hybridDot));start();}));
  hybridSlider.addEventListener('focusin',()=>{paused=true;update();stop();});
  hybridSlider.addEventListener('focusout',()=>setTimeout(start,0));

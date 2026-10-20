@@ -263,38 +263,6 @@
         "virtuallyStaged": false
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-09-a83e7f3dac3f-1500.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-09-a83e7f3dac3f-1500.webp",
-        "width": 1500,
-        "height": 2000,
-        "bytes": 3731436,
-        "sha256": "64026d2723edf06291fe1c3a1aa1b050e8b961769eebfa15c8204b7fbef050cd",
-        "variants": [
-          {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-09-a83e7f3dac3f-480.webp",
-            "width": 480,
-            "height": 640,
-            "bytes": 425822
-          },
-          {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-09-a83e7f3dac3f-960.webp",
-            "width": 960,
-            "height": 1280,
-            "bytes": 1643084
-          },
-          {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-09-a83e7f3dac3f-1500.webp",
-            "width": 1500,
-            "height": 2000,
-            "bytes": 3731436
-          }
-        ],
-        "caption": "浴室と木のカウンター",
-        "alt": "浴室と木のカウンター",
-        "originalFile": "IMG_2371.JPG",
-        "virtuallyStaged": false
-      },
-      {
         "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-10-c29a994c5f32-1500.webp",
         "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-10-c29a994c5f32-1500.webp",
         "width": 1500,

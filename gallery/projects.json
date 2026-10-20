@@ -7,325 +7,339 @@
     "description": "<p>濃い木目のキッチンと、あたたかな色合いの床。白い壁を背景に、木の表情が引き立つ住まいです。</p><p>キッチンまわりの造作収納、木張りの収納内部、階段や個室まで、各空間の素材と仕上がりをご覧いただけます。</p>",
     "photos": [
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-2000.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2334058,
-        "sha256": "46081432bdb810ac72ef360c77fb5401a87f86222479f65032ce1c804c8266d0",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-1672.webp",
+        "file": "img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1636218,
+        "sha256": "5d940e2cc614cc900ab2574e5d353a774aa7ba30c159ed47dd8ac352a060d977",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-640.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 240348
+            "bytes": 245474
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-1280.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 992504
+            "bytes": 1006718
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2334058
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1636218
           }
         ],
         "caption": "濃い外壁に木のアクセントを添えた外観",
         "alt": "濃い外壁に木のアクセントを添えた外観",
         "originalFile": "DJI_20261020084359_0007_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/exterior-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-02-f32529a04d3a-1672.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-02-f32529a04d3a-1672.webp",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/interior-02-natural-light-17c281030091-1672.webp",
+        "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-02-natural-light-17c281030091-1672.webp",
         "width": 1672,
         "height": 941,
-        "bytes": 1354286,
-        "sha256": "03946e220350314791d780099c405bbb5f7c3e7c3df5324f1914e980cb08a887",
+        "bytes": 1388836,
+        "sha256": "fa2021773d27a4608c6f35a170bb13dce0a7d000055b93ae0d0d945f15ef2ad3",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-02-f32529a04d3a-640.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-02-natural-light-17c281030091-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 197486
+            "bytes": 202962
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-02-f32529a04d3a-1280.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-02-natural-light-17c281030091-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 828350
+            "bytes": 850814
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-02-f32529a04d3a-1672.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-02-natural-light-17c281030091-1672.webp",
             "width": 1672,
             "height": 941,
-            "bytes": 1354286
+            "bytes": 1388836
           }
         ],
         "caption": "キッチンとつながるリビング。家具・家電はCGによる配置イメージです。",
         "alt": "キッチンとつながるリビング。家具・家電はCGによる配置イメージです。",
         "originalFile": "DJI_20261020091534_0040_D.JPG",
-        "virtuallyStaged": true
+        "virtuallyStaged": true,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-02-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-03-433ee0757ac3-2000.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-03-433ee0757ac3-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2108200,
-        "sha256": "e7abf80787cdc5c40954149581964889c40dfcf8ab77c42a2ed9e3f1da1e07e3",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/interior-03-natural-light-9e74b6ec14d1-1672.webp",
+        "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-03-natural-light-9e74b6ec14d1-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1394378,
+        "sha256": "3615b9cb82c1a2203b01ca3e9f4223c6e59575df27cfc15be2dbac3ac09a00f8",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-03-433ee0757ac3-640.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-03-natural-light-9e74b6ec14d1-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 205112
+            "bytes": 202364
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-03-433ee0757ac3-1280.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-03-natural-light-9e74b6ec14d1-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 865498
+            "bytes": 849796
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-03-433ee0757ac3-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2108200
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-03-natural-light-9e74b6ec14d1-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1394378
           }
         ],
         "caption": "木目の収納と対面キッチン",
         "alt": "木目の収納と対面キッチン",
         "originalFile": "DJI_20261020091608_0042_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-03-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-04-3524cf72ae6f-2000.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-04-3524cf72ae6f-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2211074,
-        "sha256": "8bd196340e8a108afb3287fa2b54a9569cf0226e11fab91dbda882aba2c6d791",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/interior-04-natural-light-89d5338da8ae-1672.webp",
+        "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-04-natural-light-89d5338da8ae-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1429890,
+        "sha256": "aff1e10424201f9bc682fce62dbaa5a6bff8bbbd405b91a70ea59ac9ee566c64",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-04-3524cf72ae6f-640.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-04-natural-light-89d5338da8ae-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 225820
+            "bytes": 217332
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-04-3524cf72ae6f-1280.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-04-natural-light-89d5338da8ae-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 926068
+            "bytes": 881460
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-04-3524cf72ae6f-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2211074
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-04-natural-light-89d5338da8ae-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1429890
           }
         ],
         "caption": "作業カウンターとキッチン収納",
         "alt": "作業カウンターとキッチン収納",
         "originalFile": "DJI_20261020091652_0045_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-04-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-05-f7c98b6c8a96-2000.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-05-f7c98b6c8a96-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2225754,
-        "sha256": "8f33280e8cfa2a287850c52aceaf1bcb968eb3f208791f973a1280503bc40e22",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/interior-05-natural-light-9ee40cebfa97-1672.webp",
+        "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-05-natural-light-9ee40cebfa97-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1544036,
+        "sha256": "d07de570c54755bf461c5ae0aae3d08b107526d487a9ed5afc17565b35a77439",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-05-f7c98b6c8a96-640.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-05-natural-light-9ee40cebfa97-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 226662
+            "bytes": 226044
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-05-f7c98b6c8a96-1280.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-05-natural-light-9ee40cebfa97-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 943946
+            "bytes": 939554
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-05-f7c98b6c8a96-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2225754
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-05-natural-light-9ee40cebfa97-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1544036
           }
         ],
         "caption": "二方向に窓を設けた個室",
         "alt": "二方向に窓を設けた個室",
         "originalFile": "DJI_20261020091014_0026_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-05-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-06-b3c984e46894-2000.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-06-b3c984e46894-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2224464,
-        "sha256": "055b31315c91b0741902ee7bfd19cc197a91055dd0f7a842780dcd57f939e3b8",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/interior-06-natural-light-cf2d2ccdb2e8-1672.webp",
+        "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-06-natural-light-cf2d2ccdb2e8-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1498174,
+        "sha256": "6e2e403dfc6c22e9295719f80a21470d592065a590a705c389088f6a6e4add86",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-06-b3c984e46894-640.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-06-natural-light-cf2d2ccdb2e8-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 216220
+            "bytes": 211824
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-06-b3c984e46894-1280.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-06-natural-light-cf2d2ccdb2e8-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 924558
+            "bytes": 902468
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-06-b3c984e46894-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2224464
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-06-natural-light-cf2d2ccdb2e8-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1498174
           }
         ],
         "caption": "木張りの収納を備えた個室",
         "alt": "木張りの収納を備えた個室",
         "originalFile": "DJI_20261020091117_0029_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-06-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-07-2188b98b05ae-2000.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-07-2188b98b05ae-2000.webp",
-        "width": 2000,
-        "height": 2000,
-        "bytes": 3988808,
-        "sha256": "6d26a39fe3310b32b19ac813755b1ca767447e9f83cb8e98b0bf920d95b97f13",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/interior-07-natural-light-0b235b95c4fb-1254.webp",
+        "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-07-natural-light-0b235b95c4fb-1254.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1616812,
+        "sha256": "f93f65d2d3e4a80c24a45b4ef6b66b0088dc6f78b20ef7a420bdc62ba8b295c6",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-07-2188b98b05ae-640.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-07-natural-light-0b235b95c4fb-640.webp",
             "width": 640,
             "height": 640,
-            "bytes": 402526
+            "bytes": 418078
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-07-2188b98b05ae-1280.webp",
-            "width": 1280,
-            "height": 1280,
-            "bytes": 1667116
-          },
-          {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-07-2188b98b05ae-2000.webp",
-            "width": 2000,
-            "height": 2000,
-            "bytes": 3988808
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-07-natural-light-0b235b95c4fb-1254.webp",
+            "width": 1254,
+            "height": 1254,
+            "bytes": 1616812
           }
         ],
         "caption": "木の踏み板と白い壁の階段",
         "alt": "木の踏み板と白い壁の階段",
         "originalFile": "DJI_20261020091323_0033_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-07-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-08-b5e746e1f748-2000.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-08-b5e746e1f748-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2157324,
-        "sha256": "949d62c0ae99ae87f5dd1520c07d057874fd8f33ddb93d6ebb95b7e60084b297",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/interior-08-natural-light-666f4c569b83-1672.webp",
+        "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-08-natural-light-666f4c569b83-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1629436,
+        "sha256": "05397555625c28dbd8a0d0f86db7c57b7657bd668300fb15c6758431699c5b4a",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-08-b5e746e1f748-640.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-08-natural-light-666f4c569b83-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 232534
+            "bytes": 239528
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-08-b5e746e1f748-1280.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-08-natural-light-666f4c569b83-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 933410
+            "bytes": 998466
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-08-b5e746e1f748-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2157324
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-08-natural-light-666f4c569b83-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1629436
           }
         ],
         "caption": "白を基調としたトイレ",
         "alt": "白を基調としたトイレ",
         "originalFile": "DJI_20261020091146_0030_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-08-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-10-c29a994c5f32-1500.webp",
-        "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-10-c29a994c5f32-1500.webp",
-        "width": 1500,
-        "height": 2000,
-        "bytes": 2330212,
-        "sha256": "4d4d3e954d8b37a6b794a084f74e8ef88b733d19b8f130e56c7dc1271f276dbc",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/interior-09-natural-light-2fd72e91198f-1086.webp",
+        "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-09-natural-light-2fd72e91198f-1086.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 1533014,
+        "sha256": "4465f6db8efe3884d19764502a7925c20fcd9dd590340fd4cc09fde29eb95e36",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-10-c29a994c5f32-480.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-09-natural-light-2fd72e91198f-480.webp",
             "width": 480,
             "height": 640,
-            "bytes": 243464
+            "bytes": 285136
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-10-c29a994c5f32-960.webp",
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-09-natural-light-2fd72e91198f-960.webp",
             "width": 960,
             "height": 1280,
-            "bytes": 963026
+            "bytes": 1233628
           },
           {
-            "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-10-c29a994c5f32-1500.webp",
-            "width": 1500,
-            "height": 2000,
-            "bytes": 2330212
+            "file": "img/gallery/houses/wood-and-plaster-two-story-house/interior-09-natural-light-2fd72e91198f-1086.webp",
+            "width": 1086,
+            "height": 1448,
+            "bytes": 1533014
           }
         ],
         "caption": "玄関まわりの可動棚収納",
         "alt": "玄関まわりの可動棚収納",
         "originalFile": "IMG_2388.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-09-natural-light.png"
       }
     ],
     "thumbnail": {
-      "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-2000.webp",
-      "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-2000.webp",
-      "width": 2000,
-      "height": 1125,
-      "bytes": 2334058,
-      "sha256": "46081432bdb810ac72ef360c77fb5401a87f86222479f65032ce1c804c8266d0",
+      "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-1672.webp",
+      "file": "img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-1672.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1636218,
+      "sha256": "5d940e2cc614cc900ab2574e5d353a774aa7ba30c159ed47dd8ac352a060d977",
       "variants": [
         {
-          "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-640.webp",
+          "file": "img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-640.webp",
           "width": 640,
           "height": 360,
-          "bytes": 240348
+          "bytes": 245474
         },
         {
-          "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-1280.webp",
+          "file": "img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-1280.webp",
           "width": 1280,
           "height": 720,
-          "bytes": 992504
+          "bytes": 1006718
         },
         {
-          "file": "img/gallery/houses/wood-and-plaster-two-story-house/photo-01-f489f07229ae-2000.webp",
-          "width": 2000,
-          "height": 1125,
-          "bytes": 2334058
+          "file": "img/gallery/houses/wood-and-plaster-two-story-house/cover-natural-light-1ecbcf72ccb5-1672.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 1636218
         }
       ],
       "caption": "濃い外壁に木のアクセントを添えた外観",
       "alt": "濃い外壁に木のアクセントを添えた外観",
       "originalFile": "DJI_20261020084359_0007_D.JPG",
-      "virtuallyStaged": false
+      "virtuallyStaged": false,
+      "lightingAdjusted": true,
+      "lightingEditSource": "lighting-edits/exterior-natural-light.png"
     }
   },
   {
@@ -336,357 +350,379 @@
     "description": "<p>黒い外壁と木張りの玄関が印象的な平屋。室内には、木の床と白い壁、キッチン上の木張り天井を取り入れています。</p><p>対面キッチンを中心とした居室、木張りの収納、洗面まわりなど、日々の暮らしを支える空間をご紹介します。</p>",
     "photos": [
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2194632,
-        "sha256": "4efd8c6ef9537b782604caaf6999325a41e5913b3938a789125b494538bd4b96",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1588266,
+        "sha256": "43b34356649333933a3362c2489077b62e24e6530006967f7808bd7f1a0580de",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 225378
+            "bytes": 243382
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 925620
+            "bytes": 979838
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2194632
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1588266
           }
         ],
         "caption": "黒い外壁と木張りの玄関が印象的な平屋",
         "alt": "黒い外壁と木張りの玄関が印象的な平屋",
         "originalFile": "DJI_20260823115523_0048_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/exterior-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-02-62dadaecc31f-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-02-62dadaecc31f-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2137598,
-        "sha256": "db33fc808c517c3d05f36cd9843679bf8a78ad97bdc383a2daf2e80c29db4612",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/interior-02-natural-light-e85aa3e1fbfd-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-02-natural-light-e85aa3e1fbfd-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1406828,
+        "sha256": "f46cd889ff380e94836b63ccc62b64811e41fba773401c03a537afc5c461aa9c",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-02-62dadaecc31f-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-02-natural-light-e85aa3e1fbfd-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 201048
+            "bytes": 197722
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-02-62dadaecc31f-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-02-natural-light-e85aa3e1fbfd-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 866424
+            "bytes": 850582
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-02-62dadaecc31f-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2137598
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-02-natural-light-e85aa3e1fbfd-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1406828
           }
         ],
         "caption": "木張り天井と対面キッチンのある室内",
         "alt": "木張り天井と対面キッチンのある室内",
         "originalFile": "DJI_20260823115918_0064_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-02-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-03-75a47c78b94a-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-03-75a47c78b94a-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2067568,
-        "sha256": "07518b873ec9503f910477dbdc6e320e9d4f2113a56566f5e3a063db3bbf7ab7",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/interior-03-natural-light-0dc3668f41bb-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-03-natural-light-0dc3668f41bb-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1278316,
+        "sha256": "d43702b61de35d86fdaf0b4b43152cf50143e478c5906b0456dce7cc6cb01f5c",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-03-75a47c78b94a-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-03-natural-light-0dc3668f41bb-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 198458
+            "bytes": 184752
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-03-75a47c78b94a-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-03-natural-light-0dc3668f41bb-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 849654
+            "bytes": 778900
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-03-75a47c78b94a-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2067568
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-03-natural-light-0dc3668f41bb-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1278316
           }
         ],
         "caption": "大きな窓から光が入る居室",
         "alt": "大きな窓から光が入る居室",
         "originalFile": "DJI_20260823115908_0063_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-03-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-04-75ff2831c912-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-04-75ff2831c912-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2132150,
-        "sha256": "42d5351502f317825d763499a5f2eebecc210eb947cf4f40233fe33b1e285e54",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/interior-04-natural-light-7c464634732e-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-04-natural-light-7c464634732e-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1493514,
+        "sha256": "a48338fd2b011c94180164b1dd5dd08c72ea1e586d3df40c5858a5efac0c6036",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-04-75ff2831c912-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-04-natural-light-7c464634732e-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 200570
+            "bytes": 206610
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-04-75ff2831c912-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-04-natural-light-7c464634732e-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 868234
+            "bytes": 901674
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-04-75ff2831c912-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2132150
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-04-natural-light-7c464634732e-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1493514
           }
         ],
         "caption": "濃い色の面材でまとめたキッチン",
         "alt": "濃い色の面材でまとめたキッチン",
         "originalFile": "DJI_20260823120002_0067_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-04-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-05-d4464c44ac78-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-05-d4464c44ac78-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2240118,
-        "sha256": "897d3c93c466a64adc7cd5c1f5425d419e59418aef909addc04c989173333ad0",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/interior-05-natural-light-bb2abffcafba-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-05-natural-light-bb2abffcafba-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1426614,
+        "sha256": "1c1808752dad59b40d03c1ea81b0f4677f4e89892091eacb3ee824f2f494e17a",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-05-d4464c44ac78-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-05-natural-light-bb2abffcafba-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 220510
+            "bytes": 210738
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-05-d4464c44ac78-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-05-natural-light-bb2abffcafba-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 932684
+            "bytes": 870932
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-05-d4464c44ac78-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2240118
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-05-natural-light-bb2abffcafba-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1426614
           }
         ],
         "caption": "木張りの収納を備えた個室",
         "alt": "木張りの収納を備えた個室",
         "originalFile": "DJI_20260823115810_0059_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-05-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-06-04a2669f2b5f-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-06-04a2669f2b5f-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2072672,
-        "sha256": "cbd07a938719f3aef0bcd314233dd023e927b58859ce0eb1cc9af7a7439c3c0e",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/interior-06-natural-light-6e324b24b07b-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-06-natural-light-6e324b24b07b-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1388352,
+        "sha256": "1eb864869ef5c7f70214696e17f2e82437d14d90f29533df58e4d0ef4b62ea50",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-06-04a2669f2b5f-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-06-natural-light-6e324b24b07b-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 197738
+            "bytes": 194820
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-06-04a2669f2b5f-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-06-natural-light-6e324b24b07b-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 852546
+            "bytes": 838942
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-06-04a2669f2b5f-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2072672
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-06-natural-light-6e324b24b07b-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1388352
           }
         ],
         "caption": "二方向に窓を設けた個室",
         "alt": "二方向に窓を設けた個室",
         "originalFile": "DJI_20260823120033_0070_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-06-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-07-3837961b19db-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-07-3837961b19db-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2186246,
-        "sha256": "c1bf72e14830e1659d9244c2f781361a2b5c69ec6080451a5d35b151e6fca8cb",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/interior-07-natural-light-f71a32d7f132-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-07-natural-light-f71a32d7f132-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1552202,
+        "sha256": "9d1e6dc1639ce0d402a400a5f3ab3e8767c9c1d68f3e0ca5faeea9140f43bf3f",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-07-3837961b19db-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-07-natural-light-f71a32d7f132-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 218612
+            "bytes": 224470
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-07-3837961b19db-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-07-natural-light-f71a32d7f132-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 904872
+            "bytes": 946614
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-07-3837961b19db-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2186246
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-07-natural-light-f71a32d7f132-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1552202
           }
         ],
         "caption": "洗面と収納まわり",
         "alt": "洗面と収納まわり",
         "originalFile": "DJI_20260823120128_0074_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-07-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-08-1f8794b8e77d-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-08-1f8794b8e77d-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2148192,
-        "sha256": "ebdaaab7e6e1b98fc7912435b719838e6a7de8de184695dbd6d4b8f8489feab8",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/interior-08-natural-light-11b924e94f7b-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-08-natural-light-11b924e94f7b-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1462706,
+        "sha256": "db63d0fb10eccf1b79b98a73514bf4ca547f9a332c23a930a2aa8c5fa3e83170",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-08-1f8794b8e77d-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-08-natural-light-11b924e94f7b-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 211264
+            "bytes": 216238
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-08-1f8794b8e77d-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-08-natural-light-11b924e94f7b-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 884588
+            "bytes": 895488
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-08-1f8794b8e77d-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2148192
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-08-natural-light-11b924e94f7b-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1462706
           }
         ],
         "caption": "棚とハンガーパイプを備えた木張り収納",
         "alt": "棚とハンガーパイプを備えた木張り収納",
         "originalFile": "DJI_20260823120132_0075_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-08-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-09-1bfee350315b-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-09-1bfee350315b-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2228618,
-        "sha256": "2acec2c7fad2c36fe6cea49462a346d5f5dd39ce57bc36913304a509aaae3221",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/interior-09-natural-light-6c72469e485d-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-09-natural-light-6c72469e485d-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1478078,
+        "sha256": "2b04f4c86cabac1f3c622b7e4596f49a2fe03f7c04efe695366bc7d296a1c1fc",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-09-1bfee350315b-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-09-natural-light-6c72469e485d-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 228392
+            "bytes": 230408
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-09-1bfee350315b-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-09-natural-light-6c72469e485d-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 939910
+            "bytes": 917148
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-09-1bfee350315b-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2228618
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-09-natural-light-6c72469e485d-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1478078
           }
         ],
         "caption": "洗面横の木の作業カウンター",
         "alt": "洗面横の木の作業カウンター",
         "originalFile": "DJI_20260823120147_0077_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-09-natural-light.png"
       },
       {
-        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-10-f7568c0c6e3c-2000.webp",
-        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-10-f7568c0c6e3c-2000.webp",
-        "width": 2000,
-        "height": 1125,
-        "bytes": 2200050,
-        "sha256": "f0cbf15a1da6c4a3a95e65dc25e50e7bd7d4fdcb64e3b28b5e136c9c3aaac965",
+        "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/interior-10-natural-light-ac55f18e332b-1672.webp",
+        "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-10-natural-light-ac55f18e332b-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1746208,
+        "sha256": "eae18748ff308bdd61668ced7b4de33f57c4facd8ce926c5a15509cdd959d780",
         "variants": [
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-10-f7568c0c6e3c-640.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-10-natural-light-ac55f18e332b-640.webp",
             "width": 640,
             "height": 360,
-            "bytes": 219636
+            "bytes": 243680
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-10-f7568c0c6e3c-1280.webp",
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-10-natural-light-ac55f18e332b-1280.webp",
             "width": 1280,
             "height": 720,
-            "bytes": 916540
+            "bytes": 1053382
           },
           {
-            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-10-f7568c0c6e3c-2000.webp",
-            "width": 2000,
-            "height": 1125,
-            "bytes": 2200050
+            "file": "img/gallery/houses/wood-ceiling-natural-hiraya/interior-10-natural-light-ac55f18e332b-1672.webp",
+            "width": 1672,
+            "height": 941,
+            "bytes": 1746208
           }
         ],
         "caption": "落ち着いた色合いの浴室",
         "alt": "落ち着いた色合いの浴室",
         "originalFile": "DJI_20260823120258_0082_D.JPG",
-        "virtuallyStaged": false
+        "virtuallyStaged": false,
+        "lightingAdjusted": true,
+        "lightingEditSource": "lighting-edits/interior-10-natural-light.png"
       }
     ],
     "thumbnail": {
-      "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-2000.webp",
-      "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-2000.webp",
-      "width": 2000,
-      "height": 1125,
-      "bytes": 2194632,
-      "sha256": "4efd8c6ef9537b782604caaf6999325a41e5913b3938a789125b494538bd4b96",
+      "source": "https://www.fujisou-ainos.com/img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-1672.webp",
+      "file": "img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-1672.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1588266,
+      "sha256": "43b34356649333933a3362c2489077b62e24e6530006967f7808bd7f1a0580de",
       "variants": [
         {
-          "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-640.webp",
+          "file": "img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-640.webp",
           "width": 640,
           "height": 360,
-          "bytes": 225378
+          "bytes": 243382
         },
         {
-          "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-1280.webp",
+          "file": "img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-1280.webp",
           "width": 1280,
           "height": 720,
-          "bytes": 925620
+          "bytes": 979838
         },
         {
-          "file": "img/gallery/houses/wood-ceiling-natural-hiraya/photo-01-4ee8f886a9a1-2000.webp",
-          "width": 2000,
-          "height": 1125,
-          "bytes": 2194632
+          "file": "img/gallery/houses/wood-ceiling-natural-hiraya/cover-natural-light-8a1c6b776fe0-1672.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 1588266
         }
       ],
       "caption": "黒い外壁と木張りの玄関が印象的な平屋",
       "alt": "黒い外壁と木張りの玄関が印象的な平屋",
       "originalFile": "DJI_20260823115523_0048_D.JPG",
-      "virtuallyStaged": false
+      "virtuallyStaged": false,
+      "lightingAdjusted": true,
+      "lightingEditSource": "lighting-edits/exterior-natural-light.png"
     }
   },
   {

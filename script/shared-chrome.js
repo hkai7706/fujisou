@@ -187,3 +187,38 @@
   });
   footer.setAttribute('data-enhanced', '');
 })();
+
+// Compact mobile footer; native details remain keyboard and touch accessible.
+(() => {
+  const footer = document.querySelector('.shared-footer');
+  if (!footer) return;
+  const media = matchMedia('(max-width: 820px)');
+  const groups = [...footer.querySelectorAll('.shared-footer__nav > div')]
+    .filter(group => group.querySelector('h2') && group.querySelector('ul'));
+  const update = () => {
+    for (const group of groups) {
+      if (media.matches && !group.querySelector('details')) {
+        const heading = group.querySelector('h2');
+        const list = group.querySelector('ul');
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        summary.textContent = heading.textContent;
+        details.className = 'shared-footer__section';
+        details.append(summary, list);
+        heading.hidden = true;
+        group.append(details);
+      } else if (!media.matches) {
+        const details = group.querySelector('details');
+        if (!details) continue;
+        const hadFocus = details.contains(document.activeElement);
+        const list = details.querySelector('ul');
+        group.append(list);
+        group.querySelector('h2').hidden = false;
+        details.remove();
+        if (hadFocus) list.querySelector('a')?.focus({preventScroll: true});
+      }
+    }
+  };
+  media.addEventListener('change', update);
+  update();
+})();

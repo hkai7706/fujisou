@@ -1292,6 +1292,9 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
 }
 .home-selector .home-selector__note,.home-selector .home-selector__note a{color:#71665f}
 
+/* A little breathing room between the shared header and homepage visual. */
+.hybrid-hero{margin-top:clamp(10px,1.2vw,18px)!important}
+
 /* Mobile hero: full uncropped photo, with compact text inside the image. */
 @media(max-width:819px){
  .hybrid-hero{display:grid!important;grid-template-columns:minmax(0,1fr)!important;height:auto!important;min-height:0!important;padding:0!important;background:transparent}

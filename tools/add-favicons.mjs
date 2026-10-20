@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
-const skip = new Set(['.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'tools', 'docs', 'include', 'mailformpro', 'mfp.statics']);
+const skip = new Set(['.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'tools', 'docs', 'include', 'mailformpro', 'mfp.statics', 'originals']);
 let count = 0;
 function walk(directory) {
   for (const item of fs.readdirSync(directory, { withFileTypes: true })) {

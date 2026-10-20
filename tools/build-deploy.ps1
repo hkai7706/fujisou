@@ -9,7 +9,7 @@ if (-not $destinationRoot.StartsWith($projectRoot + [IO.Path]::DirectorySeparato
 # Reapply shared-code and byte-identical image optimizations after page generators.
 Push-Location -LiteralPath $projectRoot
 try {
-  foreach ($optimization in 'build-videos.mjs', 'add-loan-links.mjs', 'add-house-guide-links.mjs', 'review-health-copy.mjs', 'optimize-shared-chrome.mjs', 'deduplicate-image-references.mjs', 'build-home-css.mjs', 'normalize-folder-links.mjs', 'update-catalog-links.mjs', 'add-favicons.mjs', 'prepare-seo.mjs', 'generate-sitemap.mjs', 'version-public-assets.mjs') {
+  foreach ($optimization in 'build-videos.mjs', 'add-loan-links.mjs', 'add-house-guide-links.mjs', 'build-gallery-redirects.mjs', 'review-health-copy.mjs', 'optimize-shared-chrome.mjs', 'deduplicate-image-references.mjs', 'build-home-css.mjs', 'normalize-folder-links.mjs', 'update-catalog-links.mjs', 'add-favicons.mjs', 'prepare-seo.mjs', 'generate-sitemap.mjs', 'version-public-assets.mjs') {
     & node (Join-Path $PSScriptRoot $optimization)
     if ($LASTEXITCODE -ne 0) { throw "Optimization failed: $optimization" }
   }

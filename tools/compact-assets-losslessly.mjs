@@ -5,7 +5,7 @@ import sharp from 'sharp';
 
 const root = path.resolve(import.meta.dirname, '..');
 process.chdir(root);
-const skip = new Set(['.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'mailformpro', 'mfp.statics', 'iplogs']);
+const skip = new Set(['.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'mailformpro', 'mfp.statics', 'iplogs', 'originals']);
 const files = [];
 function walk(directory) {
   for (const item of fs.readdirSync(directory, { withFileTypes: true })) {

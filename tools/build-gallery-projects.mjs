@@ -3,7 +3,9 @@ import crypto from 'node:crypto';
 import {renderProjectFacts} from './project-facts.mjs';
 const projects=JSON.parse(fs.readFileSync('gallery/projects.json','utf8'));
 const listingTemplate=fs.readFileSync('gallery/index.html','utf8').replace(/<div class="gallery-discovery"[\s\S]*?<\/p><\/div>/g,'').replace(/<p data-gallery-empty[^>]*>[\s\S]*?<\/p>/g,'').replace(/<script[^>]*src="[^"]*gallery-filter\.js[^"]*"[^>]*><\/script>/g,'').replace(/<nav class="gallery-pagination"[\s\S]*?<\/nav>/g,'');
-const detailTemplate=fs.readFileSync('gallery/post-32.shtml','utf8');
+const templateProject=projects.find(p=>fs.existsSync('gallery/'+p.file)&&!fs.readFileSync('gallery/'+p.file,'utf8').includes('data-gallery-redirect'));
+if(!templateProject)throw Error('No existing gallery article is available as a template');
+const detailTemplate=fs.readFileSync('gallery/'+templateProject.file,'utf8');
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const plain=s=>s.replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
 const version=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex').slice(0,10);
@@ -23,23 +25,23 @@ function picture(image,alt,{eager=false,cover=false,thumbnail=false}={}){image=b
 const photoLink=(photo,caption,options)=>{photo=bestSource(photo);const enhanced=enhancements[photo.file];const full=viewingImages[photo.file]?.file||(enhanced&&enhanced.full.width>photo.width?enhanced.full.file:photo.file);return `<a class="project-photo-link" href="../${full}" data-project-photo data-caption="${esc(caption)}" aria-label="${esc(caption)}を拡大する">${picture(photo,caption,options)}</a>`;};
 const photoCaption=(photo,p)=>photo.caption||(/\.(?:jpe?g|png|webp)$/i.test(photo.alt)?'':photo.alt)||`${p.title}の写真`;
 const titleBreaks={
-  'post-30.shtml':['木の香りと暮らす','癒しの畳コーナのある家'],
-  'post-27.shtml':['コンパクトに','十分な暮らしを叶えた家'],
-  'post-23.shtml':['将来の安心と安全を考えた','「平屋」の家'],
-  'post-19.shtml':['コンパクトなゆとり空間','平家建のおうち'],
-  'post-18.shtml':['ガレージのある','アウトドア好きのおうち'],
-  '50-1.shtml':['築50年住宅を','"1軒まるごと" リフォームした家'],
-  'post-28.shtml':['自分たちらしく','満足した日常を過ごす家'],
-  'post-21.shtml':['光と風が通り抜ける','「中庭」のある平屋'],
-  'post-13.shtml':['あそぶ空間 まなぶ空間','いやされる空間'],
-  '2.shtml':['夫婦2人だけで','のんびり暮らせるお家'],
-  'post-10.shtml':['アンティークでかわいい','自然素材のお家'],
-  'post-7.shtml':['子どもも猫ものびのびと','遊べるおうち'],
-  'post-5.shtml':['自然の中で暮らしているような','おうち'],
-  'post-4.shtml':['家族が集い、','ゆったりと過ごすことができるおうち'],
-  'post-2.shtml':['広々とした空間作りで','こだわりいっぱいのおうち'],
-  'post-1.shtml':['自然素材で赤ちゃんにも','安心なおうち'],
-  'post.shtml':['家事も楽々！','回遊性のある間取りのおうち']
+  'wood-and-tatami-house.shtml':['木の香りと暮らす','癒しの畳コーナのある家'],
+  'compact-custom-storage-house.shtml':['コンパクトに','十分な暮らしを叶えた家'],
+  'nanto-natural-hiraya.shtml':['将来の安心と安全を考えた','「平屋」の家'],
+  'imizu-compact-hiraya.shtml':['コンパクトなゆとり空間','平家建のおうち'],
+  'oyabe-outdoor-garage-house.shtml':['ガレージのある','アウトドア好きのおうち'],
+  'toyama-whole-house-renovation.shtml':['築50年住宅を','"1軒まるごと" リフォームした家'],
+  'imizu-personal-style-house.shtml':['自分たちらしく','満足した日常を過ごす家'],
+  'takaoka-courtyard-hiraya.shtml':['光と風が通り抜ける','「中庭」のある平屋'],
+  'play-study-sunken-living-house.shtml':['あそぶ空間 まなぶ空間','いやされる空間'],
+  'takaoka-couple-house.shtml':['夫婦2人だけで','のんびり暮らせるお家'],
+  'antique-natural-material-house.shtml':['アンティークでかわいい','自然素材のお家'],
+  'children-and-cats-house.shtml':['子どもも猫ものびのびと','遊べるおうち'],
+  'nature-inspired-house.shtml':['自然の中で暮らしているような','おうち'],
+  'family-gathering-house.shtml':['家族が集い、','ゆったりと過ごすことができるおうち'],
+  'spacious-custom-layout-house.shtml':['広々とした空間作りで','こだわりいっぱいのおうち'],
+  'natural-material-family-house.shtml':['自然素材で赤ちゃんにも','安心なおうち'],
+  'circular-flow-house.shtml':['家事も楽々！','回遊性のある間取りのおうち']
 };
 function houseType(p){const text=p.title+' '+plain(p.description);return /リフォーム|リノベーション/.test(text)?'renovation':/平屋|平家/.test(text)?'hiraya':/２階建|2階建|二階建/.test(text)?'two-story':'other';}
 function headline(p){
@@ -47,7 +49,16 @@ function headline(p){
   if(separator){const [title,subtitle]=p.title.split(separator[0]);return `<span>${esc(title)}</span><small>${subtitle.split(/(?<=、)/).map(part=>`<span>${esc(part)}</span>`).join('')}</small>`;}
   const parts=titleBreaks[p.file];return parts?parts.map(part=>`<span class="project-title-phrase">${esc(part)}</span>`).join(''):esc(p.title);
 }
-function setMeta(template,{title,description,canonical,image}){let html=template.replace(/<title>[\s\S]*?<\/title>/,`<title>${esc(title)}</title>`).replace(/<meta name="description"[^>]*>/,`<meta name="description" content="${esc(description)}">`).replace(/<link rel="canonical"[^>]*>/,`<link rel="canonical" href="${esc(canonical)}">`).replace(/<meta property="og:[^"]*"[^>]*>/g,'').replace(/<link rel="(?:next|prev)"[^>]*>/g,'');return html.replace('</head>',`<meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(image)}"></head>`);}
+function setMeta(template,{title,description,canonical,image}){
+ let html=template.replace(/<title>[\s\S]*?<\/title>/,()=>`<title>${esc(title)}</title>`)
+  .replace(/<meta name="description"[^>]*>/,()=>`<meta name="description" content="${esc(description)}">`)
+  .replace(/<link rel="canonical"[^>]*>/,()=>`<link rel="canonical" href="${esc(canonical)}">`)
+  .replace(/<meta property="og:[^"]*"[^>]*>/g,'')
+  .replace(/<meta name="twitter:[^"]*"[^>]*>/g,'')
+  .replace(/<link rel="(?:next|prev)"[^>]*>/g,'');
+ return html.replace('</head>',`<meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(image)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="${esc(image)}"></head>`);
+}
+
 for(const [index,p]of projects.entries()){
   const cover=p.photos[0],description=plain(p.description)||`${p.area}の施工事例「${p.title}」。外観と室内の写真をご覧いただけます。`;
   const neighbours=[projects[(index+projects.length-1)%projects.length],projects[(index+1)%projects.length]];
@@ -64,7 +75,7 @@ for(const [index,p]of projects.entries()){
     return `href="${esc(url.href)}"`;
   });
   const main=`<main id="main" class="gallery-project"><nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../index.html">ホーム</a></li><li> / <a href="index.html">施工事例</a></li><li> / <span aria-current="page">${esc(p.title)}</span></li></ol></nav>
-  <section class="project-masthead"><p>${esc(p.area)} / 施工事例</p><h1>${headline(p)}</h1><a href="#project-photos">住まいの写真を見る <span aria-hidden="true">↓</span></a></section>
+  <section class="project-masthead"><p>${p.area?`${esc(p.area)} / `:''}施工事例</p><h1>${headline(p)}</h1><a href="#project-photos">住まいの写真を見る <span aria-hidden="true">↓</span></a></section>
   <section class="project-cover-photo"><figure>${photoLink(cover,photoCaption(cover,p),{eager:true,cover:true})}${cover.caption?`<figcaption>${esc(cover.caption)}</figcaption>`:''}</figure></section>
   ${renderProjectFacts(p)}
   ${originalCopy?`<section class="project-original-copy" aria-label="この住まいについて">${originalCopy}</section>`:''}
@@ -73,7 +84,7 @@ for(const [index,p]of projects.entries()){
   <section class="project-consultation"><div><h2>気になる住まいを、相談のきっかけに。</h2><p>素材や間取り、お好みの雰囲気をお聞かせください。</p></div><div><a href="../consultation/index.html">家づくり無料相談 <span aria-hidden="true">→</span></a><a href="index.html">施工事例一覧に戻る <span aria-hidden="true">→</span></a></div></section>
   <dialog class="work-image-dialog" aria-label="施工事例の写真を拡大"><div class="work-image-dialog__controls"><button type="button" data-photo-prev aria-label="前の写真">←</button><span class="work-image-dialog__count"></span><button type="button" data-photo-next aria-label="次の写真">→</button><button type="button" class="work-image-dialog__close">閉じる ×</button></div><img alt="" width="1600" height="1000"><p></p></dialog></main>`;
   const socialPhoto=bestSource(cover),socialImage=enhancements[socialPhoto.file]?.full.file||socialPhoto.file;
-  let html=setMeta(detailTemplate,{title:`${p.title}｜${p.area}の施工事例｜フジ創アイノス`,description:description.slice(0,180),canonical:p.source,image:'https://www.fujisou-ainos.com/'+socialImage});
+  let html=setMeta(detailTemplate,{title:`${p.title}｜${p.area?`${p.area}の`:''}施工事例｜フジ創アイノス`,description:description.slice(0,180),canonical:p.source,image:'https://www.fujisou-ainos.com/'+socialImage});
   html=html.replace(/<main\b[\s\S]*?<\/main>/,main).replace(/<body[^>]*>/,'<body class="gallery-project-page">').replace(/<link[^>]*href="[^\"]*(?:project-detail|gallery-project)\.css[^\"]*"[^>]*>/g,'').replace(/<script[^>]*src="[^\"]*gallery-project\.js[^\"]*"[^>]*><\/script>/g,'');
   html=html.replace('</head>',`<link rel="stylesheet" href="../stylesheet/gallery-project.css?v=${version('stylesheet/gallery-project.css')}"><script src="../script/gallery-project.js?v=${version('script/gallery-project.js')}" defer></script></head>`);
   fs.writeFileSync('gallery/'+p.file,html);
@@ -84,13 +95,12 @@ for(let page=1;page<=totalPages;page++){
   const cards=rows.map(p=>`<article class="work-card" data-house-type="${houseType(p)}" data-location="${esc(p.area)}"><a href="${esc(p.file)}"><figure>${picture(p.thumbnail,p.title,{thumbnail:true})}</figure><div class="work-card__text"><p><span>${esc(p.area)}</span></p><h2>${esc(p.title)}</h2><b>詳しく見る <i>→</i></b></div></a></article>`).join('\n');
   const url=n=>n===1?'index.html':`page-${n}.html`;
   const pagination=`<nav class="gallery-pagination" aria-label="施工事例のページ切り替え">${page>1?`<a href="${url(page-1)}">← 前のページ</a>`:'<span></span>'}<div class="gallery-pagination__numbers">${Array.from({length:totalPages},(_,i)=>`<a href="${url(i+1)}" ${i+1===page?'aria-current="page"':''}>${i+1}</a>`).join('')}</div>${page<totalPages?`<a href="${url(page+1)}">次のページ →</a>`:'<span></span>'}</nav>`;
-  let html=listingTemplate.replace(/<section class="gallery-works"[^>]*>[\s\S]*?<\/section>/,`${page===1?'<div class="gallery-discovery" data-gallery-controls hidden><div role="group" aria-label="建物の種類"><button type="button" data-gallery-type="" aria-pressed="true">すべて</button><button type="button" data-gallery-type="hiraya" aria-pressed="false">平屋</button><button type="button" data-gallery-type="two-story" aria-pressed="false">２階建て</button><button type="button" data-gallery-type="renovation" aria-pressed="false">リフォーム</button></div><label>地域<select data-gallery-location><option value="">すべての地域</option>'+[...new Set(projects.map(p=>p.area))].sort().map(area=>'<option>'+esc(area)+'</option>').join('')+'</select></label><p data-gallery-count role="status"></p></div>':''}<section class="gallery-works" aria-label="施工事例一覧">${cards}</section>${page===1?'<p data-gallery-empty hidden>条件に合う事例はありません。種類や地域を変えてご覧ください。</p>':pagination}`).replace(/<body[^>]*>/,`<body class="gallery-page${page>1?' gallery-page--'+page:''}">`).replace(/<figure class="gallery-hero__visual">[\s\S]*?<\/figure>/,'').replace(/<main>/,'<main id="main">');
+  let html=listingTemplate.replace(/<section class="gallery-works"[^>]*>[\s\S]*?<\/section>/,`<section class="gallery-works" aria-label="施工事例一覧">${cards}</section>${page===1?'':pagination}`).replace(/<body[^>]*>/,`<body class="gallery-page${page>1?' gallery-page--'+page:''}">`).replace(/<figure class="gallery-hero__visual">[\s\S]*?<\/figure>/,'').replace(/<main>/,'<main id="main">');
   html=html.replace(/<link rel="(?:next|prev)"[^>]*>/g,'').replace(/<link rel="canonical"[^>]*>/,`<link rel="canonical" href="https://www.fujisou-ainos.com/gallery/${page===1?'':`index_${page}.shtml`}">`);
   if(page>1)html=html.replace(/<title>[\s\S]*?<\/title>/,`<title>施工事例 ${page}ページ目｜フジ創アイノス</title>`);
   const socialThumbnail=bestSource(rows[0].thumbnail),socialImage=enhancements[socialThumbnail.file]?.full.file||socialThumbnail.file;
   html=html.replace(/<meta property="og:image"[^>]*>/,`<meta property="og:image" content="https://www.fujisou-ainos.com/${socialImage}">`);
   html=html.replace(/<link rel="stylesheet" href="[^\"]*gallery\.css[^\"]*">/,`<link rel="stylesheet" href="../stylesheet/gallery.css?v=${version('stylesheet/gallery.css')}">`);
-  if(page===1)html=html.replace('</head>','<script src="../script/gallery-filter.js" defer></script></head>');
   fs.writeFileSync('gallery/'+filename,html);
 }
 console.log(`Built ${projects.length} gallery details and ${totalPages} listing pages with local project links.`);

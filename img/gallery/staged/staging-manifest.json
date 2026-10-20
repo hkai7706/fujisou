@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-20",
+  "method": "Built-in image_gen image editing",
+  "status": "Selected living-room image added to wood-and-plaster-two-story-house.shtml; all other public images use original photos.",
+  "publicCaption": "家具・家電はCGによる配置イメージです。",
+  "notes": "Original photos preserved. Prompt briefs below summarize the edit instructions; architecture preservation remains a visual review limitation of generative editing.",
+  "items": [
+    {
+      "house": "new-01",
+      "room": "Living room",
+      "file": "living-virtual-staging.png",
+      "original": "木と漆喰がつなぐ二階建ての家/DJI_20261020091534_0040_D.JPG",
+      "prompt": "Preserve exact architecture and framing. Add compact oatmeal two-seat sofa, low oak coffee table, one paperback, ceramic mug and subtle flat-weave rug. Everyday Japanese natural style. Match original exposure, light and contact shadows; keep sliding door clear.",
+      "selected": true,
+      "use": "approved-virtual-staging"
+    },
+    {
+      "house": "new-01",
+      "room": "Kitchen",
+      "file": "kitchen-virtual-staging.png",
+      "original": "木と漆喰がつなぐ二階建ての家/DJI_20261020091652_0045_D.JPG",
+      "prompt": "Preserve exact architecture and framing. Add realistically scaled ivory rice cooker, charcoal microwave, black electric kettle, cutting board and ceramic utensil pot on existing left countertop; believable cords. Keep work areas and walkway clear; match original lighting.",
+      "selected": false,
+      "use": "use-original-photo"
+    },
+    {
+      "house": "new-01",
+      "room": "Study",
+      "file": "study-virtual-staging.png",
+      "original": "木と漆喰がつなぐ二階建ての家/DJI_20261020091033_0027_D.JPG",
+      "prompt": "Preserve exact architecture, teal blinds and square framing. Add compact oak desk below left window, oak chair with beige seat, small lamp, two books and notebook; low oak bookcase under right window. Ordinary understated furniture, real textures, correct shadows and scale.",
+      "selected": false,
+      "use": "use-original-photo"
+    },
+    {
+      "house": "new-02",
+      "room": "Dining room",
+      "file": "dining-virtual-staging.png",
+      "original": "木張りの天井が映える平屋の住まい/DJI_20260823115918_0064_D.JPG",
+      "prompt": "Preserve exact architecture and framing. Add compact solid oak dining table, four slim oak chairs with woven seats before kitchen halfwall, small ceramic vase and linen runner; small black kettle on kitchen counter. Leave right walkway clear. Match original light and perspective.",
+      "selected": false,
+      "use": "use-original-photo"
+    },
+    {
+      "house": "new-02",
+      "room": "Bedroom",
+      "file": "bedroom-virtual-staging.png",
+      "original": "木張りの天井が映える平屋の住まい/DJI_20260823115832_0060_D.JPG",
+      "prompt": "Preserve exact architecture and framing. Add low oak single bed below window along left wall, lightly rumpled off-white linen bedding, beige pillow and small oak bedside stool with book; folded cotton blanket on existing shelf. Keep closet access clear, ordinary home style and original light.",
+      "selected": false,
+      "use": "use-original-photo"
+    }
+  ],
+  "selectionPolicy": "Use living-virtual-staging.png only for its matching original photograph. Do not use the other four generated images or add objects to any other photos."
+}

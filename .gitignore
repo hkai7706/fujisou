@@ -36,3 +36,6 @@ contact/iplogs/
 
 # Full-resolution supplied photography; publish only prepared web assets.
 /img/videos/**/originals/
+/img/gallery/originals/
+# Local staging masters and unused review drafts; publish selected WebP copies only.
+/img/gallery/staged/**/*.png

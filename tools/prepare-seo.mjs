@@ -5,7 +5,7 @@ const argument=process.argv.slice(2).find(value=>!value.startsWith('--'));
 const root=argument?path.resolve(argument):project;
 if(root!==project && !root.startsWith(path.join(project,'dist')+path.sep) && root!==path.join(project,'dist'))throw new Error('SEO output outside project/dist');
 const production=process.argv.includes('--production');
-const skip=new Set(['.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','include','mailformpro','mfp.statics','iplogs']);
+const skip=new Set(['.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','include','mailformpro','mfp.statics','iplogs', 'originals']);
 const events=JSON.parse(fs.readFileSync(path.join(project,'eventinfo/posts.json'),'utf8'));
 const archivedEvents=new Set(events.filter(post=>!post.existing&&post.legacyFile!=='post-16.shtml').map(post=>'eventinfo/'+post.file));
 const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
@@ -18,6 +18,7 @@ function walk(directory){for(const item of fs.readdirSync(directory,{withFileTyp
   if(!/\.(html|shtml)$/.test(file))continue;
   let html=fs.readFileSync(file,'utf8');
   if(!html.includes('</head>'))continue;
+  if(html.includes('data-gallery-redirect'))continue;
   const relative=path.relative(root,file).replaceAll('\\','/');
   const title=decode(html.match(/<title>([\s\S]*?)<\/title>/)?.[1]||'フジ創アイノス');
   const description=decode(html.match(/<meta\b[^>]*name="description"[^>]*content="([^"]*)"/)?.[1]||title);

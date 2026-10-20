@@ -11,6 +11,43 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # BEGIN GALLERY DESCRIPTIVE URLS
+  RewriteRule ^gallery/2\.shtml$ gallery/takaoka-couple-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-32\.shtml$ gallery/wakon-yosai-residence.shtml [R=301,L]
+  RewriteRule ^gallery/post-31\.shtml$ gallery/home-theater-house.shtml [R=301,L]
+  RewriteRule ^gallery/toyama-inner-garage-house\.shtml$ gallery/uozu-inner-garage-house.shtml [R=301,L]
+  RewriteRule ^gallery/50ainos\.shtml$ gallery/tonami-traditional-modern-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-30\.shtml$ gallery/wood-and-tatami-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-11\.shtml$ gallery/coastal-beach-style-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-12\.shtml$ gallery/sunlit-pine-interior-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-26\.shtml$ gallery/elegant-arched-entrance-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-27\.shtml$ gallery/compact-custom-storage-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-15\.shtml$ gallery/southern-european-style-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-23\.shtml$ gallery/nanto-natural-hiraya.shtml [R=301,L]
+  RewriteRule ^gallery/post-19\.shtml$ gallery/imizu-compact-hiraya.shtml [R=301,L]
+  RewriteRule ^gallery/post-18\.shtml$ gallery/oyabe-outdoor-garage-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-22\.shtml$ gallery/family-comfort-house.shtml [R=301,L]
+  RewriteRule ^gallery/50-1\.shtml$ gallery/toyama-whole-house-renovation.shtml [R=301,L]
+  RewriteRule ^gallery/post-29\.shtml$ gallery/imizu-compact-site-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-28\.shtml$ gallery/imizu-personal-style-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-21\.shtml$ gallery/takaoka-courtyard-hiraya.shtml [R=301,L]
+  RewriteRule ^gallery/post-20\.shtml$ gallery/toyama-single-person-hiraya.shtml [R=301,L]
+  RewriteRule ^gallery/post-16\.shtml$ gallery/takaoka-sunlit-hiraya.shtml [R=301,L]
+  RewriteRule ^gallery/post-13\.shtml$ gallery/play-study-sunken-living-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-10\.shtml$ gallery/antique-natural-material-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-9\.shtml$ gallery/gentle-family-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-8\.shtml$ gallery/connected-walkway-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-7\.shtml$ gallery/children-and-cats-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-6\.shtml$ gallery/wood-stove-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-5\.shtml$ gallery/nature-inspired-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-4\.shtml$ gallery/family-gathering-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-3\.shtml$ gallery/practical-compact-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-2\.shtml$ gallery/spacious-custom-layout-house.shtml [R=301,L]
+  RewriteRule ^gallery/04\.shtml$ gallery/energy-conscious-house.shtml [R=301,L]
+  RewriteRule ^gallery/post-1\.shtml$ gallery/natural-material-family-house.shtml [R=301,L]
+  RewriteRule ^gallery/post\.shtml$ gallery/circular-flow-house.shtml [R=301,L]
+  # END GALLERY DESCRIPTIVE URLS
+
   # Descriptive blog URLs: preserve original article addresses.
   RewriteRule ^staffblog/-3\.shtml$ staffblog/2026-10-12-%E4%BD%8F%E5%AE%85%E8%A6%8B%E5%AD%A6%E4%BC%9A%E3%81%A7%E8%A6%8B%E3%82%8B%E3%81%B9%E3%81%8D%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%883%E7%82%B9-open-house-checkpoints.shtml [R=301,L,NE]
   RewriteRule ^staffblog/post-939\.shtml$ staffblog/2026-10-05-%E3%83%AD%E3%83%BC%E3%82%B3%E3%82%B9%E3%83%88%E4%BD%8F%E5%AE%85%E3%81%A8%E3%81%AF-%E5%AE%89%E3%81%84%E5%AE%B6-%E3%81%A8-%E8%B3%A2%E3%81%84%E5%AE%B6%E3%81%A5%E3%81%8F%E3%82%8A-%E3%81%AF%E9%81%95%E3%81%84%E3%81%BE%E3%81%99-post-939.shtml [R=301,L,NE]

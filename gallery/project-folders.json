@@ -1,0 +1,373 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "id": "wood-ceiling-natural-hiraya",
+      "file": "wood-ceiling-natural-hiraya.shtml",
+      "title": "木張りの天井が映える、平屋の住まい",
+      "area": "",
+      "originals": "img/gallery/originals/木張りの天井が映える平屋の住まい",
+      "web": "img/gallery/houses/wood-ceiling-natural-hiraya"
+    },
+    {
+      "id": "wood-and-plaster-two-story-house",
+      "file": "wood-and-plaster-two-story-house.shtml",
+      "title": "木と漆喰がつなぐ、落ち着きのある家",
+      "area": "",
+      "originals": "img/gallery/originals/木と漆喰がつなぐ二階建ての家",
+      "web": "img/gallery/houses/wood-and-plaster-two-story-house"
+    },
+    {
+      "id": "wakon-yosai-residence",
+      "file": "wakon-yosai-residence.shtml",
+      "title": "和魂洋才の邸宅 — 伝統と気品が織りなす、至福の日常",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_和魂洋才の邸宅 — 伝統と気品が織りなす、至福の日常",
+      "web": "img/gallery/houses/wakon-yosai-residence",
+      "legacyId": "post-32",
+      "legacyFile": "post-32.shtml"
+    },
+    {
+      "id": "home-theater-house",
+      "file": "home-theater-house.shtml",
+      "title": "憧れのホームシアター｜２階建て LDK",
+      "area": "富山県",
+      "originals": "img/gallery/originals/富山県_憧れのホームシアター｜２階建て LDK",
+      "web": "img/gallery/houses/home-theater-house",
+      "legacyId": "post-31",
+      "legacyFile": "post-31.shtml"
+    },
+    {
+      "id": "uozu-inner-garage-house",
+      "file": "uozu-inner-garage-house.shtml",
+      "title": "雪に強いインナーガレージ付き住宅｜２階建て３LDK",
+      "area": "魚津市",
+      "originals": "img/gallery/originals/魚津市_雪に強いインナーガレージ付き住宅｜２階建て３LDK",
+      "web": "img/gallery/houses/uozu-inner-garage-house",
+      "legacyId": "toyama-inner-garage-house",
+      "legacyFile": "toyama-inner-garage-house.shtml"
+    },
+    {
+      "id": "tonami-traditional-modern-house",
+      "file": "tonami-traditional-modern-house.shtml",
+      "title": "築50年建築と現代の融合｜2階建て５LDK",
+      "area": "砺波市",
+      "originals": "img/gallery/originals/砺波市_築50年建築と現代の融合｜2階建て５LDK",
+      "web": "img/gallery/houses/tonami-traditional-modern-house",
+      "legacyId": "50ainos",
+      "legacyFile": "50ainos.shtml"
+    },
+    {
+      "id": "wood-and-tatami-house",
+      "file": "wood-and-tatami-house.shtml",
+      "title": "木の香りと暮らす癒しの畳コーナのある家",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_木の香りと暮らす癒しの畳コーナのある家",
+      "web": "img/gallery/houses/wood-and-tatami-house",
+      "legacyId": "post-30",
+      "legacyFile": "post-30.shtml"
+    },
+    {
+      "id": "coastal-beach-style-house",
+      "file": "coastal-beach-style-house.shtml",
+      "title": "潮風香る町のビーチハウス",
+      "area": "富山市",
+      "originals": "img/gallery/originals/富山市_潮風香る町のビーチハウス",
+      "web": "img/gallery/houses/coastal-beach-style-house",
+      "legacyId": "post-11",
+      "legacyFile": "post-11.shtml"
+    },
+    {
+      "id": "sunlit-pine-interior-house",
+      "file": "sunlit-pine-interior-house.shtml",
+      "title": "木の空間演出~太陽を迎えるおうち",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_木の空間演出~太陽を迎えるおうち",
+      "web": "img/gallery/houses/sunlit-pine-interior-house",
+      "legacyId": "post-12",
+      "legacyFile": "post-12.shtml"
+    },
+    {
+      "id": "elegant-arched-entrance-house",
+      "file": "elegant-arched-entrance-house.shtml",
+      "title": "上品で大人可愛い家",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_上品で大人可愛い家",
+      "web": "img/gallery/houses/elegant-arched-entrance-house",
+      "legacyId": "post-26",
+      "legacyFile": "post-26.shtml"
+    },
+    {
+      "id": "compact-custom-storage-house",
+      "file": "compact-custom-storage-house.shtml",
+      "title": "コンパクトに十分な暮らしを叶えた家",
+      "area": "砺波市",
+      "originals": "img/gallery/originals/砺波市_コンパクトに十分な暮らしを叶えた家",
+      "web": "img/gallery/houses/compact-custom-storage-house",
+      "legacyId": "post-27",
+      "legacyFile": "post-27.shtml"
+    },
+    {
+      "id": "southern-european-style-house",
+      "file": "southern-european-style-house.shtml",
+      "title": "南欧風のかわいいおうち",
+      "area": "富山市",
+      "originals": "img/gallery/originals/富山市_南欧風のかわいいおうち",
+      "web": "img/gallery/houses/southern-european-style-house",
+      "legacyId": "post-15",
+      "legacyFile": "post-15.shtml"
+    },
+    {
+      "id": "nanto-natural-hiraya",
+      "file": "nanto-natural-hiraya.shtml",
+      "title": "将来の安心と安全を考えた「平屋」の家",
+      "area": "南砺市",
+      "originals": "img/gallery/originals/南砺市_将来の安心と安全を考えた「平屋」の家",
+      "web": "img/gallery/houses/nanto-natural-hiraya",
+      "legacyId": "post-23",
+      "legacyFile": "post-23.shtml"
+    },
+    {
+      "id": "imizu-compact-hiraya",
+      "file": "imizu-compact-hiraya.shtml",
+      "title": "コンパクトなゆとり空間 平家建のおうち",
+      "area": "射水市",
+      "originals": "img/gallery/originals/射水市_コンパクトなゆとり空間 平家建のおうち",
+      "web": "img/gallery/houses/imizu-compact-hiraya",
+      "legacyId": "post-19",
+      "legacyFile": "post-19.shtml"
+    },
+    {
+      "id": "oyabe-outdoor-garage-house",
+      "file": "oyabe-outdoor-garage-house.shtml",
+      "title": "ガレージのあるアウトドア好きのおうち",
+      "area": "小矢部市",
+      "originals": "img/gallery/originals/小矢部市_ガレージのあるアウトドア好きのおうち",
+      "web": "img/gallery/houses/oyabe-outdoor-garage-house",
+      "legacyId": "post-18",
+      "legacyFile": "post-18.shtml"
+    },
+    {
+      "id": "family-comfort-house",
+      "file": "family-comfort-house.shtml",
+      "title": "安心と安全を大切に考えた家",
+      "area": "富山市",
+      "originals": "img/gallery/originals/富山市_安心と安全を大切に考えた家",
+      "web": "img/gallery/houses/family-comfort-house",
+      "legacyId": "post-22",
+      "legacyFile": "post-22.shtml"
+    },
+    {
+      "id": "toyama-whole-house-renovation",
+      "file": "toyama-whole-house-renovation.shtml",
+      "title": "築50年住宅を \"1軒まるごと\" リフォームした家",
+      "area": "富山市",
+      "originals": "img/gallery/originals/富山市_築50年住宅を 1軒まるごと リフォームした家",
+      "web": "img/gallery/houses/toyama-whole-house-renovation",
+      "legacyId": "50-1",
+      "legacyFile": "50-1.shtml"
+    },
+    {
+      "id": "imizu-compact-site-house",
+      "file": "imizu-compact-site-house.shtml",
+      "title": "土地を有効活用したコンパクトな家",
+      "area": "射水市",
+      "originals": "img/gallery/originals/射水市_土地を有効活用したコンパクトな家",
+      "web": "img/gallery/houses/imizu-compact-site-house",
+      "legacyId": "post-29",
+      "legacyFile": "post-29.shtml"
+    },
+    {
+      "id": "imizu-personal-style-house",
+      "file": "imizu-personal-style-house.shtml",
+      "title": "自分たちらしく満足した日常を過ごす家",
+      "area": "射水市",
+      "originals": "img/gallery/originals/射水市_自分たちらしく満足した日常を過ごす家",
+      "web": "img/gallery/houses/imizu-personal-style-house",
+      "legacyId": "post-28",
+      "legacyFile": "post-28.shtml"
+    },
+    {
+      "id": "takaoka-courtyard-hiraya",
+      "file": "takaoka-courtyard-hiraya.shtml",
+      "title": "光と風が通り抜ける「中庭」のある平屋",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_光と風が通り抜ける「中庭」のある平屋",
+      "web": "img/gallery/houses/takaoka-courtyard-hiraya",
+      "legacyId": "post-21",
+      "legacyFile": "post-21.shtml"
+    },
+    {
+      "id": "toyama-single-person-hiraya",
+      "file": "toyama-single-person-hiraya.shtml",
+      "title": "「お一人様用」の平屋",
+      "area": "富山市",
+      "originals": "img/gallery/originals/富山市_「お一人様用」の平屋",
+      "web": "img/gallery/houses/toyama-single-person-hiraya",
+      "legacyId": "post-20",
+      "legacyFile": "post-20.shtml"
+    },
+    {
+      "id": "takaoka-sunlit-hiraya",
+      "file": "takaoka-sunlit-hiraya.shtml",
+      "title": "自然光の当たる平家建てのおうち",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_自然光の当たる平家建てのおうち",
+      "web": "img/gallery/houses/takaoka-sunlit-hiraya",
+      "legacyId": "post-16",
+      "legacyFile": "post-16.shtml"
+    },
+    {
+      "id": "play-study-sunken-living-house",
+      "file": "play-study-sunken-living-house.shtml",
+      "title": "あそぶ空間 まなぶ空間 いやされる空間",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_あそぶ空間 まなぶ空間 いやされる空間",
+      "web": "img/gallery/houses/play-study-sunken-living-house",
+      "legacyId": "post-13",
+      "legacyFile": "post-13.shtml"
+    },
+    {
+      "id": "takaoka-couple-house",
+      "file": "takaoka-couple-house.shtml",
+      "title": "夫婦2人だけでのんびり暮らせるお家",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_夫婦2人だけでのんびり暮らせるお家",
+      "web": "img/gallery/houses/takaoka-couple-house",
+      "legacyId": "2",
+      "legacyFile": "2.shtml"
+    },
+    {
+      "id": "antique-natural-material-house",
+      "file": "antique-natural-material-house.shtml",
+      "title": "アンティークでかわいい自然素材のお家",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_アンティークでかわいい自然素材のお家",
+      "web": "img/gallery/houses/antique-natural-material-house",
+      "legacyId": "post-10",
+      "legacyFile": "post-10.shtml"
+    },
+    {
+      "id": "gentle-family-house",
+      "file": "gentle-family-house.shtml",
+      "title": "家族をやさしく包みこむおうち",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_家族をやさしく包みこむおうち",
+      "web": "img/gallery/houses/gentle-family-house",
+      "legacyId": "post-9",
+      "legacyFile": "post-9.shtml"
+    },
+    {
+      "id": "connected-walkway-house",
+      "file": "connected-walkway-house.shtml",
+      "title": "渡り廊下がつなぐおうち",
+      "area": "高岡市",
+      "originals": "img/gallery/originals/高岡市_渡り廊下がつなぐおうち",
+      "web": "img/gallery/houses/connected-walkway-house",
+      "legacyId": "post-8",
+      "legacyFile": "post-8.shtml"
+    },
+    {
+      "id": "children-and-cats-house",
+      "file": "children-and-cats-house.shtml",
+      "title": "子どもも猫ものびのびと遊べるおうち",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_子どもも猫ものびのびと遊べるおうち",
+      "web": "img/gallery/houses/children-and-cats-house",
+      "legacyId": "post-7",
+      "legacyFile": "post-7.shtml"
+    },
+    {
+      "id": "wood-stove-house",
+      "file": "wood-stove-house.shtml",
+      "title": "薪ストーブで家中が暖かいおうち",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_薪ストーブで家中が暖かいおうち",
+      "web": "img/gallery/houses/wood-stove-house",
+      "legacyId": "post-6",
+      "legacyFile": "post-6.shtml"
+    },
+    {
+      "id": "nature-inspired-house",
+      "file": "nature-inspired-house.shtml",
+      "title": "自然の中で暮らしているようなおうち",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_自然の中で暮らしているようなおうち",
+      "web": "img/gallery/houses/nature-inspired-house",
+      "legacyId": "post-5",
+      "legacyFile": "post-5.shtml"
+    },
+    {
+      "id": "family-gathering-house",
+      "file": "family-gathering-house.shtml",
+      "title": "家族が集い、ゆったりと過ごすことができるおうち",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_家族が集い、ゆったりと過ごすことができるおうち",
+      "web": "img/gallery/houses/family-gathering-house",
+      "legacyId": "post-4",
+      "legacyFile": "post-4.shtml"
+    },
+    {
+      "id": "practical-compact-house",
+      "file": "practical-compact-house.shtml",
+      "title": "使い勝手の良いコンパクトハウス",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_使い勝手の良いコンパクトハウス",
+      "web": "img/gallery/houses/practical-compact-house",
+      "legacyId": "post-3",
+      "legacyFile": "post-3.shtml"
+    },
+    {
+      "id": "spacious-custom-layout-house",
+      "file": "spacious-custom-layout-house.shtml",
+      "title": "広々とした空間作りでこだわりいっぱいのおうち",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_広々とした空間作りでこだわりいっぱいのおうち",
+      "web": "img/gallery/houses/spacious-custom-layout-house",
+      "legacyId": "post-2",
+      "legacyFile": "post-2.shtml"
+    },
+    {
+      "id": "energy-conscious-house",
+      "file": "energy-conscious-house.shtml",
+      "title": "地球にも優しい光熱費0のおうち",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_地球にも優しい光熱費0のおうち",
+      "web": "img/gallery/houses/energy-conscious-house",
+      "legacyId": "04",
+      "legacyFile": "04.shtml"
+    },
+    {
+      "id": "natural-material-family-house",
+      "file": "natural-material-family-house.shtml",
+      "title": "自然素材で赤ちゃんにも安心なおうち",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_自然素材で赤ちゃんにも安心なおうち",
+      "web": "img/gallery/houses/natural-material-family-house",
+      "legacyId": "post-1",
+      "legacyFile": "post-1.shtml"
+    },
+    {
+      "id": "circular-flow-house",
+      "file": "circular-flow-house.shtml",
+      "title": "家事も楽々！回遊性のある間取りのおうち",
+      "area": "",
+      "originals": "img/gallery/originals/所在地未登録_家事も楽々！回遊性のある間取りのおうち",
+      "web": "img/gallery/houses/circular-flow-house",
+      "legacyId": "post",
+      "legacyFile": "post.shtml"
+    }
+  ],
+  "newProjects": [
+    {
+      "id": "new-project-01",
+      "originals": "img/gallery/originals/木と漆喰がつなぐ二階建ての家",
+      "assignedTo": "wood-and-plaster-two-story-house"
+    },
+    {
+      "id": "new-project-02",
+      "originals": "img/gallery/originals/木張りの天井が映える平屋の住まい",
+      "assignedTo": "wood-ceiling-natural-hiraya"
+    }
+  ]
+}

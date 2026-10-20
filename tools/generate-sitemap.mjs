@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'include', 'mailformpro', 'mfp.statics', 'iplogs']);
+const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'include', 'mailformpro', 'mfp.statics', 'iplogs', 'originals']);
 const articles = new Set(JSON.parse(fs.readFileSync(path.join(root, 'docs/sitemap-articles.json'), 'utf8')));
 const events = JSON.parse(fs.readFileSync(path.join(root, 'eventinfo/posts.json'), 'utf8'));
 const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());

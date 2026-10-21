@@ -61,8 +61,8 @@
  .shared-footer__nav h2[hidden]{display:none}
  .shared-footer__section summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:14px 0;cursor:pointer;list-style:none;font-size:16px;line-height:1.7}
  .shared-footer__section summary::-webkit-details-marker{display:none}
- .shared-footer__section summary::after{content:'＋';font:400 18px/1 sans-serif;color:#967042}
- .shared-footer__section[open] summary::after{content:'−'}
+ .shared-footer__section summary::after{content:'↓';font:400 18px/1 sans-serif;color:#967042}
+ .shared-footer__section[open] summary::after{content:'↑'}
  .shared-footer__section summary:focus-visible{outline:2px solid #967042;outline-offset:3px}
  .shared-footer__section ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;padding:0 0 16px}
  .shared-footer__section a{display:flex;align-items:center;min-height:46px;padding:10px 0;font-size:14px;line-height:1.7}

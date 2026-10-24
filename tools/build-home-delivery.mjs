@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { transform } from 'lightningcss';
 import { PurgeCSS } from 'purgecss';
+import postcss from 'postcss';
+import cssnano from 'cssnano';
 
 // Preserve the original cascade in one cacheable request. Full CSS inlining made
 // the initial layout a long post-paint task in Chrome; keep styles render-ready
@@ -17,10 +19,14 @@ const css = sources.map(file => fs.readFileSync('stylesheet/' + file, 'utf8')).j
 const [{ css: used }] = await new PurgeCSS().purge({
   content: [{raw: html, extension:'html'}, 'script/fujisou-ainos.js', 'script/shared-chrome.js', 'script/event-status.js'],
   css: [{raw:css,extension:'css'}],
-  safelist: {greedy:[/^is-/,/^has-/,/^js$/, /^no-scroll$/, /^shared-/]},
+  safelist: {standard:[/^is-/,/^has-/,/^js$/, /^no-scroll$/, /^shared-/]},
   keyframes: true, fontFace: true
 });
-const result = transform({filename:'homepage.css',code:Buffer.from(used),minify:true}).code.toString();
+const compact = await postcss([cssnano({preset:['default', {
+  // Runtime states and named animations remain available after compaction.
+  discardUnused:false, reduceIdents:false, normalizeUrl:false
+}]})]).process(used,{from:undefined,map:false});
+const result = transform({filename:'homepage.css',code:Buffer.from(compact.css),minify:true}).code.toString();
 fs.writeFileSync('stylesheet/homepage.min.css', result);
 const version = crypto.createHash('sha256').update(result).digest('hex').slice(0,10);
 html = html.replace('</head>', `<link rel="stylesheet" href="stylesheet/homepage.min.css?v=${version}"></head>`);

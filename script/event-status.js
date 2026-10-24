@@ -1,6 +1,6 @@
 // Compare calendar dates in Japan, independent of the visitor's timezone.
-const today = Object.fromEntries(new Intl.DateTimeFormat('en', { timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date()).filter(p => ['year','month','day'].includes(p.type)).map(p => [p.type,p.value]));
-const date = `${today.year}-${today.month}-${today.day}`;
+// JST is UTC+09:00 year-round; avoid initializing a locale formatter on startup.
+const date = new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
 document.querySelectorAll('[data-event-end]').forEach(section => {
   const ended = date > section.dataset.eventEnd;
   section.querySelectorAll('[data-event-active]').forEach(item => { item.hidden = ended; });

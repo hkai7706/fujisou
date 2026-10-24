@@ -44,3 +44,21 @@ Image delivery and color contrast pass. One render-blocking stylesheet remains
 by design; eliminating it through full inlining reduced the local performance
 score to 80, so that approach was rejected. That earlier run's SEO was 69 because
 it preceded the owner's request to enable indexing on public source pages.
+
+## Final mobile startup refinement
+
+The later supplied live report scored performance 98 and all other categories
+100; its main penalty was Speed Index 4.0s. Removed the page-wide entrance fade
+and simulated progress accent so content paints at its final opacity immediately.
+Mobile/reduced-motion reveal content is shown through CSS instead of mutating
+every card's class at startup. Event status uses the fixed JST UTC+09 offset
+without initializing Intl; a regression test covers midnight and year rollover.
+The CSS safelist now protects individual runtime class tokens without retaining
+unrelated legacy selectors. cssnano compacts duplicate declarations before
+Lightning CSS's final pass; generated styles remain in the original cascade.
+
+Final local mobile Lighthouse: performance/accessibility/best-practices/SEO
+100/100/100/100; FCP 1.4s, LCP 1.5s, TBT 40ms, Speed Index 2.5s, CLS 0.
+These are local lab results. Hosted PageSpeed results vary with network and run
+conditions; no fixed future score is guaranteed. The single cacheable stylesheet
+is retained: moving it ahead of viewport metadata caused CLS and was discarded.

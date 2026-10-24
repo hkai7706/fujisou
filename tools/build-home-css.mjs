@@ -7,7 +7,7 @@ const [{ css: homepageCss }] = await new PurgeCSS().purge({
   content: [{raw:markup,extension:'html'}, "include/header.shtml", "include/footer.shtml", "script/fujisou-ainos.js"],
   css: [{ raw: css.toString(), extension: "css" }],
   safelist: {
-    greedy: [/^is-/, /^has-/, /^js$/, /^no-scroll$/],
+    standard: [/^is-/, /^has-/, /^js$/, /^no-scroll$/],
   },
   keyframes: true,
   fontFace: true,

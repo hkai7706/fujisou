@@ -11,6 +11,9 @@ try {
     const errors=[];
     page.on('pageerror',error=>errors.push(error.message));
     await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});
+    if(width<820){
+      assert.equal(await page.$$eval('.reveal',nodes=>nodes.filter(node=>node.offsetWidth>0).every(node=>getComputedStyle(node).opacity==='1')),true,'Mobile content must be visible without reveal-class mutations');
+    }
     await page.screenshot({path:`tmp/pagespeed/initial-${width}.png`});
     await page.evaluate(async()=>{
       for(let y=0;y<document.body.scrollHeight;y+=700){window.scrollTo({top:y,behavior:'instant'});await new Promise(resolve=>setTimeout(resolve,100));}

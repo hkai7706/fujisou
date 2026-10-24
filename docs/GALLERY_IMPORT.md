@@ -1,5 +1,9 @@
 # Construction-example archive
 
+This document records the original import and image recovery. Current project
+slugs, folder organization and routine photo changes follow
+[IMAGE_UPDATES.md](IMAGE_UPDATES.md). Use that workflow for maintenance.
+
 The original three archive pages contain 34 projects. Their local individual
 pages keep the original `.shtml` filenames so existing project links work.
 

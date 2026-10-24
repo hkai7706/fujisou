@@ -58,9 +58,9 @@ ${post.image?`<figure class="blog-entry__visual"><img src="${escape(post.image)}
   fs.writeFileSync(path.join('staffblog',post.file),start+main+shellEnd);
 }
 // The archive builder creates paginated listings after all articles are rendered.
-for(const file of process.argv.some(arg => arg.startsWith('--recent=')) ? [] : ['index.html','server/index.html']){
+for(const file of process.argv.some(arg => arg.startsWith('--recent=')) ? [] : ['index.html']){
   let html=fs.readFileSync(file,'utf8');
-  const prefix=file.startsWith('server/')?'../':'';
+  const prefix='';
   html=html.replace(/<a class="preview-card[^>]*>[\s\S]*?<\/a>/g,tag=>{
     const image=tag.match(/blog-(\d+)-hd/);if(!image)return tag;
     const post=posts.find(post=>post.image?.includes('blog-'+image[1]+'-hd'));if(!post)return tag;

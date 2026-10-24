@@ -1,10 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const root = path.resolve(import.meta.dirname, '..');
+const project = path.resolve(import.meta.dirname, '..');
+const root = process.argv[2] ? path.resolve(process.argv[2]) : project;
+if(root!==project&&root!==path.join(project,'dist'))throw Error('Unsupported sitemap output');
 const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'include', 'mailformpro', 'mfp.statics', 'iplogs', 'originals']);
-const articles = new Set(JSON.parse(fs.readFileSync(path.join(root, 'docs/sitemap-articles.json'), 'utf8')));
-const events = JSON.parse(fs.readFileSync(path.join(root, 'eventinfo/posts.json'), 'utf8'));
+const articles = new Set(JSON.parse(fs.readFileSync(path.join(project, 'docs/sitemap-articles.json'), 'utf8')));
+const events = JSON.parse(fs.readFileSync(path.join(project, 'eventinfo/posts.json'), 'utf8'));
 const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const activeEventFiles = new Set(events.filter(post => (post.existing && (post.file!=='open-house/index.html'||today<='2026-10-18'))||post.legacyFile==='post-16.shtml').map(post => post.file.replaceAll('\\','/')));
 

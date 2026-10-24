@@ -6,14 +6,14 @@ if (-not $destinationRoot.StartsWith($projectRoot + [IO.Path]::DirectorySeparato
   throw 'Deployment destination is outside the project.'
 }
 
-# Reapply shared-code and byte-identical image optimizations after page generators.
-Push-Location -LiteralPath $projectRoot
-try {
-  foreach ($optimization in 'build-videos.mjs', 'add-loan-links.mjs', 'add-house-guide-links.mjs', 'build-gallery-redirects.mjs', 'review-health-copy.mjs', 'prepare-home-images.mjs', 'optimize-shared-chrome.mjs', 'deduplicate-image-references.mjs', 'build-home-css.mjs', 'normalize-folder-links.mjs', 'update-catalog-links.mjs', 'add-favicons.mjs', 'prepare-seo.mjs', 'generate-sitemap.mjs', 'version-public-assets.mjs', 'build-home-delivery.mjs') {
-    & node (Join-Path $PSScriptRoot $optimization)
-    if ($LASTEXITCODE -ne 0) { throw "Optimization failed: $optimization" }
+# Validate prerequisites before replacing an existing upload package.
+if ($IncludeMailform) {
+  foreach ($folder in 'mailformpro', 'mfp.statics') {
+    if (-not (Test-Path -LiteralPath (Join-Path $projectRoot "contact/$folder"))) {
+      throw "Missing contact/$folder. Prepare the existing private runtime before requesting a mailform package."
+    }
   }
-} finally { Pop-Location }
+}
 
 if ([IO.Directory]::Exists($destinationRoot)) {
   Remove-Item -LiteralPath $destinationRoot -Recurse -Force
@@ -31,7 +31,7 @@ function Copy-PublicFile([string]$SourcePath) {
 }
 
 $publicExtensions = '.html', '.shtml', '.css', '.js', '.mjs', '.xml', '.txt'
-$excludedDirectories = @('.git', 'node_modules', 'tools', 'docs', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'mailformpro', 'mfp.statics', 'iplogs', 'originals')
+$excludedDirectories = @('.git', 'node_modules', 'tools', 'docs', 'source', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'mailformpro', 'mfp.statics', 'iplogs', 'originals')
 function Get-PublicFiles([string]$Directory) {
   foreach ($entry in Get-ChildItem -LiteralPath $Directory -Force) {
     if ($entry.Attributes -band [IO.FileAttributes]::ReparsePoint) { continue }
@@ -76,6 +76,24 @@ foreach ($file in $publicFiles) {
 
 foreach ($asset in $assetReferences) { Copy-PublicFile $asset }
 
+# Packaging transforms only dist/. Source regeneration is an explicit npm run
+# refresh operation; ordinary builds must not create thousand-file Git diffs.
+& node (Join-Path $PSScriptRoot 'build-shared-css.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Shared stylesheet assembly failed.' }
+& node (Join-Path $PSScriptRoot 'embed-shared-chrome.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Shared component assembly failed.' }
+& node (Join-Path $PSScriptRoot 'build-event-state.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Event state assembly failed.' }
+Push-Location -LiteralPath $destinationRoot
+try {
+  foreach ($step in 'build-home-css.mjs', 'build-home-delivery.mjs') {
+    & node (Join-Path $PSScriptRoot $step)
+    if ($LASTEXITCODE -ne 0) { throw "Deployment assembly failed: $step" }
+  }
+} finally { Pop-Location }
+& node (Join-Path $PSScriptRoot 'version-public-assets.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Asset versioning failed.' }
+
 if ($IncludeMailform) {
   & node (Join-Path $PSScriptRoot 'harden-contact-mailform.mjs')
   if ($LASTEXITCODE -ne 0) { throw 'Mailform runtime is missing or could not be prepared.' }
@@ -103,6 +121,14 @@ if ($Production) {
   & node (Join-Path $PSScriptRoot 'prepare-seo.mjs') $destinationRoot
 }
 if ($LASTEXITCODE -ne 0) { throw 'Deployment indexing preparation failed.' }
+& node (Join-Path $PSScriptRoot 'generate-sitemap.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Deployment sitemap preparation failed.' }
+& node (Join-Path $PSScriptRoot 'copy-deploy-assets.mjs')
+if ($LASTEXITCODE -ne 0) { throw 'Generated asset collection failed.' }
+& node (Join-Path $PSScriptRoot 'site-check.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Deployment reference validation failed.' }
+& node (Join-Path $PSScriptRoot 'check-seo.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Deployment SEO validation failed.' }
 
 $files = Get-ChildItem -LiteralPath $destinationRoot -Recurse -File
 [PSCustomObject]@{

@@ -1,0 +1,17 @@
+/* ==================================================
+   PAGE — CONCEPT AND STAFF
+   ================================================== */
+.concept-page main { padding: clamp(48px, 8vw, 110px) var(--space-page); }
+.concept-page article { max-width: 900px; margin-inline: auto; }
+
+/* ==================================================
+   PAGE — PLANS AND GALLERY
+   ================================================== */
+.plans-page main { padding: clamp(48px, 8vw, 110px) var(--space-page); }
+.plans-page article { max-width: 900px; margin-inline: auto; }
+
+/* ==================================================
+   PAGE — BLOG AND EVENTS
+   ================================================== */
+.blog-page main { padding: clamp(48px, 8vw, 110px) var(--space-page); }
+.blog-page article { max-width: 900px; margin-inline: auto; }

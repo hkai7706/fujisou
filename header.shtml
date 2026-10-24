@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./stylesheet/shared-chrome.min.css?v=13c78fbf3e"><link rel="stylesheet" href="./stylesheet/inquiry-journey.css?v=cc23f8f5ad"><script src="./script/shared-chrome.js?v=e2bf03211e" defer></script><script src="./script/inquiry-tracking.js?v=b8a84b86d9" defer></script><link rel="stylesheet" href="./stylesheet/site-design.css?v=8800e5cb2f"><header class="shared-header" data-shared-header>
+<link rel="stylesheet" href="stylesheet/shared-chrome.min.css?v=13c78fbf3e"><script src="script/shared-chrome.js?v=e2bf03211e" defer></script><link rel="stylesheet" href="./stylesheet/inquiry-journey.css?v=cc23f8f5ad"><script src="./script/inquiry-tracking.js?v=b8a84b86d9" defer></script><link rel="stylesheet" href="./stylesheet/site-design.css?v=8800e5cb2f"><header class="shared-header" data-shared-header>
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">

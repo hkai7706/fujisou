@@ -4,6 +4,9 @@ The homepage is the visual reference: warm white, wood-brown accents,
 Mincho headings, restrained rules and natural-material photography.
 
 `stylesheet/site-design.css` aligns interior pages with this reference.
+Shared foundations and homepage rules are edited in `stylesheet/source/`, in
+`order.json` order, then compiled with `npm run styles`. Do not hand-edit the
+generated `stylesheet/fujisou-ainos.css` or minified bundles.
 It adjusts page openings, heading scale, section spacing, focus states,
 form typography, information tables and mobile plan layouts. Page-specific
 styles still control image ratios, floor plans, players, galleries and forms.

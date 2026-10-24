@@ -2,7 +2,8 @@
 
 Updated 2026-10-24. Run `npm.cmd run seo` after page generators, then
 `npm.cmd run check` and `npm.cmd run check:seo`. The deployment build already
-runs metadata preparation and sitemap generation in this order.
+runs metadata preparation and sitemap generation in this order inside `dist/`.
+Use `npm run refresh` when shared changes must update source/GitHub pages.
 
 The public-source indexing policy below supersedes older noindex instructions
 in the audit, inquiry-update and video migration notes. Those notes describe

@@ -3,7 +3,8 @@ import path from 'node:path';
 import http from 'node:http';
 import { gzipSync } from 'node:zlib';
 
-const root = path.resolve(import.meta.dirname, '..');
+const project = path.resolve(import.meta.dirname, '..');
+const root = process.argv.includes('--dist') ? path.join(project, 'dist') : project;
 const port = Number(process.env.PORT || 5501);
 const performance = process.argv.includes('--performance');
 const mime = { '.html': 'text/html; charset=utf-8', '.shtml': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.pdf': 'application/pdf' };
@@ -39,4 +40,4 @@ http.createServer((request, response) => {
     }
     response.end(body);
   } catch { response.writeHead(404).end('Not found'); }
-}).listen(port, '127.0.0.1', () => console.log(`SSI preview: http://127.0.0.1:${port}/ (mail sending requires Lolipop)`));
+}).listen(port, '127.0.0.1', () => console.log(`Static preview (${root === project ? 'source' : 'dist'}): http://127.0.0.1:${port}/ (mail sending requires Lolipop)`));

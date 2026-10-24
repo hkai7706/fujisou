@@ -1,7 +1,8 @@
 # PageSpeed improvements — 2026-10-24
 
 `npm.cmd run performance` prepares the homepage delivery assets and refreshes
-shared components. The deployment build runs the same steps automatically.
+shared components in source. Deployment builds compile CSS/shared components
+inside `dist/` and reuse the prepared image derivatives; they do not rewrite source.
 
 - Poster display variants at 420/640/840/1240px use WebP quality 82. The original
   remains unchanged. The 840px derivative is 42,044 bytes versus 369,804 bytes for

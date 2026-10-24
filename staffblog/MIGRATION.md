@@ -1,5 +1,9 @@
 # Complete blog archive migration
 
+> Historical import snapshot. Counts and search behavior below describe the
+> migration stages on their stated dates. Current source records and workflow
+> are documented in README.md in this folder and the project-root README.
+
 The live archive was imported on 2026-10-10. It contains **949 unique articles across 32 original archive pages**, rather than the estimated 687.
 
 - All 949 articles have separate descriptive `.shtml` files in `staffblog/`.

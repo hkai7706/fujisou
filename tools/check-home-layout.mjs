@@ -61,5 +61,10 @@ try {
   await page.setJavaScriptEnabled(false);
   await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});
   assert.equal(await page.$eval('.hybrid-hero',node=>node.getBoundingClientRect().height>100),true);
+  assert.equal(await page.$eval('[data-event-promotion]',node=>getComputedStyle(node).display==='none'),true,'Expired promotion must stay hidden without JavaScript');
+  assert.equal(await page.$$eval('.home-plan-paths a',nodes=>nodes.length),3,'All three housing categories must be directly accessible');
+  await page.goto('http://127.0.0.1:5501/eventinfo/open-house/',{waitUntil:'networkidle0'});
+  assert.equal(await page.$$eval('[data-event-active]',nodes=>nodes.every(node=>node.hidden&&node.getClientRects().length===0)),true,'Expired event offers must be hidden without JavaScript');
+  assert.equal(await page.$$eval('[data-event-closed]',nodes=>nodes.every(node=>!node.hidden&&node.getClientRects().length>0)),true,'Expired event notices must be visible without JavaScript');
   console.log('No-JavaScript homepage styling passed.');
 } finally {await browser.close();}

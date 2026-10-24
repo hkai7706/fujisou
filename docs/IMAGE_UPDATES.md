@@ -93,8 +93,9 @@ npm.cmd run check
 npm.cmd run preview
 ```
 
-表示確認後、Lolipop用は `npm.cmd run build:preview`、本番公開用は
-`npm.cmd run build:production` でdistを作り直します。アップロードするのはdistの内容です。
+表示確認後、静的なテスト用は `npm.cmd run build`、本番公開用は
+`npm.cmd run build:public` でdistを作り直します。メール機能を含める既存の専用ビルドは
+`CONTACT_FORM.md` を参照してください。アップロードするのはdistの内容です。
 HTML・画像を両方アップロードしてください。Gitにpushする場合は生成画像も含めます。
 
 全ギャラリーをデータから再生成する場合は `npm.cmd run gallery:build`。

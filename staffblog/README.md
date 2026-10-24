@@ -1,20 +1,33 @@
-# Individual blog pages
+# Blog maintenance
 
-Current body presentation follows the user-supplied HTML reference: a centered 860px maximum reading column, statement plaques, checklist rows, illustrations stacked above caption grids, and a consultation section. The shared site fonts and embedded header/footer remain in use; no contents sidebar is rendered. These scoped overrides are in `stylesheet/blog-body.css`, loaded after the existing page styles. The renovation article uses the supplied edited body and CTA stored in `article-bodies/*.fragment`. Fragments are generator input and are not copied to deployment. Other articles keep their original text and generated illustrated explanations. Add a matching `.fragment` file to override another article body; otherwise the normal renderer is used.
+This is a static archive, not a connected CMS. `posts.json` is the source for
+titles, publication dates, categories, article HTML, source URLs and descriptive
+filenames. Its current records are authoritative; MIGRATION.md records earlier
+import statistics and intermediate designs.
 
-The 20 articles displayed in the listing now have complete local `.shtml` pages. Published titles, dates, and body text were imported from their original Fujisou article URLs. Article filenames use descriptive lowercase words separated by hyphens. Old inline styling was removed so the current project typography and article stylesheet control presentation.
+Edit records or matching `article-bodies/*.fragment` overrides before generating
+pages. Layout is controlled by `tools/build-blog.mjs`, `tools/build-blog-archive.mjs`,
+`stylesheet/blog-body.css`, `blog-archive.css` and `staffblog.css`.
+The illustration renderer uses the existing typography graphics and configuration;
+older scene-image notes are historical, not the current renderer specification.
 
-`posts.json` records the current `file` and canonical `permalink`, the original `legacyFile`, and the original published `source` URL. `url-renames.json` records all 20 filename changes. Permanent redirects in the root and server `.htaccess` preserve old article addresses on Apache hosting; GitHub Pages does not process these rules. Listing links, homepage previews, canonical metadata, and the project sitemap use the new filenames.
+```powershell
+npm.cmd run blog
+node tools/update-blog-redirects.mjs
+npm.cmd run refresh
+npm.cmd run check
+npm.cmd run check:seo
+```
 
-`posts.json` stores each article's full HTML body, metadata, local lead image, and source URL. It is build input rather than a public browser feed. `npm run blog` regenerates the pages using the header/footer shell from `index.html`, reconnects listing cards, and updates homepage blog previews. Article body images live under `img/staffblog/articles/`; original full image dimensions are preserved.
+Article and category/pagination pages are generated HTML. Direct changes to them
+can be overwritten by the generator. Shared components come from include/.
+Article photos and thumbnails remain local assets under img/staffblog/; preserve
+original content and do not invent substitutes for unavailable documentary photos.
 
-These are static pages, not a connected Movable Type installation. Keep this data if migrating later. Do not edit generated pages and then run the generator expecting those edits to survive; edit `posts.json` for content and `tools/build-blog.mjs` or `stylesheet/staffblog.css` for layout changes.
+Old article addresses are maintained by the root .htaccess redirect map. There is
+no server/ copy to update. Apache redirects require the production host; GitHub
+Pages does not execute .htaccess. Site navigation uses the descriptive current URLs.
 
-Each article includes three rich illustrated scenes with concise Japanese explanations. `tools/blog-illustrations.mjs` is the active renderer. It uses `visuals.json` for overview captions, `section-visuals.json` for contextual captions, `illustration-placement.json` for scene selection, and `illustration-assets.json` for image paths, dimensions, and the final generation prompts. Eight images were generated using the built-in image-generation tool: family circulation, planning with an architect, land shapes, renovation, later-life living, two-story room zoning, a music/movie room, and a hotel-inspired suite. Optimized WebP assets live in `img/staffblog/illustrations/`. These are conceptual illustrations, not actual project photographs or construction specifications. No external image or chart library is required. Run `npm run blog` after changing source data.
-
-`section-visuals.json` adds two contextual scenes per article. Each `anchor` matches an existing heading; the generator fails if that heading disappears instead of silently placing a scene in the wrong section. Images sit beside short explanations on desktop and stack with them on mobile. Images are not cropped, have descriptive alternative text and explicit dimensions, and load lazily. The earlier SVG renderer in `tools/blog-graphics.mjs` is retained as a source reference but is no longer used by the page generator. Edit source configuration and regenerate rather than changing generated markup.
-
-The lead image and body images display in full without cropping. Articles use a single full-width reading column with small screen-edge margins with explanatory graphics after the introduction, without a sidebar or contents toggle. The pages include previous/next article links with images, a back-to-list link, and local contact navigation. White backgrounds, serif typography, and restrained gold-brown lines follow the main landing page. Historical article wording is preserved; statements in the articles have not been independently fact-checked or updated.
-# Full archive update
-
-The archive now contains **949 separate articles**, with 40 listing pages and search across all years. See [MIGRATION.md](MIGRATION.md) for the complete import details and current build instructions. The earlier illustration notes apply to the original 20 specially designed articles; the other imported articles retain their original content and images in the shared reading layout. The root URL rename map now covers all 949 original addresses.
+Build only dist/ for upload using the project-root README. Ordinary packaging does
+not regenerate the source archive; explicit blog/refresh commands do. Imported
+historical claims are not independently certified by a successful build.

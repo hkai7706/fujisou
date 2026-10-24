@@ -1,38 +1,74 @@
-﻿# Fujisou Ainos website
+# Fujisou Ainos website
 
-Japanese static website for フジ創アイノス. Public pages contain their header/footer directly, so GitHub Pages and ordinary local web servers can render them without SSI. The shared sources are `include/header.shtml` and `include/footer.shtml`.
+Japanese static website for フジ創アイノス. HTML, CSS and vanilla JavaScript run
+without a production Node server. `dist/` is the only upload package. The obsolete
+`server/` copy has been removed.
 
-## Preview and checks
+## Edit and preview
 
 ```powershell
+npm.cmd ci
 npm.cmd run preview
-npm.cmd run check
 ```
 
-Open `http://127.0.0.1:5501/`. Folder URLs automatically load their index through the web server; `file://` does not provide directory-index routing. Mailform Pro requires the Lolipop Perl CGI environment and cannot send from this static preview or GitHub Pages.
+Open http://127.0.0.1:5501/. Source pages contain embedded header/footer markup
+and work on GitHub Pages. The editable shared components are in `include/`.
+Page HTML and the JSON records for blog, gallery, events and videos are maintained
+in their corresponding folders. Edit records/templates before regenerating pages.
 
-After changing shared components run `node tools/embed-shared-chrome.mjs`. Page generators should run before the final build so metadata, shared components and asset versions are reapplied.
-
-## Deployment
+Shared CSS is maintained in `stylesheet/source/`, in the order recorded by
+`order.json`. `stylesheet/fujisou-ainos.css` and minified stylesheets are generated
+outputs; do not add competing overrides to them. See `claude.md` for design rules.
 
 ```powershell
-# Separate Lolipop test folder; complete private Mailform runtime; noindex
-npm.cmd run build:preview
-node tools/site-check.mjs dist
-
-# Only when launching the actual production site
-npm.cmd run build:production
-node tools/site-check.mjs dist
+npm.cmd run styles       # compile CSS and refresh source asset versions
+npm.cmd run refresh      # intentionally regenerate maintained static source pages
+npm.cmd run check
+npm.cmd run check:seo
+npm.cmd run check:performance
 ```
 
-Both commands recreate ignored `dist/`. Upload its CONTENTS, including hidden `.htaccess` files, to the intended server folder. Never upload the project root, `tmp/`, downloaded original, Git files or node_modules. At the owner's request, source/GitHub content pages are indexable. Separate preview builds remain noindex; the production build removes preview noindex while preserving intentional archive/utility noindex. Production canonicals use `https://www.fujisou-ainos.com/`.
+`refresh` deliberately changes source pages so GitHub Pages receives shared
+updates. Ordinary deployment builds transform only `dist/`; they do not rewrite
+the checked-in site. Regenerate blog/gallery content through its documented
+command before `refresh` when those records change.
+Legacy HTML normalization is explicitly available as `npm run prepare:html`;
+dependency installation no longer triggers it through npm's `prepare` lifecycle.
 
-`npm.cmd run build` creates a public-only preview package without CGI. It is not a complete working contact-form deployment. The complete build commands above require the locally prepared, ignored `contact/mailformpro/` and `contact/mfp.statics/` packages. On a fresh checkout, prepare these once from the downloaded original with `node tools/prepare-contact-mailform.mjs`; it refuses to overwrite an existing runtime. Customer records are excluded from every build. Preserve the live form's existing `data/` on subsequent updates.
+## Package for upload
 
-See [docs/INQUIRY_UPDATE.md](docs/INQUIRY_UPDATE.md) for source evidence, tests, unresolved business details and the precise upload/live email checklist. [docs/CONTACT_FORM.md](docs/CONTACT_FORM.md) describes form settings. No production upload or actual inbox-delivery verification has been performed for this update.
+```powershell
+npm.cmd run build          # static test package, noindex
+npm.cmd run build:public   # indexable static package, mail runtime excluded
+```
 
-For lossless image optimization use `npm.cmd run optimize`. It consolidates identical files and uses smaller lossless encodings after checking decoded pixels. Responsive event-poster variants retain the full-size original. See [DEPLOY_SSI.md](DEPLOY_SSI.md) for optional SSI deployment details; SSI is not required by the current embedded pages.
+Both validate links, metadata, image references and structured data automatically.
+Use `npm run preview:dist` to review the exact package over HTTP.
+Upload the CONTENTS of `dist/`, including hidden `.htaccess` files, to the intended
+document root. Do not upload the repository, tools, docs, original photographs,
+dependencies or Git files. `build:public` uses https://www.fujisou-ainos.com/ as
+the canonical business domain. GitHub/source content pages are also indexable at
+the owner's request; utility/archive/design-sample exclusions remain.
 
-## Video section
+The existing optional `build:preview` and `build:production` commands additionally
+include the private Mailform Pro runtime. They require its locally prepared files;
+see `docs/CONTACT_FORM.md`. Mail behavior has not been changed by the folder cleanup.
+Static packages and GitHub Pages do not send email. Preserve any existing live
+mail configuration and customer data when uploading static updates.
 
-`videos/` is linked from 家造り情報 and the shared footer. Add confirmed YouTube records to `videos/posts.json`, then run `npm.cmd run videos`; deployment builds also generate the listing and individual watch pages. See [docs/VIDEOS.md](docs/VIDEOS.md) for record fields and maintenance.
+## Maintenance references
+
+- `PROJECT_FILE_MAP.md`: current folders and editing boundaries.
+- `docs/SITE_DESIGN.md`: shared visual standards.
+- `docs/SEO.md`: indexing, canonical URLs and sitemap maintenance.
+- `docs/PAGESPEED.md`: image/CSS delivery and measured performance history.
+- `docs/IMAGE_UPDATES.md`, `docs/VIDEOS.md`, `staffblog/MIGRATION.md`: content updates.
+- `docs/SSI.md`: optional Apache SSI mode; static pages do not require it.
+
+Dated audits and `docs/archive/` record previous implementations, not current
+instructions. Event visibility is rendered into HTML during refresh/build using
+Japan dates; browser JavaScript additionally updates status across expiry dates.
+
+`node tools/check-build.mjs --production` builds public static output and verifies
+that maintained source files remain unchanged. It excludes the untouched private
+mail runtime from that snapshot. Ordinary `npm run check:build` tests preview mode.

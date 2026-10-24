@@ -19,7 +19,7 @@ Record fields:
 - `uploadedAt`: optional verified full ISO timestamp for video structured data.
 - `highResolutionThumbnail`: set to `true` only after verifying YouTube's 1280×720 thumbnail exists.
 
-Run `npm.cmd run videos`, then `node tools/embed-shared-chrome.mjs`, `node tools/prepare-seo.mjs`, `node tools/generate-sitemap.mjs` and `npm.cmd run check`. Deployment builds run the video generator automatically. All watch pages use relative folder links so the `/FUJISOU-NEW/` test folder and GitHub project path both work. GitHub/source output remains noindex. Empty listings are also noindex in production; when real records are added, regeneration removes that empty-list status.
+Run `npm.cmd run videos`, then `npm.cmd run refresh` and `npm.cmd run check`. Source refresh runs the video generator; deployment builds package the maintained generated pages without rewriting source files. All watch pages use relative folder links so the `/FUJISOU-NEW/` test folder and GitHub project path both work. Public GitHub/source content is indexable at the owner's request. Empty listings remain noindex; when real records are added, regeneration removes that empty-list status.
 
 The generator validates IDs, dates and duplicate slugs/videos before writing. It does not delete folders: if removing a published video, remove its generated folder deliberately and decide whether a redirect is required. Do not put sample/test videos into the public records.
 

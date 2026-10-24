@@ -28,9 +28,9 @@ Ordinary previews keep no-cache revalidation for editing. Run
 320/390/768/1440px layouts, image loading, mobile menu/Escape and no-JS styling.
 Screenshots and Lighthouse reports belong in ignored `tmp/pagespeed/`.
 
-The GitHub copy remains a noindex preview. Its reduced Lighthouse SEO score is
-expected. Use the documented production build for the actual business domain;
-do not remove preview indexing protection simply to change a test score.
+Update: at the owner's request, public source/GitHub content pages are now
+indexable so Lighthouse's indexing audit can pass. Separate test-folder builds
+retain noindex. Utility, archive and design-sample exclusions are preserved.
 
 Remaining CSS coverage depends on viewport and interaction state: desktop,
 mobile, dropdown, focus, tab and reduced-motion rules cannot all execute during
@@ -42,4 +42,5 @@ Same-machine mobile Lighthouse comparison: baseline performance 98; final 99,
 accessibility 100 and best practices 100. Final LCP 1.8s, TBT 40ms, CLS 0.
 Image delivery and color contrast pass. One render-blocking stylesheet remains
 by design; eliminating it through full inlining reduced the local performance
-score to 80, so that approach was rejected. Preview SEO is 69 due to noindex.
+score to 80, so that approach was rejected. That earlier run's SEO was 69 because
+it preceded the owner's request to enable indexing on public source pages.

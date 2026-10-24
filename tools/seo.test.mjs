@@ -18,7 +18,7 @@ test('missing images and directory URLs fall back to a deployed photograph', () 
     assert.equal(sharingImage(`<meta property="og:image" content="${value}">`, origin + 'policy/', project), origin + 'img/home/slide1-1440.webp');
   }
 });
-test('SEO rebuild is stable and production removes only preview noindex', () => {
+test('public and production pages are indexable while previews and utilities remain excluded', () => {
   const parent = path.join(project, 'dist');
   fs.mkdirSync(parent, { recursive: true });
   const fixture = fs.mkdtempSync(path.join(parent, 'seo-test-'));
@@ -30,7 +30,8 @@ test('SEO rebuild is stable and production removes only preview noindex', () => 
   try {
     for (const file of ['index.html', 'contact/thanks.html', 'img/home/slide1-1440.webp', '.htaccess']) copy(file);
     const run = production => {
-      const result = spawnSync(process.execPath, [path.join(project, 'tools/prepare-seo.mjs'), fixture, ...(production ? ['--production'] : [])], { encoding: 'utf8' });
+      const flags=production==='public'?['--public']:production?['--production']:[];
+      const result = spawnSync(process.execPath, [path.join(project, 'tools/prepare-seo.mjs'), fixture, ...flags], { encoding: 'utf8' });
       assert.equal(result.status, 0, result.stderr);
     };
     run(false);
@@ -38,6 +39,12 @@ test('SEO rebuild is stable and production removes only preview noindex', () => 
     assert.match(preview, /data-preview-robots/);
     run(false);
     assert.equal(fs.readFileSync(path.join(fixture, 'index.html'), 'utf8'), preview);
+    run('public');
+    const publicPage=fs.readFileSync(path.join(fixture,'index.html'),'utf8');
+    assert.doesNotMatch(publicPage,/name="robots"[^>]*noindex/);
+    assert.match(fs.readFileSync(path.join(fixture,'contact/thanks.html'),'utf8'),/data-archive-robots/);
+    run('public');
+    assert.equal(fs.readFileSync(path.join(fixture,'index.html'),'utf8'),publicPage);
     run(true);
     assert.doesNotMatch(fs.readFileSync(path.join(fixture, 'index.html'), 'utf8'), /name="robots"[^>]*noindex/);
     assert.match(fs.readFileSync(path.join(fixture, 'contact/thanks.html'), 'utf8'), /data-archive-robots/);

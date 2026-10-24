@@ -25,7 +25,7 @@ npm.cmd run build:production
 node tools/site-check.mjs dist
 ```
 
-Both commands recreate ignored `dist/`. Upload its CONTENTS, including hidden `.htaccess` files, to the intended server folder. Never upload the project root, `tmp/`, downloaded original, Git files or node_modules. Source/GitHub pages intentionally remain noindex; the production build removes preview noindex while preserving intentional archive/utility noindex. Production canonicals use `https://www.fujisou-ainos.com/`.
+Both commands recreate ignored `dist/`. Upload its CONTENTS, including hidden `.htaccess` files, to the intended server folder. Never upload the project root, `tmp/`, downloaded original, Git files or node_modules. At the owner's request, source/GitHub content pages are indexable. Separate preview builds remain noindex; the production build removes preview noindex while preserving intentional archive/utility noindex. Production canonicals use `https://www.fujisou-ainos.com/`.
 
 `npm.cmd run build` creates a public-only preview package without CGI. It is not a complete working contact-form deployment. The complete build commands above require the locally prepared, ignored `contact/mailformpro/` and `contact/mfp.statics/` packages. On a fresh checkout, prepare these once from the downloaded original with `node tools/prepare-contact-mailform.mjs`; it refuses to overwrite an existing runtime. Customer records are excluded from every build. Preserve the live form's existing `data/` on subsequent updates.
 

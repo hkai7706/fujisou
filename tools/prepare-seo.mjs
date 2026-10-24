@@ -6,6 +6,10 @@ const argument=process.argv.slice(2).find(value=>!value.startsWith('--'));
 const root=argument?path.resolve(argument):project;
 if(root!==project && !root.startsWith(path.join(project,'dist')+path.sep) && root!==path.join(project,'dist'))throw new Error('SEO output outside project/dist');
 const production=process.argv.includes('--production');
+// Source/GitHub content is public at the owner's request. Separate test-folder
+// builds remain noindex unless explicitly generated as public/production.
+const preview=process.argv.includes('--preview')||(!production&&!process.argv.includes('--public')&&root!==project);
+if(process.argv.includes('--preview')&&(production||process.argv.includes('--public')))throw new Error('Choose either preview or public/production indexing');
 const skip=new Set(['.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','include','server','mailformpro','mfp.statics','iplogs', 'originals']);
 const pageCopy=JSON.parse(fs.readFileSync(path.join(project,'docs/seo-pages.json'),'utf8'));
 const events=JSON.parse(fs.readFileSync(path.join(project,'eventinfo/posts.json'),'utf8'));
@@ -40,10 +44,10 @@ function walk(directory){for(const item of fs.readdirSync(directory,{withFileTyp
   meta+=`<meta property="og:site_name" content="${brand}"><meta property="og:locale" content="ja_JP">`;
   if(!archive)meta+=pageSchema(html,canonical,title,description,image);
   if(archive||permanentNoindex){meta+='<meta name="robots" content="noindex,follow" data-archive-robots>';archives++;}
-  else if(!production)meta+='<meta name="robots" content="noindex,follow" data-preview-robots>';
+  else if(preview)meta+='<meta name="robots" content="noindex,follow" data-preview-robots>';
   html=html.replace('</head>',meta+'</head>').replace(/^[ \t]+$/gm,'');
   fs.writeFileSync(file,html);count++;
 }}
 walk(root);
-if(root!==project){const ht=path.join(root,'.htaccess');let text=fs.readFileSync(ht,'utf8').replace(/\n# BEGIN PREVIEW INDEXING[\s\S]*?# END PREVIEW INDEXING\n/g,'\n');if(!production)text+='\n# BEGIN PREVIEW INDEXING\n<IfModule mod_headers.c>\nHeader always set X-Robots-Tag "noindex, follow"\n</IfModule>\n# END PREVIEW INDEXING\n';if(production&&!text.includes('# Canonical production host'))text=text.replace('RewriteEngine On','RewriteEngine On\n  # Canonical production host; test subfolder remains separate.\n  RewriteCond %{REQUEST_URI} !^/FUJISOU-NEW(?:/|$) [NC]\n  RewriteCond %{HTTP_HOST} ^(?:fujisou-ainos\\.com|fujisou-ainos\\.sub\\.jp)$ [NC]\n  RewriteRule ^ https://www.fujisou-ainos.com%{REQUEST_URI} [R=301,L,NE]\n  RewriteCond %{REQUEST_URI} !^/FUJISOU-NEW(?:/|$) [NC]\n  RewriteCond %{HTTP_HOST} ^www\\.fujisou-ainos\\.com$ [NC]\n  RewriteCond %{HTTPS} off\n  RewriteRule ^ https://www.fujisou-ainos.com%{REQUEST_URI} [R=301,L,NE]');fs.writeFileSync(ht,text);}
-console.log(`Aligned metadata in ${count} pages; ${archives} archives/utility pages noindex; mode=${production?'production':'preview'}.`);
+if(root!==project){const ht=path.join(root,'.htaccess');let text=fs.readFileSync(ht,'utf8').replace(/\n# BEGIN PREVIEW INDEXING[\s\S]*?# END PREVIEW INDEXING\n/g,'\n');if(preview)text+='\n# BEGIN PREVIEW INDEXING\n<IfModule mod_headers.c>\nHeader always set X-Robots-Tag "noindex, follow"\n</IfModule>\n# END PREVIEW INDEXING\n';if(production&&!text.includes('# Canonical production host'))text=text.replace('RewriteEngine On','RewriteEngine On\n  # Canonical production host; test subfolder remains separate.\n  RewriteCond %{REQUEST_URI} !^/FUJISOU-NEW(?:/|$) [NC]\n  RewriteCond %{HTTP_HOST} ^(?:fujisou-ainos\\.com|fujisou-ainos\\.sub\\.jp)$ [NC]\n  RewriteRule ^ https://www.fujisou-ainos.com%{REQUEST_URI} [R=301,L,NE]\n  RewriteCond %{REQUEST_URI} !^/FUJISOU-NEW(?:/|$) [NC]\n  RewriteCond %{HTTP_HOST} ^www\\.fujisou-ainos\\.com$ [NC]\n  RewriteCond %{HTTPS} off\n  RewriteRule ^ https://www.fujisou-ainos.com%{REQUEST_URI} [R=301,L,NE]');fs.writeFileSync(ht,text);}
+console.log(`Aligned metadata in ${count} pages; ${archives} archives/utility pages noindex; mode=${production?'production':preview?'preview':'public'}.`);

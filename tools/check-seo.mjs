@@ -18,6 +18,9 @@ for (const file of walk(root)) {
   const html = fs.readFileSync(file, 'utf8');
   if (!html.includes('</head>') || html.includes('data-gallery-redirect')) continue;
   const relative = path.relative(root, file).replaceAll('\\', '/');
+  if(root===path.resolve(import.meta.dirname,'..')&&relative==='index.html') {
+    assert.doesNotMatch(html,/<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/,'Public source homepage must remain indexable');
+  }
   const expected = new URL(relative.replace(/index\.html$/, ''), origin).href;
   const canonicals = [...html.matchAll(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/g)];
   assert.equal(canonicals.length, 1, `${relative}: canonical count`);

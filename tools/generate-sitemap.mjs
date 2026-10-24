@@ -21,12 +21,13 @@ for (const file of walk(root).filter((item) => /\.(?:html|shtml)$/i.test(item)))
   if (['404.html', 'header.shtml', 'footer.shtml'].includes(path.basename(file))) continue;
   const html = fs.readFileSync(file, 'utf8');
   const relative = path.relative(root,file).replaceAll('\\','/');
-  if (html.includes('data-archive-robots')) continue;
+  if (html.includes('data-archive-robots') || html.includes('data-gallery-redirect') || relative.startsWith('design-sample/')) continue;
   if (relative.startsWith('staffblog/') && relative !== 'staffblog/index.html' && !articles.has(relative.slice('staffblog/'.length))) continue;
   if (relative.startsWith('eventinfo/') && relative !== 'eventinfo/index.html' && !activeEventFiles.has(relative.slice('eventinfo/'.length))) continue;
   const canonical = html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)/i)?.[1]
     ?? html.match(/<link\b[^>]*href=["']([^"']+)["'][^>]*rel=["']canonical["']/i)?.[1];
-  if (canonical) urls.add(canonical);
+  const expected = new URL(relative.replace(/index\.html$/, ''), 'https://www.fujisou-ainos.com/').href;
+  if (canonical === expected) urls.add(canonical);
 }
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...urls].sort().map((url) => `  <url><loc>${url}</loc></url>`).join('\n')}\n</urlset>\n`;

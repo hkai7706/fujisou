@@ -12,6 +12,8 @@
     "optimize": "node tools/optimize-assets.mjs",
     "sitemap": "node tools/generate-sitemap.mjs",
     "check": "node tools/site-check.mjs",
+    "seo": "node tools/prepare-seo.mjs && node tools/generate-sitemap.mjs",
+    "check:seo": "node --test tools/seo.test.mjs && node tools/check-seo.mjs",
     "build": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1",
     "build:preview": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -IncludeMailform",
     "build:production": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -Production -IncludeMailform"

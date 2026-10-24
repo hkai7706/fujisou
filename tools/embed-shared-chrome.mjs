@@ -21,7 +21,8 @@ function walk(directory) {
     if (!original.includes('include/header.shtml') && !original.includes('include/footer.shtml') && !original.includes('data-shared-header')) continue;
     const rel = path.relative(path.dirname(file), root).replaceAll('\\', '/');
     const prefix = rel ? rel + '/' : './';
-    const relative = markup => markup.replace(/((?:src|href)=["'])\/(?!\/)/g, '$1' + prefix);
+    const relative = markup => markup.replace(/((?:src|href)=["'])\/(?!\/)/g, '$1' + prefix)
+      .replace(/srcset="([^"]+)"/g, (_, value) => `srcset="${value.replace(/(^|,\s*)\/(?!\/)/g, '$1' + prefix)}"`);
     let html = original.replace(/<!--#set var="site_root" value="[^"]*" -->\s*/g, '')
       .replace(/<!--#include virtual="[^"\n]*include\/header\.shtml"\s*-->/g, relative(header))
       .replace(/<!--#include virtual="[^"\n]*include\/footer\.shtml"\s*-->/g, relative(footer));

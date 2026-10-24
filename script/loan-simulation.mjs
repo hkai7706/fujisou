@@ -1,4 +1,4 @@
-﻿import {calculateLoan} from './loan-calculation.mjs?v=bf37011474';
+﻿import {calculateLoan} from './loan-calculation.mjs?v=0b59f86a29';
 const form=document.querySelector('[data-loan-form]');
 if(form){
  const empty=document.querySelector('[data-loan-empty]');

@@ -35,7 +35,7 @@ for (const file of walk(root)) {
     assert.equal(schema['@context'], 'https://schema.org', `${relative}: schema context`);
     schemas++;
   }
-  if (html.includes('site-breadcrumbs') && !html.includes('data-archive-robots')) assert.match(html, /"@type":"BreadcrumbList"/, `${relative}: breadcrumb schema`);
+  if (/<(?:nav|div)\b[^>]*class="site-breadcrumbs"/.test(html) && !html.includes('data-archive-robots')) assert.match(html, /"@type":"BreadcrumbList"/, `${relative}: breadcrumb schema`);
   pages++;
 }
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');

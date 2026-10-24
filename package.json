@@ -14,6 +14,7 @@
     "check": "node tools/site-check.mjs",
     "seo": "node tools/prepare-seo.mjs && node tools/generate-sitemap.mjs",
     "check:seo": "node --test tools/seo.test.mjs && node tools/check-seo.mjs",
+    "performance": "node tools/prepare-home-images.mjs && node tools/embed-shared-chrome.mjs && node tools/build-home-css.mjs && node tools/version-public-assets.mjs && node tools/build-home-delivery.mjs",
     "build": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1",
     "build:preview": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -IncludeMailform",
     "build:production": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -Production -IncludeMailform"

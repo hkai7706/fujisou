@@ -2,8 +2,9 @@ import {readFile,writeFile} from "node:fs/promises";
 import {transform} from "lightningcss";
 import {PurgeCSS} from "purgecss";
 const css = await readFile("stylesheet/fujisou-ainos.css");
+const markup = (await readFile('index.html', 'utf8')).replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, '');
 const [{ css: homepageCss }] = await new PurgeCSS().purge({
-  content: ["index.html", "include/header.shtml", "include/footer.shtml", "script/fujisou-ainos.js"],
+  content: [{raw:markup,extension:'html'}, "include/header.shtml", "include/footer.shtml", "script/fujisou-ainos.js"],
   css: [{ raw: css.toString(), extension: "css" }],
   safelist: {
     greedy: [/^is-/, /^has-/, /^js$/, /^no-scroll$/],

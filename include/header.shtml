@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="/stylesheet/shared-chrome.min.css?v=13c78fbf3e">
-<script src="/script/shared-chrome.js?v=d996bf2697" defer></script>
+<script src="/script/shared-chrome.js?v=e2bf03211e" defer></script>
 <header class="shared-header" data-shared-header>
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
     <a class="shared-header__brand" href="/" aria-label="フジ創アイノス ホーム">
-      <img src="/img/common/ainos-logo.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async">
+      <img src="/img/common/ainos-logo-480.webp" alt="Bridal House Ainos 有限会社フジ創" width="720" height="240" decoding="async" srcset="/img/common/ainos-logo-240.webp 240w, /img/common/ainos-logo-480.webp 480w, /img/common/ainos-logo.webp 720w" sizes="(max-width:760px) 128px, (max-width:1120px) 205px, 260px">
     </a>
     <div class="shared-header__signature" aria-label="全面漆喰の家。壁から、空気を整える。"><strong>全面漆喰の家</strong><small>壁から、空気を整える。</small></div>
     </div>

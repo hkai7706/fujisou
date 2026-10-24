@@ -42,6 +42,21 @@ try {
     console.log(width,JSON.stringify(result));
     await page.close();
   }
+  const delayed=await browser.newPage();
+  await delayed.setViewport({width:390,height:900});
+  await delayed.setRequestInterception(true);
+  delayed.on('request',async request=>{
+    if(request.url().includes('/img/home/slide1-'))await new Promise(resolve=>setTimeout(resolve,2500));
+    await request.continue();
+  });
+  await delayed.goto('http://127.0.0.1:5501/',{waitUntil:'domcontentloaded'});
+  const before=await delayed.$eval('.hybrid-hero',node=>node.getBoundingClientRect().height);
+  assert.ok(before>200,'Hero must reserve its height before the photograph loads');
+  await delayed.waitForNetworkIdle();
+  const after=await delayed.$eval('.hybrid-hero',node=>node.getBoundingClientRect().height);
+  assert.ok(Math.abs(before-after)<1,`Slow hero image shifted height: ${before} -> ${after}`);
+  await delayed.close();
+  console.log('Slow-image hero layout reservation passed.');
   const page=await browser.newPage();
   await page.setJavaScriptEnabled(false);
   await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});

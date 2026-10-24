@@ -62,3 +62,9 @@ Final local mobile Lighthouse: performance/accessibility/best-practices/SEO
 These are local lab results. Hosted PageSpeed results vary with network and run
 conditions; no fixed future score is guaranteed. The single cacheable stylesheet
 is retained: moving it ahead of viewport metadata caused CLS and was discarded.
+
+Live follow-up found an additional cold-image layout shift: the mobile image
+rule's `aspect-ratio:auto` overrode the dimension-derived ratio before image
+download. Each hero scene now reserves its actual source ratio (1440/810,
+1535/1024, 1538/1023) before loading. `check-home-layout.mjs` holds the hero
+request for 2.5 seconds and verifies that its reserved height does not change.

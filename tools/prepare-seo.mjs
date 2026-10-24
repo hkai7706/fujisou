@@ -10,7 +10,7 @@ const production=process.argv.includes('--production');
 // builds remain noindex unless explicitly generated as public/production.
 const preview=process.argv.includes('--preview')||(!production&&!process.argv.includes('--public')&&root!==project);
 if(process.argv.includes('--preview')&&(production||process.argv.includes('--public')))throw new Error('Choose either preview or public/production indexing');
-const skip=new Set(['.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','include','server','mailformpro','mfp.statics','iplogs', 'originals']);
+const skip=new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','include','server','mailformpro','mfp.statics','iplogs', 'originals']);
 const pageCopy=JSON.parse(fs.readFileSync(path.join(project,'docs/seo-pages.json'),'utf8'));
 const events=JSON.parse(fs.readFileSync(path.join(project,'eventinfo/posts.json'),'utf8'));
 const archivedEvents=new Set(events.filter(post=>!post.existing&&post.legacyFile!=='post-16.shtml').map(post=>'eventinfo/'+post.file));

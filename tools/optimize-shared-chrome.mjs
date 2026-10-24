@@ -5,7 +5,7 @@ import {transform} from 'lightningcss';
 await import('./embed-shared-chrome.mjs');
 
 const pages=[];
-const excluded=new Set(['backup','dist','tmp','.git','node_modules','tools','server','include', 'originals']);
+const excluded=new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','backup','dist','tmp','.git','node_modules','tools','server','include', 'originals']);
 function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){if(excluded.has(e.name))continue;const file=path.join(dir,e.name);if(e.isDirectory())walk(file);else if(/\.(html|shtml)$/.test(e.name))pages.push(file);}}
 walk('.');
 const normalize=body=>body.replace(/(?:\.\.\/)*img\//g,'../img/').replace(/\r\n/g,'\n').trim();

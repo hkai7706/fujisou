@@ -1,8 +1,19 @@
 # Fujisou Ainos website
 
 Japanese static website for フジ創アイノス. HTML, CSS and vanilla JavaScript run
-without a production Node server. `dist/` is the only upload package. The obsolete
+without a production Node server. `dist/` is the public website upload package. The obsolete
 `server/` copy has been removed.
+
+## Separate private analytics
+
+The dashboard has no link in the public website navigation. Build its separate
+packages with `npm run analytics:build`; validate with `npm run check:analytics`
+(PHP with PDO SQLite and Chrome required). `analytics-service-dist/` runs on
+Lolipop; `analytics-portal-dist/` can be hosted separately. GitHub Pages can host
+the dashboard and website; the PHP service must run on Lolipop. Tracking stays
+disabled until a service URL is configured. Follow [docs/ANALYTICS.md](docs/ANALYTICS.md)
+for setup. Never commit private configuration or visitor databases. Existing mail
+delivery code is unchanged.
 
 ## Edit and preview
 

@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 const project = path.resolve(import.meta.dirname, '..');
 const root = process.argv[2] ? path.resolve(process.argv[2]) : project;
 if (root !== project && root !== path.join(project, 'dist')) throw new Error('Unsupported output folder');
-const skip = new Set(['.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'tools', 'docs', 'include', 'mailformpro', 'mfp.statics', 'iplogs', 'originals']);
+const skip = new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'tools', 'docs', 'include', 'mailformpro', 'mfp.statics', 'iplogs', 'originals']);
 const header = fs.readFileSync(path.join(project, 'include/header.shtml'), 'utf8').match(/<header\b[\s\S]*?<\/header>/)?.[0];
 const footer = fs.readFileSync(path.join(project, 'include/footer.shtml'), 'utf8').match(/<footer\b[\s\S]*?<\/footer>/)?.[0];
 if (!header || !footer) throw new Error('Missing shared component markup');

@@ -12,7 +12,7 @@ function resolve(url) {
   const file = path.resolve(root, '.' + url);
   if (file !== root && !file.startsWith(root + path.sep)) throw new Error('Invalid path');
   const relative = path.relative(root, file).split(path.sep);
-  if (relative.some(part => part.startsWith('.') || ['tmp', 'backup', 'node_modules', 'mailformpro', 'iplogs', 'originals'].includes(part))) throw new Error('Private path');
+  if (relative.some(part => part.startsWith('.') || ['tmp', 'backup', 'node_modules', 'mailformpro', 'iplogs', 'originals', 'analytics-service', 'analytics-service-dist'].includes(part))) throw new Error('Private path');
   return file;
 }
 function render(file, depth = 0) {

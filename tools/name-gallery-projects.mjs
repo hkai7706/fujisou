@@ -27,7 +27,7 @@ for(const file of ['gallery/projects.json','gallery/project-folders.json','galle
 // All absolute rename targets were checked above before the first mutation.
 for(const [from,to]of directoryMoves)fs.renameSync(from,to);
 for(const m of moves){fs.renameSync('gallery/'+m.oldFile,'gallery/'+m.file);if(fs.existsSync('dist/gallery/'+m.oldFile))fs.renameSync('dist/gallery/'+m.oldFile,'dist/gallery/'+m.file);}
-const excluded=new Set(['.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','originals','mailformpro','mfp.statics','iplogs']);
+const excluded=new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','originals','mailformpro','mfp.statics','iplogs']);
 const rewrite=(text,galleryLocal)=>{
  for(const m of moves){
   text=text.split(m.oldOriginals).join(m.originals).split(m.oldWeb+'/').join(m.web+'/');

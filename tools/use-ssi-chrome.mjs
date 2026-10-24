@@ -3,7 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 
 const root = path.resolve(import.meta.dirname, '..');
-const excluded = new Set(['.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'tools', 'docs', 'include', 'mailformpro', 'mfp.statics']);
+const excluded = new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'tools', 'docs', 'include', 'mailformpro', 'mfp.statics']);
 const headerPattern = /<header\b[^>]*\bdata-shared-header\b[^>]*>[\s\S]*?<\/header>/g;
 const footerPattern = /<footer\b[^>]*class="shared-footer"[^>]*>[\s\S]*?<\/footer>/g;
 const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');

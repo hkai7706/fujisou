@@ -38,3 +38,10 @@ Shared source regeneration can intentionally update many checked-in pages. Packa
 does not: header/CSS assembly, date-dependent event state, asset versions, SEO and
 sitemap updates are applied to dist after copying. A source snapshot check verifies
 that ordinary builds leave maintained files unchanged.
+# Private analytics
+
+`analytics-portal/` contains the separate dashboard, with no public navigation link.
+`analytics-service/` contains the PHP/SQLite collector and authenticated reports.
+`script/analytics-config.js` holds the public endpoint (empty disables collection).
+`npm run analytics:build` creates separate ignored upload packages; neither is
+included in public `dist/`. Setup: [docs/ANALYTICS.md](docs/ANALYTICS.md).

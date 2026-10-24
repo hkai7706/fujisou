@@ -68,3 +68,8 @@ rule's `aspect-ratio:auto` overrode the dimension-derived ratio before image
 download. Each hero scene now reserves its actual source ratio (1440/810,
 1535/1024, 1538/1023) before loading. `check-home-layout.mjs` holds the hero
 request for 2.5 seconds and verifies that its reserved height does not change.
+
+The live network trace also showed the visible philosophy photograph requested
+at 1.48s with low priority, after the hero/CSS requests at 0.29s. It is now eager
+and has a responsive mobile-only preload, avoiding a blank region in the initial
+viewport while retaining lazy loading for photographs farther down the page.

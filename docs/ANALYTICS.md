@@ -59,6 +59,13 @@ config/data to GitHub. Actual host permissions/TLS/routing must be checked after
 
 ## Local development and checks
 
+To open the dashboard without Lolipop, run `npm.cmd run analytics:preview`.
+Open http://127.0.0.1:5503/ and use the service URL, username and random temporary
+password printed in that terminal. Keep it open while testing; Ctrl+C stops the
+service and deletes its temporary database. Reports start empty. This command
+does not enable public tracking or use production credentials. It requires PHP
+with PDO SQLite (the helper detects the installed Windows PHP runtime).
+
 ```powershell
 npm.cmd run check:analytics
 ```

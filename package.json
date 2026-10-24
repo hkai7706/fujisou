@@ -5,6 +5,7 @@
     "preview": "node tools/serve-ssi.mjs",
     "preview:dist": "node tools/serve-ssi.mjs --dist",
     "analytics:build": "node tools/build-analytics.mjs",
+    "analytics:preview": "node tools/preview-analytics.mjs",
     "check:analytics": "node --test tools/analytics.test.mjs && node tools/check-analytics-service.mjs",
     "refresh": "node tools/refresh-site.mjs",
     "styles": "node tools/build-shared-css.mjs && node tools/build-home-css.mjs && node tools/version-public-assets.mjs && node tools/build-home-delivery.mjs",

@@ -1,11 +1,15 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import puppeteer from 'puppeteer-core';
-const paths=['eventinfo/','concept/','staff/','policy/','gallery/','land-info/','shikkui/','plans/hiraya/','plans/two-story/','plans/custom/','plans/products/cute/','plans/products/hirayahouse/','plans/products/premium/','plans/products/smart/','plans/products/healthy/','plans/products/pretty/','plans/products/simply/','staffblog/','videos/'];
+const paths=['eventinfo/','staffblog/'];
 fs.mkdirSync('tmp/heroes',{recursive:true});
 const browser=await puppeteer.launch({executablePath:process.env.CHROME_BINARY||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 try{
   const page=await browser.newPage();
+  for(const path of ['concept/','staff/','policy/','gallery/','land-info/','shikkui/','plans/hiraya/','plans/two-story/','plans/custom/','plans/products/cute/','plans/products/healthy/','videos/']){
+    await page.goto('http://127.0.0.1:5501/'+path);
+    assert.equal(await page.$('.page-hero'),null,'Event/blog standard must not affect '+path);
+  }
   for(const width of [320,390,1440]){
     await page.setViewport({width,height:1000});
     for(const path of paths){

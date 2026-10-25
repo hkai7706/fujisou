@@ -4,7 +4,7 @@ const project=path.resolve(import.meta.dirname,'..');
 const root=process.argv[2]?path.resolve(process.argv[2]):project;
 if(root!==project&&root!==path.join(project,'dist'))throw Error('Unsupported hero output');
 const skip=new Set(['.git','node_modules','tools','docs','source','dist','tmp','backup','output','originals','analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist']);
-const heroes=new Set(['event-index-hero','concept-hero','staff-hero','policy-hero','gallery-hero','land-hero','shikkui-hero','planning-hero','custom-hero','cute-hero','custom-product__hero','video-intro','archive-heading']);
+const heroes=new Set(['event-index-hero','archive-heading']);
 let changed=0;
 function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
   if(entry.isSymbolicLink()||skip.has(entry.name))continue;
@@ -12,7 +12,10 @@ function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
   if(!/\.(?:html|shtml)$/.test(file))continue;
   const before=fs.readFileSync(file,'utf8');if(!before.includes('data-site-design="interior"'))continue;
   const after=before.replace(/<(?:section|header)\b[^>]*class="([^"]+)"[^>]*>/g,(tag,classes)=>{
-    const list=classes.split(/\s+/);return list.some(name=>heroes.has(name))&&!list.includes('page-hero')?tag.replace(`class="${classes}"`,`class="${classes} page-hero"`):tag;
+    const list=classes.split(/\s+/).filter(name=>name!=='page-hero');
+    const section=path.relative(root,file).split(path.sep)[0];
+    if(['eventinfo','staffblog'].includes(section)&&list.some(name=>heroes.has(name)))list.push('page-hero');
+    return tag.replace(`class="${classes}"`,`class="${list.join(' ')}"`);
   });
   if(after!==before){fs.writeFileSync(file,after);changed++;}
 }}

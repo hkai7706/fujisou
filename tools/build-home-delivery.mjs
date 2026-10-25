@@ -20,7 +20,7 @@ const [{ css: used }] = await new PurgeCSS().purge({
   content: [{raw: html, extension:'html'}, 'script/fujisou-ainos.js', 'script/shared-chrome.js', 'script/event-status.js'],
   css: [{raw:css,extension:'css'}],
   safelist: {standard:[/^is-/,/^has-/,/^js$/, /^no-scroll$/, /^shared-/]},
-  keyframes: true, fontFace: true
+  keyframes: true, fontFace: false
 });
 const compact = await postcss([cssnano({preset:['default', {
   // Runtime states and named animations remain available after compaction.

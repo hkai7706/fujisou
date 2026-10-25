@@ -9,6 +9,11 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   generous spacing, restrained brown/gold lines and no heavy shadows.
 - Use existing `--serif`, `--sans`, spacing and colour tokens. Japanese headings
   use Mincho; body/navigation/form text uses the shared sans-serif stack.
+- Webfonts are self-hosted in `fonts/`, declared in `stylesheet/source/00-webfonts.css`.
+  Hannari Mincho supplies kana, with Noto Serif JP for kanji/other characters;
+  Quattrocento is available through `--latin`. Keep the bundled OFL licenses.
+  Do not purge font-face rules based on literal family names: styles use CSS
+  variables. Verify actual Chrome-rendered fonts with `node tools/check-fonts.mjs`.
 - Preserve professional Japanese wording and sourced facts. Do not invent current
   prices, performance guarantees, owner requirements, completion dates or warranties.
 - Preserve photographs and their originals. Use responsive derivatives with truthful

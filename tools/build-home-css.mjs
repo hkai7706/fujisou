@@ -10,7 +10,8 @@ const [{ css: homepageCss }] = await new PurgeCSS().purge({
     standard: [/^is-/, /^has-/, /^js$/, /^no-scroll$/],
   },
   keyframes: true,
-  fontFace: true,
+  // Font families are referenced through CSS variables; do not purge their faces.
+  fontFace: false,
 });
 const homepageMinified = transform({
   filename: "fujisou-ainos.home.css",

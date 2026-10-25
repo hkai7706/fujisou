@@ -1,7 +1,7 @@
 /* ==================================================
    COMPONENTS — HOMEPAGE AND SHARED UI
    ================================================== */
-:root{--paper:#f2efe8;--ink:#1c211e;--muted:#656b66;--green:#273b31;--gold:#b49b68;--line:rgba(28,33,30,.16);--frame:clamp(10px,2vw,26px);--sx:clamp(18px,4vw,56px);--sy:clamp(42px,5.5vw,76px);--serif:"はんなり明朝","Hannari Mincho",YuMincho,"Yu Mincho","Noto Serif JP","ヒラギノ明朝 ProN W3","Hiragino Mincho ProN",serif;--sans:"Noto Sans JP","ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--latin:"Quattrocento",YuMincho,"Yu Mincho","Noto Serif JP",serif}
+:root{--paper:#f2efe8;--ink:#1c211e;--muted:#656b66;--green:#273b31;--gold:#b49b68;--line:rgba(28,33,30,.16);--frame:clamp(10px,2vw,26px);--sx:clamp(18px,4vw,56px);--sy:clamp(42px,5.5vw,76px);--serif:"Hannari Mincho","Noto Serif JP",YuMincho,"Yu Mincho","Hiragino Mincho ProN",serif;--sans:"Noto Sans JP","ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--latin:"Quattrocento",YuMincho,"Yu Mincho","Noto Serif JP",serif}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:clip}
 body{margin:0;min-width:320px;color:var(--ink);background:#d9d5cd;font:400 15px/1.9 var(--sans);font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow-x:clip}

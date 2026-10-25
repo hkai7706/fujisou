@@ -9,8 +9,8 @@
   --color-accent: #9b784d;
   --color-line: rgba(28, 33, 30, .16);
   --space-page: clamp(18px, 4vw, 56px);
-  --font-serif: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
-  --font-sans: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  --font-serif: var(--serif);
+  --font-sans: var(--sans);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -20,5 +20,5 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 
 /* Homepage critical foundations */
-:root{--paper:#f2efe8;--ink:#1c211e;--muted:#656b66;--green:#273b31;--gold:#b49b68;--gold-line:#9b784d;--line:rgba(28,33,30,.16);--frame:clamp(10px,2vw,26px);--sx:clamp(18px,4vw,56px);--sy:clamp(30px,4vw,52px);--serif:YuMincho,"Yu Mincho","Hiragino Mincho ProN",serif;--sans:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--latin:Georgia,"Times New Roman",serif}
+:root{--paper:#f2efe8;--ink:#1c211e;--muted:#656b66;--green:#273b31;--gold:#b49b68;--gold-line:#9b784d;--line:rgba(28,33,30,.16);--frame:clamp(10px,2vw,26px);--sx:clamp(18px,4vw,56px);--sy:clamp(30px,4vw,52px);--serif:"Hannari Mincho","Noto Serif JP",YuMincho,"Yu Mincho","Hiragino Mincho ProN",serif;--sans:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--latin:Georgia,"Times New Roman",serif}
     *,*::before,*::after{box-sizing:border-box}html{overflow-x:clip;scroll-behavior:smooth}body{margin:0;min-width:320px;color:var(--ink);background:#fff;font:400 15px/1.9 var(--sans);font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow-x:clip}img{display:block;max-width:100%;height:auto}a{color:inherit}button{font:inherit}.skip-link{position:fixed;z-index:100;top:8px;left:8px;padding:8px 12px;background:#fff;transform:translateY(-160%)}.skip-link:focus{transform:none}.site-header,main,.site-footer{width:min(1380px,calc(100% - var(--frame)*2));margin-inline:auto}.site-header{height:clamp(66px,7vw,92px);display:flex;align-items:center;padding-inline:clamp(18px,3.5vw,54px);background:var(--paper)}.site-header img{width:clamp(172px,21vw,250px)}main{background:var(--paper);overflow:clip}

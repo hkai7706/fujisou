@@ -86,6 +86,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Shared component assembly failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'Event state assembly failed.' }
 & node (Join-Path $PSScriptRoot 'add-analytics.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Analytics tracker assembly failed.' }
+& node (Join-Path $PSScriptRoot 'standardize-page-heroes.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Inner-page hero assembly failed.' }
 Push-Location -LiteralPath $destinationRoot
 try {
   foreach ($step in 'build-home-css.mjs', 'build-home-delivery.mjs') {

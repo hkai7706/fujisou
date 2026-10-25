@@ -14,6 +14,17 @@ rendered appearance as the visual reference. Older references are in docs/archiv
 - Preserve photographs and their originals. Use responsive derivatives with truthful
   dimensions, alt text and deliberate crops. Reserve hero dimensions before loading.
 - Keep keyboard focus, touch targets, reduced-motion and no-JavaScript usability.
+- Inner-page hero reference: the owner's event-page screenshot (2026-10-25),
+  approximately 1575 × 400 pixels, establishes a desktop width-to-height ratio
+  of approximately 4:1. Use this proportion for page hero banners, with centered
+  headings/copy and cover-cropped photography where a photo banner is used.
+  On mobile, allow enough height for readable wrapped copy; do not force a 4:1
+  box that clips text. This standard does not replace the homepage hero layout.
+  The shared implementation is `.page-hero` in `stylesheet/site-design.css`;
+  `tools/standardize-page-heroes.mjs` attaches it to existing inner-page hero
+  components during refresh and deployment. Reference desktop composition:
+  maximum width 1260px, minimum height 320px, centered 44px maximum Mincho title,
+  11px label and 15px lead. Mobile minimum height is 260px, expanding for copy.
 - The homepage presents housing categories before the free-design product comparison.
   Expired promotions are hidden; their archived details remain accessible.
 

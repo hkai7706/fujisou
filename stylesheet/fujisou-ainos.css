@@ -2314,7 +2314,7 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
 .home-main { overflow: visible; }
 .hybrid-hero {
   position: relative; display: block; width: 100vw; max-width: none;
-  height: calc(100svh - var(--home-header-height,126px)) !important;
+  height: calc(100svh - var(--home-header-height,92px)) !important;
   min-height: 0 !important; max-height: none !important; aspect-ratio: auto;
   margin: 0 calc(50% - 50vw) !important; padding: 0; background: #302820;
 }
@@ -2382,8 +2382,8 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
 }
 .hybrid-hero__controls button { min-width: 44px; min-height: 44px; }
 .hybrid-hero[data-paused] .hybrid-hero__controls button span { animation-play-state: paused; }
-@media(max-width:1120px) { .hybrid-hero { --home-header-height: 88px; } }
-@media(max-width:760px) { .hybrid-hero { --home-header-height: 68px; } }
+@media(max-width:1120px) { .hybrid-hero { --home-header-height: 76px; } }
+@media(max-width:760px) { .hybrid-hero { --home-header-height: 60px; } }
 @media(max-width:819px) {
   .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel > img { object-position: 55% center !important; }
   .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel::after {

@@ -34,6 +34,9 @@ rendered appearance as the visual reference. Older references are in docs/archiv
 - Homepage hero: all three slides span the viewport width and fill its height
   below the sticky header. Use cover-cropped photos, readable overlay text and
   stable slide dimensions; preserve the normal width of subsequent sections.
+- Shared header heights: approximately 92px desktop, 76px tablet, 60px phone.
+  Compact spacing is maintained in `stylesheet/inquiry-journey.css`. Keep the
+  homepage hero's no-JavaScript height fallbacks aligned with these values.
   Expired promotions are hidden; their archived details remain accessible.
 
 ## Source and generated files

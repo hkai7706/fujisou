@@ -1,0 +1,7 @@
+<section class="owner-support" id="owner-support" aria-labelledby="owner-support-title">
+  <p class="owner-support__label">FOR OWNERS</p>
+  <h2 id="owner-support-title">すでにお住まいのオーナー様へ。</h2>
+  <p>点検や修理、お住まいのお困りごとは、既存のオーナーズクラブまたはお電話でご相談ください。状況や発生時期、保証書などをお手元にご用意いただくと確認がスムーズです。</p>
+  <div class="owner-support__links"><a href="https://fujisou-ainos.ambassador-cloud.biz/login/" target="_blank" rel="noopener noreferrer">オーナーズクラブへログイン <span aria-hidden="true">↗</span></a><a href="tel:08002002661">電話で相談：0800-200-2661</a></div>
+  <p class="owner-support__note">オーナーズクラブは外部の会員専用サービスです。ログイン情報がわからない場合は、お電話でお問い合わせください。電話受付：9:00–18:00（水曜・木曜定休）。</p>
+</section>

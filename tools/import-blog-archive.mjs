@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import sharp from 'sharp';
 const root='https://www.fujisou-ainos.com';
+const latest=process.argv.includes('--latest');
 const cache='tmp/blog-import';fs.mkdirSync(cache,{recursive:true});fs.mkdirSync('img/staffblog/articles',{recursive:true});
 const existing=JSON.parse(fs.readFileSync('staffblog/posts.json','utf8'));
 const existingBySource=new Map(existing.map(p=>[p.source,p]));
@@ -11,15 +12,15 @@ const decode=s=>s.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&
 const plain=s=>decode(s.replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim());
 const esc=s=>s.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 async function download(url){for(let attempt=0;attempt<3;attempt++){try{const r=await fetch(url,{signal:AbortSignal.timeout(45000)});if(!r.ok)throw Error(`${r.status} ${url}`);return Buffer.from(await r.arrayBuffer());}catch(e){if(attempt===2)throw e;await new Promise(r=>setTimeout(r,500*(attempt+1)));}}}
-async function html(url){const file=path.join(cache,crypto.createHash('sha256').update(url).digest('hex')+'.html');if(fs.existsSync(file))return fs.readFileSync(file,'utf8');const data=await download(url);fs.writeFileSync(file,data);return data.toString('utf8');}
+async function html(url){const file=path.join(cache,crypto.createHash('sha256').update(url).digest('hex')+'.html');if(!latest&&fs.existsSync(file))return fs.readFileSync(file,'utf8');const data=await download(url);fs.writeFileSync(file,data);return data.toString('utf8');}
 const queue=[root+'/staffblog/archives.shtml'];const seen=new Set(queue);const entries=new Map();let cursor=0;
-async function archiveWorker(){while(cursor<queue.length){const url=queue[cursor++];const text=await html(url);for(const m of text.matchAll(/href=["']([^"']*\/staffblog\/archives(?:_\d+)?\.shtml)["']/g)){const u=new URL(decode(m[1]),url).href;if(!seen.has(u)){seen.add(u);queue.push(u);}}
+async function archiveWorker(){while(cursor<queue.length){const url=queue[cursor++];const text=await html(url);for(const m of text.matchAll(/href=["']([^"']*\/staffblog\/archives(?:_\d+)?\.shtml)["']/g)){const u=new URL(decode(m[1]),url).href;if(!latest&&!seen.has(u)){seen.add(u);queue.push(u);}}
  const list=text.match(/<ul\b[^>]*class="archivelist"[^>]*>([\s\S]*?)<\/ul>/)?.[1];if(!list)throw Error('Archive list missing '+url);
  for(const m of list.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/g)){const tag=m[1];const source=new URL(decode(tag.match(/href="([^"]+)"/)[1]),url).href;const title=plain(tag.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1]||'');const date=plain(tag.match(/class="date"[^>]*>([\s\S]*?)<\/span>/)?.[1]||'').replaceAll('.','-');const category=plain(tag.match(/class="cat"[^>]*>([\s\S]*?)<\/span>/)?.[1]||'').replace(/^｜/,'')||'社長ブログ';entries.set(source,{source,title,date,category});}
  console.log(`Archive ${seen.size} known pages; ${entries.size} unique articles discovered`);
 }}
 await Promise.all(Array.from({length:4},archiveWorker));
-fs.writeFileSync('staffblog/archive-discovery.json',JSON.stringify({archives:[...seen],articles:[...entries.values()]},null,2));
+fs.writeFileSync('staffblog/'+(latest?'latest-discovery.json':'archive-discovery.json'),JSON.stringify({archives:[...seen],articles:[...entries.values()]},null,2));
 console.log(`Discovery complete: ${seen.size} archive pages, ${entries.size} articles.`);
 function extract(text){const marker=text.match(/<div\b[^>]*class=["']postbody["'][^>]*>/i);if(!marker)throw Error('Missing article body');const start=marker.index+marker[0].length;const tokens=/<\/?div\b[^>]*>/gi;tokens.lastIndex=start;let depth=1,m;while((m=tokens.exec(text))){depth+=/^<\//.test(m[0])?-1:1;if(!depth)return text.slice(start,m.index);}throw Error('Unclosed article body');}
 function media(url){if(mediaTasks.has(url))return mediaTasks.get(url);const task=(async()=>{const hash=crypto.createHash('sha256').update(url).digest('hex').slice(0,16);let extension=path.extname(new URL(url).pathname).toLowerCase();if(!['.gif','.svg'].includes(extension))extension='.webp';const file=`img/staffblog/articles/${hash}${extension}`;
@@ -45,6 +46,6 @@ const urls=new Map(posts.map(p=>[p.source,p.file]));
 const localRoutes={'/contact/':'../contact/index.html','/concept/':'../concept/index.html','/staff/':'../staff/index.html','/gallery/':'../gallery/index.html','/eventinfo/':'../eventinfo/index.html','/staffblog/':'index.html','/':'../index.html'};
 for(const p of posts){p.body=p.body.replace(/href=["']([^"']+)["']/g,(tag,value)=>{if(/^(?:#|tel:|mailto:|data:)/i.test(value))return tag;let url;try{url=new URL(decode(value),p.source);}catch{return tag;}if(urls.has(url.href))return`href="${esc(urls.get(url.href))}"`;if(url.origin===root&&localRoutes[url.pathname])return`href="${localRoutes[url.pathname]}${esc(url.hash)}"`;if(!/^https?:/i.test(value))return`href="${esc(url.href)}"`;return tag;});}
 posts.sort((a,b)=>b.date.localeCompare(a.date)||a.source.localeCompare(b.source));posts.forEach((p,i)=>p.index=i+1);
-fs.writeFileSync('staffblog/posts.json',JSON.stringify(posts,null,2)+'\n');fs.writeFileSync('staffblog/import-report.json',JSON.stringify({discovered:all.length,imported:posts.length,archivePages:seen.size,failures,mediaFailures},null,2)+'\n');
+fs.writeFileSync('staffblog/posts.json',JSON.stringify(posts,null,2)+'\n');fs.writeFileSync('staffblog/'+(latest?'latest-import-report.json':'import-report.json'),JSON.stringify({discovered:all.length,imported:posts.length,archivePages:seen.size,failures,mediaFailures},null,2)+'\n');
 console.log(`Saved ${posts.length} articles; ${failures.length} failed pages; ${mediaFailures.length} unavailable images.`);
 if(failures.length)process.exitCode=1;

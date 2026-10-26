@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const project=path.resolve(import.meta.dirname,'..'),root=process.argv[2]?path.resolve(process.argv[2]):project;
+if(root!==project&&root!==path.join(project,'dist'))throw Error('Unsupported home blog output');
+const posts=JSON.parse(fs.readFileSync(path.join(project,'staffblog/posts.json'),'utf8'));
+const overrides=JSON.parse(fs.readFileSync(path.join(project,'staffblog/thumbnail-overrides.json'),'utf8'));
+const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const latest=posts.filter(post=>post.date<=today).sort((a,b)=>b.date.localeCompare(a.date)||a.file.localeCompare(b.file)).slice(0,3);
+const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+const cards=latest.map(post=>{const image=overrides[post.legacyFile]||post;return `<a class="preview-card reveal" data-news-category="blog" href="staffblog/${esc(post.file)}">${image.image?`<img class="preview-card__image" src="${esc(image.image.replace(/^\.\.\//,''))}" alt="${esc(post.title)}" width="${image.imageWidth}" height="${image.imageHeight}" loading="lazy" decoding="async">`:''}<span class="preview-card__meta"><span class="preview-card__type">BLOG</span><time datetime="${post.date}">${post.date.replaceAll('-','.')}</time></span><h3>${esc(post.title)}</h3><span class="preview-card__link">記事を読む →</span></a>`;});
+const file=path.join(root,'index.html');let html=fs.readFileSync(file,'utf8'),index=0;
+html=html.replace(/<a\b[^>]*data-news-category="blog"[^>]*>[\s\S]*?<\/a>/g,()=>cards[index++]||'');
+if(index!==3)throw Error('Expected three homepage blog previews');fs.writeFileSync(file,html);
+console.log('Homepage blog previews updated to the latest three published articles.');

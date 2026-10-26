@@ -88,6 +88,10 @@ if ($LASTEXITCODE -ne 0) { throw 'Event state assembly failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'Analytics tracker assembly failed.' }
 & node (Join-Path $PSScriptRoot 'standardize-page-heroes.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Inner-page hero assembly failed.' }
+& node (Join-Path $PSScriptRoot 'sync-customer-support.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Customer support assembly failed.' }
+& node (Join-Path $PSScriptRoot 'build-home-blog.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Homepage blog assembly failed.' }
 Push-Location -LiteralPath $destinationRoot
 try {
   foreach ($step in 'build-home-css.mjs', 'build-home-delivery.mjs') {

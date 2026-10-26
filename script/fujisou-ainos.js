@@ -86,6 +86,11 @@ blogFilters.forEach((filter) => {
 
 const hybridSlider=document.querySelector('[data-hybrid-slider]');
 if(hybridSlider){
+ const heroHeader=document.querySelector('[data-shared-header]');
+ const sizeHero=()=>{if(heroHeader)hybridSlider.style.setProperty('--home-header-height',`${heroHeader.getBoundingClientRect().height}px`);};
+ sizeHero();
+ if(heroHeader&&'ResizeObserver' in window)new ResizeObserver(sizeHero).observe(heroHeader);
+ else addEventListener('resize',sizeHero);
  const scenes=[...hybridSlider.querySelectorAll('.hybrid-hero__scene')];
  const dots=[...hybridSlider.querySelectorAll('[data-hybrid-dot]')];
  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');

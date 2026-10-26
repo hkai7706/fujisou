@@ -20,11 +20,10 @@ for (const file of ['include/header.shtml', 'include/footer.shtml']) {
   fs.writeFileSync(file, html);
 }
 let html = fs.readFileSync('index.html', 'utf8');
-// This photograph is in the initial mobile viewport. Lazy loading deferred its
-// request until after layout, leaving a large blank area after the hero painted.
-html = html.replace(/<img\b[^>]*src="img\/home\/natural-room-900.webp"[^>]*>/g, tag => tag.replace(/loading="lazy"/, 'loading="eager"'));
+// The full-screen hero now occupies the initial viewport. Defer the following
+// section photograph rather than letting it compete with the first hero image.
+html = html.replace(/<img\b[^>]*src="img\/home\/natural-room-900.webp"[^>]*>/g, tag => tag.replace(/loading="eager"/, 'loading="lazy"'));
 html = html.replace(/<link\b[^>]*data-mobile-first-photo[^>]*>/g, '');
-html = html.replace('</head>', '<link rel="preload" as="image" href="img/home/natural-room-720.webp" imagesrcset="img/home/natural-room-480.webp 480w, img/home/natural-room-720.webp 720w, img/home/natural-room-900.webp 900w" imagesizes="(max-width:760px) calc(100vw - 56px), 50vw" media="(max-width:819px)" type="image/webp" fetchpriority="high" data-mobile-first-photo></head>');
 html = html.replace(/<img\b[^>]*src="img\/eventinfo\/tonami-open-house-until-oct18[^\"]*"[^>]*>/g, tag => tag
   .replace(/src="[^"]*"/, 'src="img/eventinfo/tonami-open-house-until-oct18-display-840.webp"')
   .replace(/srcset="[^"]*"/, `srcset="${[420,640,840,1240].map(width => `img/eventinfo/tonami-open-house-until-oct18-display-${width}.webp ${width}w`).join(', ')}"`)

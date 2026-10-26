@@ -31,6 +31,9 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   maximum width 1260px, minimum height 320px, centered 44px maximum Mincho title,
   11px label and 15px lead. Mobile minimum height is 260px, expanding for copy.
 - The homepage presents housing categories before the free-design product comparison.
+- Homepage hero: all three slides span the viewport width and fill its height
+  below the sticky header. Use cover-cropped photos, readable overlay text and
+  stable slide dimensions; preserve the normal width of subsequent sections.
   Expired promotions are hidden; their archived details remain accessible.
 
 ## Source and generated files

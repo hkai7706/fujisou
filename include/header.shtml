@@ -27,6 +27,7 @@
         <summary>家造り情報</summary>
         <ul class="shared-header__dropdown">
           <li><a href="/gallery/">施工事例</a></li>
+          <li><a href="/renovation/">リノベーション</a></li>
           <li><a href="/videos/">動画</a></li>
 
           <li><a href="/land-info/">土地情報</a></li>

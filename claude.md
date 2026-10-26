@@ -37,6 +37,9 @@ rendered appearance as the visual reference. Older references are in docs/archiv
 - Shared header heights: approximately 92px desktop, 76px tablet, 60px phone.
   Compact spacing is maintained in `stylesheet/inquiry-journey.css`. Keep the
   homepage hero's no-JavaScript height fallbacks aligned with these values.
+- EXTERIOR WORKS uses user-controlled horizontal cards with native scrolling,
+  swipe, keyboard and arrow navigation; preserve all six real project links.
+  Styles are maintained in `stylesheet/source/10-exterior-slider.css`.
   Expired promotions are hidden; their archived details remain accessible.
 
 ## Source and generated files

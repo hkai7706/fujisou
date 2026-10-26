@@ -1,0 +1,43 @@
+/* Exterior works: native swipe/scroll cards, enhanced by optional arrow controls. */
+.exterior-works .exterior-works__grid {
+  position:relative; display:flex; gap:24px; align-items:stretch;
+  grid-template-columns:none; overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type:x mandatory; scroll-padding-inline:4px; scroll-behavior:smooth;
+  overscroll-behavior-x:contain; padding:6px 4px 20px;
+  scrollbar-width:thin; scrollbar-color:#b8a68d #f5f2ec;
+}
+.exterior-works .exterior-card {
+  display:flex; flex-direction:column; flex:0 0 calc((100% - 48px)/2.4);
+  min-width:0; min-height:0; overflow:hidden; scroll-snap-align:start;
+  background:#fff; color:#493b31; border-bottom:1px solid #d8cbb9;
+}
+.exterior-works .exterior-card::after { content:none; }
+.exterior-works .exterior-card img {
+  position:static; display:block; flex:none; width:100%; height:auto;
+  aspect-ratio:3/2; object-fit:cover; object-position:center;
+  transform:none; transition:opacity .2s;
+}
+.exterior-works .exterior-card:hover img { transform:none; opacity:.9; }
+.exterior-works .exterior-card__copy {
+  position:static; display:flex; flex:1; flex-direction:column;
+  padding:20px 0 22px; color:#493b31;
+}
+.exterior-works .exterior-card__copy span { color:#71665f; font-size:11px; line-height:1.8; }
+.exterior-works .exterior-card__copy h3 { margin:10px 0 18px; color:#493b31; font-size:clamp(18px,1.7vw,23px); line-height:1.65; }
+.exterior-works .exterior-card__copy b { margin-top:auto; color:#806039; font-size:10px; line-height:1.8; letter-spacing:.12em; }
+.exterior-works .exterior-card:focus-visible { outline:2px solid #806039; outline-offset:-2px; }
+.exterior-works .exterior-works__grid:focus-visible { outline:2px solid #806039; outline-offset:4px; }
+.exterior-works__navigation { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; margin-bottom:16px; }
+.exterior-works .exterior-works__navigation>p { margin:0; color:#71665f; font-size:13px; }
+.exterior-works__controls { display:flex; align-items:center; gap:10px; margin-left:auto; }
+.exterior-works__controls[hidden] { display:none; }
+.exterior-works__count { margin-right:12px; color:#806039; font:12px/1.7 var(--latin); letter-spacing:.08em; }
+.exterior-works__controls button { display:grid; place-items:center; width:48px; height:48px; padding:0; border:1px solid #b8a68d; border-radius:50%; background:#fff; color:#604426; font-size:23px; cursor:pointer; transition:background .2s,color .2s; }
+.exterior-works__controls button:hover:not(:disabled) { background:#604426; color:#fff; }
+.exterior-works__controls button:disabled { opacity:.35; cursor:default; }
+.exterior-works__controls button:focus-visible { outline:2px solid #806039; outline-offset:4px; }
+.exterior-works .exterior-works__grid.is-dragging { cursor:grabbing; user-select:none; scroll-snap-type:none; scroll-behavior:auto; }
+.exterior-works__grid.is-dragging .exterior-card { cursor:grabbing; }
+@media(max-width:1100px) { .exterior-works .exterior-card { flex-basis:calc((100% - 24px)/1.65); } }
+@media(max-width:600px) { .exterior-works .exterior-works__grid { gap:16px; }.exterior-works .exterior-card { flex-basis:86%; }.exterior-works__controls button { width:44px; height:44px; }.exterior-works__count { margin-right:4px; }.exterior-works .exterior-card__copy h3 { font-size:19px; } }
+@media(prefers-reduced-motion:reduce) { .exterior-works .exterior-works__grid { scroll-behavior:auto; }.exterior-works .exterior-card img,.exterior-works__controls button { transition:none; } }

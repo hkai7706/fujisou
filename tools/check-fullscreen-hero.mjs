@@ -33,7 +33,8 @@ try{
    assert.equal(result.overflow,false);assert.deepEqual(result.clipped,[]);
    const headingTop=await page.$eval('.hybrid-hero__scene.is-active :is(h1,h2)',el=>el.getBoundingClientRect().top);
    firstHeadingTop ??= headingTop;
-   assert.ok(Math.abs(headingTop-firstHeadingTop)<1,'All slide headings must align with the first slide');
+   const offset=width>=820&&slide>0?16:0;
+   assert.ok(Math.abs(headingTop-firstHeadingTop-offset)<1,'Secondary slides must use the requested text offset');
    if(width<=760){
     const mobile=await page.evaluate(()=>{
      const element=document.querySelector('.hybrid-hero__scene.is-active .hybrid-hero__copy');

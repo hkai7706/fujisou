@@ -5,12 +5,31 @@
   if (!header || header.hasAttribute('data-enhanced')) return;
   if (document.body.classList.contains('home-page')) {
     let scrollFrame;
-    const syncHeader = () => header.toggleAttribute('data-scrolled', window.scrollY > 40);
-    window.addEventListener('scroll', () => {
+    const progress = document.createElement('span');
+    progress.className = 'home-scroll-status';
+    progress.setAttribute('role', 'progressbar');
+    progress.setAttribute('aria-label', 'ページの閲覧位置');
+    progress.setAttribute('aria-valuemin', '0');
+    progress.setAttribute('aria-valuemax', '100');
+    header.querySelector('.shared-header__signature')?.append(progress);
+    const syncHeader = () => {
+      // The drawer temporarily fixes the body; keep the actual reading position.
+      if (header.hasAttribute('data-menu-open')) return;
+      header.toggleAttribute('data-scrolled', window.scrollY > 40);
+      const distance = document.documentElement.scrollHeight - window.innerHeight;
+      const percentage = distance > 0 ? Math.min(100, Math.max(0, window.scrollY / distance * 100)) : 0;
+      header.style.setProperty('--home-scroll-progress', `${percentage}%`);
+      const value = String(Math.round(percentage));
+      if (progress.getAttribute('aria-valuenow') !== value) progress.setAttribute('aria-valuenow', value);
+    };
+    const scheduleHeader = () => {
       cancelAnimationFrame(scrollFrame);
       scrollFrame = requestAnimationFrame(syncHeader);
-    }, { passive: true });
+    };
+    window.addEventListener('scroll', scheduleHeader, { passive: true });
+    window.addEventListener('resize', scheduleHeader, { passive: true });
     window.addEventListener('pageshow', syncHeader);
+    if ('ResizeObserver' in window) new ResizeObserver(scheduleHeader).observe(document.body);
     syncHeader();
   }
   const toggle = header.querySelector('.shared-header__toggle');

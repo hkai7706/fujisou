@@ -41,6 +41,8 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   at the top and solid after scrolling. The owner rejected viewport-height phone banners,
   text below the photograph, and black or blurred fill around the image.
 - Shared header heights: approximately 92px desktop, 76px tablet, 60px phone.
+  On the homepage, the gold dot beside the tagline tracks document scroll progress
+  along its existing vertical line. Preserve its position while the mobile drawer locks scrolling.
   Compact spacing is maintained in `stylesheet/inquiry-journey.css`. Keep the
   homepage hero's no-JavaScript height fallbacks aligned with these values.
 - EXTERIOR WORKS uses user-controlled horizontal cards with native scrolling,

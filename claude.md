@@ -19,15 +19,15 @@ rendered appearance as the visual reference. Older references are in docs/archiv
 - Preserve photographs and their originals. Use responsive derivatives with truthful
   dimensions, alt text and deliberate crops. Reserve hero dimensions before loading.
 - Keep keyboard focus, touch targets, reduced-motion and no-JavaScript usability.
-- Blog/event, privacy policy and staff hero reference: the owner's event-page screenshot (2026-10-25),
+- Blog/event, privacy policy, staff and concept hero reference: the owner's event-page screenshot (2026-10-25),
   approximately 1575 × 400 pixels, establishes a desktop width-to-height ratio
   of approximately 4:1. Use this proportion for blog and event index/archive banners, with centered
   headings/copy and cover-cropped photography where a photo banner is used.
   On mobile, allow enough height for readable wrapped copy; do not force a 4:1
-  box that clips text. The owner also requested this standard for policy and staff pages.
+  box that clips text. The owner also requested this standard for policy, staff and concept pages.
   Preserve all other pages' existing hero layouts.
   The shared implementation is `.page-hero` in `stylesheet/site-design.css`;
-  `tools/standardize-page-heroes.mjs` attaches it only to blog/event index/archive, policy and staff hero
+  `tools/standardize-page-heroes.mjs` attaches it only to blog/event index/archive, policy, staff and concept hero
   components during refresh and deployment. Reference desktop composition:
   maximum width 1260px, minimum height 320px, centered 44px maximum Mincho title,
   11px label and 15px lead. Mobile minimum height is 260px, expanding for copy.

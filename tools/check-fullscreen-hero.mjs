@@ -7,6 +7,7 @@ try{
  const page=await browser.newPage();await page.emulateMediaFeatures([{name:'prefers-reduced-motion',value:'reduce'}]);
  for(const [width,height] of [[320,568],[390,844],[430,932],[768,1024],[1440,900],[1920,1080],[844,390]]){
   await page.setViewport({width,height});await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});await page.evaluate(()=>document.fonts.ready);
+  let firstHeight;
   for(let slide=0;slide<3;slide++){
    await page.click(`[data-hybrid-dot="${slide}"]`);
    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
@@ -17,6 +18,8 @@ try{
    });
    assert.ok(Math.abs(result.width-width)<1,JSON.stringify(result));
    if(width<=760){
+    firstHeight ??= result.height;
+    assert.ok(Math.abs(result.height-firstHeight)<1,'Mobile banner height must stay constant between slides');
     assert.ok(result.height<height,JSON.stringify(result));
     assert.ok(Math.abs(result.photoWidth/result.photoHeight-result.naturalRatio)<.01,JSON.stringify(result));
     assert.ok(Math.abs(result.height-result.photoHeight)<1,JSON.stringify(result));

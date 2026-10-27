@@ -46,7 +46,7 @@ try {
   await delayed.setViewport({width:390,height:900});
   await delayed.setRequestInterception(true);
   delayed.on('request',async request=>{
-    if(request.url().includes('/img/home/slide1-'))await new Promise(resolve=>setTimeout(resolve,2500));
+    if(request.url().includes('/img/home/hero-material-'))await new Promise(resolve=>setTimeout(resolve,2500));
     await request.continue();
   });
   await delayed.goto('http://127.0.0.1:5501/',{waitUntil:'domcontentloaded'});

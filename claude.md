@@ -35,9 +35,9 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   with the homepage header overlaid transparently at the top and solid after scrolling.
   Keep the solid in-flow header without JavaScript. Use cover-cropped photos, readable overlay text and
   stable slide dimensions; preserve the normal width of subsequent sections.
-  On phones (760px and below), each slide follows its photo's natural aspect ratio,
-  with small text and buttons overlaid on the image. Keep the solid phone header above
-  the photo so the content fits. The owner rejected viewport-height phone banners,
+  On phones (760px and below), use matching 3:2 photos and a stable 3:2 banner,
+  with small text and buttons overlaid on the image. Keep the phone header transparent
+  at the top and solid after scrolling. The owner rejected viewport-height phone banners,
   text below the photograph, and black or blurred fill around the image.
 - Shared header heights: approximately 92px desktop, 76px tablet, 60px phone.
   Compact spacing is maintained in `stylesheet/inquiry-journey.css`. Keep the

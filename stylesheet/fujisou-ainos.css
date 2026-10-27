@@ -2353,7 +2353,7 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
 }
 @media(min-width:820px){
  .hybrid-hero[style*="--hero-copy-top"] .hybrid-hero__scene:not(:first-child) .hybrid-hero__panel .hybrid-hero__copy {
-  top: calc(var(--hero-copy-top) + 16px) !important;
+  top: calc(var(--hero-copy-top) + 32px) !important;
  }
 }
 .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > p {

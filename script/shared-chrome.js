@@ -3,6 +3,16 @@
   'use strict';
   const header = document.querySelector('[data-shared-header]');
   if (!header || header.hasAttribute('data-enhanced')) return;
+  if (document.body.classList.contains('home-page')) {
+    let scrollFrame;
+    const syncHeader = () => header.toggleAttribute('data-scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', () => {
+      cancelAnimationFrame(scrollFrame);
+      scrollFrame = requestAnimationFrame(syncHeader);
+    }, { passive: true });
+    window.addEventListener('pageshow', syncHeader);
+    syncHeader();
+  }
   const toggle = header.querySelector('.shared-header__toggle');
   const navigation = header.querySelector('.shared-header__nav');
   if (!toggle || !navigation) return;

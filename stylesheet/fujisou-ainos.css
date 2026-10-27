@@ -2501,4 +2501,13 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
  .home-page > .shared-header:not([data-scrolled]):not([data-menu-open]):not(:has(.shared-header__group[open])) .shared-header__brand img{filter:brightness(0) invert(1)}
  .home-page > .shared-header:not([data-scrolled]):not([data-menu-open]):not(:has(.shared-header__group[open])) :is(.shared-header__signature strong,.shared-header__signature small,.shared-header__line,.shared-header__toggle){color:#fff;border-color:rgba(255,255,255,.6)}
 }
+@media (scripting:enabled) and (max-width:760px){
+ /* Give the logo room instead of squeezing the desktop tagline onto a phone. */
+ .home-page .shared-header__inner{min-height:68px;padding:8px max(20px,env(safe-area-inset-right)) 8px max(20px,env(safe-area-inset-left));gap:12px}
+ .home-page .shared-header__signature{display:none}
+ .home-page .shared-header__identity .shared-header__brand{flex:0 0 clamp(144px,41vw,168px);width:clamp(144px,41vw,168px)}
+ .home-page .shared-header .shared-header__brand img{height:auto;aspect-ratio:3}
+ .home-page .shared-header__toggle{width:44px;min-height:44px;border:1px solid currentColor;border-radius:2px}
+ .home-page .shared-header__drawer{padding-right:max(24px,env(safe-area-inset-right));padding-left:max(24px,env(safe-area-inset-left))}
+}
 @media (prefers-reduced-motion:reduce){.home-page > .shared-header,.home-page .shared-header__brand img{transition:none}}

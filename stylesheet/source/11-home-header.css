@@ -4,6 +4,9 @@
  .home-page .hybrid-hero{height:100svh!important}
  .home-page .hybrid-hero::before{content:"";position:absolute;inset:0 0 auto;height:clamp(140px,22svh,220px);background:linear-gradient(to bottom,rgba(0,0,0,.62),transparent);z-index:3;pointer-events:none}
  .home-page .shared-header__brand img{transition:filter .25s ease}
+ /* Restore the original green leaf above the white-filtered wordmark. */
+ .home-page .shared-header__brand{position:relative}
+ .home-page .shared-header__brand::after{content:"";position:absolute;inset:0;background:url('../img/common/ainos-logo.webp') center/contain no-repeat;clip-path:inset(22% 76% 56% 16%);pointer-events:none}
  .home-page > .shared-header:not([data-scrolled]):not([data-menu-open]):not(:has(.shared-header__group[open])){--chrome-ink:#fff;--chrome-muted:#fff;background:transparent;border-color:transparent;box-shadow:none}
  .home-page > .shared-header:not([data-scrolled]):not([data-menu-open]):not(:has(.shared-header__group[open])) .shared-header__brand img{filter:brightness(0) invert(1)}
  .home-page > .shared-header:not([data-scrolled]):not([data-menu-open]):not(:has(.shared-header__group[open])) :is(.shared-header__signature strong,.shared-header__signature small,.shared-header__line,.shared-header__toggle){color:#fff;border-color:rgba(255,255,255,.6)}

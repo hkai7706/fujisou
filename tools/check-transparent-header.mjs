@@ -17,9 +17,9 @@ try {
     signature:getComputedStyle(document.querySelector('.shared-header__signature')).display,
     overflow:document.documentElement.scrollWidth>innerWidth
    }));
-   assert.ok(layout.logo>=144);
+   assert.ok(layout.logo>=108);
    assert.ok(layout.toggle>=44);
-   assert.equal(layout.signature,'none');
+   assert.equal(layout.signature,'block');
    assert.equal(layout.overflow,false);
   }
   await page.evaluate(()=>window.scrollTo(0,500));

@@ -2502,10 +2502,13 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
  .home-page > .shared-header:not([data-scrolled]):not([data-menu-open]):not(:has(.shared-header__group[open])) :is(.shared-header__signature strong,.shared-header__signature small,.shared-header__line,.shared-header__toggle){color:#fff;border-color:rgba(255,255,255,.6)}
 }
 @media (scripting:enabled) and (max-width:760px){
- /* Give the logo room instead of squeezing the desktop tagline onto a phone. */
+ /* Keep the house-material tagline alongside the phone logo. */
  .home-page .shared-header__inner{min-height:68px;padding:8px max(20px,env(safe-area-inset-right)) 8px max(20px,env(safe-area-inset-left));gap:12px}
- .home-page .shared-header__signature{display:none}
- .home-page .shared-header__identity .shared-header__brand{flex:0 0 clamp(144px,41vw,168px);width:clamp(144px,41vw,168px)}
+ .home-page .shared-header__identity{gap:8px;min-width:0}
+ .home-page .shared-header__signature{display:block;padding-left:8px}
+ .home-page .shared-header__signature strong{font-size:clamp(10px,3vw,12px);letter-spacing:0}
+ .home-page .shared-header__signature small{font-size:7px;letter-spacing:0}
+ .home-page .shared-header__identity .shared-header__brand{flex:0 0 clamp(108px,32vw,128px);width:clamp(108px,32vw,128px)}
  .home-page .shared-header .shared-header__brand img{height:auto;aspect-ratio:3}
  .home-page .shared-header__toggle{width:44px;min-height:44px;border:1px solid currentColor;border-radius:2px}
  .home-page .shared-header__drawer{padding-right:max(24px,env(safe-area-inset-right));padding-left:max(24px,env(safe-area-inset-left))}
@@ -2517,8 +2520,13 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
  .home-page .hybrid-hero{display:block;height:clamp(340px,48svh,400px)!important;background:#302820}
  .hybrid-hero .hybrid-hero__scene{position:absolute!important;inset:0!important;height:100%}
  .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel{position:absolute!important;inset:0!important;height:100%!important;background:#302820}
- .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel > img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:#302820}
- .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel::after{display:block!important;background:linear-gradient(0deg,#181511d9,#18151173 50%,#18151126)!important}
+ .hybrid-hero .hybrid-hero__panel--material{--phone-photo:url('../img/home/slide1-768.webp')}
+ .hybrid-hero .hybrid-hero__panel--full{--phone-photo:url('../img/gallery/exterior-safe-home-retouched-768.webp')}
+ .hybrid-hero .hybrid-hero__panel--atelier{--phone-photo:url('../img/home/fujisou-kitchen-retouched-768.webp')}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel::before{content:"";position:absolute;inset:-16px;background:var(--phone-photo) center/cover no-repeat;filter:blur(12px);pointer-events:none}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel > img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:transparent}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel::after{display:block!important;background:linear-gradient(0deg,#18151199,#18151173 50%,#18151126)!important}
+ .home-page .hybrid-hero::before{background:linear-gradient(to bottom,#18151166,transparent);height:100px}
  .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy{position:absolute!important;top:auto!important;left:20px!important;right:20px!important;bottom:56px!important;width:auto!important;padding:0!important;text-shadow:0 1px 6px #18151180!important}
  .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > p{display:block!important;margin-bottom:6px!important;font-size:9px!important;line-height:1.4!important;letter-spacing:.1em!important}
  .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy :is(h1,h2){font-size:clamp(19px,5.2vw,23px)!important;line-height:1.4!important;letter-spacing:.015em!important}

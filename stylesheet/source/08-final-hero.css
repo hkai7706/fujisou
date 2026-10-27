@@ -29,7 +29,7 @@
 }
 .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy {
   position: absolute !important; z-index: 2; top: auto !important; right: auto !important;
-  bottom: clamp(76px,12svh,140px) !important; left: clamp(28px,6vw,112px) !important;
+  bottom: calc(clamp(76px,12svh,140px) + 40px) !important; left: clamp(28px,6vw,112px) !important;
   width: min(680px,calc(100% - 56px)) !important; max-width: none !important;
   height: auto !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important;
   color: #fff !important; background: transparent !important; border: 0 !important;

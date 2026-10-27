@@ -56,8 +56,8 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   and all mail runtime behavior. Keep analytics disabled until an endpoint is configured.
 - JOURNAL & EVENTS uses image-led, horizontally swipeable cards on phones, retaining
   full titles, native links, existing category tabs and ended-event labels. Desktop
-  keeps its existing row layout. Do not restore the cramped phone thumbnail/text/link columns.
-  Styles are maintained in `stylesheet/source/10-exterior-slider.css`.
+  shows three image-first cards, tablets two columns. Do not restore the cramped
+  thumbnail/text/link columns. Journal styles are in `stylesheet/source/13-consultation-banners.css`.
   Expired promotions are hidden; their archived details remain accessible.
 
 ## Source and generated files

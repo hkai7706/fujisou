@@ -51,6 +51,15 @@ try{
    await new Promise(resolve=>setTimeout(resolve,100));
    assert.ok(await page.$eval('.news-preview__grid',e=>e.scrollLeft>0));
    await page.$eval('.news-preview__grid',e=>e.scrollTo({left:0,behavior:'instant'}));
+  }else{
+   const cards=await page.$$eval('.news-preview .preview-card:not([hidden])',els=>els.map(e=>{
+    const box=e.getBoundingClientRect(),photo=e.querySelector('img').getBoundingClientRect(),title=e.querySelector('h3').getBoundingClientRect(),link=e.querySelector('.preview-card__link').getBoundingClientRect();
+    return {left:box.left,top:box.top,width:box.width,photoWidth:photo.width,photoBottom:photo.bottom,titleTop:title.top,linkWidth:link.width,linkHeight:link.height};
+   }));
+   for(const card of cards){assert.ok(Math.abs(card.width-card.photoWidth)<1);assert.ok(card.titleTop>card.photoBottom);assert.ok(card.linkWidth>card.linkHeight);}
+   assert.ok(cards[1].left>cards[0].left);
+   if(width>=1024)assert.ok(Math.abs(cards[2].top-cards[0].top)<1,'Three cards must share a desktop row');
+   else assert.ok(cards[2].top>cards[0].top,'Tablet must use two columns');
   }
   await page.click('#news-tab-event');
   assert.equal(await page.$$eval('[data-news-category="blog"]',els=>els.every(e=>e.hidden)),true);
@@ -60,6 +69,7 @@ try{
   assert.equal(await page.$$eval('[data-news-category="blog"]',els=>els.filter(e=>!e.hidden).length),3);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   if(width===390)await page.screenshot({path:'tmp/approved-consultation/journal-mobile.png'});
+  if(width===1440)await(await page.$('#journal-preview')).screenshot({path:'tmp/approved-consultation/journal-desktop.png'});
   console.log(`${width}px: banner placement, photos, CTA targets, contact channels and journal passed.`);
  }
  await page.goto(new URL('consultation/',base).href,{waitUntil:'networkidle0'});

@@ -13,6 +13,8 @@ The user approved implementation and publication of the reviewed V2 design with
   `consultation/` route, valid under GitHub Pages' `/fujisou/` base and the production root.
 - JOURNAL & EVENTS uses native horizontal image cards on mobile. Tabs, article titles,
   dates, links and the event's `開催終了` label remain intact.
+  The subsequent approved desktop update displays three image-first cards, with
+  two columns on tablets, retaining horizontal read links beneath the titles.
 
 ## Maintenance
 

@@ -5,7 +5,7 @@ fs.mkdirSync('tmp/fullscreen-hero',{recursive:true});
 const browser=await puppeteer.launch({executablePath:process.env.CHROME_BINARY||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 try{
  const page=await browser.newPage();await page.emulateMediaFeatures([{name:'prefers-reduced-motion',value:'reduce'}]);
- for(const [width,height] of [[320,568],[390,844],[768,1024],[1440,900],[1920,1080],[844,390]]){
+ for(const [width,height] of [[320,568],[390,844],[430,932],[768,1024],[1440,900],[1920,1080],[844,390]]){
   await page.setViewport({width,height});await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});await page.evaluate(()=>document.fonts.ready);
   for(let slide=0;slide<3;slide++){
    await page.click(`[data-hybrid-dot="${slide}"]`);
@@ -18,6 +18,18 @@ try{
    assert.ok(Math.abs(result.width-width)<1,JSON.stringify(result));assert.ok(Math.abs(result.bottom-height)<2,JSON.stringify(result));
    assert.ok(Math.abs(result.photoWidth-result.width)<1&&Math.abs(result.photoHeight-result.height)<1,JSON.stringify(result));
    assert.equal(result.fit,'cover');assert.equal(result.overflow,false);assert.deepEqual(result.clipped,[]);
+   if(width<=760){
+    const mobile=await page.evaluate(()=>{
+     const copy=document.querySelector('.hybrid-hero__scene.is-active .hybrid-hero__copy').getBoundingClientRect();
+     const controls=document.querySelector('.hybrid-hero__controls').getBoundingClientRect();
+     return {copyTop:copy.top,copyBottom:copy.bottom,headerBottom:document.querySelector('[data-shared-header]').getBoundingClientRect().bottom,controlsTop:controls.top,controlsBottom:controls.bottom,barTop:document.querySelector('.mobile-contact-bar').getBoundingClientRect().top,
+      targets:[...document.querySelectorAll('.hybrid-hero__scene.is-active a')].map(a=>a.getBoundingClientRect().height)};
+    });
+    assert.ok(mobile.copyTop>mobile.headerBottom,JSON.stringify(mobile));
+    assert.ok(mobile.copyBottom<=mobile.controlsTop,JSON.stringify(mobile));
+    assert.ok(mobile.controlsBottom<=mobile.barTop,JSON.stringify(mobile));
+    assert.ok(mobile.targets.every(height=>height>=44),JSON.stringify(mobile));
+   }
    await page.screenshot({path:`tmp/fullscreen-hero/${width}-${height}-slide-${slide+1}.png`});
   }
   console.log(`${width}×${height}: all three slides fill the screen; copy fits.`);

@@ -38,7 +38,7 @@ try{
    if(width<=760){
     const mobile=await page.evaluate(()=>{
      const element=document.querySelector('.hybrid-hero__scene.is-active .hybrid-hero__copy');
-     const copy=element.getBoundingClientRect(),copyEnd=element.lastElementChild.getBoundingClientRect();
+     const copy=element.getBoundingClientRect(),copyEnd=(element.querySelector('.hybrid-hero__actions,.hybrid-hero__editorial-link')||element.lastElementChild).getBoundingClientRect();
      const controls=document.querySelector('.hybrid-hero__controls').getBoundingClientRect();
      return {copyTop:copy.top,copyBottom:copyEnd.bottom,headerBottom:document.querySelector('[data-shared-header]').getBoundingClientRect().bottom,controlsTop:controls.top,controlsBottom:controls.bottom,barTop:document.querySelector('.mobile-contact-bar').getBoundingClientRect().top,
       targets:[...document.querySelectorAll('.hybrid-hero__scene.is-active a')].map(a=>a.getBoundingClientRect().height)};

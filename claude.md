@@ -47,6 +47,16 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   homepage hero's no-JavaScript height fallbacks aligned with these values.
 - EXTERIOR WORKS uses user-controlled horizontal cards with native scrolling,
   swipe, keyboard and arrow navigation; preserve all six real project links.
+- Approved consultation V2: two banners only, after HONEST VALUE and after the
+  performance/basic-information section before MONEY & LAND. Maintain the reusable
+  `include/consultation-banners.mjs` configuration and regenerate its marked sections
+  with `tools/build-consultation-banners.mjs` during refresh and packaging.
+  Use the supplied three-free-consultations wording and existing authentic photos.
+  Primary consultation links go to `consultation/`; preserve telephone, email, LINE
+  and all mail runtime behavior. Keep analytics disabled until an endpoint is configured.
+- JOURNAL & EVENTS uses image-led, horizontally swipeable cards on phones, retaining
+  full titles, native links, existing category tabs and ended-event labels. Desktop
+  keeps its existing row layout. Do not restore the cramped phone thumbnail/text/link columns.
   Styles are maintained in `stylesheet/source/10-exterior-slider.css`.
   Expired promotions are hidden; their archived details remain accessible.
 

@@ -92,6 +92,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Inner-page hero assembly failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'Customer support assembly failed.' }
 & node (Join-Path $PSScriptRoot 'build-home-blog.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Homepage blog assembly failed.' }
+& node (Join-Path $PSScriptRoot 'build-consultation-banners.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Consultation banner assembly failed.' }
 Push-Location -LiteralPath $destinationRoot
 try {
   foreach ($step in 'build-home-css.mjs', 'build-home-delivery.mjs') {

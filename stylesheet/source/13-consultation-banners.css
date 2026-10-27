@@ -1,0 +1,73 @@
+/* Approved consultation banners and existing CTA refinements. */
+.consultation-banner{--consultation-green:#244b3e;box-sizing:border-box;width:min(1260px,calc(100% - var(--sx,24px)*2));margin:clamp(40px,5vw,72px) auto;display:grid;grid-template-columns:48% minmax(0,52%);align-items:center;background:#f5f1e9;color:#493b31;isolation:isolate}
+.consultation-banner *{box-sizing:border-box}
+.consultation-banner__photo{margin:0;min-width:0;align-self:center}
+.consultation-banner__photo img{display:block;width:100%;height:auto;object-fit:contain;filter:none}
+.consultation-banner__copy{min-width:0;padding:clamp(28px,3.5vw,48px)}
+.consultation-banner .consultation-banner__eyebrow{margin:0 0 20px;color:#806039;font:500 11px/1.8 var(--latin,var(--serif));letter-spacing:.12em}
+.consultation-banner__eyebrow>span{display:inline-block}
+.consultation-banner h2{margin:0;font:500 clamp(26px,2.55vw,36px)/1.6 var(--serif);letter-spacing:.025em;overflow-wrap:anywhere;text-wrap:pretty;color:inherit}
+.consultation-banner .consultation-banner__description{margin:20px 0 0;font:400 15px/2 var(--serif);color:inherit}
+.consultation-banner .consultation-banner__offer{margin:24px 0 10px;font:500 12px/1.8 var(--serif);color:#725536}
+.consultation-button{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:52px;max-width:100%;padding:14px 20px;border:1px solid #244b3e;background:#244b3e;color:#fff;text-decoration:none;font:500 14px/1.7 var(--serif);letter-spacing:.02em;transition:background-color .2s,color .2s}
+.consultation-button:hover{background:#19372c;color:#fff}
+.consultation-button:focus-visible{outline:2px solid #967042;outline-offset:5px}
+.consultation-button>span:last-child{flex:none}
+.consultation-banner--editorial-dark{grid-template-columns:minmax(0,68%) 32%;background:#244b3e;color:#fffaf1;border-top:1px solid #bda87b}
+.consultation-banner--editorial-dark .consultation-banner__photo{grid-column:2;grid-row:1;padding:28px 28px 28px 0}
+.consultation-banner--editorial-dark .consultation-banner__copy{grid-column:1;grid-row:1;padding:40px clamp(28px,4vw,56px)}
+.consultation-banner--editorial-dark .consultation-banner__eyebrow{color:#e2cfaa}
+.consultation-banner--editorial-dark .consultation-banner__offer{color:#eee1c7}
+.consultation-banner--editorial-dark .consultation-button{background:#f5f1e9;color:#244b3e;border-color:#f5f1e9}
+.consultation-banner--editorial-dark .consultation-button:hover{background:#e7dcc7}
+.consultation-banner .consultation-banner__topics{margin:18px 0 0;color:#e2cfaa;font:400 12px/1.9 var(--serif)}
+.consultation-banner__topics span{padding:0 5px;color:#a9b8ad}
+.home-page .hybrid-hero__consultation-note{display:block;margin-top:8px;color:#f5efe5;font:400 11px/1.6 var(--serif)}
+.home-page .design-feature__copy>a.consultation-button{background:#244b3e;color:white;border-color:#244b3e;padding:14px 20px}
+.home-page .contact__consultation-offer{max-width:48em;margin:24px 0 14px;font:400 15px/2 var(--serif)}
+.home-page .contact__head .consultation-button{margin-top:8px}
+.home-page .home-consultation-faq .consultation-assurance{margin:12px 0 0;font-size:13px;line-height:1.9}
+.home-page .mobile-contact-bar a:first-child{background:#244b3e}
+.home-page .mobile-contact-bar a:nth-child(2){background:#47774e}
+.home-page .mobile-contact-bar{padding-bottom:env(safe-area-inset-bottom);height:auto;min-height:54px}
+.journal-swipe-hint{display:none}
+@media(min-width:761px) and (max-width:1024px){
+ .consultation-banner{grid-template-columns:44% minmax(0,56%)}
+ .consultation-banner__copy{padding:28px}
+ .consultation-banner--editorial-dark{grid-template-columns:minmax(0,65%) 35%}
+ .consultation-banner--editorial-dark .consultation-banner__copy{padding:28px}
+}
+@media(max-width:760px){
+ .consultation-banner{width:calc(100% - 40px);grid-template-columns:minmax(0,1fr);margin:36px auto}
+ .consultation-banner__copy{padding:24px 20px 28px}
+ .consultation-banner .consultation-banner__eyebrow{font-size:10px;letter-spacing:.08em;margin-bottom:12px}
+ .consultation-banner h2{font-size:26px;line-height:1.55}
+ .consultation-banner .consultation-banner__description{font-size:14px;line-height:1.95;margin-top:14px}
+ .consultation-banner .consultation-banner__offer{font-size:12px;margin-top:18px}
+ .consultation-banner .consultation-button{display:flex;width:100%;padding:12px 14px;font-size:13px;gap:12px}
+ .consultation-banner--editorial-dark .consultation-banner__photo{grid-column:1;grid-row:1;padding:0}
+ .consultation-banner--editorial-dark .consultation-banner__copy{grid-column:1;grid-row:2;padding:24px 20px 28px}
+ .consultation-banner .consultation-banner__topics{font-size:11px;margin-top:14px}
+ .home-page .hybrid-hero__consultation-note{position:absolute;bottom:-28px;left:0;max-width:calc(100% - 150px);font-size:8px;line-height:1.4;margin:0}
+ .home-page .contact__consultation-offer{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.consultation-button{transition:none}}
+
+/* Journal: image-led, swipeable cards on phones; existing desktop layout stays. */
+@media(max-width:760px){
+ .home-page .news-preview__head{gap:14px;margin-bottom:24px}
+ .home-page .news-preview__head h2{font-size:clamp(27px,7vw,34px);line-height:1.55}
+ .home-page .news-preview__categories{margin-bottom:12px}
+ .home-page .journal-swipe-hint{display:flex;justify-content:space-between;gap:12px;margin:0 0 16px;color:#71665f;font-size:11px;line-height:1.8}
+ .home-page .news-preview:has([data-news-tab="event"][aria-selected="true"]) .journal-swipe-hint{display:none}
+ .home-page .news-preview__grid{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:0;overscroll-behavior-x:contain;padding:0 0 14px;border-top:0;scrollbar-width:thin;scrollbar-color:#967042 #eee9e1}
+ .home-page .news-preview .preview-card{display:grid;flex:0 0 86%;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto 1fr auto;align-items:start;gap:12px;min-width:0;padding:0 0 18px;scroll-snap-align:start;border-bottom:1px solid #d8cbb9;background:#fff}
+ .home-page .news-preview .preview-card[hidden]{display:none}
+ .home-page .news-preview .preview-card__image{grid-column:1;grid-row:1;width:100%;height:auto;aspect-ratio:16 / 9;object-fit:contain;background:#f5f1e9}
+ .home-page .news-preview .preview-card__meta{grid-column:1;grid-row:2;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;min-width:0}
+ .home-page .news-preview .preview-card h3{grid-column:1;grid-row:3;margin:0;font-size:18px;line-height:1.75;overflow-wrap:anywhere}
+ .home-page .news-preview .preview-card__link{grid-column:1;grid-row:4;display:inline-flex;justify-self:start;width:auto;min-width:0;white-space:nowrap;writing-mode:horizontal-tb;font-size:13px;line-height:1.8;color:#725536}
+ .home-page .news-preview .preview-card time{white-space:nowrap;font-size:12px}
+ .home-page .news-preview .preview-card__type{font-size:10px;min-width:0;padding:4px 9px}
+ .home-page .news-preview__links{margin-top:18px}
+}

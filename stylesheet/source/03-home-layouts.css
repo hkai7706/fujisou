@@ -182,7 +182,21 @@
     .home-selector__caption small{margin-top:6px;color:#8a6f5b;font-weight:600}
     .home-selector__caption p{max-width:290px}
     .home-selector__arrow{display:grid;width:30px;height:30px;border:1px solid #b9afa6;border-radius:50%;font-size:13px;place-items:center}
-    @media(max-width:760px){.home-selector__head{padding-left:17px}.home-selector__head::before{bottom:0}.home-selector__item:nth-child(2),.home-selector__item:nth-child(3){margin-top:0}.home-selector__item{display:grid;height:auto;padding:0 0 18px}.home-selector__caption{min-height:0}.home-selector__image{aspect-ratio:4/3}}
+    @media(max-width:760px){
+ .home-selector__head{padding-left:17px}
+ .home-selector__head::before{bottom:0}
+ .home-selector__grid{gap:32px;margin-top:20px}
+ .home-selector__item:nth-child(2),.home-selector__item:nth-child(3){margin-top:0}
+ .home-selector__item{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:stretch;height:auto;padding:0 0 24px}
+ .home-selector__image{width:100%;aspect-ratio:auto}
+ .home-selector__image img{display:block;width:100%;height:auto;object-fit:contain}
+ .home-selector__caption{min-height:0;padding:18px 42px 0 0}
+ .home-selector__caption strong{font-size:26px}
+ .home-selector__caption small{font-size:12px;line-height:1.7;letter-spacing:.04em}
+ .home-selector__caption p{max-width:none;font-size:14px;line-height:1.85}
+ .home-selector__caption ul{font-size:13px;line-height:1.85;margin-bottom:0}
+ .home-selector__arrow{top:18px}
+}
     /* Skip below-the-fold layout and paint work until sections approach the viewport. */
     main>section:not(.hybrid-hero){content-visibility:auto;contain:layout paint style;contain-intrinsic-size:auto 620px}
     @media(max-width:760px){main>section:not(.hybrid-hero){contain-intrinsic-size:auto 760px}}

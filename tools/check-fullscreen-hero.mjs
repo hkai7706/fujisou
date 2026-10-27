@@ -12,13 +12,14 @@ try{
    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
    const result=await page.evaluate(()=>{
     const hero=document.querySelector('.hybrid-hero'),box=hero.getBoundingClientRect(),scene=hero.querySelector('.is-active'),image=scene.querySelector('img'),photo=image.getBoundingClientRect();
-    return {width:box.width,height:box.height,bottom:box.bottom,photoWidth:photo.width,photoHeight:photo.height,fit:getComputedStyle(image).objectFit,overflow:document.documentElement.scrollWidth>innerWidth,
+    return {width:box.width,height:box.height,bottom:box.bottom,naturalRatio:image.naturalWidth/image.naturalHeight,photoWidth:photo.width,photoHeight:photo.height,fit:getComputedStyle(image).objectFit,overflow:document.documentElement.scrollWidth>innerWidth,
      clipped:[...scene.querySelectorAll('.hybrid-hero__copy h1,.hybrid-hero__copy h2,.hybrid-hero__copy > span,.hybrid-hero__copy a')].filter(el=>{const r=el.getBoundingClientRect();return r.left<box.left-1||r.right>box.right+1||r.top<box.top-1||r.bottom>box.bottom+1;}).map(el=>el.textContent)};
    });
    assert.ok(Math.abs(result.width-width)<1,JSON.stringify(result));
    if(width<=760){
     assert.ok(result.height<height,JSON.stringify(result));
-    assert.ok(result.height>=340&&result.height<=400,JSON.stringify(result));
+    assert.ok(Math.abs(result.photoWidth/result.photoHeight-result.naturalRatio)<.01,JSON.stringify(result));
+    assert.ok(Math.abs(result.height-result.photoHeight)<1,JSON.stringify(result));
     assert.equal(result.fit,'contain');
    }else{
     assert.ok(Math.abs(result.bottom-height)<2,JSON.stringify(result));
@@ -45,5 +46,5 @@ try{
  }
  await page.setJavaScriptEnabled(false);await page.setViewport({width:390,height:844});await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});
  // Without JS, mobile navigation stays expanded and available above the hero.
- assert.ok(await page.$eval('.hybrid-hero',hero=>hero.getBoundingClientRect().height>=300),'No-JS compact hero must remain visible');
+ assert.ok(await page.$eval('.hybrid-hero',hero=>hero.getBoundingClientRect().height>150),'No-JS natural-size hero must remain visible');
 }finally{await browser.close();}

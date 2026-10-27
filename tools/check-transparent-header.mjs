@@ -8,8 +8,8 @@ try {
  for (const width of [320,390,430,768,1440]) {
   await page.setViewport({width,height:900});
   await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});
-  assert.equal((await state()).background,'rgba(0, 0, 0, 0)');
-  assert.notEqual((await state()).filter,'none');
+  assert.equal((await state()).background,width<=760?'rgb(255, 255, 255)':'rgba(0, 0, 0, 0)');
+  if(width>760) assert.notEqual((await state()).filter,'none');
   if (width<=760) {
    const layout=await page.evaluate(()=>({
     logo:document.querySelector('.shared-header__brand').getBoundingClientRect().width,
@@ -33,7 +33,7 @@ try {
   else await page.click('.shared-header__group > summary');
   assert.equal((await state()).background,'rgb(255, 255, 255)');
   await page.keyboard.press('Escape');
-  assert.equal((await state()).background,'rgba(0, 0, 0, 0)');
+  assert.equal((await state()).background,width<=760?'rgb(255, 255, 255)':'rgba(0, 0, 0, 0)');
   console.log(`${width}px: transparent, scrolled, and open-menu states passed.`);
  }
  await page.goto('http://127.0.0.1:5501/renovation/',{waitUntil:'networkidle0'});

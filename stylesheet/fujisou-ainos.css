@@ -2348,6 +2348,9 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
   box-shadow: none !important; text-shadow: 0 2px 18px #18151180 !important;
   text-align: left !important; transform: none !important; backdrop-filter: none !important;
 }
+.hybrid-hero[style*="--hero-copy-top"] .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy {
+  top: var(--hero-copy-top) !important; bottom: auto !important;
+}
 .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > p {
   display: block !important; margin: 0 0 18px !important; padding: 0 !important;
   color: #f2e5ce !important; font-size: 11px !important; line-height: 1.6 !important; letter-spacing: .18em !important;

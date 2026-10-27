@@ -128,10 +128,20 @@ blogFilters.forEach((filter) => {
 const hybridSlider=document.querySelector('[data-hybrid-slider]');
 if(hybridSlider){
  const heroHeader=document.querySelector('[data-shared-header]');
- const sizeHero=()=>{if(heroHeader)hybridSlider.style.setProperty('--home-header-height',`${heroHeader.getBoundingClientRect().height}px`);};
+ const sizeHero=()=>{
+  if(heroHeader)hybridSlider.style.setProperty('--home-header-height',`${heroHeader.getBoundingClientRect().height}px`);
+  // Align every slide with the first copy block, regardless of its buttons or links.
+  const firstCopy=hybridSlider.querySelector('.hybrid-hero__copy');
+  if(firstCopy){
+   hybridSlider.style.removeProperty('--hero-copy-top');
+   const top=firstCopy.getBoundingClientRect().top-hybridSlider.getBoundingClientRect().top;
+   hybridSlider.style.setProperty('--hero-copy-top',`${top}px`);
+  }
+ };
  sizeHero();
  if(heroHeader&&'ResizeObserver' in window)new ResizeObserver(sizeHero).observe(heroHeader);
- else addEventListener('resize',sizeHero);
+ addEventListener('resize',sizeHero);
+ document.fonts?.ready.then(sizeHero);
  const scenes=[...hybridSlider.querySelectorAll('.hybrid-hero__scene')];
  const dots=[...hybridSlider.querySelectorAll('[data-hybrid-dot]')];
  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');

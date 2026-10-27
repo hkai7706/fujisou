@@ -8,6 +8,7 @@ try{
  for(const [width,height] of [[320,568],[390,844],[430,932],[768,1024],[1440,900],[1920,1080],[844,390]]){
   await page.setViewport({width,height});await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});await page.evaluate(()=>document.fonts.ready);
   let firstHeight;
+  let firstHeadingTop;
   for(let slide=0;slide<3;slide++){
    await page.click(`[data-hybrid-dot="${slide}"]`);
    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
@@ -30,6 +31,9 @@ try{
     assert.equal(result.fit,'cover');
    }
    assert.equal(result.overflow,false);assert.deepEqual(result.clipped,[]);
+   const headingTop=await page.$eval('.hybrid-hero__scene.is-active :is(h1,h2)',el=>el.getBoundingClientRect().top);
+   firstHeadingTop ??= headingTop;
+   assert.ok(Math.abs(headingTop-firstHeadingTop)<1,'All slide headings must align with the first slide');
    if(width<=760){
     const mobile=await page.evaluate(()=>{
      const element=document.querySelector('.hybrid-hero__scene.is-active .hybrid-hero__copy');

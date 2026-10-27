@@ -1,12 +1,12 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import puppeteer from 'puppeteer-core';
-const paths=['eventinfo/','staffblog/'];
+const paths=['eventinfo/','staffblog/','policy/','staff/'];
 fs.mkdirSync('tmp/heroes',{recursive:true});
 const browser=await puppeteer.launch({executablePath:process.env.CHROME_BINARY||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 try{
   const page=await browser.newPage();
-  for(const path of ['concept/','staff/','policy/','gallery/','land-info/','shikkui/','plans/hiraya/','plans/two-story/','plans/custom/','plans/products/cute/','plans/products/healthy/','videos/']){
+  for(const path of ['concept/','gallery/','land-info/','shikkui/','plans/hiraya/','plans/two-story/','plans/custom/','plans/products/cute/','plans/products/healthy/','videos/']){
     await page.goto('http://127.0.0.1:5501/'+path);
     assert.equal(await page.$('.page-hero'),null,'Event/blog standard must not affect '+path);
   }
@@ -24,6 +24,9 @@ try{
       });
       assert.equal(result.align,'center',path);assert.equal(result.overflow,false,`Page overflow ${path} ${width}`);
       assert.deepEqual(result.clipped,[],`Clipped hero copy ${path} ${width}`);assert.deepEqual(result.broken,[],path);
+      if(width===1440&&['policy/','staff/'].includes(path)){
+        assert.equal(result.width,1260,path);assert.equal(result.height,320,path);
+      }
       await page.screenshot({path:`tmp/heroes/${path.replaceAll('/','-')}${width}.png`});
       console.log(`${width} ${path} ${result.width}×${result.height}`);
     }

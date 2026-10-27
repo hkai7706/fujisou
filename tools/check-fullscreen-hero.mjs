@@ -18,7 +18,7 @@ try{
    assert.ok(Math.abs(result.width-width)<1,JSON.stringify(result));
    if(width<=760){
     assert.ok(result.height<height,JSON.stringify(result));
-    assert.ok(Math.abs(result.photoWidth/result.photoHeight-1.5)<.01,JSON.stringify(result));
+    assert.ok(result.height>=340&&result.height<=400,JSON.stringify(result));
     assert.equal(result.fit,'contain');
    }else{
     assert.ok(Math.abs(result.bottom-height)<2,JSON.stringify(result));
@@ -45,5 +45,5 @@ try{
  }
  await page.setJavaScriptEnabled(false);await page.setViewport({width:390,height:844});await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});
  // Without JS, mobile navigation stays expanded and available above the hero.
- assert.ok(await page.$eval('.hybrid-hero',hero=>hero.getBoundingClientRect().height>400),'No-JS hero must remain visible');
+ assert.ok(await page.$eval('.hybrid-hero',hero=>hero.getBoundingClientRect().height>=300),'No-JS compact hero must remain visible');
 }finally{await browser.close();}

@@ -35,9 +35,9 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   with the homepage header overlaid transparently at the top and solid after scrolling.
   Keep the solid in-flow header without JavaScript. Use cover-cropped photos, readable overlay text and
   stable slide dimensions; preserve the normal width of subsequent sections.
-  On phones (760px and below), use a shorter banner with full, uncropped photos
-  contained in a 3:2 frame and the copy/buttons below. Do not restore phone cover cropping
-  or viewport-height banners; the owner explicitly rejected them.
+  On phones (760px and below), use a compact 340–400px banner with complete photos
+  using contain, with small text and buttons overlaid on the image. The owner rejected
+  both viewport-height phone banners and placing the text below the photograph.
 - Shared header heights: approximately 92px desktop, 76px tablet, 60px phone.
   Compact spacing is maintained in `stylesheet/inquiry-journey.css`. Keep the
   homepage hero's no-JavaScript height fallbacks aligned with these values.

@@ -15,7 +15,7 @@ try{
    const result=await page.evaluate(()=>{
     const hero=document.querySelector('.hybrid-hero'),box=hero.getBoundingClientRect(),scene=hero.querySelector('.is-active'),image=scene.querySelector('img'),photo=image.getBoundingClientRect();
     return {width:box.width,height:box.height,bottom:box.bottom,naturalRatio:image.naturalWidth/image.naturalHeight,photoWidth:photo.width,photoHeight:photo.height,fit:getComputedStyle(image).objectFit,overflow:document.documentElement.scrollWidth>innerWidth,
-     clipped:[...scene.querySelectorAll('.hybrid-hero__copy h1,.hybrid-hero__copy h2,.hybrid-hero__copy > span,.hybrid-hero__copy a')].filter(el=>{const r=el.getBoundingClientRect();return r.left<box.left-1||r.right>box.right+1||r.top<box.top-1||r.bottom>box.bottom+1;}).map(el=>el.textContent)};
+     clipped:[...scene.querySelectorAll('.hybrid-hero__copy h1,.hybrid-hero__copy h2,.hybrid-hero__copy > span,.hybrid-hero__copy a')].filter(el=>el.checkVisibility()).filter(el=>{const r=el.getBoundingClientRect();return r.left<box.left-1||r.right>box.right+1||r.top<box.top-1||r.bottom>box.bottom+1;}).map(el=>el.textContent)};
    });
    assert.ok(Math.abs(result.width-width)<1,JSON.stringify(result));
    if(width<=760){
@@ -41,12 +41,15 @@ try{
      const copy=element.getBoundingClientRect(),copyEnd=(element.querySelector('.hybrid-hero__actions,.hybrid-hero__editorial-link')||element.lastElementChild).getBoundingClientRect();
      const controls=document.querySelector('.hybrid-hero__controls').getBoundingClientRect();
      return {copyTop:copy.top,copyBottom:copyEnd.bottom,headerBottom:document.querySelector('[data-shared-header]').getBoundingClientRect().bottom,controlsTop:controls.top,controlsBottom:controls.bottom,barTop:document.querySelector('.mobile-contact-bar').getBoundingClientRect().top,
-      targets:[...document.querySelectorAll('.hybrid-hero__scene.is-active a')].map(a=>a.getBoundingClientRect().height)};
+      headingSize:parseFloat(getComputedStyle(element.querySelector('h1,h2')).fontSize),
+      targets:[...document.querySelectorAll('.hybrid-hero__scene.is-active a')].filter(a=>a.checkVisibility()).map(a=>a.getBoundingClientRect().height)};
     });
     assert.ok(mobile.copyTop>mobile.headerBottom,JSON.stringify(mobile));
     assert.ok(mobile.copyBottom<=mobile.controlsTop,JSON.stringify(mobile));
     assert.ok(mobile.controlsBottom<=mobile.barTop,JSON.stringify(mobile));
     assert.ok(mobile.targets.every(height=>height>=44),JSON.stringify(mobile));
+    assert.equal(mobile.targets.length,1,'Phone hero must have one clear action');
+    assert.ok(mobile.headingSize>=22,'Phone headlines must remain readable');
    }
    await page.screenshot({path:`tmp/fullscreen-hero/${width}-${height}-slide-${slide+1}.png`});
   }

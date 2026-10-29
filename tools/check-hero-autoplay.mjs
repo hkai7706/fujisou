@@ -36,6 +36,12 @@ try{
  await page.hover('.hybrid-hero');await cycles();
  await page.click('[data-hybrid-dot="2"]');await cycles();
  console.log('Automatic 1→2→3→1 looping continues over multiple cycles, on hover and after dot clicks.');
+ await page.click('[data-hero-autoplay-toggle]');
+ const current=()=>page.$eval('[data-hybrid-dot][aria-current="true"]',e=>e.dataset.hybridDot);
+ const stopped=await current();await delay(500);assert.equal(await current(),stopped);
+ assert.equal(await page.$eval('[data-icon-play]',e=>e.hidden),false);
+ await page.click('[data-hero-autoplay-toggle]');await cycles();
+ console.log('Visible pause/resume control stops and restarts autoplay.');
  await page.keyboard.press('Tab');
  await page.$eval('[data-hybrid-dot="0"]',e=>e.focus());
  await page.waitForFunction(()=>document.querySelector('.hybrid-hero').hasAttribute('data-paused'));

@@ -144,18 +144,26 @@ if(hybridSlider){
  document.fonts?.ready.then(sizeHero);
  const scenes=[...hybridSlider.querySelectorAll('.hybrid-hero__scene')];
  const dots=[...hybridSlider.querySelectorAll('[data-hybrid-dot]')];
+ const pauseToggle=hybridSlider.querySelector('[data-hero-autoplay-toggle]');
  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
- let active=0,timer,touching=false,touchStart=0;
+ let active=0,timer,touching=false,touchStart=0,manualPaused=false;
  const stop=()=>clearTimeout(timer);
  const show=index=>{active=(index+scenes.length)%scenes.length;scenes.forEach((scene,i)=>{scene.classList.toggle('is-active',i===active);scene.setAttribute('aria-hidden',String(i!==active));scene.inert=i!==active;});dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===active);if(i===active)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');});};
  const keyboardFocus=()=>hybridSlider.contains(document.activeElement)&&document.activeElement.matches(':focus-visible');
  const start=()=>{
   stop();
-  const paused=reduceMotion.matches||document.hidden||touching||keyboardFocus();
+  const paused=manualPaused||reduceMotion.matches||document.hidden||touching||keyboardFocus();
   hybridSlider.toggleAttribute('data-paused',paused);
+  if(pauseToggle){
+   pauseToggle.hidden=reduceMotion.matches;
+   pauseToggle.setAttribute('aria-label',manualPaused?'スライドの自動再生を再開':'スライドの自動再生を一時停止');
+   pauseToggle.querySelector('[data-icon-pause]').hidden=manualPaused;
+   pauseToggle.querySelector('[data-icon-play]').hidden=!manualPaused;
+  }
   if(!paused)timer=setTimeout(()=>{show(active+1);start();},7000);
  };
  dots.forEach(dot=>dot.addEventListener('click',()=>{show(Number(dot.dataset.hybridDot));start();}));
+ pauseToggle?.addEventListener('click',()=>{manualPaused=!manualPaused;start();});
  hybridSlider.addEventListener('focusin',start);
  hybridSlider.addEventListener('focusout',()=>setTimeout(start,0));
  hybridSlider.addEventListener('touchstart',event=>{touching=true;touchStart=event.changedTouches[0].clientX;start();},{passive:true});

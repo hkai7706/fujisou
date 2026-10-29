@@ -46,9 +46,14 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   Keep the solid in-flow header without JavaScript. Use cover-cropped photos, readable overlay text and
   stable slide dimensions; preserve the normal width of subsequent sections.
   On phones (760px and below), use matching 3:2 photos and a stable 3:2 banner,
-  with small text and buttons overlaid on the image. Keep the phone header transparent
+  with readable 22–24px two-line headings and one action overlaid on each image.
+  Use short 14px phone summaries where space permits; omit the summaries at 360px
+  and below. Hide the secondary hero link, English label and consultation offer note
+  on phones; those remain available elsewhere on the page. Keep the phone header transparent
   at the top and solid after scrolling. The owner rejected viewport-height phone banners,
   text below the photograph, and black or blurred fill around the image.
+  A visible pause/resume button lets visitors control autoplay without changing
+  the default continuous loop; reduced-motion users retain manual slide navigation.
 - Shared header heights: approximately 92px desktop, 76px tablet, 60px phone.
   On the homepage, the gold dot beside the tagline tracks document scroll progress
   along its existing vertical line. Preserve its position while the mobile drawer locks scrolling.

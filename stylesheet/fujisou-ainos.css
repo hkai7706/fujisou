@@ -2527,7 +2527,7 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
 }
 @media (scripting:enabled) and (max-width:760px){
  /* Keep the house-material tagline alongside the phone logo. */
- .home-page .shared-header__inner{min-height:68px;padding:8px max(20px,env(safe-area-inset-right)) 8px max(20px,env(safe-area-inset-left));gap:12px}
+ .home-page .shared-header__inner{min-height:56px;padding:4px max(20px,env(safe-area-inset-right)) 4px max(20px,env(safe-area-inset-left));gap:12px}
  .home-page .shared-header__identity{gap:8px;min-width:0}
  .home-page .shared-header__signature{display:block;padding-left:8px}
  .home-page .shared-header__signature strong{font-size:clamp(10px,3vw,12px);letter-spacing:0}
@@ -2540,6 +2540,10 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
 @media (prefers-reduced-motion:reduce){.home-page > .shared-header,.home-page .shared-header__brand img{transition:none}}
 
 /* Phone photos retain their natural proportions; all copy stays on the photo. */
+.hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > .hero-mobile-summary{display:none!important}
+.hero-autoplay-toggle{display:grid;place-items:center;color:#fff}
+.hero-autoplay-toggle[hidden],.hero-autoplay-toggle svg[hidden]{display:none}
+.hero-autoplay-toggle svg{width:16px;height:16px;fill:currentColor}
 @media(max-width:760px){
  .home-page .hybrid-hero{display:block;height:auto!important;aspect-ratio:3 / 2;background:transparent}
  .home-page .hybrid-hero::before{height:76px;background:linear-gradient(to bottom,#18151199,transparent)}
@@ -2554,14 +2558,20 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
  .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel::after{display:block!important;background:linear-gradient(90deg,#181511b3,#18151166 65%,#18151126)!important}
  .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy{position:absolute!important;top:auto!important;left:16px!important;right:16px!important;bottom:34px!important;width:auto!important;padding:0!important;text-shadow:0 1px 5px #18151180!important}
  .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > p{display:none!important}
- .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy :is(h1,h2){font-size:clamp(15px,4.1vw,20px)!important;line-height:1.3!important;letter-spacing:.015em!important}
- .hybrid-hero .hybrid-hero__copy br{display:none}
- .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > span{font-size:clamp(10px,2.6vw,12px)!important;line-height:1.5!important;margin-top:5px!important;max-width:34em!important}
- .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important;margin-top:7px!important}
- .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__actions a{display:flex;align-items:center;justify-content:center;min-height:44px!important;padding:6px 3px!important;font-size:10px!important;text-align:center}
- .hybrid-hero .hybrid-hero__scene .hybrid-hero__editorial-link{min-height:44px;margin-top:6px;font-size:11px}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy :is(h1,h2){font-size:clamp(22px,5.6vw,24px)!important;line-height:1.35!important;letter-spacing:.015em!important}
+ .hybrid-hero .hybrid-hero__copy br{display:initial}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > span{display:none!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > .hero-mobile-summary{display:block!important;font-size:14px!important;line-height:1.5!important;margin-top:8px!important;max-width:none!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__actions{display:flex!important;gap:0!important;margin-top:10px!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__actions a:first-child{display:none!important}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__actions a{display:flex;flex:0 1 auto!important;align-items:center;justify-content:center;min-height:44px!important;padding:8px 14px!important;font-size:14px!important;text-align:center}
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__editorial-link{min-height:44px;margin-top:10px;font-size:14px}
+ .home-page .hybrid-hero .hybrid-hero__consultation-note{display:none}
  .hybrid-hero .hybrid-hero__controls{right:16px;bottom:0;gap:6px;height:32px;align-items:center}
  .hybrid-hero .hybrid-hero__controls button{position:relative;min-height:44px}
+}
+@media(max-width:360px){
+ .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > .hero-mobile-summary{display:none!important}
 }
 
 /* Approved consultation banners and existing CTA refinements. */

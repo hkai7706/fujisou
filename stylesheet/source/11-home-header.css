@@ -15,7 +15,7 @@
 }
 @media (scripting:enabled) and (max-width:760px){
  /* Keep the house-material tagline alongside the phone logo. */
- .home-page .shared-header__inner{min-height:68px;padding:8px max(20px,env(safe-area-inset-right)) 8px max(20px,env(safe-area-inset-left));gap:12px}
+ .home-page .shared-header__inner{min-height:56px;padding:4px max(20px,env(safe-area-inset-right)) 4px max(20px,env(safe-area-inset-left));gap:12px}
  .home-page .shared-header__identity{gap:8px;min-width:0}
  .home-page .shared-header__signature{display:block;padding-left:8px}
  .home-page .shared-header__signature strong{font-size:clamp(10px,3vw,12px);letter-spacing:0}

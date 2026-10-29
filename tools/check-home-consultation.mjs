@@ -17,10 +17,12 @@ try{
   assert.equal(await page.$eval('.shared-header__contact',e=>new URL(e.href).pathname.endsWith('/consultation/')),true);
   const heroNote=await page.$eval('.hybrid-hero__consultation-note',e=>{
    const r=e.getBoundingClientRect(),hero=e.closest('.hybrid-hero').getBoundingClientRect(),controls=e.closest('.hybrid-hero').querySelector('.hybrid-hero__controls').getBoundingClientRect();
-   return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,heroTop:hero.top,heroBottom:hero.bottom,overlapsControls:r.left<controls.right&&r.right>controls.left&&r.top<controls.bottom&&r.bottom>controls.top};
+   return {visible:e.checkVisibility(),left:r.left,right:r.right,top:r.top,bottom:r.bottom,heroTop:hero.top,heroBottom:hero.bottom,overlapsControls:r.left<controls.right&&r.right>controls.left&&r.top<controls.bottom&&r.bottom>controls.top};
   });
-  assert.ok(heroNote.left>=0&&heroNote.right<=width&&heroNote.top>=heroNote.heroTop&&heroNote.bottom<=heroNote.heroBottom,JSON.stringify(heroNote));
-  assert.equal(heroNote.overlapsControls,false,'Offer note must not cover the slide controls');
+  if(heroNote.visible){
+   assert.ok(heroNote.left>=0&&heroNote.right<=width&&heroNote.top>=heroNote.heroTop&&heroNote.bottom<=heroNote.heroBottom,JSON.stringify(heroNote));
+   assert.equal(heroNote.overlapsControls,false,'Offer note must not cover the slide controls');
+  }else assert.ok(width<=760,'Desktop hero retains the consultation offer note');
   for(const id of ['banner-01','banner-02']){
    await page.$eval('#'+id,e=>e.scrollIntoView());
    await new Promise(resolve=>setTimeout(resolve,100));

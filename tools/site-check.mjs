@@ -48,6 +48,12 @@ for (const file of walk(root).filter((item) => /\.(?:html|shtml)$/i.test(item)))
     seenIds.add(id);
   }
   if (/href=["']#main["']/.test(html) && !seenIds.has('main')) failures.push(`${relativeFile}: skip link has no main target`);
+  const anchorTargets = new Set([...seenIds, ...[...html.matchAll(/<a\b[^>]*\bname=["']([^"']+)["']/gi)].map(match => match[1])]);
+  for (const match of html.matchAll(/href=["']#([^"']+)["']/gi)) {
+    let target;
+    try { target = decodeURIComponent(match[1]); } catch { target = match[1]; }
+    if (!anchorTargets.has(target)) failures.push(`${relativeFile}: missing in-page anchor #${target}`);
+  }
 
   if (!/<html\b[^>]*\blang=["']ja["']/i.test(html)) failures.push(`${relativeFile}: missing lang="ja"`);
   if (!/<meta\b[^>]*name=["']viewport["']/i.test(html)) failures.push(`${relativeFile}: missing viewport metadata`);

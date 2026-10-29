@@ -13,10 +13,9 @@ The user requested a whole-project quality review following mobile hero readabil
 - Each phone slide has one visible action. The English label, secondary philosophy
   button and small consultation offer note are hidden on phones. Desktop retains the
   full copy and offer; the page's other consultation offers remain available.
-- Added an accessible pause/resume button to the hero. Autoplay still loops continuously
-  by default. Manual pause, keyboard focus, reduced motion and cancelled gestures have
-  distinct tested behavior. Reduced-motion/no-JavaScript visitors do not get a misleading
-  autoplay control.
+- Hero autoplay loops continuously, with slide indicators only and no pause/resume
+  button, as requested by the owner. Keyboard focus, reduced motion and cancelled
+  gestures retain their tested behavior.
 - Added same-page anchor checks to `tools/site-check.mjs`, supplementing existing local
   link, responsive-image, metadata, duplicate-ID and asset checks. The audit found no
   broken in-page targets across 1,211 pages.

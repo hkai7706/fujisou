@@ -1,8 +1,5 @@
 /* Phone photos retain their natural proportions; all copy stays on the photo. */
 .hybrid-hero .hybrid-hero__scene .hybrid-hero__panel .hybrid-hero__copy > .hero-mobile-summary{display:none!important}
-.hero-autoplay-toggle{display:grid;place-items:center;color:#fff}
-.hero-autoplay-toggle[hidden],.hero-autoplay-toggle svg[hidden]{display:none}
-.hero-autoplay-toggle svg{width:16px;height:16px;fill:currentColor}
 @media(max-width:760px){
  .home-page .hybrid-hero{display:block;height:auto!important;aspect-ratio:3 / 2;background:transparent}
  .home-page .hybrid-hero::before{height:76px;background:linear-gradient(to bottom,#18151199,transparent)}

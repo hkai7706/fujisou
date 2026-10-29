@@ -39,7 +39,10 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   11px label and 15px lead. Mobile minimum height is 260px, expanding for copy.
 - The homepage presents housing categories before the free-design product comparison.
 - Homepage hero: all three slides span the viewport width and fill its height on desktop,
-  with the homepage header overlaid transparently at the top and solid after scrolling.
+  cycling continuously at seven-second intervals. Pointer clicks, hovering over the
+  image and cancelled touch gestures must not permanently pause it. Keyboard-visible
+  focus and reduced-motion pause autoplay; leaving/changing those states resumes it.
+  The homepage header is overlaid transparently at the top and solid after scrolling.
   Keep the solid in-flow header without JavaScript. Use cover-cropped photos, readable overlay text and
   stable slide dimensions; preserve the normal width of subsequent sections.
   On phones (760px and below), use matching 3:2 photos and a stable 3:2 banner,

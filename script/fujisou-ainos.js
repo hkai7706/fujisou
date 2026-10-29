@@ -145,20 +145,26 @@ if(hybridSlider){
  const scenes=[...hybridSlider.querySelectorAll('.hybrid-hero__scene')];
  const dots=[...hybridSlider.querySelectorAll('[data-hybrid-dot]')];
  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
- let active=0,timer,paused=reduceMotion.matches,touchStart=0;
+ let active=0,timer,touching=false,touchStart=0;
  const stop=()=>clearTimeout(timer);
  const show=index=>{active=(index+scenes.length)%scenes.length;scenes.forEach((scene,i)=>{scene.classList.toggle('is-active',i===active);scene.setAttribute('aria-hidden',String(i!==active));scene.inert=i!==active;});dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===active);if(i===active)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');});};
- const update=()=>{hybridSlider.toggleAttribute('data-paused',paused);};
- const start=()=>{stop();if(!paused&&!reduceMotion.matches&&!document.hidden&&!hybridSlider.contains(document.activeElement))timer=setTimeout(()=>{show(active+1);start();},7000);};
+ const keyboardFocus=()=>hybridSlider.contains(document.activeElement)&&document.activeElement.matches(':focus-visible');
+ const start=()=>{
+  stop();
+  const paused=reduceMotion.matches||document.hidden||touching||keyboardFocus();
+  hybridSlider.toggleAttribute('data-paused',paused);
+  if(!paused)timer=setTimeout(()=>{show(active+1);start();},7000);
+ };
  dots.forEach(dot=>dot.addEventListener('click',()=>{show(Number(dot.dataset.hybridDot));start();}));
- hybridSlider.addEventListener('focusin',()=>{paused=true;update();stop();});
+ hybridSlider.addEventListener('focusin',start);
  hybridSlider.addEventListener('focusout',()=>setTimeout(start,0));
- hybridSlider.addEventListener('pointerenter',stop);hybridSlider.addEventListener('pointerleave',start);
- hybridSlider.addEventListener('touchstart',event=>{touchStart=event.changedTouches[0].clientX;stop();},{passive:true});
- hybridSlider.addEventListener('touchend',event=>{const distance=event.changedTouches[0].clientX-touchStart;if(Math.abs(distance)>50)show(active+(distance<0?1:-1));start();},{passive:true});
- document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
- reduceMotion.addEventListener('change',()=>{if(reduceMotion.matches)paused=true;update();start();});
- update();if(document.readyState==='complete')start();else addEventListener('load',start,{once:true});
+ hybridSlider.addEventListener('touchstart',event=>{touching=true;touchStart=event.changedTouches[0].clientX;start();},{passive:true});
+ hybridSlider.addEventListener('touchend',event=>{touching=false;const distance=event.changedTouches[0].clientX-touchStart;if(Math.abs(distance)>50)show(active+(distance<0?1:-1));start();},{passive:true});
+ hybridSlider.addEventListener('touchcancel',()=>{touching=false;start();},{passive:true});
+ document.addEventListener('visibilitychange',start);
+ reduceMotion.addEventListener('change',start);
+ addEventListener('pageshow',start);
+ if(document.readyState==='complete')start();else addEventListener('load',start,{once:true});
 }
     const buildingSteps=[
       ['話','まずは気軽にご相談','希望の暮らし、予算、土地の有無、不安に感じていることを伺います。','無料相談'],

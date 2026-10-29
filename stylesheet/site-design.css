@@ -166,3 +166,54 @@ body[data-site-design="interior"] > .shared-header ~ main .event-index-hero.page
 [data-site-design="interior"] .concept-hero.page-hero .concept-hero__copy{padding:0;max-width:100%;text-align:center}
 [data-site-design="interior"] .concept-hero.page-hero .concept-hero__copy::before{display:none}
 [data-site-design="interior"] .concept-hero.page-hero .concept-hero__copy > a{margin-top:18px}
+
+/* Phone refinements shared by planning, product, reference and reading pages. */
+@media(max-width:760px){
+ [data-site-design="interior"] main :is(section,article,figure,fieldset){min-width:0}
+ [data-site-design="interior"] main :is(h1,h2,h3){line-break:strict}
+ [data-site-design="interior"] main :is(input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),select){min-height:48px;font-size:max(16px,1em)}
+ [data-site-design="interior"] main :is(.consultation-actions a,.editorial-link,.renovation-text-link,.loan-entry a){min-height:44px;display:inline-flex;align-items:center}
+ [data-site-design="interior"] .consultation-faq summary{min-height:48px;padding-block:10px;line-height:1.8}
+ [data-site-design="interior"] .consultation-intro p{font-size:16px;line-height:1.95}
+ [data-site-design="interior"] .consultation-actions{gap:12px 24px}
+ [data-site-design="interior"] .gallery-pagination a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}
+ [data-site-design="interior"] .archive-pagination a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}
+ [data-site-design="interior"] .blog-entry__content{padding-inline:0;font-size:16px;line-height:1.95}
+ [data-site-design="interior"] .blog-entry__content :is(h2,h3){text-wrap:pretty}
+ [data-site-design="interior"] .evidence-page > h1{text-wrap:balance}
+ [data-site-design="interior"] .evidence-page :is(p,li){font-size:16px;line-height:1.95}
+ [data-site-design="interior"] .custom-style .heading-phrase{white-space:normal;overflow-wrap:anywhere;font-size:inherit;text-wrap:balance}
+}
+@media(max-width:600px){
+ [data-site-design="interior"] .planning-hero{width:100%;padding-inline:20px;padding-top:24px}
+ [data-site-design="interior"] .planning-hero__copy{width:100%;padding:20px 0 24px}
+ [data-site-design="interior"] .planning-hero h1{font-size:clamp(26px,7.2vw,32px);line-height:1.6}
+ [data-site-design="interior"] .planning-hero h1 span{white-space:normal;overflow-wrap:anywhere}
+ [data-site-design="interior"] .planning-hero__images{height:260px}
+ [data-site-design="interior"] main.custom-product{width:calc(100% - 20px);padding-inline:0}
+ [data-site-design="interior"] .custom-product section{width:calc(100% - 32px)}
+ [data-site-design="interior"] .custom-product__features ul{grid-template-columns:minmax(0,1fr);gap:0}
+ [data-site-design="interior"] .custom-product__features h2{font-size:24px;text-wrap:normal}
+ [data-site-design="interior"] .custom-product__features h2 span{display:inline-block}
+ [data-site-design="interior"] .evidence-page > h1 .mobile-heading-phrase{display:inline-block}
+ [data-site-design="interior"] .custom-product p{font-size:16px;line-height:1.95}
+ [data-site-design="interior"] .custom-product__hero figure{width:100%;max-width:none}
+ [data-site-design="interior"] .custom-product__point figure{width:100%;max-width:none}
+ [data-site-design="interior"] .gallery-works{padding-top:16px;gap:32px}
+ [data-site-design="interior"] .gallery-works .work-card figure img{height:auto;aspect-ratio:auto;object-fit:contain}
+ [data-site-design="interior"] .gallery-works .work-card__text{min-height:0;padding:36px 0 20px}
+ [data-site-design="interior"] .gallery-works .work-card__text::before{top:12px}
+ [data-site-design="interior"] .evidence-page .evidence-table{display:block;width:100%;border-collapse:collapse}
+ [data-site-design="interior"] .evidence-page .evidence-table caption{display:block;width:100%;text-align:left;margin-bottom:12px;font-size:14px;line-height:1.9}
+ [data-site-design="interior"] .evidence-page .evidence-table tbody{display:block;width:100%}
+ [data-site-design="interior"] .evidence-page .evidence-table tr{display:grid;grid-template-columns:minmax(0,1fr);padding:16px 0;border-bottom:1px solid #d8cbb9}
+ [data-site-design="interior"] .evidence-page .evidence-table :is(th,td){display:block;width:100%;padding:0;border:0;text-align:left;font-size:15px;line-height:1.9;overflow-wrap:anywhere}
+ [data-site-design="interior"] .evidence-page .evidence-table th{margin-bottom:8px;color:#806039;font-weight:500}
+ [data-site-design="interior"] .loan-field{grid-template-columns:minmax(0,1fr);gap:8px;padding-block:16px}
+ [data-site-design="interior"] .loan-field label{font-size:15px}
+ [data-site-design="interior"] .loan-field .loan-input{width:100%;max-width:none}
+ [data-site-design="interior"] .loan-actions{gap:12px}
+ [data-site-design="interior"] .loan-actions button[type="submit"]{width:100%}
+ [data-site-design="interior"] .hirayahouse-main .cute-lineup nav{grid-template-columns:minmax(0,1fr)}
+ [data-site-design="interior"] .hirayahouse-main .house-comparison{width:100%;min-width:0}
+}

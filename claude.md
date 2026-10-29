@@ -19,6 +19,12 @@ rendered appearance as the visual reference. Older references are in docs/archiv
 - Preserve photographs and their originals. Use responsive derivatives with truthful
   dimensions, alt text and deliberate crops. Reserve hero dimensions before loading.
 - Keep keyboard focus, touch targets, reduced-motion and no-JavaScript usability.
+- Mobile layouts are regression-checked with `node tools/check-mobile-project.mjs`
+  across 32 page samples at 320, 390 and 768px. Shared touch/focus refinements are
+  in `stylesheet/source/14-mobile-usability.css`; interior phone layouts are scoped
+  in `stylesheet/site-design.css`. Keep planning headings inside their containers,
+  product photos wide, and phone specification tables stacked with explicit table roles.
+  Preserve the evidence/product generator markup when updating their headings or tables.
 - Blog/event, privacy policy, staff and concept hero reference: the owner's event-page screenshot (2026-10-25),
   approximately 1575 × 400 pixels, establishes a desktop width-to-height ratio
   of approximately 4:1. Use this proportion for blog and event index/archive banners, with centered

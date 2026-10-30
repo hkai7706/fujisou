@@ -38,6 +38,10 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   maximum width 1260px, minimum height 320px, centered 44px maximum Mincho title,
   11px label and 15px lead. Mobile minimum height is 260px, expanding for copy.
 - The homepage presents housing categories before the free-design product comparison.
+- Each visible homepage content section has an outlined お問い合わせ action to
+  `contact/`, plus the hero's primary inquiry action. Regenerate section actions
+  with `tools/build-home-inquiries.mjs` after section generators; styles live in
+  `stylesheet/source/16-section-inquiries.css`. Preserve free-consultation CTAs.
 - Homepage hero: all three slides span the viewport width and fill its height on desktop,
   cycling continuously at seven-second intervals. Pointer clicks, hovering over the
   image and cancelled touch gestures must not permanently pause it. Keyboard-visible

@@ -93,7 +93,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Customer support assembly failed.' }
 & node (Join-Path $PSScriptRoot 'build-home-blog.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Homepage blog assembly failed.' }
 & node (Join-Path $PSScriptRoot 'build-consultation-banners.mjs') $destinationRoot
-& node (Join-Path $PSScriptRoot 'build-home-inquiries.mjs') $destinationRoot
+& node (Join-Path $PSScriptRoot 'build-site-inquiries.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Consultation banner assembly failed.' }
 Push-Location -LiteralPath $destinationRoot
 try {

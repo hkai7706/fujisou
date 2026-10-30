@@ -8,7 +8,7 @@ import cssnano from 'cssnano';
 // Preserve the original cascade in one cacheable request. Full CSS inlining made
 // the initial layout a long post-paint task in Chrome; keep styles render-ready
 // before painting rather than trading input responsiveness for a faster paint.
-const sources = ['fujisou-ainos.home.min.css', 'page-start.css', 'home-updates.css', 'house-guide.css', 'home-videos.css', 'shared-chrome.min.css', 'inquiry-journey.css'];
+const sources = ['fujisou-ainos.home.min.css', 'page-start.css', 'home-updates.css', 'house-guide.css', 'section-inquiries.css', 'home-videos.css', 'shared-chrome.min.css', 'inquiry-journey.css'];
 let html = fs.readFileSync('index.html', 'utf8').replace(/<style\b[^>]*data-home-styles[^>]*>[\s\S]*?<\/style>/g, '');
 const linked = [...html.matchAll(/<link\b[^>]*rel="stylesheet"[^>]*href="(?:\.\/)?stylesheet\/([^"?]+)(?:\?[^"]*)?"[^>]*>/g)];
 for (const match of linked) {

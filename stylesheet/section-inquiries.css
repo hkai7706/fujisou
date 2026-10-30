@@ -1,0 +1,8 @@
+/* One restrained inquiry action at the end of each homepage content section. */
+.section-inquiry{grid-column:1 / -1;flex-basis:100%;width:100%;min-width:0;display:flex;justify-content:center;padding:28px 20px 8px;box-sizing:border-box}
+.section-inquiry>a{display:inline-flex;align-items:center;justify-content:space-between;gap:40px;min-height:48px;width:240px;max-width:100%;padding:12px 22px;box-sizing:border-box;border:1px solid #806039;background:#fff;color:#604426;text-decoration:none;font:500 15px/1.6 var(--serif);letter-spacing:.06em;transition:background .2s,color .2s}
+.section-inquiry>a:hover{background:#604426;color:#fff}
+.section-inquiry>a:focus-visible{outline:2px solid #806039;outline-offset:4px}
+.home-page .contact>.section-inquiry,.home-page .consultation-banner--editorial-dark>.section-inquiry{padding-bottom:28px}
+@media(max-width:760px){.section-inquiry{padding:24px 16px 8px}.section-inquiry>a{width:100%;max-width:320px}}
+@media(prefers-reduced-motion:reduce){.section-inquiry>a{transition:none}}

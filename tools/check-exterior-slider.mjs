@@ -13,6 +13,8 @@ try{
   assert.equal(await page.$eval('[data-exterior-prev]',node=>node.disabled),true);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`Page overflow at ${width}`);
   await page.click('[data-exterior-next]');await page.waitForFunction(()=>document.querySelector('[data-exterior-track]').scrollLeft>10);
+  // Control state is updated in the scroll handler's next animation frame.
+  await page.waitForFunction(()=>!document.querySelector('[data-exterior-prev]').disabled);
   assert.equal(await page.$eval('[data-exterior-prev]',node=>node.disabled),false);
   await page.focus('[data-exterior-track]');await page.keyboard.press('End');
   await page.waitForFunction(()=>document.querySelector('[data-exterior-next]').disabled);

@@ -2670,3 +2670,39 @@ main .phrase-heading>.heading-phrase{display:block;white-space:nowrap;font-size:
 @media(hover:none){
  .home-selector__item:hover .home-selector__image img{transform:none}
 }
+
+/* Reversible photo-led homepage trial. Keep all information and native navigation. */
+.home-page .home-selector{background:#f7f5f0;padding-block:clamp(56px,7vw,100px)}
+.home-page .home-selector__inner{max-width:1260px}
+.home-page .home-selector__grid{gap:clamp(24px,3vw,40px);align-items:stretch}
+.home-page .home-selector__item{display:flex;flex-direction:column;background:#fff;border-bottom:1px solid #d8cbb9}
+.home-page .home-selector__image{aspect-ratio:3/2;background:#edeae4}
+.home-page .home-selector__image img{object-fit:contain;filter:none;transform:none}
+.home-page .home-selector__caption{position:relative;flex:1;padding:24px}
+.home-page .home-selector__caption>strong{font-size:clamp(26px,2.7vw,34px);line-height:1.3}
+.home-page .home-selector__caption>small{display:block;margin-top:10px;font-size:13px;line-height:1.8}
+.home-page .home-selector__caption>p{margin-block:18px;font-size:15px;line-height:1.9}
+.home-page .home-selector__caption li{font-size:13px;line-height:1.9;padding-block:10px}
+.home-page .home-selector__arrow{position:static;display:grid;place-items:center;width:44px;height:44px;margin:20px 0 0 auto}
+.home-page .home-selector__note{max-width:64em;line-height:1.95;margin-bottom:24px}
+.home-page .home-selector__grid+.home-selector__note{margin-top:28px;font-size:12px}
+.home-page .value-story{gap:clamp(32px,6vw,96px);padding-block:clamp(60px,8vw,112px)}
+.home-page .value-story__image img{aspect-ratio:3/2;height:auto;object-fit:contain}
+.home-page .exterior-works{padding-block:clamp(56px,7vw,96px)}
+.home-page .exterior-works .exterior-card__copy span{font-size:13px;letter-spacing:.04em}
+.home-page .exterior-works .exterior-card__copy b{font-size:13px;letter-spacing:.04em}
+.home-page .exterior-works .exterior-card__copy h3{line-height:1.8}
+@media(max-width:760px){
+ .home-page .home-selector__head{gap:16px}
+ .home-page .home-selector__head>p{font-size:15px;line-height:1.9}
+ .home-page .home-selector__head small{font-size:11px;letter-spacing:.08em}
+ .home-page .home-selector__grid{grid-template-columns:minmax(0,1fr);gap:28px}
+ .home-page .home-selector__item{grid-template-columns:none}
+ .home-page .home-selector__image{width:100%;height:auto;min-height:0;aspect-ratio:3/2}
+ .home-page .home-selector__caption{padding:22px 20px}
+ .home-page .home-selector__caption>p{font-size:16px}
+ .home-page .home-selector__caption li{font-size:14px}
+ .home-page .home-selector__note{font-size:15px}
+ .home-page .value-story{gap:28px}
+ .home-page .exterior-works .section-index{font-size:11px;letter-spacing:.08em}
+}

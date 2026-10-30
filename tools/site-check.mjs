@@ -4,7 +4,7 @@ import path from 'node:path';
 const root = process.argv[2]
   ? path.resolve(process.cwd(), process.argv[2])
   : path.resolve(import.meta.dirname, '..');
-const ignoredDirectories = new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git', 'node_modules', 'docs', 'source', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'mailformpro', 'mfp.statics', 'iplogs', 'originals']);
+const ignoredDirectories = new Set(['.git', 'node_modules', 'docs', 'source', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'mailformpro', 'mfp.statics', 'iplogs', 'originals']);
 const failures = [];
 let checkedPages = 0;
 

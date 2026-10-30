@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 const root=path.resolve(import.meta.dirname,'..');
-const ignored=new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools', 'originals']);
+const ignored=new Set(['.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools', 'originals']);
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>ignored.has(e.name)?[]:e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
 let filesChanged=0,linksChanged=0;
 for(const file of walk(root).filter(f=>/\.(?:html|shtml)$/i.test(f))){

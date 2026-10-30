@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 const project=path.resolve(import.meta.dirname,'..'),root=path.resolve(process.argv[2]||project);
 const routes=JSON.parse(fs.readFileSync(path.join(project,'docs/legacy-routes.json'),'utf8'));
-const skip=new Set(['.git','node_modules','tools','docs','source','dist','backup','tmp','.tmp','output','cms','mailformpro','mfp.statics','iplogs','originals','analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist']);
+const skip=new Set(['.git','node_modules','tools','docs','source','dist','backup','tmp','.tmp','output','cms','mailformpro','mfp.statics','iplogs','originals']);
 let count=0;
 function localize(html,dir){return html.replace(/(<a\b[^>]*\bhref=)["'](https?:\/\/[^"']+)["']/gi,(all,prefix,href)=>{
  let url;try{url=new URL(href.replaceAll('&amp;','&'));}catch{return all;}

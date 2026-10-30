@@ -40,9 +40,3 @@ contact/iplogs/
 # Local staging masters and unused review drafts; publish selected WebP copies only.
 /img/gallery/staged/**/*.png
 
-# Separate analytics packages and private runtime data
-/analytics-service-dist/
-/analytics-portal-dist/
-/analytics-service/private/config.php
-/analytics-service/private/data/
-/analytics-service/private/pages.json

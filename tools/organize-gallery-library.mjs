@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 const root = path.resolve(import.meta.dirname, '..');
 process.chdir(root);
 const apply = process.argv.includes('--apply');
-const excluded = new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','originals','mailformpro','mfp.statics','iplogs']);
+const excluded = new Set(['.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','originals','mailformpro','mfp.statics','iplogs']);
 const walk = dir => fs.readdirSync(dir,{withFileTypes:true}).flatMap(e => excluded.has(e.name)||e.isSymbolicLink()?[]:e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
 const files = walk('.').filter(f => /\.(?:html|shtml|css|js|mjs|json)$/.test(f) && !/gallery[\\/](?:image-paths|project-folders)\.json$/.test(f));
 const texts = new Map(files.map(f => [f,fs.readFileSync(f,'utf8')]));

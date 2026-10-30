@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { addGoogleTag } from './google-tag.mjs';
 import { brand, sharingImage, pageSchema } from './seo-helpers.mjs';
 const project=path.resolve(import.meta.dirname,'..');
 const argument=process.argv.slice(2).find(value=>!value.startsWith('--'));
@@ -10,7 +11,7 @@ const production=process.argv.includes('--production');
 // builds remain noindex unless explicitly generated as public/production.
 const preview=process.argv.includes('--preview')||(!production&&!process.argv.includes('--public')&&root!==project);
 if(process.argv.includes('--preview')&&(production||process.argv.includes('--public')))throw new Error('Choose either preview or public/production indexing');
-const skip=new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','include','server','mailformpro','mfp.statics','iplogs', 'originals']);
+const skip=new Set(['.git','node_modules','backup','tmp','.tmp','output','dist','cms','tools','docs','include','server','mailformpro','mfp.statics','iplogs', 'originals']);
 const pageCopy=JSON.parse(fs.readFileSync(path.join(project,'docs/seo-pages.json'),'utf8'));
 const events=JSON.parse(fs.readFileSync(path.join(project,'eventinfo/posts.json'),'utf8'));
 const archivedEvents=new Set(events.filter(post=>!post.existing&&post.legacyFile!=='post-16.shtml').map(post=>'eventinfo/'+post.file));
@@ -22,9 +23,9 @@ function walk(directory){for(const item of fs.readdirSync(directory,{withFileTyp
   const file=path.join(directory,item.name);
   if(item.isDirectory()){walk(file);continue;}
   if(!/\.(html|shtml)$/.test(file))continue;
-  let html=fs.readFileSync(file,'utf8');
+  let html=addGoogleTag(fs.readFileSync(file,'utf8'));
   if(!html.includes('</head>'))continue;
-  if(html.includes('data-gallery-redirect'))continue;
+  if(html.includes('data-gallery-redirect')){fs.writeFileSync(file,html);continue;}
   const relative=path.relative(root,file).replaceAll('\\','/');
   const title=pageCopy[relative]?.title||decode(html.match(/<title>([\s\S]*?)<\/title>/)?.[1]||'フジ創アイノス');
   const description=(pageCopy[relative]?.description||decode(html.match(/<meta\b[^>]*name="description"[^>]*content="([^"]*)"/)?.[1]||title)).replace(/\s+/g,' ').trim();

@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { origin } from './seo-helpers.mjs';
 
 const root = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(import.meta.dirname, '..');
-const skip = new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git','node_modules','docs','tools','include','server','dist','tmp','backup','.tmp','output','cms','originals','mailformpro','mfp.statics','iplogs']);
+const skip = new Set(['.git','node_modules','docs','tools','include','server','dist','tmp','backup','.tmp','output','cms','originals','mailformpro','mfp.statics','iplogs']);
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
     if (skip.has(entry.name) || entry.isSymbolicLink()) return [];

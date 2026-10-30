@@ -22,9 +22,6 @@
     title.textContent='お問い合わせありがとうございます';
     message.textContent='お問い合わせを受け付けました。担当者よりご連絡いたしますので、しばらくお待ちください。自動返信メールが届かない場合は、迷惑メールフォルダーもご確認ください。';
     try { sessionStorage.removeItem(`fujisou-contact-draft:${folder}`); sessionStorage.removeItem(pendingKey); sessionStorage.setItem(receiptKey,JSON.stringify({time:Date.now(),id:pending.id})); } catch {}
-    const detail={page:location.pathname,submissionId:pending.id};
-    window.dispatchEvent(new CustomEvent('inquiry_success',{detail}));
-    if(Array.isArray(window.dataLayer))window.dataLayer.push({event:'inquiry_success',...detail});
     delete window.fujisouContactReceipt;
   };
   const script=document.createElement('script');

@@ -15,9 +15,12 @@
     const syncHeader = () => {
       // The drawer temporarily fixes the body; keep the actual reading position.
       if (header.hasAttribute('data-menu-open')) return;
-      header.toggleAttribute('data-scrolled', window.scrollY > 40);
-      const distance = document.documentElement.scrollHeight - window.innerHeight;
-      const percentage = distance > 0 ? Math.min(100, Math.max(0, window.scrollY / distance * 100)) : 0;
+      const offset=window.scrollY;
+      // The top-of-page value is known without laying out every below-fold
+      // section. Read geometry before changing header styles on actual scroll.
+      const distance = offset>0 ? document.documentElement.scrollHeight-window.innerHeight : 0;
+      const percentage = distance > 0 ? Math.min(100, Math.max(0, offset / distance * 100)) : 0;
+      header.toggleAttribute('data-scrolled', offset > 40);
       header.style.setProperty('--home-scroll-progress', `${percentage}%`);
       const value = String(Math.round(percentage));
       if (progress.getAttribute('aria-valuenow') !== value) progress.setAttribute('aria-valuenow', value);

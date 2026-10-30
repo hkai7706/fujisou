@@ -1,5 +1,13 @@
 <!doctype html><html lang="ja"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-17DNR9SPL4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-17DNR9SPL4');
+</script>
 <mt:If name="ainos_listing">
 <title><$mt:Var name="ainos_section" encode_html="1"$>｜フジ創アイノス</title>
 <link rel="canonical" href="<$mt:Var name="ainos_listing_url" encode_html="1"$>">
@@ -21,7 +29,7 @@
 <mt:Unless name="ainos_listing"><mt:EntryAssets type="image" lastn="1" sort_by="created_on" sort_order="ascend"><$mt:AssetURL setvar="ainos_cover_url"$></mt:EntryAssets></mt:Unless>
 <mt:If name="ainos_cover_url"><meta property="og:image" content="<$mt:Var name="ainos_cover_url" encode_html="1"$>"><mt:Else><meta property="og:image" content="<$mt:Var name="ainos_origin"$><$mt:Var name="ainos_root"$>img/ogp.jpg"></mt:If>
 <link rel="icon" href="<$mt:Var name="ainos_root"$>favicon.ico">
-<link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/fujisou-ainos.css?v=576d39ef52">
+<link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/fujisou-ainos.css?v=467cac6fb0">
 <link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/breadcrumbs.css?v=9ded9c5593">
 <link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/staffblog.css?v=88a235ec84">
 <link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/page-start.css?v=749818468d">
@@ -29,8 +37,8 @@
 <link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/event-detail.css?v=cc3f616f46">
 <link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/blog-archive.css?v=432f5156bb">
 <link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/shared-chrome.min.css?v=13c78fbf3e">
-<link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/inquiry-journey.css?v=4153620f3c">
+<link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/inquiry-journey.css?v=7360660979">
 <link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/site-design.css?v=059c1c6d42">
 <link rel="stylesheet" href="<$mt:Var name="ainos_root"$>stylesheet/mt-posting.css?v=aa5731b9b9">
-<script src="<$mt:Var name="ainos_root"$>script/shared-chrome.js?v=706c8c63cf" defer></script>
+<script src="<$mt:Var name="ainos_root"$>script/shared-chrome.js?v=bb281d0b1c" defer></script>
 </head>

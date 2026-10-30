@@ -5,7 +5,7 @@ import {japanDate,renderEventState} from './event-state.mjs';
 const project=path.resolve(import.meta.dirname,'..');
 const root=process.argv[2]?path.resolve(process.argv[2]):project;
 if(root!==project&&root!==path.join(project,'dist'))throw Error('Unsupported event output');
-const skip=new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git','node_modules','docs','tools','include','dist','tmp','backup','output','originals','source','mailformpro','mfp.statics','iplogs']);
+const skip=new Set(['.git','node_modules','docs','tools','include','dist','tmp','backup','output','originals','source','mailformpro','mfp.statics','iplogs']);
 let count=0;const date=japanDate();
 function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
   if(skip.has(entry.name)||entry.isSymbolicLink())continue;

@@ -159,7 +159,7 @@ Local tests render fixtures from the actual template files and check responsive
 layout, both editable fields, missing images, dynamic tab switching, failed and
 empty feeds, escaped titles and SSI fallback. This fixture renderer is not the
 Movable Type compiler. Actual template compilation and publication/scheduling
-remain host checks after your MT details are supplied. Mail/analytics unchanged.
+remain host checks after your MT details are supplied. Mail remains unchanged. The shared Ainos Head module includes Google Analytics 4 (G-17DNR9SPL4), so newly published entries and listings inherit the tag. Do not also install the same tag through another MT plugin.
 
 Official references: [Entries](https://movabletype.org/documentation/appendices/tags/entries.html),
 [EntryMore](https://movabletype.org/documentation/appendices/tags/entrymore.html),

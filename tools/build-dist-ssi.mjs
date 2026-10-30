@@ -19,7 +19,7 @@ for(const [name,pattern] of [['header',headerPattern],['footer',footerPattern]])
  fs.writeFileSync(path.join(root,name+'.shtml'),`<!--#include virtual="${base}include/${name}.shtml" -->\n`);
 }
 let count=0;
-const skip=new Set(['include','mailformpro','mfp.statics','iplogs','originals','analytics-service','analytics-portal']);
+const skip=new Set(['include','mailformpro','mfp.statics','iplogs','originals']);
 function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){
  if(skip.has(e.name)||e.isSymbolicLink())continue;
  const file=path.join(dir,e.name);if(e.isDirectory()){walk(file);continue;}

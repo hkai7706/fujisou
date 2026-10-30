@@ -73,7 +73,7 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   with `tools/build-consultation-banners.mjs` during refresh and packaging.
   Use the supplied three-free-consultations wording and existing authentic photos.
   Primary consultation links go to `consultation/`; preserve telephone, email, LINE
-  and all mail runtime behavior. Keep analytics disabled until an endpoint is configured.
+  and all mail runtime behavior. The old custom analytics system is removed; Google Analytics 4 uses G-17DNR9SPL4 as explicitly requested by the owner.
 - JOURNAL & EVENTS uses image-led, horizontally swipeable cards on phones, retaining
   full titles, native links, existing category tabs and ended-event labels. Desktop
   shows three image-first cards, tablets two columns. Do not restore the cramped

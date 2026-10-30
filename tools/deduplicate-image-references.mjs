@@ -7,7 +7,7 @@ function images(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){co
 images('img');
 const replacements=[];
 for(const group of groups.values()){if(group.files.length<2)continue;group.files.sort((a,b)=>a.length-b.length||a.localeCompare(b));const canonical=group.files[0];for(const duplicate of group.files.slice(1))replacements.push([duplicate,canonical]);}
-const excluded=new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','backup','dist','tmp','.git','node_modules','tools','server','include', 'originals']);
+const excluded=new Set(['backup','dist','tmp','.git','node_modules','tools','server','include', 'originals']);
 let changed=0;
 function pages(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){if(excluded.has(e.name))continue;const file=path.join(dir,e.name);if(e.isDirectory())pages(file);else if(/\.(html|shtml|css)$/.test(e.name)){const original=fs.readFileSync(file,'utf8');let content=original;for(const [oldFile,newFile] of replacements){const oldRelative=path.relative(path.dirname(file),oldFile).replaceAll('\\','/');const newRelative=path.relative(path.dirname(file),newFile).replaceAll('\\','/');if(content.includes(oldRelative))content=content.replaceAll(oldRelative,newRelative);if(content.includes('/'+oldFile))content=content.replaceAll('/'+oldFile,'/'+newFile);}if(content!==original){fs.writeFileSync(file,content);changed++;}}}}
 pages('.');

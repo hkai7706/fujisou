@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { googleTag } from './google-tag.mjs';
 const dir='cms/movable-type',modules=path.join(dir,'modules');
 fs.mkdirSync(modules,{recursive:true});
 const write=(name,text)=>fs.writeFileSync(path.join(modules,name+'.mtml'),text+'\n');
@@ -12,6 +13,7 @@ for(const name of ['Header','Footer']){
 }
 write('Ainos Head',`<!doctype html><html lang="ja"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+${googleTag}
 <mt:If name="ainos_listing">
 <title><$mt:Var name="ainos_section" encode_html="1"$>｜フジ創アイノス</title>
 <link rel="canonical" href="<$mt:Var name="ainos_listing_url" encode_html="1"$>">

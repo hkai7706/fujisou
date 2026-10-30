@@ -40,6 +40,10 @@
     const time=element('time','',date.replaceAll('-','.'));time.dateTime=date;meta.append(time);
     card.append(meta,element('h3','',title),element('span','preview-card__link',kind==='blog'?'記事を読む →':'詳しく見る →'));
     cards.push(card);
+    const covered=document.querySelector('meta[name="home-font-characters"]')?.content;
+    if(covered&&[...title].some(character=>!covered.includes(character))&&!document.querySelector('[data-post-font-fallback]')){
+     const fonts=document.createElement('link');fonts.rel='stylesheet';fonts.href=new URL('stylesheet/post-font-fallback.css',root).href;fonts.dataset.postFontFallback='';document.head.append(fonts);
+    }
    }
    const existing=[...track.querySelectorAll(`[data-news-category="${kind}"]`)];
    const signature=nodes=>nodes.map(n=>[n.href,text(n,'h3'),n.querySelector('time')?.dateTime,n.querySelector('img')?.src||''].join('|')).join('\n');

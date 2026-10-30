@@ -118,8 +118,10 @@ blogFilters.forEach((filter) => {
  track.addEventListener('pointerup',endDrag);track.addEventListener('pointercancel',endDrag);
  track.addEventListener('pointerleave',()=>{if(drag&&!drag.moved)drag=null;});
  track.addEventListener('click',event=>{if(suppressClick){event.preventDefault();event.stopImmediatePropagation();suppressClick=false;}},true);
- if('ResizeObserver' in window)new ResizeObserver(schedule).observe(track);else addEventListener('resize',schedule);
- update();
+ const activate=()=>{if('ResizeObserver' in window)new ResizeObserver(schedule).observe(track);else addEventListener('resize',schedule);update();};
+ // Measuring an offscreen horizontal gallery forces otherwise-skipped sections
+ // to lay out. Activate its controls shortly before the visitor reaches it.
+ if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){observer.disconnect();activate();}},{rootMargin:'300px'});observer.observe(track);}else activate();
 })();
 
 /* ===== HOMEPAGE INTERACTIONS ===== */
@@ -128,6 +130,8 @@ const hybridSlider=document.querySelector('[data-hybrid-slider]');
 if(hybridSlider){
  const heroHeader=document.querySelector('[data-shared-header]');
  const sizeHero=()=>{
+  // Phones use the fixed 3:2 CSS composition and do not need desktop alignment.
+  if(matchMedia('(max-width:760px)').matches)return;
   if(heroHeader)hybridSlider.style.setProperty('--home-header-height',`${heroHeader.getBoundingClientRect().height}px`);
   // Align every slide with the first copy block, regardless of its buttons or links.
   const firstCopy=hybridSlider.querySelector('.hybrid-hero__copy');

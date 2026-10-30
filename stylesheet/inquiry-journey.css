@@ -54,7 +54,7 @@
 /* A quieter, compact footer for phones and tablets. */
 .shared-footer__offices .shared-footer__office-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;font-size:13px;text-underline-offset:4px}
 @media(max-width:820px){
- .shared-footer{background:#f5f2ec;background-image:none;padding-bottom:0;content-visibility:visible}
+ .shared-footer{background:#f5f2ec;background-image:none;padding-bottom:0;content-visibility:auto;contain-intrinsic-size:auto 1800px}
  body:has(.mobile-contact-bar) .shared-footer{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
  .shared-footer__inner{padding:36px 24px calc(24px + env(safe-area-inset-bottom))}
  .shared-footer__top{gap:26px;padding-bottom:28px}

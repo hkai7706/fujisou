@@ -3,7 +3,7 @@ import path from 'node:path';
 const project=path.resolve(import.meta.dirname,'..');
 const root=process.argv[2]?path.resolve(process.argv[2]):project;
 if(root!==project&&root!==path.join(project,'dist'))throw Error('Unsupported hero output');
-const skip=new Set(['.git','node_modules','tools','docs','source','dist','tmp','backup','output','originals','analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist']);
+const skip=new Set(['.git','node_modules','tools','docs','source','dist','tmp','backup','output','originals']);
 const heroes=new Set(['event-index-hero','archive-heading','policy-hero','staff-hero','concept-hero']);
 let changed=0;
 function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){

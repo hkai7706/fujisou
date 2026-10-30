@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
 
 const root=path.resolve(import.meta.dirname,'..');
-const skip=new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git','node_modules','dist','tmp','backup','.tmp','output','.cache','mailformpro','mfp.statics','iplogs','originals']);
+const skip=new Set(['.git','node_modules','dist','tmp','backup','.tmp','output','.cache','mailformpro','mfp.statics','iplogs','originals']);
 function snapshot(){
   const result={};
   function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){

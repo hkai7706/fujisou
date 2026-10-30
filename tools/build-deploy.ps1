@@ -31,7 +31,7 @@ function Copy-PublicFile([string]$SourcePath) {
 }
 
 $publicExtensions = '.html', '.shtml', '.css', '.js', '.mjs', '.xml', '.txt', '.inc'
-$excludedDirectories = @('.git', 'node_modules', 'tools', 'docs', 'source', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'mailformpro', 'mfp.statics', 'iplogs', 'originals', 'analytics-portal', 'analytics-service', 'analytics-portal-dist', 'analytics-service-dist')
+$excludedDirectories = @('.git', 'node_modules', 'tools', 'docs', 'source', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'mailformpro', 'mfp.statics', 'iplogs', 'originals')
 function Get-PublicFiles([string]$Directory) {
   foreach ($entry in Get-ChildItem -LiteralPath $Directory -Force) {
     if ($entry.Attributes -band [IO.FileAttributes]::ReparsePoint) { continue }
@@ -95,8 +95,6 @@ if ($LASTEXITCODE -ne 0) { throw 'Shared stylesheet assembly failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'Shared component assembly failed.' }
 & node (Join-Path $PSScriptRoot 'build-event-state.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Event state assembly failed.' }
-& node (Join-Path $PSScriptRoot 'add-analytics.mjs') $destinationRoot
-if ($LASTEXITCODE -ne 0) { throw 'Analytics tracker assembly failed.' }
 & node (Join-Path $PSScriptRoot 'standardize-page-heroes.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Inner-page hero assembly failed.' }
 & node (Join-Path $PSScriptRoot 'sync-customer-support.mjs') $destinationRoot

@@ -1,5 +1,5 @@
 ﻿import fs from 'node:fs';import path from 'node:path';
-const skip=new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','backup','dist','tmp','.git','node_modules','tools','server']);const changed=[];
+const skip=new Set(['backup','dist','tmp','.git','node_modules','tools','server']);const changed=[];
 function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){if(skip.has(e.name))continue;const file=path.join(dir,e.name);if(e.isDirectory())walk(file);else if(e.name.endsWith('.html'))polish(file);}}
 function polish(file){let html=fs.readFileSync(file,'utf8');let count=0;html=html.replace(/<main\b[\s\S]*?<\/main>/g,main=>main.replace(/<(h[12])([^>]*)>([\s\S]*?)<\/\1>/g,(original,tag,attrs,body)=>{
 if(/phrase-heading|<svg|<img|<a\b/i.test(original))return original;

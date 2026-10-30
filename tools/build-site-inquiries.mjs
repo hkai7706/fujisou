@@ -53,7 +53,7 @@ export function addInquiries(source, contactHref, cssHref) {
 }
 
 export function build(root) {
-  const skip = new Set(['.git','node_modules','tools','docs','source','dist','backup','tmp','.tmp','output','cms','mailformpro','mfp.statics','iplogs','originals','analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist']);
+  const skip = new Set(['.git','node_modules','tools','docs','source','dist','backup','tmp','.tmp','output','cms','mailformpro','mfp.statics','iplogs','originals']);
   let pages=0, actions=0;
   function walk(dir) {
     for (const entry of fs.readdirSync(dir,{withFileTypes:true})) {

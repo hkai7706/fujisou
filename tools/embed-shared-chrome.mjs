@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 const project = path.resolve(import.meta.dirname, '..');
 const root = process.argv[2] ? path.resolve(process.argv[2]) : project;
 if (root !== project && root !== path.join(project, 'dist')) throw new Error('Unsupported output folder');
-const skip = new Set(['analytics-portal','analytics-service','analytics-portal-dist','analytics-service-dist','.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'tools', 'docs', 'include', 'mailformpro', 'mfp.statics', 'iplogs', 'originals']);
+const skip = new Set(['.git', 'node_modules', 'backup', 'tmp', '.tmp', 'output', 'dist', 'cms', 'tools', 'docs', 'include', 'mailformpro', 'mfp.statics', 'iplogs', 'originals']);
 const header = fs.readFileSync(path.join(project, 'include/header.shtml'), 'utf8').match(/<header\b[\s\S]*?<\/header>/)?.[0];
 const footer = fs.readFileSync(path.join(project, 'include/footer.shtml'), 'utf8').match(/<footer\b[\s\S]*?<\/footer>/)?.[0];
 if (!header || !footer) throw new Error('Missing shared component markup');
@@ -31,9 +31,8 @@ function walk(directory) {
       .replace(/<footer\b[^>]*class="shared-footer"[^>]*>[\s\S]*?<\/footer>/g, relative(footer));
     html = html.replace(/<link\b[^>]*href="[^"\n]*shared-chrome\.min\.css[^"\n]*"[^>]*>/g, '')
       .replace(/<link\b[^>]*href="[^"\n]*inquiry-journey\.css[^"\n]*"[^>]*>/g, '')
-      .replace(/<script\b[^>]*src="[^"\n]*inquiry-tracking\.js[^"\n]*"[^>]*><\/script>/g, '')
       .replace(/<script\b[^>]*src="[^"\n]*shared-chrome\.js[^"\n]*"[^>]*><\/script>/g, '');
-    const assets = `<link rel="stylesheet" href="${prefix}stylesheet/shared-chrome.min.css?v=${hash('stylesheet/shared-chrome.min.css')}"><link rel="stylesheet" href="${prefix}stylesheet/inquiry-journey.css?v=${hash('stylesheet/inquiry-journey.css')}"><script src="${prefix}script/shared-chrome.js?v=${hash('script/shared-chrome.js')}" defer></script><script src="${prefix}script/inquiry-tracking.js?v=${hash('script/inquiry-tracking.js')}" defer></script>`;
+    const assets = `<link rel="stylesheet" href="${prefix}stylesheet/shared-chrome.min.css?v=${hash('stylesheet/shared-chrome.min.css')}"><link rel="stylesheet" href="${prefix}stylesheet/inquiry-journey.css?v=${hash('stylesheet/inquiry-journey.css')}"><script src="${prefix}script/shared-chrome.js?v=${hash('script/shared-chrome.js')}" defer></script>`;
     html = html.replace(/<link\b[^>]*href="[^"\n]*site-design\.css[^"\n]*"[^>]*>/g, '');
     // Apply the homepage's design language to every interior template, including
     // regenerated articles. The homepage itself remains the reference design.

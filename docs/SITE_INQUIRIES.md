@@ -1,12 +1,15 @@
 # Site-wide inquiry actions
 
 Requested on 30 October 2026: an お問い合わせ button in each page's content sections,
-extending the earlier homepage-only implementation.
+extending the earlier homepage-only implementation. Sections that already contain
+a consultation or contact link keep their existing action without a duplicate
+お問い合わせ button, as subsequently requested by the owner.
 
 `node tools/build-site-inquiries.mjs` updates public static HTML. It inserts native
 links at the end of each visible section inside main, including nested sections.
 Pages such as blog archives with no section elements receive one action at the
-end of main. Current coverage: 1,587 actions across 1,174 pages.
+end of main. After excluding existing consultation/contact actions, the generator
+adds 460 actions across 177 pages; other pages retain their existing actions.
 
 The generator preserves scripts, hidden content, forms, header/footer navigation,
 redirects and private analytics packages. Contact destination pages are excluded

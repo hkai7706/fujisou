@@ -19,16 +19,22 @@ export function addInquiries(source, contactHref, cssHref) {
       const index = stack.findLastIndex(node => node.tag === tag);
       if (index < 0) continue;
       const node = stack[index];
-      if (tag === 'section' && node.eligible) {
+      if (tag === 'section' && node.eligible && !node.hasContact) {
         inserts.push({at:token.index, text:`\n${button(node.heading)}\n`});
         count++;
       }
       if (tag === 'main' && main === node) {
-        if (!count) { inserts.push({at:token.index, text:`\n${button('')}\n`}); count++; }
+        if (!count && !node.hasContact) { inserts.push({at:token.index, text:`\n${button('')}\n`}); count++; }
         main = null;
       }
       stack.length = index;
       continue;
+    }
+    if (tag === 'a') {
+      const href = token[0].match(/\bhref\s*=\s*["']([^"']+)["']/i)?.[1] || '';
+      if (!stack.some(node => node.blocked) && !/^(?:[a-z]+:|\/\/)/i.test(href) && /(?:^|\/)(?:contact|consultation)(?:\/|[?#]|$)/.test(href)) {
+        for (const ancestor of stack) ancestor.hasContact = true;
+      }
     }
     if (/^(area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)$/.test(tag)) continue;
     const blocked = stack.some(node => node.blocked) || /\shidden(?:\s|=|>)/i.test(token[0]) || tag === 'form' || tag === 'template';

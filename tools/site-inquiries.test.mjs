@@ -14,6 +14,16 @@ test('nested sections receive separate actions without editing forms or script t
   assert.equal(addInquiries(result.html,'../../contact/','../../stylesheet/section-inquiries.css').html,result.html);
 });
 
+test('existing consultation and inquiry actions prevent duplicate section buttons', () => {
+  const source='<head></head><main><section class="consultation-banner"><h2>相談</h2><a href="../../consultation/">無料相談</a></section><section><a href="../../contact/?topic=consultation#mailformpro">申し込む</a></section><section><a href="../../gallery/">事例を見る</a></section></main>';
+  const result=addInquiries(source,'../../contact/','style.css');
+  assert.equal(result.count,1);
+  assert.ok(result.html.includes('<section class="consultation-banner"><h2>相談</h2><a href="../../consultation/">無料相談</a></section>'));
+  assert.ok(result.html.includes('<section><a href="../../contact/?topic=consultation#mailformpro">申し込む</a></section>'));
+  const onlyBanner='<head></head><main><section><a href="../consultation/">無料相談</a></section></main>';
+  assert.equal(addInquiries(onlyBanner,'../contact/','style.css').html,onlyBanner);
+});
+
 test('archives get one action, while redirects and hidden sections are excluded', () => {
   assert.equal(addInquiries('<head></head><main><article>Archive card</article></main>','contact/','style.css').count,1);
   const result=addInquiries('<head></head><main><section hidden><section>Expired</section></section><section>Visible</section></main>','contact/','style.css');

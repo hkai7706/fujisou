@@ -3,6 +3,13 @@
 `dist/` is the only upload package. The former `server/` folder has been removed.
 See README.md for build commands and `docs/SSI.md` for component maintenance.
 
+Public builds run `tools/optimize-dist.mjs` before validation. It converts deployed
+PNG/GIF/AVIF raster images to WebP, rewrites references, recompresses large WebP/JPEG
+photographs without changing dimensions, and removes unreferenced runtime assets
+and source configuration. SVG icons, the browser favicon, PDFs, feeds and SSI files
+remain where required. Source originals are unchanged. The size report is written
+to `tmp/dist-optimization.json` outside the upload folder.
+
 The main project embeds the shared header/footer for local preview and GitHub Pages.
 Every dist build replaces those copies with server-side includes:
 

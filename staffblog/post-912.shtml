@@ -1,9 +1,27 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8">
 <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-17DNR9SPL4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-17DNR9SPL4');
-</script><meta name="viewport" content="width=device-width,initial-scale=1"><title>ページを移動しました｜フジ創アイノス</title><meta name="description" content="フジ創アイノスの新しいページをご案内します。"><meta http-equiv="refresh" content="0;url=2025-12-22-家族の成長を考えた家づくり-post-912.shtml"><link rel="canonical" href="https://www.fujisou-ainos.com/staffblog/post-912.shtml"><meta property="og:type" content="article"><meta property="og:title" content="ページを移動しました｜フジ創アイノス"><meta property="og:description" content="フジ創アイノスの新しいページをご案内します。"><meta property="og:url" content="https://www.fujisou-ainos.com/staffblog/post-912.shtml"><meta property="og:image" content="https://www.fujisou-ainos.com/img/home/slide1-1440.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ページを移動しました｜フジ創アイノス"><meta name="twitter:description" content="フジ創アイノスの新しいページをご案内します。"><meta name="twitter:image" content="https://www.fujisou-ainos.com/img/home/slide1-1440.webp"><meta property="og:site_name" content="フジ創アイノス"><meta property="og:locale" content="ja_JP"><script type="application/ld+json" data-seo-schema>{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.fujisou-ainos.com/staffblog/post-912.shtml#webpage","url":"https://www.fujisou-ainos.com/staffblog/post-912.shtml","name":"ページを移動しました｜フジ創アイノス","description":"フジ創アイノスの新しいページをご案内します。","inLanguage":"ja","isPartOf":{"@id":"https://www.fujisou-ainos.com/#website"},"about":{"@id":"https://www.fujisou-ainos.com/#business"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.fujisou-ainos.com/img/home/slide1-1440.webp"}}]}</script><meta name="robots" content="noindex,follow" data-archive-robots></head><body><!-- data-legacy-redirect --><main id="main"><p><a href="2025-12-22-家族の成長を考えた家づくり-post-912.shtml">新しいページを見る →</a></p></main></body></html>
+  window.gtag = window.gtag || gtag;
+  (function () {
+    var started = false;
+    function start() {
+      if (started) return;
+      started = true;
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-17DNR9SPL4');
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-17DNR9SPL4';
+      document.head.appendChild(script);
+    }
+    ['pointerdown', 'keydown', 'touchstart'].forEach(function (event) {
+      addEventListener(event, start, { once: true, passive: true });
+    });
+    // Give the first mobile render priority; interaction always begins tracking
+    // immediately, while inactive visitors are initialized after the page settles.
+    addEventListener('load', function () { setTimeout(start, 10000); }, { once: true });
+  }());
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>ページを移動しました｜フジ創アイノス</title><meta name="description" content="フジ創アイノスの新しいページをご案内します。"><meta http-equiv="refresh" content="0;url=2025-12-22-家族の成長を考えた家づくり-post-912.shtml"><link rel="canonical" href="https://www.fujisou-ainos.com/staffblog/post-912.shtml"><meta property="og:type" content="article"><meta property="og:title" content="ページを移動しました｜フジ創アイノス"><meta property="og:description" content="フジ創アイノスの新しいページをご案内します。"><meta property="og:url" content="https://www.fujisou-ainos.com/staffblog/post-912.shtml"><meta property="og:image" content="https://www.fujisou-ainos.com/img/home/slide1-1440.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ページを移動しました｜フジ創アイノス"><meta name="twitter:description" content="フジ創アイノスの新しいページをご案内します。"><meta name="twitter:image" content="https://www.fujisou-ainos.com/img/home/slide1-1440.webp"><meta property="og:site_name" content="フジ創アイノス"><meta property="og:locale" content="ja_JP"><script type="application/ld+json" data-seo-schema>{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.fujisou-ainos.com/staffblog/post-912.shtml#webpage","url":"https://www.fujisou-ainos.com/staffblog/post-912.shtml","name":"ページを移動しました｜フジ創アイノス","description":"フジ創アイノスの新しいページをご案内します。","inLanguage":"ja","isPartOf":{"@id":"https://www.fujisou-ainos.com/#website"},"about":{"@id":"https://www.fujisou-ainos.com/#business"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.fujisou-ainos.com/img/home/slide1-1440.webp"}}]}</script><meta name="robots" content="noindex,follow" data-archive-robots></head><body><!-- data-legacy-redirect --><main id="main"><p><a href="2025-12-22-家族の成長を考えた家づくり-post-912.shtml">新しいページを見る →</a></p></main></body></html>

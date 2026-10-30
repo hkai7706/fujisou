@@ -148,15 +148,16 @@ if(hybridSlider){
  const scenes=[...hybridSlider.querySelectorAll('.hybrid-hero__scene')];
  const dots=[...hybridSlider.querySelectorAll('[data-hybrid-dot]')];
  const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
- let active=0,timer,touching=false,touchStart=0;
- const stop=()=>clearTimeout(timer);
- const show=index=>{active=(index+scenes.length)%scenes.length;scenes.forEach((scene,i)=>{scene.classList.toggle('is-active',i===active);scene.setAttribute('aria-hidden',String(i!==active));scene.inert=i!==active;});dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===active);if(i===active)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');});};
+ let active=0,timer,photoTimer,touching=false,touchStart=0;
+ const loadScene=index=>scenes[(index+scenes.length)%scenes.length]?.querySelectorAll('img[data-hero-src]').forEach(image=>{image.loading='eager';if(image.dataset.heroSrcset)image.srcset=image.dataset.heroSrcset;image.src=image.dataset.heroSrc;delete image.dataset.heroSrc;delete image.dataset.heroSrcset;});
+ const stop=()=>{clearTimeout(timer);clearTimeout(photoTimer);};
+ const show=index=>{active=(index+scenes.length)%scenes.length;loadScene(active);scenes.forEach((scene,i)=>{scene.classList.toggle('is-active',i===active);scene.setAttribute('aria-hidden',String(i!==active));scene.inert=i!==active;});dots.forEach((dot,i)=>{dot.classList.toggle('is-active',i===active);if(i===active)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');});};
  const keyboardFocus=()=>hybridSlider.contains(document.activeElement)&&document.activeElement.matches(':focus-visible');
  const start=()=>{
   stop();
   const paused=reduceMotion.matches||document.hidden||touching||keyboardFocus();
   hybridSlider.toggleAttribute('data-paused',paused);
-  if(!paused)timer=setTimeout(()=>{show(active+1);start();},7000);
+  if(!paused){photoTimer=setTimeout(()=>loadScene(active+1),5000);timer=setTimeout(()=>{show(active+1);start();},7000);}
  };
  dots.forEach(dot=>dot.addEventListener('click',()=>{show(Number(dot.dataset.hybridDot));start();}));
  hybridSlider.addEventListener('focusin',start);

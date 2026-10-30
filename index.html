@@ -1,15 +1,33 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"><link rel="preload" as="font" type="font/woff2" href="fonts/hannari-regular.woff2" crossorigin data-home-font-preload><link rel="preload" as="font" type="font/woff2" href="fonts/home-noto-ba41a048a98b.woff2" crossorigin data-home-font-preload>
 <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-17DNR9SPL4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-17DNR9SPL4');
+  window.gtag = window.gtag || gtag;
+  (function () {
+    var started = false;
+    function start() {
+      if (started) return;
+      started = true;
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-17DNR9SPL4');
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-17DNR9SPL4';
+      document.head.appendChild(script);
+    }
+    ['pointerdown', 'keydown', 'touchstart'].forEach(function (event) {
+      addEventListener(event, start, { once: true, passive: true });
+    });
+    // Give the first mobile render priority; interaction always begins tracking
+    // immediately, while inactive visitors are initialized after the page settles.
+    addEventListener('load', function () { setTimeout(start, 10000); }, { once: true });
+  }());
 </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>富山・高岡の注文住宅｜自然素材・漆喰の家｜フジ創アイノス</title>
   <meta name="description" content="富山・高岡で自然素材の注文住宅を建てるならフジ創アイノス。無垢材・漆喰・構造・断熱も考えた家づくり。平屋・2階建て・土地探し・住宅ローンまで、家づくりを一からサポートします。">
@@ -23,7 +41,7 @@
   <link rel="sitemap" type="application/xml" href="https://www.fujisou-ainos.com/sitemap.xml">
   <link rel="alternate" type="text/plain" href="https://www.fujisou-ainos.com/llms.txt" title="フジ創アイノス llms.txt">
 
-  <link rel="preload" as="image" href="img/home/hero-material-hq-768.webp" imagesrcset="img/home/hero-material-hq-768.webp 768w, img/home/hero-material-hq-1152.webp 1152w, img/home/hero-material-hq-1920.webp 1920w, img/home/hero-material-hq-2560.webp 2560w" imagesizes="100vw" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="img/home/hero-material-display-768.webp" imagesrcset="img/home/hero-material-display-768.webp 768w, img/home/hero-material-display-1152.webp 1152w, img/home/hero-material-display-1920.webp 1920w, img/home/hero-material-display-2560.webp 2560w" imagesizes="100vw" type="image/webp" fetchpriority="high">
 
 
 
@@ -58,7 +76,7 @@
         "sameAs":["https://www.youtube.com/@Ainos-fujiso"],
         "url":"https://www.fujisou-ainos.com/",
         "logo":"https://www.fujisou-ainos.com/img/common/ainos-logo.webp",
-        "image":"https://www.fujisou-ainos.com/img/home/hero-material-hq-2560.webp",
+        "image":"https://www.fujisou-ainos.com/img/home/hero-material-display-2560.webp",
         "description":"富山県高岡市を拠点に、漆喰・無垢材を使った注文住宅、平屋、自然素材の家を手がける地域密着の工務店。",
         "telephone":"0800-200-2661",
         "email":"info@ainos.biz",
@@ -87,9 +105,9 @@
 
 
 
-<script src="script/home-posts.js?v=f8fbbfec7c" defer></script><link rel="canonical" href="https://www.fujisou-ainos.com/"><meta property="og:type" content="website"><meta property="og:title" content="富山・高岡の注文住宅｜自然素材・漆喰の家｜フジ創アイノス"><meta property="og:description" content="富山・高岡で自然素材の注文住宅を建てるならフジ創アイノス。無垢材・漆喰・構造・断熱も考えた家づくり。平屋・2階建て・土地探し・住宅ローンまで、家づくりを一からサポートします。"><meta property="og:url" content="https://www.fujisou-ainos.com/"><meta property="og:image" content="https://www.fujisou-ainos.com/img/home/slide1.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="富山・高岡の注文住宅｜自然素材・漆喰の家｜フジ創アイノス"><meta name="twitter:description" content="富山・高岡で自然素材の注文住宅を建てるならフジ創アイノス。無垢材・漆喰・構造・断熱も考えた家づくり。平屋・2階建て・土地探し・住宅ローンまで、家づくりを一からサポートします。"><meta name="twitter:image" content="https://www.fujisou-ainos.com/img/home/slide1.jpg"><meta property="og:site_name" content="フジ創アイノス"><meta property="og:locale" content="ja_JP"><script type="application/ld+json" data-seo-schema>{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.fujisou-ainos.com/#webpage","url":"https://www.fujisou-ainos.com/","name":"富山・高岡の注文住宅｜自然素材・漆喰の家｜フジ創アイノス","description":"富山・高岡で自然素材の注文住宅を建てるならフジ創アイノス。無垢材・漆喰・構造・断熱も考えた家づくり。平屋・2階建て・土地探し・住宅ローンまで、家づくりを一からサポートします。","inLanguage":"ja","isPartOf":{"@id":"https://www.fujisou-ainos.com/#website"},"about":{"@id":"https://www.fujisou-ainos.com/#business"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.fujisou-ainos.com/img/home/slide1.jpg"}}]}</script><script src="./script/shared-chrome.js?v=bb281d0b1c" defer></script>
-<meta name="home-font-characters" content="
- !&quot;#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~×–—※←→↗▶　、。々「」【】〒〜あいうえおかがきくぐけげこごさしじすずせぜそただちっつづてでとどなにぬねのはびぶへべまみむめもやょよらりるれろわをんァアイウエォオガクグコザシジスズセタダチッツテデトドナニネノハバビフブプベホボポミムメモャュョラリルレロワン・ー一丈上下不世中乾了予事二五介仕他付件休会伝伺住体何余作使例価保個候健備催償先光入全具内冊写冬出分切初別制前剤創加動務化匠区南友収取受合同含吸呼品商問喰営回囲図土地垢域基報場塗境壁士夏外大天夫契好始子学宅守安完定実室家容富対射将小尻届屋山岡川工市希帯平年広床店度康廊延建引強役後得心必応快思性悔情想意感成所手抑拠指採探換支整敷文料断新方施族日明映時暮曜書最月有望期木末本材条来板査格案棟検業楽構様標横樹欠次欧正歩段毎比気水永江決沢法波注津活済渡湿準滑漆潮点無然熱燃燥物特独理環生用由町画番畳皮目直相省県真着矢知砺確社私移積空窓立第等算範築粧系約納級素細紹終組経総緒線考耐能脂自色落薬蟻表補要見視覧観触言計記設証話詳認説読調談諸象費資質贅身軽較農近返迷追送造過適選部酸重金長開間関防限階際集雪電震面順頼額風食飽香駄高魚黒！（）２：？｜"><link rel="stylesheet" href="stylesheet/homepage.min.css?v=98c7d9e1d9"></head>
+<script src="script/home-posts.js?v=31171922c0" defer></script><script src="./script/shared-chrome.js?v=bb281d0b1c" defer></script>
+<link rel="canonical" href="https://www.fujisou-ainos.com/"><meta property="og:type" content="website"><meta property="og:title" content="富山・高岡の注文住宅｜自然素材・漆喰の家｜フジ創アイノス"><meta property="og:description" content="富山・高岡で自然素材の注文住宅を建てるならフジ創アイノス。無垢材・漆喰・構造・断熱も考えた家づくり。平屋・2階建て・土地探し・住宅ローンまで、家づくりを一からサポートします。"><meta property="og:url" content="https://www.fujisou-ainos.com/"><meta property="og:image" content="https://www.fujisou-ainos.com/img/home/slide1.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="富山・高岡の注文住宅｜自然素材・漆喰の家｜フジ創アイノス"><meta name="twitter:description" content="富山・高岡で自然素材の注文住宅を建てるならフジ創アイノス。無垢材・漆喰・構造・断熱も考えた家づくり。平屋・2階建て・土地探し・住宅ローンまで、家づくりを一からサポートします。"><meta name="twitter:image" content="https://www.fujisou-ainos.com/img/home/slide1.jpg"><meta property="og:site_name" content="フジ創アイノス"><meta property="og:locale" content="ja_JP"><script type="application/ld+json" data-seo-schema>{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.fujisou-ainos.com/#webpage","url":"https://www.fujisou-ainos.com/","name":"富山・高岡の注文住宅｜自然素材・漆喰の家｜フジ創アイノス","description":"富山・高岡で自然素材の注文住宅を建てるならフジ創アイノス。無垢材・漆喰・構造・断熱も考えた家づくり。平屋・2階建て・土地探し・住宅ローンまで、家づくりを一からサポートします。","inLanguage":"ja","isPartOf":{"@id":"https://www.fujisou-ainos.com/#website"},"about":{"@id":"https://www.fujisou-ainos.com/#business"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.fujisou-ainos.com/img/home/slide1.jpg"}}]}</script><meta name="home-font-characters" content="
+ !&quot;#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~→↗、。々いうえおかがきくげごしじすずせただちつづてでとどなにのはへべまみもやよらりるれわをアイオクグシジスタダットドニノバビフブプベポミメュョラリルレロン・ー一上予事介仕会住使例価健全内分初創動取合同吸呼問喰回土地垢報塗境壁大天宅安室家富屋山岡工平床康建得心情抑整敷文料施族日暮本材格棟正毎気注済漆無然物環画目直相社私移空算納素紹経緒線考自見触詳談費返造長間関階面頼食駄高２｜"><link rel="stylesheet" href="stylesheet/homepage.min.css?v=17ca40d013"><noscript data-home-font-fallback><link rel="stylesheet" href="stylesheet/post-font-fallback.css" data-post-font-fallback></noscript></head>
 <body class="home-page">
 <!-- Shared SSI header: CSS/JS included; assets resolve from img/ at the domain root. -->
 
@@ -149,13 +167,13 @@
   <main id="main" class="home-main">
     <section class="hybrid-hero" aria-labelledby="hybrid-hero-title" data-hybrid-slider>
       <div class="hybrid-hero__scene hybrid-hero__scene--intro hybrid-hero__scene--cover is-active" aria-hidden="false">
-        <article class="hybrid-hero__panel hybrid-hero__panel--material"><img src="img/home/hero-material-hq-2560.webp" srcset="img/home/hero-material-hq-768.webp 768w, img/home/hero-material-hq-1152.webp 1152w, img/home/hero-material-hq-1920.webp 1920w, img/home/hero-material-hq-2560.webp 2560w" sizes="100vw" alt="富山市の自然素材住宅・漆喰壁と無垢床のリビング" width="2560" height="1707" fetchpriority="high" decoding="async"><div class="hybrid-hero__copy"><p>FUJISOU AINOS / TOYAMA</p><h1 id="hybrid-hero-title">富山に、フジ創の<br>漆喰と無垢の家。</h1><span>漆喰の壁と無垢の床。富山での家づくりを、土地と予算から一緒に考えます。</span><span class="hero-mobile-summary">土地と予算から、一緒に。</span><div class="hybrid-hero__actions"><a href="#philosophy">アイノスの家づくり</a><a href="contact/" data-inquiry-location="hero">お問い合わせ →</a></div><small class="hybrid-hero__consultation-note">初回から3回目までのご相談は無料</small></div></article>
+        <article class="hybrid-hero__panel hybrid-hero__panel--material"><img src="img/home/hero-material-display-2560.webp" srcset="img/home/hero-material-display-768.webp 768w, img/home/hero-material-display-1152.webp 1152w, img/home/hero-material-display-1920.webp 1920w, img/home/hero-material-display-2560.webp 2560w" sizes="100vw" alt="富山市の自然素材住宅・漆喰壁と無垢床のリビング" width="2560" height="1707" fetchpriority="high" decoding="sync"><div class="hybrid-hero__copy"><p>FUJISOU AINOS / TOYAMA</p><h1 id="hybrid-hero-title">富山に、フジ創の<br>漆喰と無垢の家。</h1><span>漆喰の壁と無垢の床。富山での家づくりを、土地と予算から一緒に考えます。</span><span class="hero-mobile-summary">土地と予算から、一緒に。</span><div class="hybrid-hero__actions"><a href="#philosophy">アイノスの家づくり</a><a href="contact/" data-inquiry-location="hero">お問い合わせ →</a></div><small class="hybrid-hero__consultation-note">初回から3回目までのご相談は無料</small></div></article>
       </div>
       <div class="hybrid-hero__scene hybrid-hero__scene--air" aria-hidden="true" inert>
-        <article class="hybrid-hero__panel hybrid-hero__panel--full"><img src="img/gallery/exterior-hero-hq-1535.webp" srcset="img/gallery/exterior-hero-hq-768.webp 768w, img/gallery/exterior-hero-hq-1152.webp 1152w, img/gallery/exterior-hero-hq-1535.webp 1535w" sizes="100vw" alt="富山市に建つ照明計画と屋根付き駐車場を備えたフジ創アイノスの住宅外観" width="1535" height="1024" loading="lazy" decoding="async"><div class="hybrid-hero__copy"><p>FUJISOU AINOS / PLANNING</p><h2>富山の敷地に、<br>家族の間取りを。</h2><span>土地のかたちと日々の動線から、一棟ずつ間取りを考えます。</span><span class="hero-mobile-summary">敷地と暮らしに合わせた間取り。</span><a class="hybrid-hero__editorial-link" href="#works">施工事例を見る <b>→</b></a></div></article>
+        <article class="hybrid-hero__panel hybrid-hero__panel--full"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='2'/%3E" data-hero-src="img/gallery/exterior-hero-hq-1535.webp" data-hero-srcset="img/gallery/exterior-hero-hq-768.webp 768w, img/gallery/exterior-hero-hq-1152.webp 1152w, img/gallery/exterior-hero-hq-1535.webp 1535w" sizes="100vw" alt="富山市に建つ照明計画と屋根付き駐車場を備えたフジ創アイノスの住宅外観" width="1535" height="1024" loading="lazy" decoding="async"><div class="hybrid-hero__copy"><p>FUJISOU AINOS / PLANNING</p><h2>富山の敷地に、<br>家族の間取りを。</h2><span>土地のかたちと日々の動線から、一棟ずつ間取りを考えます。</span><span class="hero-mobile-summary">敷地と暮らしに合わせた間取り。</span><a class="hybrid-hero__editorial-link" href="#works">施工事例を見る <b>→</b></a></div></article>
       </div>
       <div class="hybrid-hero__scene hybrid-hero__scene--craft" aria-hidden="true" inert>
-        <article class="hybrid-hero__panel hybrid-hero__panel--atelier"><img src="img/home/kitchen-hero-hq-1538.webp" srcset="img/home/kitchen-hero-hq-768.webp 768w, img/home/kitchen-hero-hq-1152.webp 1152w, img/home/kitchen-hero-hq-1538.webp 1538w" sizes="100vw" alt="漆喰の白い壁と天然木が調和するフジ創アイノスのキッチン・ダイニング施工事例" width="1538" height="1023" loading="lazy" decoding="async"><div class="hybrid-hero__copy"><p>FUJISOU AINOS / SHIKKUI</p><h2>全面漆喰の家。<br>フジ創の塗り壁。</h2><span>ビニールクロスに頼らず、漆喰の塗り壁で室内を仕上げます。</span><span class="hero-mobile-summary">ビニールクロスに頼らない塗り壁。</span><a class="hybrid-hero__editorial-link" href="shikkui/">全面漆喰の家づくりを見る <b aria-hidden="true">→</b></a></div></article>
+        <article class="hybrid-hero__panel hybrid-hero__panel--atelier"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3' height='2'/%3E" data-hero-src="img/home/kitchen-hero-hq-1538.webp" data-hero-srcset="img/home/kitchen-hero-hq-768.webp 768w, img/home/kitchen-hero-hq-1152.webp 1152w, img/home/kitchen-hero-hq-1538.webp 1538w" sizes="100vw" alt="漆喰の白い壁と天然木が調和するフジ創アイノスのキッチン・ダイニング施工事例" width="1538" height="1023" loading="lazy" decoding="async"><div class="hybrid-hero__copy"><p>FUJISOU AINOS / SHIKKUI</p><h2>全面漆喰の家。<br>フジ創の塗り壁。</h2><span>ビニールクロスに頼らず、漆喰の塗り壁で室内を仕上げます。</span><span class="hero-mobile-summary">ビニールクロスに頼らない塗り壁。</span><a class="hybrid-hero__editorial-link" href="shikkui/">全面漆喰の家づくりを見る <b aria-hidden="true">→</b></a></div></article>
       </div>
       <div class="hybrid-hero__controls" role="group" aria-label="メインビジュアルを選ぶ"><button class="is-active" type="button" data-hybrid-dot="0" aria-label="スライド1を表示" aria-current="true"><span></span></button><button type="button" data-hybrid-dot="1" aria-label="スライド2を表示"><span></span></button><button type="button" data-hybrid-dot="2" aria-label="スライド3を表示"><span></span></button></div>
     </section>
@@ -464,6 +482,6 @@
   </div>
 </footer>
 
-  <script src="script/fujisou-ainos.js?v=27ea84a0f1" defer></script>
+  <script src="script/fujisou-ainos.js?v=c658c7c934" defer></script>
 </body>
 </html>

@@ -5,6 +5,15 @@
  const track=section?.querySelector('.news-preview__grid');
  if(!track)return;
  const root=new URL('./',document.querySelector('.shared-header__brand')?.href||document.baseURI);
+ function loadPageFonts(){
+  if(document.querySelector('[data-post-font-fallback]'))return;
+  const fonts=document.createElement('link');fonts.rel='stylesheet';fonts.href=new URL('stylesheet/post-font-fallback.css',root).href;fonts.dataset.postFontFallback='';document.head.append(fonts);
+ }
+ // Additional Japanese glyphs are needed for the content below the introduction.
+ // Fetch them on navigation intent, or immediately if that content is visible.
+ for(const event of ['wheel','touchstart','keydown','pointerdown'])addEventListener(event,loadPageFonts,{once:true,passive:true});
+ const following=document.querySelector('.home-selector');
+ if(following&&'IntersectionObserver' in window){const fontsObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){loadPageFonts();fontsObserver.disconnect();}});fontsObserver.observe(following);}else loadPageFonts();
  const paths={blog:'staffblog/',event:'eventinfo/'};
  let pending=false;
  const text=(node,selector)=>node.querySelector(selector)?.textContent.trim()||'';

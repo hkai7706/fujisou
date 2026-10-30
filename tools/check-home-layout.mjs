@@ -22,7 +22,7 @@ try {
     const result = await page.evaluate(()=>({
       overflow:document.documentElement.scrollWidth>innerWidth,
       missing:[...document.images].filter(image=>image.offsetWidth>0&&image.complete&&!image.naturalWidth).map(image=>image.src),
-      styles:document.querySelectorAll('link[rel="stylesheet"]').length,
+      styles:document.querySelectorAll('link[rel="stylesheet"]:not([data-post-font-fallback])').length,
       labelColor:getComputedStyle(document.querySelector('.shared-footer__area strong')).color,
       logo:document.querySelector('.shared-header__brand img').currentSrc,
       poster:document.querySelector('.home-event__visual img').currentSrc
@@ -46,7 +46,7 @@ try {
   await delayed.setViewport({width:390,height:900});
   await delayed.setRequestInterception(true);
   delayed.on('request',async request=>{
-    if(request.url().includes('/img/home/hero-material-hq-'))await new Promise(resolve=>setTimeout(resolve,2500));
+    if(/\/img\/home\/hero-material-(?:hq|display)-/.test(request.url()))await new Promise(resolve=>setTimeout(resolve,2500));
     await request.continue();
   });
   await delayed.goto('http://127.0.0.1:5501/',{waitUntil:'domcontentloaded'});

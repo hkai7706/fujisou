@@ -3,13 +3,31 @@
 <head>
   <meta charset="utf-8">
 <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-17DNR9SPL4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-17DNR9SPL4');
+  window.gtag = window.gtag || gtag;
+  (function () {
+    var started = false;
+    function start() {
+      if (started) return;
+      started = true;
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-17DNR9SPL4');
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-17DNR9SPL4';
+      document.head.appendChild(script);
+    }
+    ['pointerdown', 'keydown', 'touchstart'].forEach(function (event) {
+      addEventListener(event, start, { once: true, passive: true });
+    });
+    // Give the first mobile render priority; interaction always begins tracking
+    // immediately, while inactive visitors are initialized after the page settles.
+    addEventListener('load', function () { setTimeout(start, 10000); }, { once: true });
+  }());
 </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>家族が集い、ゆったりと過ごすことができるおうち｜施工事例｜フジ創アイノス</title>
   <meta name="description" content="家族が集い、ゆったりと過ごすことができる空間がある家です。">
@@ -23,8 +41,8 @@
   <link rel="stylesheet" href="../stylesheet/breadcrumbs.css?v=9ded9c5593">
 
   <link rel="stylesheet" href="../stylesheet/page-start.css?v=749818468d">
-<link rel="stylesheet" href="../stylesheet/gallery-project.css?v=8caa985554"><script src="../script/gallery-project.js?v=fe411e87d7" defer></script><link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../favicon.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../apple-touch-icon.png"><link rel="canonical" href="https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml"><meta property="og:type" content="article"><meta property="og:title" content="家族が集い、ゆったりと過ごすことができるおうち｜施工事例｜フジ創アイノス"><meta property="og:description" content="家族が集い、ゆったりと過ごすことができる空間がある家です。"><meta property="og:url" content="https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml"><meta property="og:image" content="https://www.fujisou-ainos.com/img/gallery/projects/enhanced/342f3266e05bd7c53fe9-1800.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="家族が集い、ゆったりと過ごすことができるおうち｜施工事例｜フジ創アイノス"><meta name="twitter:description" content="家族が集い、ゆったりと過ごすことができる空間がある家です。"><meta name="twitter:image" content="https://www.fujisou-ainos.com/img/gallery/projects/enhanced/342f3266e05bd7c53fe9-1800.webp"><meta property="og:site_name" content="フジ創アイノス"><meta property="og:locale" content="ja_JP"><script type="application/ld+json" data-seo-schema>{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml#webpage","url":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml","name":"家族が集い、ゆったりと過ごすことができるおうち｜施工事例｜フジ創アイノス","description":"家族が集い、ゆったりと過ごすことができる空間がある家です。","inLanguage":"ja","isPartOf":{"@id":"https://www.fujisou-ainos.com/#website"},"about":{"@id":"https://www.fujisou-ainos.com/#business"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.fujisou-ainos.com/img/gallery/projects/enhanced/342f3266e05bd7c53fe9-1800.webp"},"breadcrumb":{"@id":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.fujisou-ainos.com/"},{"@type":"ListItem","position":2,"name":"施工事例","item":"https://www.fujisou-ainos.com/gallery/"},{"@type":"ListItem","position":3,"name":"家族が集い、ゆったりと過ごすことができるおうち","item":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml"}]}]}</script><link rel="stylesheet" href="../stylesheet/shared-chrome.min.css?v=13c78fbf3e"><link rel="stylesheet" href="../stylesheet/inquiry-journey.css?v=7360660979"><script src="../script/shared-chrome.js?v=bb281d0b1c" defer></script><link rel="stylesheet" href="../stylesheet/site-design.css?v=059c1c6d42"><link rel="stylesheet" href="../stylesheet/section-inquiries.css?v=fa6acc0ab7" data-section-inquiries>
-</head>
+<link rel="stylesheet" href="../stylesheet/gallery-project.css?v=8caa985554"><script src="../script/gallery-project.js?v=fe411e87d7" defer></script><link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../favicon.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../apple-touch-icon.png"><link rel="stylesheet" href="../stylesheet/shared-chrome.min.css?v=13c78fbf3e"><link rel="stylesheet" href="../stylesheet/inquiry-journey.css?v=7360660979"><script src="../script/shared-chrome.js?v=bb281d0b1c" defer></script><link rel="stylesheet" href="../stylesheet/site-design.css?v=059c1c6d42"><link rel="stylesheet" href="../stylesheet/section-inquiries.css?v=fa6acc0ab7" data-section-inquiries>
+<link rel="canonical" href="https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml"><meta property="og:type" content="article"><meta property="og:title" content="家族が集い、ゆったりと過ごすことができるおうち｜施工事例｜フジ創アイノス"><meta property="og:description" content="家族が集い、ゆったりと過ごすことができる空間がある家です。"><meta property="og:url" content="https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml"><meta property="og:image" content="https://www.fujisou-ainos.com/img/gallery/projects/enhanced/342f3266e05bd7c53fe9-1800.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="家族が集い、ゆったりと過ごすことができるおうち｜施工事例｜フジ創アイノス"><meta name="twitter:description" content="家族が集い、ゆったりと過ごすことができる空間がある家です。"><meta name="twitter:image" content="https://www.fujisou-ainos.com/img/gallery/projects/enhanced/342f3266e05bd7c53fe9-1800.webp"><meta property="og:site_name" content="フジ創アイノス"><meta property="og:locale" content="ja_JP"><script type="application/ld+json" data-seo-schema>{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml#webpage","url":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml","name":"家族が集い、ゆったりと過ごすことができるおうち｜施工事例｜フジ創アイノス","description":"家族が集い、ゆったりと過ごすことができる空間がある家です。","inLanguage":"ja","isPartOf":{"@id":"https://www.fujisou-ainos.com/#website"},"about":{"@id":"https://www.fujisou-ainos.com/#business"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.fujisou-ainos.com/img/gallery/projects/enhanced/342f3266e05bd7c53fe9-1800.webp"},"breadcrumb":{"@id":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.fujisou-ainos.com/"},{"@type":"ListItem","position":2,"name":"施工事例","item":"https://www.fujisou-ainos.com/gallery/"},{"@type":"ListItem","position":3,"name":"家族が集い、ゆったりと過ごすことができるおうち","item":"https://www.fujisou-ainos.com/gallery/family-gathering-house.shtml"}]}]}</script></head>
 <body class="gallery-project-page" data-site-design="interior">
 
 
@@ -167,6 +185,6 @@
 
 
 
-  <script src="../script/fujisou-ainos.js?v=27ea84a0f1" defer></script>
+  <script src="../script/fujisou-ainos.js?v=c658c7c934" defer></script>
 </body>
 </html>

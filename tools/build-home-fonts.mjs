@@ -3,7 +3,10 @@ import crypto from 'node:crypto';
 import subsetFont from 'subset-font';
 const revision='6157dfaa640ca5738b4d1a7070fe389c3036d7fc';
 export async function buildHomeFonts(html){
- const text=html.replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,'').replace(/<!--[\s\S]*?-->/g,'').replace(/<[^>]*>/g,'').replace(/&(?:amp|quot|lt|gt|nbsp);/g,s=>({'&amp;':'&','&quot;':'"','&lt;':'<','&gt;':'>','&nbsp;':' '})[s]).replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Number(n)));
+ // Load glyphs for the header, all hero slides and introductory section first.
+ // Remaining page glyphs keep the same font and are requested near their section.
+ const initial=html.split('<section class="home-selector"')[0];
+ const text=initial.replace(/<(script|style)\b[\s\S]*?<\/\1>/gi,'').replace(/<!--[\s\S]*?-->/g,'').replace(/<[^>]*>/g,'').replace(/&(?:amp|quot|lt|gt|nbsp);/g,s=>({'&amp;':'&','&quot;':'"','&lt;':'<','&gt;':'>','&nbsp;':' '})[s]).replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Number(n)));
  const characters=[...new Set(text+Array.from({length:95},(_,i)=>String.fromCharCode(i+32)).join(''))].sort().join('');
  const key=crypto.createHash('sha256').update(revision+characters).digest('hex').slice(0,12);
  const noto=`fonts/home-noto-${key}.woff2`,hannari='fonts/hannari-regular.woff2';

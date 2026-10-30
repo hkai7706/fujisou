@@ -38,12 +38,10 @@ rendered appearance as the visual reference. Older references are in docs/archiv
   maximum width 1260px, minimum height 320px, centered 44px maximum Mincho title,
   11px label and 15px lead. Mobile minimum height is 260px, expanding for copy.
 - The homepage presents housing categories before the free-design product comparison.
-- Each visible content section across the public site has an outlined お問い合わせ
-  action to its relative `contact/` destination. Archives without sections get one
-  end-of-content action. Preserve existing free-consultation CTAs and hero layouts.
-  Run `tools/build-site-inquiries.mjs` after section generators; shared button styles
-  live in `stylesheet/section-inquiries.css`. Skip redirects, hidden sections, form
-  interiors and contact destination pages. Never add buttons to header/footer menus.
+- Per-section お問い合わせ buttons were discontinued at the owner's request.
+  Run `tools/build-site-inquiries.mjs` after section generators to remove any old
+  generated copies. Preserve intentional header, footer, hero, consultation, phone,
+  email and LINE actions.
 - Homepage hero: all three slides span the viewport width and fill its height on desktop,
   cycling continuously at seven-second intervals. Pointer clicks, hovering over the
   image and cancelled touch gestures must not permanently pause it. Keyboard-visible

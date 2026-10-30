@@ -1,33 +1,17 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {addInquiries} from './build-site-inquiries.mjs';
+import {removeInquiries} from './build-site-inquiries.mjs';
 
-test('nested sections receive separate actions without editing forms or script text', () => {
-  const form='<form><section><input name="email"></section></form>';
-  const source=`<html><head></head><body><main><section aria-labelledby="outer"><h2 id="outer">Outer</h2><section>Inner</section>${form}</section><script>const x="<section>not markup</section>";</script></main></body></html>`;
-  const result=addInquiries(source,'../../contact/','../../stylesheet/section-inquiries.css');
-  assert.equal(result.count,2);
-  assert.ok(result.html.includes(form));
-  assert.ok(result.html.includes('const x="<section>not markup</section>";'));
-  assert.equal((result.html.match(/href="\.\.\/\.\.\/contact\/"/g)||[]).length,2);
-  assert.ok(result.html.includes('aria-describedby="outer"'));
-  assert.equal(addInquiries(result.html,'../../contact/','../../stylesheet/section-inquiries.css').html,result.html);
+test('generated section inquiry actions and their stylesheet are removed',()=>{
+  const source='<head><link rel="stylesheet" href="section-inquiries.css" data-section-inquiries></head><main><section>Keep<!-- SECTION INQUIRY --><div class="section-inquiry"><a href="contact/">お問い合わせ</a></div><!-- END SECTION INQUIRY --></section></main>';
+  const result=removeInquiries(source);
+  assert.equal(result.count,1);
+  assert.equal(result.html.includes('section-inquiry'),false);
+  assert.match(result.html,/<section>Keep\s*<\/section>/);
+  assert.equal(removeInquiries(result.html).html,result.html);
 });
 
-test('existing consultation and inquiry actions prevent duplicate section buttons', () => {
-  const source='<head></head><main><section class="consultation-banner"><h2>相談</h2><a href="../../consultation/">無料相談</a></section><section><a href="../../contact/?topic=consultation#mailformpro">申し込む</a></section><section><a href="../../gallery/">事例を見る</a></section></main>';
-  const result=addInquiries(source,'../../contact/','style.css');
-  assert.equal(result.count,1);
-  assert.ok(result.html.includes('<section class="consultation-banner"><h2>相談</h2><a href="../../consultation/">無料相談</a></section>'));
-  assert.ok(result.html.includes('<section><a href="../../contact/?topic=consultation#mailformpro">申し込む</a></section>'));
-  const onlyBanner='<head></head><main><section><a href="../consultation/">無料相談</a></section></main>';
-  assert.equal(addInquiries(onlyBanner,'../contact/','style.css').html,onlyBanner);
-});
-
-test('archives get one action, while redirects and hidden sections are excluded', () => {
-  assert.equal(addInquiries('<head></head><main><article>Archive card</article></main>','contact/','style.css').count,1);
-  const result=addInquiries('<head></head><main><section hidden><section>Expired</section></section><section>Visible</section></main>','contact/','style.css');
-  assert.equal(result.count,1);
-  assert.ok(result.html.includes('<section hidden><section>Expired</section></section>'));
-  assert.equal(addInquiries('<head><meta http-equiv="refresh" content="0;url=../"></head><main>Redirect</main>','contact/','style.css').count,0);
+test('normal contact and consultation links are preserved',()=>{
+  const source='<main><a href="contact/">お問い合わせ</a><a href="consultation/">無料相談</a></main>';
+  assert.equal(removeInquiries(source).html,source);
 });

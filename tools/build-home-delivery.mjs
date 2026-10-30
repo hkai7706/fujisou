@@ -10,7 +10,7 @@ import sharp from 'sharp';
 // Preserve the original cascade in one cacheable request. Full CSS inlining made
 // the initial layout a long post-paint task in Chrome; keep styles render-ready
 // before painting rather than trading input responsiveness for a faster paint.
-const sources = ['fujisou-ainos.home.min.css', 'page-start.css', 'home-updates.css', 'house-guide.css', 'section-inquiries.css', 'home-videos.css', 'shared-chrome.min.css', 'inquiry-journey.css'];
+const sources = ['fujisou-ainos.home.min.css', 'page-start.css', 'home-updates.css', 'house-guide.css', 'home-videos.css', 'shared-chrome.min.css', 'inquiry-journey.css'];
 let html = fs.readFileSync('index.html', 'utf8').replace(/<style\b[^>]*data-home-styles[^>]*>[\s\S]*?<\/style>/g, '');
 html=html.replace(/(<img\b[^>]*fetchpriority="high"[^>]*\bdecoding=")async("[^>]*>)/, '$1sync$2');
 html=html.replace(/<noscript data-home-font-fallback>[\s\S]*?<\/noscript>/g,'');

@@ -49,11 +49,14 @@ dependency installation no longer triggers it through npm's `prepare` lifecycle.
 ## Package for upload
 
 ```powershell
-npm.cmd run build          # static test package, noindex
-npm.cmd run build:public   # indexable static package, mail runtime excluded
+npm.cmd run build          # SSI hosting test package, noindex
+npm.cmd run build:public   # indexable SSI package, mail runtime excluded
 ```
 
 Both validate links, metadata, image references and structured data automatically.
+Source pages keep embedded headers/footers for GitHub Pages. Dist pages use shared
+server-side includes from `include/header.shtml` and `include/footer.shtml`;
+Apache/Lolipop must process SSI. Changing a deployed fragment updates all pages.
 Use `npm run preview:dist` to review the exact package over HTTP.
 Upload the CONTENTS of `dist/`, including hidden `.htaccess` files, to the intended
 document root. Do not upload the repository, tools, docs, original photographs,
@@ -74,12 +77,12 @@ mail configuration and customer data when uploading static updates.
 - `docs/SEO.md`: indexing, canonical URLs and sitemap maintenance.
 - `docs/PAGESPEED.md`: image/CSS delivery and measured performance history.
 - `docs/IMAGE_UPDATES.md`, `docs/VIDEOS.md`, `staffblog/MIGRATION.md`: content updates.
-- `docs/SSI.md`: optional Apache SSI mode; static pages do not require it.
+- `docs/SSI.md`: embedded source versus shared SSI header/footer in dist.
 
 Dated audits and `docs/archive/` record previous implementations, not current
 instructions. Event visibility is rendered into HTML during refresh/build using
 Japan dates; browser JavaScript additionally updates status across expiry dates.
 
-`node tools/check-build.mjs --production` builds public static output and verifies
-that maintained source files remain unchanged. It excludes the untouched private
+`node tools/check-build.mjs --production` builds public SSI output and verifies
+shared includes and that maintained source files remain unchanged. It excludes the untouched private
 mail runtime from that snapshot. Ordinary `npm run check:build` tests preview mode.

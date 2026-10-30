@@ -57,6 +57,5 @@
  }
  async function refresh(){if(pending)return;pending=true;await Promise.allSettled(Object.keys(paths).map(update));pending=false;}
  if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();refresh();}},{rootMargin:'300px'});observer.observe(section);}else refresh();
- section.addEventListener('click',()=>{const selected=section.querySelector('[data-news-tab][aria-selected="true"]')?.dataset.newsTab;track.querySelectorAll('[data-news-empty]').forEach(n=>n.hidden=n.dataset.newsEmpty!==selected);});
  addEventListener('pageshow',event=>{if(event.persisted)refresh();});
 })();

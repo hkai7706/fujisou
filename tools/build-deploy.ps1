@@ -151,6 +151,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Deployment indexing preparation failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'Deployment sitemap preparation failed.' }
 & node (Join-Path $PSScriptRoot 'copy-deploy-assets.mjs')
 if ($LASTEXITCODE -ne 0) { throw 'Generated asset collection failed.' }
+& node (Join-Path $PSScriptRoot 'build-dist-ssi.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Shared SSI component assembly failed.' }
 & node (Join-Path $PSScriptRoot 'site-check.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Deployment reference validation failed.' }
 & node (Join-Path $PSScriptRoot 'check-seo.mjs') $destinationRoot

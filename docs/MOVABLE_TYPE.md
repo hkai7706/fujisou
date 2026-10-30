@@ -116,8 +116,11 @@ has been accessed or configured by this work.
 6. Verify that publishing a second entry updates its article, the previous/next
    navigation, section index, monthly archive and latest-cards fragment. Also test
    unpublishing/deleting and scheduled publication with MT's actual scheduler.
-7. For changes to the website header/footer or styles later, rerun the preparation
-   tool and update those MT modules; MT includes them at rebuild time.
+7. Ainos Header/Footer output SSI directives. Newly published articles share the
+   same deployed `include/header.shtml` and `include/footer.shtml` as the rest of
+   dist; editing those server fragments updates every page without rebuilding MT
+   posts. For stylesheet/script changes, regenerate and update Ainos Head, then
+   rebuild the affected MT pages. Article HTML/SHTML requires SSI on Lolipop.
 
 ## Lolipop SSI homepage activation
 

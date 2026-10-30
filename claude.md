@@ -89,6 +89,12 @@ rendered appearance as the visual reference. Older references are in docs/archiv
 - `stylesheet/fujisou-ainos.css`, `*.min.css`: generated styles; do not hand-edit.
 - `script/`: vanilla browser behavior. `tools/`: Node/PowerShell generation and checks.
 - `dist/`: ignored deployment output. There is no separate `server/` package.
+- Main-project pages keep embedded shared header/footer markup for GitHub Pages.
+  Every dist build ends with `tools/build-dist-ssi.mjs`, which replaces these
+  copies with `/include/header.shtml` and `/include/footer.shtml` SSI directives.
+  Deployed fragments contain markup only; CSS/scripts stay in page heads. Newly
+  published Movable Type articles use the same SSI fragments. Never run the old
+  source-wide SSI conversion as part of packaging. Validate resolved includes.
 
 `npm run styles` compiles CSS and asset versions. `npm run refresh` intentionally
 updates source HTML, shared components, event state, SEO and the sitemap.

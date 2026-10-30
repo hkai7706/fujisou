@@ -58,6 +58,9 @@ try{
  for(const failure of ['failed','invalid']){mode=failure;await load();assert.equal(await page.$$eval('[data-news-category="blog"]',ns=>ns.length),3);assert.ok(!(await page.$eval('[data-news-category="blog"] h3',n=>n.textContent)).startsWith('新しいblog'));}
  mode='empty';await load();await page.waitForSelector('[data-news-empty="blog"]');
  assert.equal(await page.$$('[data-news-category]').then(n=>n.length),0);
+ // Empty feeds shrink the section; settle scroll anchoring before a coordinate click.
+ await page.$eval('#news-tab-event',n=>n.scrollIntoView({block:'center',behavior:'instant'}));
+ await new Promise(resolve=>setTimeout(resolve,150));
  await page.click('#news-tab-event');assert.equal(await page.$eval('[data-news-empty="event"]',n=>n.hidden),false);
  await page.close();console.log('Homepage publication, dynamic tabs, escaped titles, failed/invalid feeds and unpublishing passed.');
  const folder='tmp/movable-type/ssi';for(const kind of ['staffblog','eventinfo'])fs.mkdirSync(folder+'/'+kind,{recursive:true});

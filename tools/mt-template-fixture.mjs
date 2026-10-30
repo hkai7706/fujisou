@@ -62,5 +62,12 @@ export function renderMT(file,data,{root='/',origin='http://127.0.0.1:5501',mont
   if(a.remove_html)value=String(value).replace(/<[^>]*>/g,'');
   return a.encode_html?escape(value):String(value??'');
  }).join('');}
- return template(file,initial);
+ return template(file,initial).replace(/<!--#include virtual="([^"]+)" -->/g,(directive,url)=>{
+  const local=url.startsWith(root)?url.slice(root.length):null;
+  if(!local||!/^include\/(?:header|footer)\.shtml$/.test(local))throw Error('Unexpected fixture SSI '+url);
+  const kind=local.includes('header')?'header':'footer';
+  const fragment=fs.readFileSync(local,'utf8').match(kind==='header'?/<header\b[\s\S]*?<\/header>/:/<footer\b[\s\S]*?<\/footer>/)?.[0];
+  if(!fragment)throw Error('Missing fixture shared '+kind);
+  return fragment.replace(/\b(href|src)="\/(?!\/)([^"]*)"/g,(_,attr,value)=>`${attr}="${root}${value}"`).replace(/srcset="([^"]+)"/g,(_,value)=>`srcset="${value.replace(/(^|,\s*)\/(?!\/)/g,'$1'+root)}"`);
+ });
 }

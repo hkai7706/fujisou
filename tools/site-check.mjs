@@ -8,6 +8,18 @@ const ignoredDirectories = new Set(['analytics-portal','analytics-service','anal
 const failures = [];
 let checkedPages = 0;
 
+function readRendered(file, ancestors=[]) {
+  if(ancestors.includes(file)||ancestors.length>10){failures.push(`${path.relative(root,file)}: recursive SSI include`);return '';}
+  const html=fs.readFileSync(file,'utf8');
+  return html.replace(/<!--#include virtual="([^"]+)"\s*-->/g,(_,url)=>{
+    const target=path.resolve(root,'.'+url);
+    if(!url.startsWith('/')||!target.startsWith(root+path.sep)||!fs.existsSync(target)){
+      failures.push(`${path.relative(root,file)}: missing or invalid SSI include ${url}`);return '';
+    }
+    return readRendered(target,[...ancestors,file]);
+  });
+}
+
 function checkReference(file, reference) {
   if (/^(?:https?:|mailto:|tel:|data:|\/\/|#)/i.test(reference)) return;
   const clean = reference.split(/[?#]/)[0];
@@ -18,7 +30,7 @@ function checkReference(file, reference) {
 
 // Check responsive candidates and CSS assets as well as normal src/href links.
 for (const file of walk(root).filter(item => /\.(?:html|shtml|css)$/i.test(item))) {
-  const content = fs.readFileSync(file, 'utf8');
+  const content = /\.(?:html|shtml)$/.test(file) ? readRendered(file) : fs.readFileSync(file, 'utf8');
   for (const match of content.matchAll(/(?:src|href)=["']([^"']+)["']/gi)) checkReference(file, match[1]);
   for (const match of content.matchAll(/(?:srcset|imagesrcset)=["']([^"']+)["']/gi)) {
     for (const item of match[1].split(',')) checkReference(file, item.trim().split(/\s+/)[0]);
@@ -39,7 +51,7 @@ for (const file of walk(root).filter((item) => /\.(?:html|shtml)$/i.test(item)))
   if (['header.shtml', 'footer.shtml'].includes(path.basename(file))) continue;
   checkedPages += 1;
   const relativeFile = path.relative(root, file);
-  const html = fs.readFileSync(file, 'utf8');
+  const html = readRendered(file);
 
   const ids = [...html.matchAll(/\sid=["']([^"']+)["']/g)].map(match => match[1]);
   const seenIds = new Set();

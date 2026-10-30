@@ -52,8 +52,8 @@ newsTabs.forEach((tab) => {
       item.tabIndex=isSelected?0:-1;
     });
 
-    document.querySelectorAll('[data-news-category]').forEach((card) => {
-      card.hidden = card.dataset.newsCategory !== selectedCategory;
+    document.querySelectorAll('[data-news-category],[data-news-empty]').forEach((card) => {
+      card.hidden = (card.dataset.newsCategory || card.dataset.newsEmpty) !== selectedCategory;
     });
 
     if (newsMoreLink && newsCategories[selectedCategory]) {

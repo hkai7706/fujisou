@@ -8,9 +8,7 @@ const root='<$mt:Var name="ainos_root"$>';
 const asset=file=>`${root}${file}?v=${crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex').slice(0,10)}`;
 write('Ainos Settings','<mt:SetVar name="ainos_root" value="/">\n<mt:SetVar name="ainos_origin" value="https://www.fujisou-ainos.com">');
 for(const name of ['Header','Footer']){
- let text=fs.readFileSync(`include/${name.toLowerCase()}.shtml`,'utf8');
- text=text.replace(/\b(href|src|srcset)="([^"]*)"/g,(tag,attribute,value)=>`${attribute}="${value.replace(/(^|,\s*)\/(?!\/)/g,'$1'+root)}"`);
- write('Ainos '+name,text);
+ write('Ainos '+name,`<!--#include virtual="${root}include/${name.toLowerCase()}.shtml" -->`);
 }
 write('Ainos Head',`<!doctype html><html lang="ja"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -35,7 +33,8 @@ write('Ainos Head',`<!doctype html><html lang="ja"><head>
 <mt:Unless name="ainos_listing"><mt:EntryAssets type="image" lastn="1" sort_by="created_on" sort_order="ascend"><$mt:AssetURL setvar="ainos_cover_url"$></mt:EntryAssets></mt:Unless>
 <mt:If name="ainos_cover_url"><meta property="og:image" content="<$mt:Var name="ainos_cover_url" encode_html="1"$>"><mt:Else><meta property="og:image" content="<$mt:Var name="ainos_origin"$>${root}img/ogp.jpg"></mt:If>
 <link rel="icon" href="${root}favicon.ico">
-${['fujisou-ainos.css','breadcrumbs.css','staffblog.css','page-start.css','blog-body.css','event-detail.css','blog-archive.css','inquiry-journey.css','site-design.css','mt-posting.css'].map(file=>`<link rel="stylesheet" href="${asset('stylesheet/'+file)}">`).join('\n')}
+${['fujisou-ainos.css','breadcrumbs.css','staffblog.css','page-start.css','blog-body.css','event-detail.css','blog-archive.css','shared-chrome.min.css','inquiry-journey.css','site-design.css','mt-posting.css'].map(file=>`<link rel="stylesheet" href="${asset('stylesheet/'+file)}">`).join('\n')}
+<script src="${asset('script/shared-chrome.js')}" defer></script>
 </head>`);
 write('Ainos Breadcrumbs',`<nav class="site-breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="${root}">ホーム</a></li><li aria-hidden="true">/</li><li><a href="${root}<$mt:Var name="ainos_section_path"$>"><$mt:Var name="ainos_section" encode_html="1"$></a></li><li aria-hidden="true">/</li><li><span aria-current="page">記事</span></li></ol></nav>`);
 write('Ainos Listing Card',`<article class="archive-card"><a href="<$mt:EntryPermalink encode_html="1"$>"><mt:EntryAssets type="image" lastn="1" sort_by="created_on" sort_order="ascend"><figure><img src="<$mt:AssetURL encode_html="1"$>" alt="<$mt:AssetLabel encode_html="1"$>" width="<$mt:AssetProperty property="image_width"$>" height="<$mt:AssetProperty property="image_height"$>" loading="lazy" decoding="async"></figure></mt:EntryAssets><div><p class="archive-meta"><time datetime="<$mt:EntryDate format="%Y-%m-%d"$>"><$mt:EntryDate format="%Y.%m.%d"$></time>　<$mt:EntryCategory encode_html="1"$></p><h2><$mt:EntryTitle encode_html="1"$></h2><p><$mt:EntryExcerpt remove_html="1" encode_html="1"$></p><span class="archive-read">詳しく見る →</span></div></a></article>`);

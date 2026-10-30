@@ -1,0 +1,8 @@
+<$mt:Include module="Ainos Settings"$>
+<div data-ainos-feed="blog">
+<mt:Entries lastn="3" sort_by="authored_on" sort_order="descend">
+<a class="preview-card reveal" data-news-category="blog" href="<$mt:EntryPermalink encode_html="1"$>">
+<mt:EntryAssets type="image" lastn="1" sort_by="created_on" sort_order="ascend"><img class="preview-card__image" src="<$mt:AssetURL encode_html="1"$>" alt="<$mt:AssetLabel encode_html="1"$>" width="<$mt:AssetProperty property="image_width"$>" height="<$mt:AssetProperty property="image_height"$>" loading="lazy" decoding="async"></mt:EntryAssets>
+<span class="preview-card__meta"><span class="preview-card__type">BLOG</span><time datetime="<$mt:EntryDate format="%Y-%m-%d"$>"><$mt:EntryDate format="%Y.%m.%d"$></time></span>
+<h3><$mt:EntryTitle encode_html="1"$></h3><span class="preview-card__link">記事を読む →</span></a>
+</mt:Entries></div>

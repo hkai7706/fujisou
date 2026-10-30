@@ -1,0 +1,12 @@
+/* Only newly published Movable Type articles; existing articles keep their layouts. */
+.mt-posting-page .blog-entry__opening:not(:has(.blog-entry__visual)),
+.mt-posting-page .event-detail__intro:not(:has(.event-detail__visual)){grid-template-columns:minmax(0,1fr)}
+.mt-posting-page .blog-entry__visual img,.mt-posting-page .event-detail__visual img{object-fit:contain}
+.mt-posting-page .blog-entry__navigation>a:not(:has(img)),
+.mt-posting-page .event-detail__neighbors>a:not(:has(img)){grid-template-columns:minmax(0,1fr)}
+.mt-posting-page :is(.blog-entry__navigation,.event-detail__neighbors):empty{display:none}
+.mt-posting-page :is(.blog-entry__content,.event-detail__body):empty{min-height:180px}
+.mt-posting-page :is(.blog-entry__content,.event-detail__body) :is(img,video,iframe){max-width:100%}
+.mt-posting-page :is(.blog-entry__content,.event-detail__body) img{height:auto}
+.mt-posting-page :is(.blog-entry__content,.event-detail__body) table{max-width:100%;display:block;overflow-x:auto}
+@media(max-width:760px){.mt-posting-page :is(.blog-entry__content,.event-detail__body){font-size:16px;line-height:1.95}.mt-posting-page .event-detail__neighbors a{min-width:0;overflow-wrap:anywhere}.mt-posting-page :is(a,button):focus-visible{outline:2px solid #806039;outline-offset:4px}}

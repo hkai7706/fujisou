@@ -1,0 +1,29 @@
+<$mt:Include module="Ainos Settings"$>
+<mt:SetVar name="ainos_section" value="イベント情報">
+<mt:SetVar name="ainos_section_path" value="eventinfo/">
+<mt:SetVar name="ainos_kind" value="event">
+<mt:SetVar name="ainos_listing" value="">
+<$mt:Include module="Ainos Head"$>
+<body class="event-list-page event-detail-page mt-posting-page" data-site-design="interior">
+<$mt:Include module="Ainos Header"$>
+<main id="main">
+<$mt:Include module="Ainos Breadcrumbs"$>
+<article class="event-detail" itemscope itemtype="https://schema.org/Article">
+  <meta itemprop="datePublished" content="<$mt:EntryDate format="%Y-%m-%dT%H:%M:%S%z"$>">
+  <meta itemprop="dateModified" content="<$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S%z"$>">
+  <div class="event-detail__intro">
+    <header class="event-detail__heading"><p>イベント情報</p><time datetime="<$mt:EntryDate format="%Y-%m-%d"$>"><span><$mt:EntryDate format="%Y"$></span><strong><$mt:EntryDate format="%m.%d"$></strong><small>掲載日</small></time><h1 itemprop="headline"><$mt:EntryTitle encode_html="1"$></h1><a class="event-detail__read" href="#event-content">詳しいご案内 <span aria-hidden="true">↓</span></a></header>
+    <mt:EntryAssets type="image" lastn="1" sort_by="created_on" sort_order="ascend"><figure class="event-detail__visual"><img itemprop="image" src="<$mt:AssetURL encode_html="1"$>" alt="<$mt:AssetLabel encode_html="1"$>" width="<$mt:AssetProperty property="image_width"$>" height="<$mt:AssetProperty property="image_height"$>" fetchpriority="high" decoding="async"></figure></mt:EntryAssets>
+  </div>
+  <div class="event-detail__content" id="event-content"><div class="event-detail__body" itemprop="articleBody">
+    <!-- EDITABLE MIDDLE: Movable Type 本文 and 続き only. -->
+    <$mt:EntryBody$>
+    <$mt:EntryMore$>
+    <!-- END EDITABLE MIDDLE -->
+  </div></div>
+  <section class="event-detail__contact"><h2>イベントや住まいについて、<br>気になることからご相談ください。</h2><a href="<$mt:Var name="ainos_root"$>contact/">お問い合わせ <span aria-hidden="true">→</span></a><a href="tel:08002002661">0800-200-2661</a></section>
+  <nav class="event-detail__neighbors" aria-label="前後のお知らせ"><mt:EntryPrevious><a href="<$mt:EntryPermalink encode_html="1"$>"><mt:EntryAssets type="image" lastn="1"><img src="<$mt:AssetURL encode_html="1"$>" alt="" width="130" height="130" loading="lazy" decoding="async"></mt:EntryAssets><div><small>以前のお知らせ</small><time datetime="<$mt:EntryDate format="%Y-%m-%d"$>"><$mt:EntryDate format="%Y.%m.%d"$></time><span><$mt:EntryTitle encode_html="1"$></span><b aria-hidden="true">→</b></div></a></mt:EntryPrevious><mt:EntryNext><a href="<$mt:EntryPermalink encode_html="1"$>"><mt:EntryAssets type="image" lastn="1"><img src="<$mt:AssetURL encode_html="1"$>" alt="" width="130" height="130" loading="lazy" decoding="async"></mt:EntryAssets><div><small>新しいお知らせ</small><time datetime="<$mt:EntryDate format="%Y-%m-%d"$>"><$mt:EntryDate format="%Y.%m.%d"$></time><span><$mt:EntryTitle encode_html="1"$></span><b aria-hidden="true">→</b></div></a></mt:EntryNext></nav>
+  <a class="event-detail__back" href="<$mt:Var name="ainos_root"$>eventinfo/">← イベント情報一覧へ</a>
+</article></main>
+<$mt:Include module="Ainos Footer"$>
+</body></html>

@@ -1,0 +1,29 @@
+<$mt:Include module="Ainos Settings"$>
+<mt:SetVar name="ainos_section" value="社長のブログ">
+<mt:SetVar name="ainos_section_path" value="staffblog/">
+<mt:SetVar name="ainos_kind" value="blog">
+<mt:SetVar name="ainos_listing" value="">
+<$mt:Include module="Ainos Head"$>
+<body class="blog-page blog-article-page mt-posting-page" data-site-design="interior">
+<$mt:Include module="Ainos Header"$>
+<main id="main">
+<$mt:Include module="Ainos Breadcrumbs"$>
+<article class="blog-entry" itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="datePublished" content="<$mt:EntryDate format="%Y-%m-%dT%H:%M:%S%z"$>">
+  <meta itemprop="dateModified" content="<$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S%z"$>">
+  <div class="blog-entry__opening">
+    <header class="blog-entry__header"><p class="blog-eyebrow">社長のブログ</p><div class="blog-meta"><time datetime="<$mt:EntryDate format="%Y-%m-%d"$>"><$mt:EntryDate format="%Y.%m.%d"$></time><span><$mt:EntryCategory encode_html="1"$></span></div><h1 itemprop="headline"><$mt:EntryTitle encode_html="1"$></h1><a class="blog-entry__read-link" href="#article-reading">本文を読む <span aria-hidden="true">↓</span></a></header>
+    <mt:EntryAssets type="image" lastn="1" sort_by="created_on" sort_order="ascend"><figure class="blog-entry__visual"><img itemprop="image" src="<$mt:AssetURL encode_html="1"$>" alt="<$mt:AssetLabel encode_html="1"$>" width="<$mt:AssetProperty property="image_width"$>" height="<$mt:AssetProperty property="image_height"$>" fetchpriority="high" decoding="async"></figure></mt:EntryAssets>
+  </div>
+  <div class="blog-entry__reading" id="article-reading"><div class="blog-entry__content" itemprop="articleBody">
+    <!-- EDITABLE MIDDLE: Movable Type 本文 and 続き only. -->
+    <$mt:EntryBody$>
+    <$mt:EntryMore$>
+    <!-- END EDITABLE MIDDLE -->
+  </div></div>
+  <section class="blog-entry__consultation"><div><h2>家づくりについて、気になることから。</h2><p>暮らし方や土地、ご予算について、お気軽にご相談ください。</p></div><ul><li><a href="<$mt:Var name="ainos_root"$>contact/">お問い合わせ<span aria-hidden="true">→</span></a></li><li><a href="tel:08002002661">0800-200-2661<span>電話で相談</span></a></li></ul></section>
+  <nav class="blog-entry__navigation" aria-label="前後の記事"><mt:EntryPrevious><a href="<$mt:EntryPermalink encode_html="1"$>"><div><small>前の記事 <b aria-hidden="true">↗</b></small><span><$mt:EntryTitle encode_html="1"$></span></div></a></mt:EntryPrevious><mt:EntryNext><a href="<$mt:EntryPermalink encode_html="1"$>"><div><small>次の記事 <b aria-hidden="true">↗</b></small><span><$mt:EntryTitle encode_html="1"$></span></div></a></mt:EntryNext></nav>
+  <div class="blog-entry__closing"><a class="blog-back" href="<$mt:Var name="ainos_root"$>staffblog/">← 社長のブログ一覧へ</a></div>
+</article></main>
+<$mt:Include module="Ainos Footer"$>
+</body></html>

@@ -27,7 +27,6 @@ if (skipRevealTracking) {
 }
 
 const newsTabs = document.querySelectorAll('[data-news-tab]');
-const newsCards = document.querySelectorAll('[data-news-category]');
 const newsMoreLink = document.querySelector('[data-news-more]');
 
 const newsCategories = {
@@ -53,7 +52,7 @@ newsTabs.forEach((tab) => {
       item.tabIndex=isSelected?0:-1;
     });
 
-    newsCards.forEach((card) => {
+    document.querySelectorAll('[data-news-category]').forEach((card) => {
       card.hidden = card.dataset.newsCategory !== selectedCategory;
     });
 

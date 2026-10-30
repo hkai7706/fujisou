@@ -31,6 +31,7 @@
 .home-page .mobile-contact-bar a:nth-child(2){background:#47774e}
 .home-page .mobile-contact-bar{padding-bottom:env(safe-area-inset-bottom);height:auto;min-height:54px}
 .journal-swipe-hint{display:none}
+.news-preview__grid>[data-ainos-feed]{display:contents}
 @media(min-width:761px) and (max-width:1024px){
  .consultation-banner{grid-template-columns:44% minmax(0,56%)}
  .consultation-banner__copy{padding:28px}

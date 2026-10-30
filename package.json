@@ -26,7 +26,10 @@
     "build": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1",
     "build:public": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -Production",
     "build:preview": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -IncludeMailform",
-    "build:production": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -Production -IncludeMailform"
+    "build:production": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-deploy.ps1 -Production -IncludeMailform",
+    "movabletype:prepare": "node tools/build-movable-type.mjs && node tools/build-home-post-seeds.mjs",
+    "movabletype:home": "node tools/enable-movable-type-home.mjs dist",
+    "check:movabletype": "node tools/check-movable-type.mjs"
   },
   "devDependencies": {
     "cssnano": "^9.9.0",

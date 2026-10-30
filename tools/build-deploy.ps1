@@ -30,7 +30,7 @@ function Copy-PublicFile([string]$SourcePath) {
   Copy-Item -LiteralPath $source -Destination $destination -Force
 }
 
-$publicExtensions = '.html', '.shtml', '.css', '.js', '.mjs', '.xml', '.txt'
+$publicExtensions = '.html', '.shtml', '.css', '.js', '.mjs', '.xml', '.txt', '.inc'
 $excludedDirectories = @('.git', 'node_modules', 'tools', 'docs', 'source', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'mailformpro', 'mfp.statics', 'iplogs', 'originals', 'analytics-portal', 'analytics-service', 'analytics-portal-dist', 'analytics-service-dist')
 function Get-PublicFiles([string]$Directory) {
   foreach ($entry in Get-ChildItem -LiteralPath $Directory -Force) {
@@ -103,6 +103,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Inner-page hero assembly failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'Customer support assembly failed.' }
 & node (Join-Path $PSScriptRoot 'build-home-blog.mjs') $destinationRoot
 & node (Join-Path $PSScriptRoot 'build-home-events.mjs') $destinationRoot
+& node (Join-Path $PSScriptRoot 'build-home-post-seeds.mjs') $destinationRoot
 & node (Join-Path $PSScriptRoot 'build-legacy-routes.mjs') $destinationRoot
 & node (Join-Path $PSScriptRoot 'localize-original-links.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Homepage blog assembly failed.' }

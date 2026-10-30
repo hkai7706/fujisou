@@ -4,7 +4,7 @@ import {PurgeCSS} from "purgecss";
 const css = await readFile("stylesheet/fujisou-ainos.css");
 const markup = (await readFile('index.html', 'utf8')).replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, '');
 const [{ css: homepageCss }] = await new PurgeCSS().purge({
-  content: [{raw:markup,extension:'html'}, "include/header.shtml", "include/footer.shtml", "script/fujisou-ainos.js"],
+  content: [{raw:markup,extension:'html'}, "include/header.shtml", "include/footer.shtml", "script/fujisou-ainos.js", "staffblog/latest-cards.inc", "eventinfo/latest-cards.inc"],
   css: [{ raw: css.toString(), extension: "css" }],
   safelist: {
     standard: [/^is-/, /^has-/, /^js$/, /^no-scroll$/],

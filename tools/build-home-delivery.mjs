@@ -17,7 +17,7 @@ for (const match of linked) {
 }
 const css = sources.map(file => fs.readFileSync('stylesheet/' + file, 'utf8')).join('\n');
 const [{ css: used }] = await new PurgeCSS().purge({
-  content: [{raw: html, extension:'html'}, 'script/fujisou-ainos.js', 'script/shared-chrome.js', 'script/event-status.js'],
+  content: [{raw: html, extension:'html'}, 'script/fujisou-ainos.js', 'script/shared-chrome.js', 'script/event-status.js', 'staffblog/latest-cards.inc', 'eventinfo/latest-cards.inc'],
   css: [{raw:css,extension:'css'}],
   safelist: {standard:[/^is-/,/^has-/,/^js$/, /^no-scroll$/, /^shared-/]},
   keyframes: true, fontFace: false

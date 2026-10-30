@@ -1,5 +1,5 @@
 /* Reversible photo-led homepage trial. Keep all information and native navigation. */
-.home-page .home-selector{background:#f7f5f0;padding-block:clamp(56px,7vw,100px)}
+.home-page .home-selector{background:#fff;padding-block:clamp(56px,7vw,100px)}
 .home-page .home-selector__inner{max-width:1260px}
 .home-page .home-selector__grid{gap:clamp(24px,3vw,40px);align-items:stretch}
 .home-page .home-selector__item{display:flex;flex-direction:column;background:#fff;border-bottom:1px solid #d8cbb9}

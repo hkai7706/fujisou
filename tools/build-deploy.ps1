@@ -31,7 +31,7 @@ function Copy-PublicFile([string]$SourcePath) {
 }
 
 $publicExtensions = '.html', '.shtml', '.css', '.js', '.mjs', '.xml', '.txt', '.inc'
-$excludedDirectories = @('.git', 'node_modules', 'tools', 'docs', 'source', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'mailformpro', 'mfp.statics', 'iplogs', 'originals')
+$excludedDirectories = @('.git', 'node_modules', 'tools', 'docs', 'source', 'dist', 'backup', 'tmp', '.tmp', 'output', 'cms', 'server', 'mailformpro', 'mfp.statics', 'iplogs', 'originals', 'design-sample')
 function Get-PublicFiles([string]$Directory) {
   foreach ($entry in Get-ChildItem -LiteralPath $Directory -Force) {
     if ($entry.Attributes -band [IO.FileAttributes]::ReparsePoint) { continue }

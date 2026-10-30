@@ -66,7 +66,8 @@ try{
   await page.click('#news-tab-event');
   assert.equal(await page.$$eval('[data-news-category="blog"]',els=>els.every(e=>e.hidden)),true);
   assert.ok((await page.$eval('[data-news-more]',e=>e.href)).endsWith('/eventinfo/'));
-  assert.ok((await page.$eval('[data-news-category="event"]',e=>e.textContent)).includes('開催終了'));
+  assert.ok((await page.$eval('[data-news-category="event"]',e=>e.textContent)).includes('11/14'));
+  assert.ok(await page.$$eval('[data-news-category="event"]',nodes=>nodes.some(e=>e.textContent.includes('開催終了'))),'Archived events retain their ended status');
   await page.click('#news-tab-blog');
   assert.equal(await page.$$eval('[data-news-category="blog"]',els=>els.filter(e=>!e.hidden).length),3);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);

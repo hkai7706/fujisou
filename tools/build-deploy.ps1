@@ -49,6 +49,17 @@ foreach ($rootFile in '.htaccess', 'robots.txt', 'sitemap.xml', 'llms.txt') {
   Copy-PublicFile (Join-Path $projectRoot $rootFile)
 }
 
+# Keep historical public download URLs available even if a redesigned page no
+# longer links to every attachment directly.
+foreach ($manifestName in 'original-downloads.json', 'original-image-downloads.json') {
+  $manifestPath = Join-Path $projectRoot (Join-Path 'docs' $manifestName)
+  if (Test-Path -LiteralPath $manifestPath) {
+    foreach ($download in (Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json)) {
+      if ($download.file) { Copy-PublicFile (Join-Path $projectRoot $download.file) }
+    }
+  }
+}
+
 $assetReferences = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 foreach ($file in $publicFiles) {
   $content = [IO.File]::ReadAllText($file.FullName, [Text.Encoding]::UTF8)
@@ -91,6 +102,9 @@ if ($LASTEXITCODE -ne 0) { throw 'Inner-page hero assembly failed.' }
 & node (Join-Path $PSScriptRoot 'sync-customer-support.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Customer support assembly failed.' }
 & node (Join-Path $PSScriptRoot 'build-home-blog.mjs') $destinationRoot
+& node (Join-Path $PSScriptRoot 'build-home-events.mjs') $destinationRoot
+& node (Join-Path $PSScriptRoot 'build-legacy-routes.mjs') $destinationRoot
+& node (Join-Path $PSScriptRoot 'localize-original-links.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Homepage blog assembly failed.' }
 & node (Join-Path $PSScriptRoot 'build-consultation-banners.mjs') $destinationRoot
 & node (Join-Path $PSScriptRoot 'build-site-inquiries.mjs') $destinationRoot

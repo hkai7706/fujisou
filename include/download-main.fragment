@@ -1,0 +1,4 @@
+<main id="main" class="consultation-page">
+  <header><p>FUJISOU AINOS / GUIDE BOOK</p><h1>家づくりの冊子<br>「しっくいのひみつ」</h1><p>漆喰の壁について知りたい方へ。家づくりを考えるための冊子をご案内します。</p></header>
+  <section><h2>住まいの素材選びを、ここから。</h2><img src="../img/download/shikkui-booklet.webp" alt="冊子「しっくいのひみつ」の表紙" width="600" height="495" style="display:block;max-width:100%;width:300px;height:auto;margin:24px auto" loading="lazy" decoding="async"><p>冊子をご希望の方は、お問い合わせフォームのご相談内容に「しっくいのひみつ希望」とご記入ください。お渡し方法は担当者よりご案内します。</p><div class="consultation-actions"><a href="../contact/#mailformpro">冊子について問い合わせる →</a><a href="../shikkui/">漆喰の家づくりを見る →</a></div></section>
+</main>

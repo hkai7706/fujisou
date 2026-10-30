@@ -61,7 +61,9 @@ try {
   await page.setJavaScriptEnabled(false);
   await page.goto('http://127.0.0.1:5501/',{waitUntil:'networkidle0'});
   assert.equal(await page.$eval('.hybrid-hero',node=>node.getBoundingClientRect().height>100),true);
-  assert.equal(await page.$eval('[data-event-promotion]',node=>getComputedStyle(node).display==='none'),true,'Expired promotion must stay hidden without JavaScript');
+  const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const promotion=await page.$eval('[data-event-promotion]',node=>({end:node.dataset.eventEnd,hidden:getComputedStyle(node).display==='none'}));
+  assert.equal(promotion.hidden,today>promotion.end,'Promotion visibility follows its published end date without JavaScript');
   assert.equal(await page.$$eval('.home-plan-paths a',nodes=>nodes.length),3,'All three housing categories must be directly accessible');
   await page.goto('http://127.0.0.1:5501/eventinfo/open-house/',{waitUntil:'networkidle0'});
   assert.equal(await page.$$eval('[data-event-active]',nodes=>nodes.every(node=>node.hidden&&node.getClientRects().length===0)),true,'Expired event offers must be hidden without JavaScript');

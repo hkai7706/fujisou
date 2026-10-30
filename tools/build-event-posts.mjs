@@ -21,7 +21,11 @@ for(const [index,p] of posts.entries()){
  if(p.legacyFile==='-all-styles-scoped-to-kk26-root.shtml')rendered=rendered.replace(`<h1>${esc(p.title)}</h1>`,'<h1>砺波市・自然素材の平屋<br>完成見学会</h1><p class="tonami-ended">この見学会は終了しました</p>');
  if(p.legacyFile==='-gw-holiday-notice.shtml')rendered=rendered.replace(`<h1>${esc(p.title)}</h1>`,'<h1>ゴールデンウィーク<br>休業のお知らせ</h1>');
  if(p.legacyFile==='2-315331.shtml')rendered=rendered.replace(`<h1>${esc(p.title)}</h1>`,'<h1>高岡市・全面漆喰と無垢材<br>2階建ての完成見学会</h1><p class="tonami-ended">この見学会は終了しました</p>');
- fs.writeFileSync('eventinfo/'+p.file,head+rendered+finish);
+ // Historical imports sometimes reused section IDs; keep the first anchor and
+ // give subsequent sections unique IDs without changing their visible content.
+ const ids=new Set();let duplicate=0;
+ rendered=rendered.replace(/\bid="([^"]+)"/g,(attribute,id)=>{if(!ids.has(id)){ids.add(id);return attribute;}let unique;do{unique=id+'-'+(++duplicate);}while(ids.has(unique));ids.add(unique);return `id="${unique}"`;});
+ fs.writeFileSync('eventinfo/'+p.file,(head+rendered+finish).replace(/[\t ]+$/gm,''));
 }
 const size=15,total=Math.ceil(posts.length/size);
 const href=n=>n===1?'index.html':`page-${n}.html`;

@@ -56,6 +56,16 @@ const byName=new Map();for(const file of current){const name=path.basename(file)
 const keep=new Set(),queue=[];
 function add(file){if(file&&fs.existsSync(file)&&!keep.has(file)){keep.add(file);queue.push(file);}}
 for(const file of current)if(/\.(?:html|shtml|inc|pdf|xml|txt)$/i.test(file)||path.basename(file)==='.htaccess'||file.includes(path.sep+'mailformpro'+path.sep)||file.includes(path.sep+'mfp.statics'+path.sep))add(file);
+// Original public downloads may be reached from search results or external
+// bookmarks even when no current page links to them. They are compatibility
+// assets, not unused files, so retain them through deployment pruning.
+for(const manifest of ['original-downloads.json','original-image-downloads.json']){
+ const records=JSON.parse(fs.readFileSync(path.resolve(root,'../docs',manifest),'utf8'));
+ for(const record of records){
+  const deployed=record.file.replace(/\.(?:png|gif)$/i,'.deploy.webp');
+  add(byRelative.get(record.file)||byRelative.get(deployed));
+ }
+}
 function reference(file,value){
  value=value.replaceAll('&amp;','&');
  if(/^https?:/.test(value)){const url=new URL(value);if(url.hostname!=='www.fujisou-ainos.com'&&url.hostname!=='hkai7706.github.io')return;value=url.pathname.replace(/^\/fujisou\//,'/');}

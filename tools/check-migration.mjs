@@ -20,9 +20,13 @@ for(const [old,target] of Object.entries(routes)){
  assert.ok(fs.existsSync(path.join(root,target.endsWith('/')?target+'index.html':target)));
 }
 const downloads=[...JSON.parse(fs.readFileSync('docs/original-downloads.json','utf8')),...JSON.parse(fs.readFileSync('docs/original-image-downloads.json','utf8'))];
+const access=fs.readFileSync(path.join(root,'.htaccess'),'utf8');
 for(const record of downloads){
  assert.ok(!record.error,record.source||record.url);
- assert.ok(fs.existsSync(path.join(root,record.file)),`Missing download ${record.file}`);
+ const original=path.join(root,record.file);
+ const converted=original.replace(/\.(?:png|gif)$/i,'.deploy.webp');
+ const preserved=fs.existsSync(original)||(fs.existsSync(converted)&&/RewriteRule \^\(\.\+\)\\\.\(\?:png\|gif\)\$ \/\$1\.deploy\.webp/.test(access));
+ assert.ok(preserved,`Missing download or compatibility redirect ${record.file}`);
 }
 const home=fs.readFileSync(path.join(root,'index.html'),'utf8');
 assert.match(home,/eventinfo\/november-open-house\//);

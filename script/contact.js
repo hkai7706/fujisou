@@ -8,29 +8,16 @@
   const retry = form.querySelector('[data-contact-retry]');
   const button = form.querySelector('button[type="submit"]');
   const category = form.elements['お問い合わせ種別'];
-  const booking = form.querySelector('[data-contact-booking]');
   const draftKey = `fujisou-contact-draft:${new URL(".", location.href).pathname}`;
   try { const draft=JSON.parse(sessionStorage.getItem(draftKey)||"null"); if(draft&&Date.now()-draft.savedAt<7200000) for(const [name,value] of Object.entries(draft.fields)) if(form.elements[name]&&form.elements[name].type!=="checkbox") form.elements[name].value=value; } catch {}
   const saveDraft=()=>{try{const fields={};for(const input of form.elements)if(input.name&&!input.name.startsWith("mfp_")&&input.name!=="website_url"&&input.type!=="checkbox")fields[input.name]=input.value;sessionStorage.setItem(draftKey,JSON.stringify({savedAt:Date.now(),fields}));}catch{}};
   form.addEventListener("input",saveDraft); form.addEventListener("change",saveDraft);
   let ready = false;
   let loading = false;
-  const today = () => new Intl.DateTimeFormat('sv-SE', {timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-  const updateBooking = () => {
-    const show = ['家づくりのご相談','見学のご相談'].includes(category.value);
-    booking.hidden = !show;
-    booking.disabled = !show;
-    booking.querySelectorAll('input,select').forEach(input => { input.disabled = !show; });
-    const attendees=booking.querySelector('[data-contact-attendees]');
-    if(attendees){attendees.hidden=category.value!=='見学のご相談';attendees.querySelector('select').disabled=attendees.hidden;}
-    booking.querySelectorAll('input[type="date"]').forEach(input => { input.min = today(); });
-  };
   const topic = new URLSearchParams(location.search).get('topic');
   const project = new URLSearchParams(location.search).get('project');
   if (project && !form.elements['お問い合わせ内容'].value) form.elements['お問い合わせ内容'].value = `施工事例「${project.slice(0,150)}」について相談したいです。\n`;
   if (topic === 'consultation' || topic === 'visit') category.value = topic === 'consultation' ? '家づくりのご相談' : '見学のご相談';
-  updateBooking();
-  category.addEventListener('change', updateBooking);
   const showError = message => { status.textContent = message; status.focus(); };
   const guardSubmission = event => {
     saveDraft();
@@ -42,15 +29,6 @@
         ? 'このページはプレビューです。メールは送信されません。入力内容はこの画面に残ります。'
         : '送信サービスに接続できません。入力内容はこの画面に残ります。「送信サービスに再接続」をお試しください。');
       return;
-    }
-    for (const input of booking.querySelectorAll('input[type="date"]')) {
-      if (!booking.disabled && input.value && input.value < today()) {
-        event.preventDefault(); event.stopImmediatePropagation();
-        input.setAttribute('aria-invalid','true');
-        showError('希望日は本日以降の日付を選択してください。');
-        return;
-      }
-      input.removeAttribute('aria-invalid');
     }
     status.textContent = '';
   };

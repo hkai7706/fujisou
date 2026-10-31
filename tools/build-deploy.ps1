@@ -139,6 +139,8 @@ if ($IncludeMailform) {
     }
   }
 }
+& node (Join-Path $PSScriptRoot 'copy-deploy-assets.mjs')
+if ($LASTEXITCODE -ne 0) { throw 'Generated asset collection failed.' }
 if ($Production) {
   & node (Join-Path $PSScriptRoot 'prepare-seo.mjs') $destinationRoot --production
 } else {
@@ -147,16 +149,18 @@ if ($Production) {
 if ($LASTEXITCODE -ne 0) { throw 'Deployment indexing preparation failed.' }
 & node (Join-Path $PSScriptRoot 'generate-sitemap.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Deployment sitemap preparation failed.' }
-& node (Join-Path $PSScriptRoot 'copy-deploy-assets.mjs')
-if ($LASTEXITCODE -ne 0) { throw 'Generated asset collection failed.' }
 & node (Join-Path $PSScriptRoot 'build-dist-ssi.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Shared SSI component assembly failed.' }
 & node (Join-Path $PSScriptRoot 'optimize-dist.mjs')
 if ($LASTEXITCODE -ne 0) { throw 'Deployment optimization failed.' }
+& node (Join-Path $PSScriptRoot 'clean-dist-image-formats.mjs')
+if ($LASTEXITCODE -ne 0) { throw 'Deployment image-format cleanup failed.' }
 & node (Join-Path $PSScriptRoot 'site-check.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Deployment reference validation failed.' }
 & node (Join-Path $PSScriptRoot 'check-seo.mjs') $destinationRoot
 if ($LASTEXITCODE -ne 0) { throw 'Deployment SEO validation failed.' }
+& node (Join-Path $PSScriptRoot 'check-business-claims.mjs') $destinationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Deployment business-claims validation failed.' }
 
 $files = Get-ChildItem -LiteralPath $destinationRoot -Recurse -File
 [PSCustomObject]@{

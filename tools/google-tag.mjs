@@ -29,7 +29,8 @@ export function addGoogleTag(html) {
   // Replace earlier immediate and delayed versions so configuration changes
   // reach every static page instead of only newly generated pages.
   html = html
-    .replace(/<!-- Google Analytics 4 -->\s*<script\b[^>]*src=["']https:\/\/www\.googletagmanager\.com\/gtag\/js[^"']*["'][^>]*><\/script>\s*<script>[\s\S]*?<\/script>/g, '')
-    .replace(/<!-- Google Analytics 4 -->\s*<script>[\s\S]*?<\/script>/g, '');
-  return html.replace(/(<meta\b[^>]*charset[^>]*>)/i, `$1\n${googleTag}`);
+    .replace(/<!-- Google Analytics 4 -->\s*<script\b[^>]*src=["']https:\/\/www\.googletagmanager\.com\/gtag\/js[^"']*["'][^>]*><\/script>\s*<script>[\s\S]*?<\/script>\s*/g, '')
+    .replace(/<!-- Google Analytics 4 -->\s*<script>[\s\S]*?<\/script>\s*/g, '');
+  html = html.replace(/(<meta\b[^>]*charset[^>]*>)/i, `$1\n${googleTag}\n`);
+  return html.replace(/(<!-- Google Analytics 4 -->\s*<script>[\s\S]*?<\/script>)[\t \r\n]*/g, '$1\n');
 }

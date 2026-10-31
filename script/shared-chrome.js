@@ -3,6 +3,27 @@
   'use strict';
   const header = document.querySelector('[data-shared-header]');
   if (!header || header.hasAttribute('data-enhanced')) return;
+  const track = (name, parameters = {}) => {
+    if (typeof window.gtag === 'function') window.gtag('event', name, parameters);
+  };
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    const location = link.dataset.inquiryLocation || link.closest('header,main,footer,nav')?.tagName.toLowerCase() || 'page';
+    if (href.startsWith('tel:')) track('phone_click', { link_location: location });
+    else if (/^(?:https?:\/\/)?(?:page\.line\.me|lin\.ee)\//i.test(href)) track('line_click', { link_location: location });
+    else if (/(?:^|\/)(?:contact|consultation|reserve)\//.test(href)) track('consultation_click', { link_location: location });
+  });
+  if (/\/contact\/thanks\.(?:s?html)$/.test(location.pathname)) {
+    try {
+      const key = 'fujisou-ga4-lead-recorded';
+      if (!sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, '1');
+        track('generate_lead', { method: 'contact_form' });
+      }
+    } catch { track('generate_lead', { method: 'contact_form' }); }
+  }
   if (document.body.classList.contains('home-page')) {
     let scrollFrame;
     const progress = document.createElement('span');

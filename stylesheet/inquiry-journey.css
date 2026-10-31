@@ -1,6 +1,7 @@
 /* Inquiry controls follow the existing white, wood and muted-gold palette. */
 @media(max-width:1120px) and (scripting:enabled){.shared-header:not([data-enhanced]) .shared-header__nav{display:none}}
 .shared-header__actions{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.shared-header__phone{display:none}
 .shared-header__contact{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 15px;border:1px solid #967042;background:#604426;color:#fff!important;font-size:15px;white-space:nowrap;text-decoration:none}
 .shared-header__contact:hover{background:#493b31}.shared-header__contact:focus-visible{outline:2px solid #493b31;outline-offset:3px}
 .shared-header__actions .shared-header__line{display:inline-flex;align-items:center;gap:8px;min-height:44px;white-space:nowrap;font-size:15px}
@@ -44,12 +45,14 @@
  .shared-header[data-enhanced] .shared-header__drawer .shared-header__nav{order:1;position:static;inset:auto;display:grid;width:100%;max-height:none;flex:0 0 auto;min-width:0;padding:0;border:0;background:transparent;overflow:visible;box-shadow:none}
  .shared-header[data-enhanced] .shared-header__drawer .shared-header__actions{order:2;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;flex:0 0 auto;gap:16px;width:100%;margin:24px 0 0;padding:24px 0 0;border-top:1px solid #d8cbb9}
  .shared-header__drawer .shared-header__actions .shared-header__contact{min-height:48px;font-size:15px}
+ .shared-header__drawer .shared-header__actions .shared-header__phone{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px;padding:10px 0;border-bottom:1px solid #d8cbb9;font-size:15px}
  .shared-header__drawer .shared-header__actions .shared-header__line{justify-content:space-between;min-height:48px;padding:10px 0;font-size:15px}
  .shared-header[data-enhanced] .shared-header__backdrop{position:fixed;z-index:1;inset:0;display:block;width:100%;height:100vh;height:100dvh;margin:0;padding:0;border:0;border-radius:0;background:#211b1666;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .32s,visibility .32s;cursor:pointer;touch-action:none}
  .shared-header[data-menu-open] .shared-header__backdrop{opacity:1;visibility:visible;pointer-events:auto}
 }
 @media(prefers-reduced-motion:reduce){.shared-header[data-enhanced] .shared-header__drawer,.shared-header[data-enhanced] .shared-header__backdrop{transition:none}}
 @media print{.shared-header__drawer-head,.shared-header__backdrop{display:none!important}}
+.mobile-contact-bar{display:none!important}
 
 /* A quieter, compact footer for phones and tablets. */
 .shared-footer__offices .shared-footer__office-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;font-size:13px;text-underline-offset:4px}

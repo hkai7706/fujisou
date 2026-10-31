@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./stylesheet/shared-chrome.min.css?v=13c78fbf3e"><link rel="stylesheet" href="./stylesheet/inquiry-journey.css?v=7360660979"><script src="./script/shared-chrome.js?v=bb281d0b1c" defer></script><link rel="stylesheet" href="./stylesheet/site-design.css?v=059c1c6d42"><header class="shared-header" data-shared-header>
+<link rel="stylesheet" href="./stylesheet/shared-chrome.min.css?v=13c78fbf3e"><link rel="stylesheet" href="./stylesheet/inquiry-journey.css?v=50c8e0442b"><script src="./script/shared-chrome.js?v=3e3e9c6843" defer></script><link rel="stylesheet" href="./stylesheet/site-design.css?v=059c1c6d42"><header class="shared-header" data-shared-header>
   <a class="shared-header__skip" href="#main">本文へ移動</a>
   <div class="shared-header__inner">
     <div class="shared-header__identity">
@@ -10,7 +10,7 @@
     <button class="shared-header__toggle" type="button" aria-expanded="false" aria-controls="shared-site-navigation" aria-label="メニューを開く" hidden>
       <span class="shared-header__toggle-lines" aria-hidden="true"></span>
     </button>
-    <div class="shared-header__actions"><a class="shared-header__contact" href="./consultation/">無料相談</a><a class="shared-header__line" href="https://lin.ee/t6RziIw" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a></div>
+    <div class="shared-header__actions"><a class="shared-header__contact" href="./consultation/">無料相談</a><a class="shared-header__phone" href="tel:08002002661"><span>電話で相談</span><span>0800-200-2661</span></a><a class="shared-header__line" href="https://page.line.me/725sqkvb?oat_content=url&amp;openQrModal=true" target="_blank" rel="noopener noreferrer"><span>LINEで相談</span><span aria-hidden="true">↗</span></a></div>
 
     <nav class="shared-header__nav" id="shared-site-navigation" aria-label="メインナビゲーション">
       <details class="shared-header__group">

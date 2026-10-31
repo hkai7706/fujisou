@@ -24,7 +24,15 @@
       }
     } catch { track('generate_lead', { method: 'contact_form' }); }
   }
-  if (document.body.classList.contains('home-page')) {
+  if (!document.querySelector('.mobile-contact-bar')) {
+    const mobileContact = document.createElement('nav');
+    const contactHref = document.querySelector('.shared-footer__inquiry')?.getAttribute('href') || '/contact/';
+    mobileContact.className = 'mobile-contact-bar';
+    mobileContact.setAttribute('aria-label', 'お問い合わせ方法');
+    mobileContact.innerHTML = `<a href="https://page.line.me/725sqkvb?oat_content=url&amp;openQrModal=true" target="_blank" rel="noopener noreferrer">LINE</a><a href="${contactHref}">お問い合わせ</a><a href="tel:08002002661">電話</a>`;
+    document.body.append(mobileContact);
+  }
+  {
     let scrollFrame;
     const progress = document.createElement('span');
     progress.className = 'home-scroll-status';

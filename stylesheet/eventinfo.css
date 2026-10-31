@@ -72,6 +72,9 @@
 }
 .event-card__text > p span + span::before { margin-right: 18px; color: #c1b19e; content: "/"; }
 .event-card__status--open { color: #73512e; font-weight: 600; }
+.event-card__status--closed { color: #8a3f35; font-weight: 700; }
+.event-card--ended figure { position: relative; }
+.event-card--ended img { filter: saturate(.72); }
 .event-card h3 {
   margin: 0; color: #493b31; font: 500 clamp(18px, 1.6vw, 22px)/1.65 var(--serif);
 }
